@@ -4,7 +4,6 @@ import { useEffect, useRef } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
-import { WavyBackground } from './ui/wavy-background'
 import { ImageGrid } from './ui/image-grid'
 import { Facebook, Twitter, Instagram, Linkedin, ArrowRight, Send } from 'lucide-react'
 import gsap from 'gsap'
@@ -54,7 +53,6 @@ export default function Footer() {
 
     return (
         <footer ref={footerRef} className="relative bg-black text-white overflow-hidden">
-            <WavyBackground />
 
             <div className="container mx-auto px-4 py-16 relative z-10">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
