@@ -14,11 +14,11 @@ import { useState } from "react";
 import Image from "next/image";
 
 // Import images
-import home_theater from "@/images/Home_theater.jpg";
-import electric1 from "@/images/electric1.jpg";
-import interior from "@/images/interior.jpg";
-import lighting from "@/images/lighting.jpg";
-import luxary from "@/images/luxary.jpg";
+import home_theater from "@/Images/Home_theater.jpg";
+import electric1 from "@/Images/electric1.jpg";
+import interior from "@/Images/interior.jpg";
+import lighting from "@/Images/lighting.jpg";
+import luxary from "@/Images/luxary.jpg";
 
 const HeroSlider = () => {
   const [activeSlideIndex, setActiveSlideIndex] = useState(0);
