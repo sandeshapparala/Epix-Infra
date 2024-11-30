@@ -53,7 +53,7 @@ export default function AboutSection() {
   }, []);
 
   return (
-    <div id={"about"} className="min-h-screen bg-white py-20">
+    <div id={"about"} className=" bg-white py-20">
       <div className="container mx-auto lg:px-20 px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <motion.div

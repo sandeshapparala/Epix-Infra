@@ -12,10 +12,10 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 gsap.registerPlugin(ScrollTrigger)
 
 const socialLinks = [
-    { icon: Facebook, href: '#' },
-    { icon: Twitter, href: '#' },
-    { icon: Instagram, href: '#' },
-    { icon: Linkedin, href: '#' },
+    { icon: Facebook, href: 'https://sandeshapparala.com/' },
+    { icon: Twitter, href: 'https://x.com/sandeshapparala' },
+    { icon: Instagram, href: 'https://www.instagram.com/epixinfra/' },
+    // { icon: Linkedin, href: '#' },
 ]
 
 const services = [
@@ -63,10 +63,10 @@ export default function Footer() {
                             whileInView={{ opacity: 1, x: 0 }}
                             className="text-3xl font-bold text-[#C8B496]"
                         >
-                            SIMON
+                            Epix Infra
                         </motion.h2>
                         <p className="text-gray-400">
-                            The pain itself will be followed by the fat icing, but it will happen at the same time as the pain is great for some of us.
+                            At Epix Infra, we redefine living spaces by blending innovation with expertise to deliver immersive experiences that exceed expectations.
                         </p>
                         <div className="flex space-x-4">
                             {socialLinks.map(({ icon: Icon, href }, index) => (
@@ -135,7 +135,7 @@ export default function Footer() {
                     style={{ opacity }}
                     className="mt-16 pt-8 border-t border-white/10 text-center text-gray-400"
                 >
-                    <p>Simon © {new Date().getFullYear()} All Right Reserved</p>
+                    <p>Epix Infra © {new Date().getFullYear()} All Right Reserved</p>
                 </motion.div>
             </div>
         </footer>
