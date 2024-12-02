@@ -6,6 +6,9 @@ import { motion } from 'framer-motion';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import Image from 'next/image';
 import gsap from 'gsap';
+import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
+
+gsap.registerPlugin(ScrollToPlugin);
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -27,7 +30,7 @@ const Navbar = () => {
         const targetElement = document.getElementById(target);
         if (targetElement) {
             gsap.to(window, {
-                duration: 1,
+                duration: 0.5,
                 scrollTo: {
                     y: targetElement,
                     offsetY: 80, // Adjust if Navbar height changes

@@ -59,7 +59,7 @@ export function TestimonialsSection() {
         : testimonials;
 
     return (
-        <section className="relative overflow-hidden py-20">
+        <section id={"testimonials"} className="relative overflow-hidden py-20">
             <div className="absolute inset-0 bg-gradient-to-b from-gray-50 to-white dark:from-gray-950 dark:to-black"></div>
             <motion.div
                 initial={{ opacity: 0, y: 20 }}

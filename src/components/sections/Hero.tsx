@@ -66,7 +66,7 @@ const HeroSlider = () => {
   };
 
   return (
-    <section className="relative w-full h-screen">
+    <section id={"hero"} className="relative w-full h-screen">
       <Swiper
         modules={[Autoplay, Pagination, Navigation, EffectFade]}
         effect="fade" // Fade effect

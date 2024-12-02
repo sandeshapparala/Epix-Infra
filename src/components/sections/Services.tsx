@@ -7,7 +7,7 @@ import {DesktopServices} from "@/components/services/desktop-services";
 
 export default function Services() {
     return (
-        <section className="py-20 bg-black">
+        <section id={'services'} className="py-20 bg-black">
             <div className="container mx-auto lg:px-20 px-4">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
