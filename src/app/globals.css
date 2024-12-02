@@ -167,7 +167,7 @@ body {
 }
 
 .animate-scroll {
-  animation: scroll var(10s) linear infinite;
+  animation: scroll var(--animation-duration, 1s) linear infinite;
 }
 
 .testimonial-card-shadow {
