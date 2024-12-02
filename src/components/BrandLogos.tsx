@@ -14,15 +14,18 @@ const BrandLogos = () => {
         "/Logos/Klipsch.png",
         "/Logos/Samsung.png",
         "/Logos/Sony.png",
+        "/Logos/Sony.png",
+        "/Logos/Sony.png",
+        "/Logos/Sony.png",
         "/Logos/Yamaha.png",
     ];
 
     return (
-        <div className="w-full py-10 bg-gray-50">
+        <div className="w-full py-1 mt-4">
             <div className="container mx-auto">
                 <Swiper
                     modules={[Autoplay]}
-                    slidesPerView={2} // Default number of logos visible
+                    slidesPerView={5} // Default number of logos visible
                     spaceBetween={20}
                     breakpoints={{
                         640: { slidesPerView: 3 }, // For small devices
@@ -38,7 +41,7 @@ const BrandLogos = () => {
                 >
                     {brandLogos.map((logo, index) => (
                         <SwiperSlide key={index} className="flex justify-center items-center">
-                            <div className="flex items-center justify-center w-full h-12 my-10">
+                            <div className="flex items-center justify-center w-full h-24 ">
                                 <img
                                     src={logo}
                                     alt={`Brand ${index + 1}`}

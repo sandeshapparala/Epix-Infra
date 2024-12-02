@@ -4,26 +4,26 @@ import { useEffect, useRef } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
-import { ImageGrid } from './ui/image-grid'
-import { Facebook, Twitter, Instagram, Linkedin, ArrowRight, Send } from 'lucide-react'
+// import { ImageGrid } from './ui/image-grid'
+import { Facebook, Twitter, Instagram, ArrowRight, Send } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 gsap.registerPlugin(ScrollTrigger)
 
 const socialLinks = [
-    { icon: Facebook, href: '#' },
-    { icon: Twitter, href: '#' },
-    { icon: Instagram, href: '#' },
-    { icon: Linkedin, href: '#' },
+    { icon: Facebook, href: 'https://sandeshapparala.com/' },
+    { icon: Twitter, href: 'https://x.com/sandeshapparala' },
+    { icon: Instagram, href: 'https://www.instagram.com/epixinfra/' },
+    // { icon: Linkedin, href: '#' },
 ]
 
 const services = [
-    'Company History',
-    'About Us',
-    'Contact Us',
-    'Services',
-    'Privacy Policy',
+    'Home Theatre Installation',
+    'Interior Design',
+    'Construction Services',
+    'Electrical & Lighting',
+    'Smart Integration',
 ]
 
 export default function Footer() {
@@ -54,8 +54,8 @@ export default function Footer() {
     return (
         <footer ref={footerRef} className="relative bg-black text-white overflow-hidden">
 
-            <div className="container mx-auto px-4 py-16 relative z-10">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+            <div className="container mx-auto px-4 py-16 relative z-10  lg:px-20 ">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
                     {/* Brand Section */}
                     <section className="space-y-6">
                         <motion.h2
@@ -63,10 +63,10 @@ export default function Footer() {
                             whileInView={{ opacity: 1, x: 0 }}
                             className="text-3xl font-bold text-[#C8B496]"
                         >
-                            SIMON
+                            Epix Infra
                         </motion.h2>
                         <p className="text-gray-400">
-                            The pain itself will be followed by the fat icing, but it will happen at the same time as the pain is great for some of us.
+                            At Epix Infra, we redefine living spaces by blending innovation with expertise to deliver immersive experiences that exceed expectations.
                         </p>
                         <div className="flex space-x-4">
                             {socialLinks.map(({ icon: Icon, href }, index) => (
@@ -81,13 +81,22 @@ export default function Footer() {
                                 </motion.a>
                             ))}
                         </div>
+                        <address className="text-gray-400">
+                            18th cross road, <br/>
+                            Balaji Nagar, Nellore, <br/>
+                            Andhra Pradesh, India
+                            <br />
+                            +91 1234567890
+
+                        </address>
+
                     </section>
 
-                    {/* Latest Work Section */}
-                    <section className="space-y-6">
-                        <h2 className="text-2xl font-bold text-[#C8B496]">LATEST WORK</h2>
-                        <ImageGrid />
-                    </section>
+                    {/*/!* Latest Work Section *!/*/}
+                    {/*<section className="space-y-6">*/}
+                    {/*    <h2 className="text-2xl font-bold text-[#C8B496]">LATEST WORK</h2>*/}
+                    {/*    /!*<ImageGrid />*!/*/}
+                    {/*</section>*/}
 
                     {/* Services Section */}
                     <section className="space-y-6">
@@ -110,7 +119,7 @@ export default function Footer() {
 
                     {/* Newsletter Section */}
                     <section className="space-y-6">
-                        <h2 className="text-2xl font-bold text-[#C8B496]">NEWSLETTER</h2>
+                        <h2 className="text-2xl font-bold text-[#C8B496]">Reach to us</h2>
                         <p className="text-gray-400">
                             It is important to take care of the patient, and the result will be adipisicing.
                         </p>
@@ -135,7 +144,7 @@ export default function Footer() {
                     style={{ opacity }}
                     className="mt-16 pt-8 border-t border-white/10 text-center text-gray-400"
                 >
-                    <p>Simon © {new Date().getFullYear()} All Right Reserved</p>
+                    <p>Epix Infra © {new Date().getFullYear()} All Right Reserved</p>
                 </motion.div>
             </div>
         </footer>

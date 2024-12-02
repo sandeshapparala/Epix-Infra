@@ -1,8 +1,13 @@
 import React from 'react'
 import HeroSlider from "@/components/sections/Hero";
-import BrandLogos from "@/components/BrandLogos";
-import {ServicesSection} from "@/components/sections/services";
 import About from "@/components/sections/About";
+import HomeTheaterSection from "@/components/home-theater/HomeTheaterSection";
+import {InteriorSection} from "@/components/interior-design/InteriorSection";
+import ServicesSlider from "@/components/sections/Services";
+import  {TestimonialsSection} from "@/components/Testimonials";
+import WhatsappIcon from "@/components/WhatsappIcon";
+// import TeamSection from "@/components/sections/TeamSection";
+
 
 const Page = () => {
   return (
@@ -10,8 +15,13 @@ const Page = () => {
 
         <HeroSlider />
           <About/>
-          <BrandLogos/>
-          <ServicesSection/>
+          <HomeTheaterSection/>
+          <InteriorSection/>
+          <ServicesSlider/>
+          <TestimonialsSection/>
+          {/*<TeamSection/>*/}
+          <WhatsappIcon/>
+
       </div>
   )
 }
