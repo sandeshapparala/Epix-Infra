@@ -11,53 +11,54 @@ const categories = [
     {
         title: "Modular Kitchens",
         images: [
-            "/images/interior/kitchen1.jpg",
-            "/images/interior/kitchen2.jpg",
-            "/images/interior/kitchen3.jpg",
+            "/Images/interior/kitchen1.jpg",
+            "/Images/interior/kitchen2.jpg",
+            "/Images/interior/kitchen3.jpg",
+
         ],
     },
     {
         title: "Luxury Wardrobes",
         images: [
-            "/images/interior/wardrobe1.jpg",
-            "/images/interior/wardrobe2.jpg",
-            "/images/interior/wardrobe3.jpg",
+            "/Images/interior/wardrobe1.jpg",
+            "/Images/interior/wardrobe2.jpg",
+            "/Images/interior/wardrobe3.jpg",
 
         ],
     },
     {
         title: "Living Room Spaces",
         images: [
-            "/images/interior/living_room1.jpg",
-            "/images/interior/living_room2.jpg",
-            "/images/interior/living_room3.jpg",
+            "/Images/interior/living_room1.jpg",
+            "/Images/interior/living_room2.jpg",
+            "/Images/interior/living_room3.jpg",
 
         ],
     },
     {
         title: "Comfortable Beds",
         images: [
-            "/images/interior/bed1.jpg",
-            "/images/interior/bed2.jpg",
-            "/images/interior/bed3.jpg",
+            "/Images/interior/bed1.jpg",
+            "/Images/interior/bed2.jpg",
+            "/Images/interior/bed3.jpg",
 
         ],
     },
     {
         title: "Home Bar",
         images: [
-            "/images/bar/bar1.jpg",
-            "/images/bar/bar2.jpg",
-            "/images/bar/bar3.jpg",
+            "/Images/bar/bar1.jpg",
+            "/Images/bar/bar2.jpg",
+            "/Images/bar/bar3.jpg",
 
         ],
     },
     {
         title: "Dining Room",
         images: [
-            "/images/dining/dining1.jpg",
-            "/images/dining/dining2.jpg",
-            "/images/dining/dining3.jpg",
+            "/Images/dining/dining1.jpg",
+            "/Images/dining/dining2.jpg",
+            "/Images/dining/dining3.jpg",
         ],
     },
 ];
