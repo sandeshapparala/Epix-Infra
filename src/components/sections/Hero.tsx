@@ -16,7 +16,7 @@ import Image from "next/image";
 // Import images
 import home_theater from "@/Images/Home_theater.jpg";
 import electric1 from "@/Images/electric1.jpg";
-import interior from "@/Images/interior.jpg";
+import interior from "@/Images/interior2.jpg";
 import lighting from "@/Images/lighting.jpg";
 import luxary from "@/Images/luxary.jpg";
 
@@ -27,32 +27,32 @@ const HeroSlider = () => {
     {
       image: home_theater,
       title: "Cinematic visuals and surround sound, right at home.",
-      link: "/news/first-phase-of-six-senses-residences-project-in-thailand-completes/",
+      link: "/",
       category: "Experience Immersive Entertainment",
     },
     {
       image: interior,
       title: "Modern interiors designed for style and comfort.",
-      link: "/news/a-major-winery-extension-legacy-of-bodegas-faustino-opens/",
+      link: "/",
       category: "Crafting Spaces That Inspire",
     },
     {
       image: electric1,
       title: "Reliable solutions for all your electrical needs.",
-      link: "/news/foster-plus-partners-completes-restoration-of-iconic-transamerica-pyramid-center/",
+      link: "/",
       category: "Powering Precision, Ensuring Safety",
     },
     {
       image: lighting,
       title: "Innovative lighting to highlight your vision.",
-      link: "/news/foster-plus-partners-completes-alibaba-s-new-shanghai-offices/",
+      link: "/",
       category: "Lighting That Elevates Design",
     },
     {
       image: luxary,
       title: "Gadigal and Barangaroo stations welcome Sydney customers",
-      link: "/news/gadigal-and-barangaroo-stations-welcome-sydney-customers/",
-      category: "News",
+      link: "/",
+      category: "",
     },
   ];
 
@@ -113,7 +113,7 @@ const HeroSlider = () => {
                     </span>
 
                     <Link href={slide.link} className="block mt-2 text-center">
-                      <h2 className="text-6xl font-semibold lg:max-w-6xl leading-tight">
+                      <h2 className="text-6xl font-semibold lg:max-w-5xl leading-tight max-md:text-4xl">
                         {slide.title}
                       </h2>
                     </Link>

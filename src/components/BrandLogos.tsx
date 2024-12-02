@@ -14,6 +14,9 @@ const BrandLogos = () => {
         "/Logos/Klipsch.png",
         "/Logos/Samsung.png",
         "/Logos/Sony.png",
+        "/Logos/Sony.png",
+        "/Logos/Sony.png",
+        "/Logos/Sony.png",
         "/Logos/Yamaha.png",
     ];
 

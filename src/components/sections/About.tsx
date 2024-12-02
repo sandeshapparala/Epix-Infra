@@ -53,7 +53,7 @@ export default function AboutSection() {
   }, []);
 
   return (
-    <div id={"about"} className=" bg-white py-20">
+    <div id={"about"} className=" bg-white py-20 max-md:py-10 max-md:pb-4">
       <div className="container mx-auto lg:px-20 px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <motion.div
@@ -141,7 +141,7 @@ export default function AboutSection() {
                 Choose Epix Infra for a journey beyond the ordinary—a seamless blend of innovation, artistry, and a personalized approach that turns your space into a masterpiece. Let us bring your dreams to life with dedication and excellence that set us apart.
               </p>
             </div>
-            <Button className="mt-8 bg-accent hover:bg-accent">
+            <Button className="mt-8 bg-accent hover:bg-accent max-md:text-center">
               READ MORE
             </Button>
           </motion.div>

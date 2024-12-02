@@ -4,8 +4,8 @@ import { useEffect, useRef } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
-import { ImageGrid } from './ui/image-grid'
-import { Facebook, Twitter, Instagram, Linkedin, ArrowRight, Send } from 'lucide-react'
+// import { ImageGrid } from './ui/image-grid'
+import { Facebook, Twitter, Instagram, ArrowRight, Send } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
@@ -19,11 +19,11 @@ const socialLinks = [
 ]
 
 const services = [
-    'Company History',
-    'About Us',
-    'Contact Us',
-    'Services',
-    'Privacy Policy',
+    'Home Theatre Installation',
+    'Interior Design',
+    'Construction Services',
+    'Electrical & Lighting',
+    'Smart Integration',
 ]
 
 export default function Footer() {
@@ -54,8 +54,8 @@ export default function Footer() {
     return (
         <footer ref={footerRef} className="relative bg-black text-white overflow-hidden">
 
-            <div className="container mx-auto px-4 py-16 relative z-10">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+            <div className="container mx-auto px-4 py-16 relative z-10  lg:px-20 ">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
                     {/* Brand Section */}
                     <section className="space-y-6">
                         <motion.h2
@@ -81,13 +81,22 @@ export default function Footer() {
                                 </motion.a>
                             ))}
                         </div>
+                        <address className="text-gray-400">
+                            18th cross road, <br/>
+                            Balaji Nagar, Nellore, <br/>
+                            Andhra Pradesh, India
+                            <br />
+                            +91 1234567890
+
+                        </address>
+
                     </section>
 
-                    {/* Latest Work Section */}
-                    <section className="space-y-6">
-                        <h2 className="text-2xl font-bold text-[#C8B496]">LATEST WORK</h2>
-                        <ImageGrid />
-                    </section>
+                    {/*/!* Latest Work Section *!/*/}
+                    {/*<section className="space-y-6">*/}
+                    {/*    <h2 className="text-2xl font-bold text-[#C8B496]">LATEST WORK</h2>*/}
+                    {/*    /!*<ImageGrid />*!/*/}
+                    {/*</section>*/}
 
                     {/* Services Section */}
                     <section className="space-y-6">
@@ -110,7 +119,7 @@ export default function Footer() {
 
                     {/* Newsletter Section */}
                     <section className="space-y-6">
-                        <h2 className="text-2xl font-bold text-[#C8B496]">NEWSLETTER</h2>
+                        <h2 className="text-2xl font-bold text-[#C8B496]">Reach to us</h2>
                         <p className="text-gray-400">
                             It is important to take care of the patient, and the result will be adipisicing.
                         </p>
