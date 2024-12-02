@@ -82,8 +82,8 @@ export default function Footer() {
                             ))}
                         </div>
                         <address className="text-gray-400">
-                            18th cross road, <br/>
-                            Balaji Nagar, Nellore, <br/>
+                            D.NO : 27-4-455, Goudhostel Center  <br/>
+                            Balaji Nagar, Nellore - 524002 <br/>
                             Andhra Pradesh, India
                             <br />
                             +91 1234567890

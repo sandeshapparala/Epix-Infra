@@ -12,12 +12,9 @@ const BrandLogos = () => {
         "/Logos/Denon.png",
         "/Logos/JBL.png",
         "/Logos/Klipsch.png",
-        "/Logos/Samsung.png",
+        "/Logos/KEF.jpg",
+        "/Logos/polk.png",
         "/Logos/Sony.png",
-        "/Logos/Sony.png",
-        "/Logos/Sony.png",
-        "/Logos/Sony.png",
-        "/Logos/Yamaha.png",
     ];
 
     return (
