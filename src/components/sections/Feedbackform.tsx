@@ -149,7 +149,7 @@ export function FeedbackForm() {
                                 <FormItem>
                                     <FormLabel>Email (Optional)</FormLabel>
                                     <FormControl>
-                                        <Input placeholder="john@example.com" {...field} />
+                                        <Input placeholder="example@gmail.com" {...field} />
                                     </FormControl>
                                     <FormMessage />
                                 </FormItem>
