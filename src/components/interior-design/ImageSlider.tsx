@@ -36,7 +36,7 @@ export function ImageSlider({ images, title }: ImageSliderProps) {
                                 className="object-cover"
                                 priority={index === 0}
                             />
-                            <div className="absolute inset-0 bg-black/40 transition-opacity group-hover:opacity-0" />
+                            {/*<div className="absolute inset-0 bg-black/40 transition-opacity group-hover:opacity-0" />*/}
                             <div className="absolute bottom-0 left-0 right-0 p-6 pb-3 text-white bg-gradient-to-t from-black/80 to-transparent">
                                 <h3 className="text-2xl font-bold text-center">{title}</h3>
                             </div>

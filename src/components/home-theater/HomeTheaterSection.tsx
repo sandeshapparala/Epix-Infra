@@ -129,43 +129,6 @@ export default function HomeTheaterSection() {
               </AnimatePresence>
             </div>
 
-            {/*<div className="h-32">*/}
-            {/*  <Swiper*/}
-            {/*      modules={[Navigation, Autoplay]}*/}
-            {/*      navigation={{*/}
-            {/*        prevEl: ".swiper-button-prev",*/}
-            {/*        nextEl: ".swiper-button-next",*/}
-            {/*      }}*/}
-            {/*      autoplay={{*/}
-            {/*        delay: 3000,*/}
-            {/*        disableOnInteraction: false,*/}
-            {/*      }}*/}
-            {/*      loop={true}*/}
-            {/*      className="w-full h-full rounded-lg shadow-xl"*/}
-            {/*  >*/}
-            {/*    <SwiperSlide>*/}
-            {/*      <img*/}
-            {/*          src="https://plus.unsplash.com/premium_photo-1661880106258-f1e62559f4e1"*/}
-            {/*          alt="Interior 1"*/}
-            {/*          className="w-full h-full object-cover"*/}
-            {/*      />*/}
-            {/*    </SwiperSlide>*/}
-            {/*    <SwiperSlide>*/}
-            {/*      <img*/}
-            {/*          src="https://plus.unsplash.com/premium_photo-1676968002767-1f6a09891350"*/}
-            {/*          alt="Interior 2"*/}
-            {/*          className="w-full h-full object-cover"*/}
-            {/*      />*/}
-            {/*    </SwiperSlide>*/}
-            {/*    <SwiperSlide>*/}
-            {/*      <img*/}
-            {/*          src="https://images.unsplash.com/photo-1501127122-f385ca6ddd9d"*/}
-            {/*          alt="Interior 3"*/}
-            {/*          className="w-full h-full object-cover"*/}
-            {/*      />*/}
-            {/*    </SwiperSlide>*/}
-            {/*  </Swiper>*/}
-            {/*</div>*/}
 
               <BrandLogos/>
 
