@@ -3,7 +3,7 @@ import {FeedbackForm} from "@/components/sections/Feedbackform";
 
 const Page = () => {
     return (
-        <div>
+        <div className={"pt-12"}>
             <FeedbackForm/>
         </div>
     )
