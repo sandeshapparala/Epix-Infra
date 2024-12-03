@@ -7,6 +7,7 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import Image from 'next/image';
 import gsap from 'gsap';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
+import Link from "next/link";
 
 gsap.registerPlugin(ScrollToPlugin);
 
@@ -67,9 +68,9 @@ const Navbar = () => {
                 <div className="flex justify-between h-16">
                     {/* Logo */}
                     <div className="flex-shrink-0 flex items-center">
-                        <a href="#hero" onClick={(e) => handleScroll(e, 'hero')}>
+                        <Link href="#hero" onClick={(e) => handleScroll(e, 'hero')}>
                             <Image src="/logo.png" alt="Epix Infra Logo" width={150} height={50} />
-                        </a>
+                        </Link>
                     </div>
                     {/* Desktop Menu */}
                     <div className="hidden md:flex md:items-center">

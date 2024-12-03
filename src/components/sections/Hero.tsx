@@ -67,6 +67,9 @@ const HeroSlider = () => {
 
   return (
     <section id={"hero"} className="relative w-full h-screen">
+      <h1 className="absolute top-4 left-4 text-4xl font-bold text-white z-20">
+        EPix Infra
+      </h1>
       <Swiper
         modules={[Autoplay, Pagination, Navigation, EffectFade]}
         effect="fade" // Fade effect

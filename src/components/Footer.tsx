@@ -12,8 +12,8 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 gsap.registerPlugin(ScrollTrigger)
 
 const socialLinks = [
-    { icon: Facebook, href: 'https://sandeshapparala.com/' },
-    { icon: Twitter, href: 'https://x.com/sandeshapparala' },
+    { icon: Facebook, href: 'https://www.facebook.com/lbesengineeringworks/' },
+    { icon: Twitter, href: 'https://x.com/epixinfra' },
     { icon: Instagram, href: 'https://www.instagram.com/epixinfra/' },
     // { icon: Linkedin, href: '#' },
 ]
