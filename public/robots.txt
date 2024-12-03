@@ -1,0 +1,11 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://epixinfra.com
+
+# Sitemaps
+Sitemap: https://epixinfra.com/sitemap.xml
+Sitemap: https://epixinfra.com/sitemap-1.xml
+Sitemap: https://epixinfra.com/sitemap-2.xml
