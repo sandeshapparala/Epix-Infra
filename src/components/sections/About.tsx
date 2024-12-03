@@ -11,6 +11,7 @@ import { Button } from "@/components/ui/button";
 
 import "swiper/css";
 import "swiper/css/navigation";
+import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -64,10 +65,12 @@ export default function AboutSection() {
             transition={{ duration: 0.5 }}
           >
             <div className="relative w-full h-[480px] max-md:h-[280px]">
-              <img
+              <Image
                 src="/Images/theater.webp"
                 alt="Modern interior"
                 className="w-full h-full object-cover rounded-lg"
+                // className="object-cover"
+                layout="fill" // Makes the image responsive and covers the parent container
               />
               <div className="absolute top-[15%] -right-12 w-72 h-80 z-10 max-md:-right-3 max-md:top-[80%] max-md:h-32 max-md:w-48">
                 <Swiper
@@ -84,26 +87,32 @@ export default function AboutSection() {
                   className="w-full h-full rounded-lg shadow-xl"
                 >
                   <SwiperSlide>
-                    <img
-                      src="https://plus.unsplash.com/premium_photo-1661880106258-f1e62559f4e1"
-                      alt="Interior 1"
-                      className="w-full h-full object-cover"
-                    />
+                      <Image
+                          src="/Images/about/interior1.jpg" // Ensure the image is in the `public/Images/about` directory
+                          alt="Interior 1"
+                          className="object-cover"
+                          layout="fill" // Makes the image responsive and covers the parent container
+                      />
                   </SwiperSlide>
-                  <SwiperSlide>
-                    <img
-                      src="https://plus.unsplash.com/premium_photo-1676968002767-1f6a09891350"
-                      alt="Interior 2"
-                      className="w-full h-full object-cover"
-                    />
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <img
-                      src="https://images.unsplash.com/photo-1501127122-f385ca6ddd9d"
-                      alt="Interior 3"
-                      className="w-full h-full object-cover"
-                    />
-                  </SwiperSlide>
+                    <SwiperSlide>
+                        <Image
+                            src="/Images/about/interior2.jpg" // Ensure the image is in the `public/Images/about` directory
+                            alt="Interior 2"
+                            className="object-cover"
+                            layout="fill" // Makes the image responsive and covers the parent container
+                        />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <Image
+                            src="/Images/about/interior3.jpg" // Ensure the image is in the `public/Images/about` directory
+                            alt="Interior 3"
+                            className="object-cover"
+                            layout="fill" // Makes the image responsive and covers the parent container
+                        />
+                    </SwiperSlide>
+
+
+
                 </Swiper>
               </div>
             </div>
