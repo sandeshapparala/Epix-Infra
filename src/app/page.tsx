@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import HeroSlider from "@/components/sections/Hero";
 import About from "@/components/sections/About";
 import HomeTheaterSection from "@/components/home-theater/HomeTheaterSection";
@@ -6,32 +8,37 @@ import { InteriorSection } from "@/components/interior-design/InteriorSection";
 import ServicesSlider from "@/components/sections/Services";
 import { TestimonialsSection } from "@/components/Testimonials";
 import WhatsappIcon from "@/components/WhatsappIcon";
-import Footer from "@/components/Footer";
-// import TeamSection from "@/components/sections/TeamSection";
+import { Preloader } from "@/components/Preloader";
 
 const Page = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
   return (
     <div className="">
-      {/* Header Section */}
-      <header>
-        <HeroSlider />
-      </header>
+      {isLoading && <Preloader onComplete={() => setIsLoading(false)} />}
+      {!isLoading && (
+        <>
+          {/* Header Section */}
+          <header>
+            <HeroSlider />
+          </header>
 
-      {/* Main Content Section */}
-      <main>
-        <About />
-        <HomeTheaterSection />
-        <InteriorSection />
-        <ServicesSlider />
-        <TestimonialsSection />
-        <WhatsappIcon />
-        {/* <TeamSection /> */}
-      </main>
+          {/* Main Content Section */}
+          <main>
+            <About />
+            <HomeTheaterSection />
+            <InteriorSection />
+            <ServicesSlider />
+            <TestimonialsSection />
+            <WhatsappIcon />
+          </main>
 
-      {/* Footer Section */}
-      <footer>
-        <Footer />
-      </footer>
+          {/* Footer Section */}
+          <footer>
+            {/*<Footer />*/}
+          </footer>
+        </>
+      )}
     </div>
   );
 };
