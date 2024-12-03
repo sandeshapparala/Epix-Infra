@@ -86,7 +86,7 @@ export default function Footer() {
                             Balaji Nagar, Nellore - 524002 <br/>
                             Andhra Pradesh, India
                             <br />
-                            +91 1234567890
+                            +91 7386440344
 
                         </address>
 
