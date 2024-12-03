@@ -9,6 +9,9 @@ import ServicesSlider from "@/components/sections/Services";
 import { TestimonialsSection } from "@/components/Testimonials";
 import WhatsappIcon from "@/components/WhatsappIcon";
 import { Preloader } from "@/components/Preloader";
+import {TeamSection} from "@/components/sections/TeamSection";
+import {Separator} from "@/components/ui/separator";
+import BrandLogos from "@/components/sections/BrandLogos2";
 
 const Page = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -31,6 +34,9 @@ const Page = () => {
             <ServicesSlider />
             <TestimonialsSection />
             <WhatsappIcon />
+            <TeamSection/>
+            <Separator/>
+            <BrandLogos/>
           </main>
 
           {/* Footer Section */}

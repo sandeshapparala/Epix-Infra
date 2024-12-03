@@ -44,7 +44,7 @@ const BrandLogos = () => {
             <div className="container mx-auto">
                 <Swiper
                     modules={[Autoplay]}
-                    slidesPerView={5} // Default number of logos visible
+                    slidesPerView={10} // Default number of logos visible
                     spaceBetween={20}
                     breakpoints={{
                         640: { slidesPerView: 3 }, // For small devices
