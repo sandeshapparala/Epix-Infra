@@ -82,16 +82,22 @@ const AddProjectForm: React.FC<AddProjectFormProps> = ({ onClose }) => {
           className="w-full mt-1 p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
       </label>
+
       <label className="block">
         Category:
-        <input
-          type="text"
+        <select
           name="category"
           value={formData.category}
           onChange={handleChange}
           required
           className="w-full mt-1 p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-        />
+        >
+          <option value="">Select a category</option>
+          <option value="Interior">Interior</option>
+          <option value="Home Theater">Home Theater</option>
+          <option value="Electrical">Electrical</option>
+          <option value="Furniture">Furniture</option>
+        </select>
       </label>
       <label className="block">
         Image:

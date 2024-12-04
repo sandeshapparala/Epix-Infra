@@ -73,7 +73,7 @@ const EditProjectForm: React.FC<EditProjectFormProps> = ({ project, onUpdate, on
     };
 
     return (
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <form onSubmit={handleSubmit} className="space-y-4 max-h-screen">
             <label className="block">
                 Project Name:
                 <input
