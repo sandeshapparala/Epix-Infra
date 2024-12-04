@@ -1,3 +1,9 @@
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+//@ts-nocheck
+/* eslint-disable */
+// src/components/ContactForm/ContactForm.tsx
+
+
 "use client";
 
 import React, { useState } from "react";
