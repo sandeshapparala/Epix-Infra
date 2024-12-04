@@ -150,9 +150,12 @@ export default function AboutSection() {
                 Choose Epix Infra for a journey beyond the ordinary—a seamless blend of innovation, artistry, and a personalized approach that turns your space into a masterpiece. Let us bring your dreams to life with dedication and excellence that set us apart.
               </p>
             </div>
-            <Button className="mt-8 bg-accent hover:bg-accent max-md:text-center">
-              READ MORE
-            </Button>
+              <Button
+                  className="mt-8 bg-accent hover:bg-accent max-md:text-center"
+                  onClick={() => window.location.href = '/about'}
+              >
+                  READ MORE
+              </Button>
           </motion.div>
         </div>
       </div>
