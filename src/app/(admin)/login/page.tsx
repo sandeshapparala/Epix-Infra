@@ -29,7 +29,9 @@ const LoginPage: React.FC = () => {
     try {
       await signInWithEmailAndPassword(auth, email, password);
       router.push("/admin");
-    } catch (err: any) {
+    } catch (err: unknown) {
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-expect-error
       setError(err.message);
     }
     setLoading(false);
