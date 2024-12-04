@@ -1,5 +1,3 @@
-// src/app/(admin)/admin/page.tsx
-
 "use client";
 
 import React, { useEffect, useState } from "react";
@@ -21,13 +19,44 @@ import {
   DialogContent,
   DialogHeader,
   DialogTitle,
-  DialogClose,
+  DialogFooter,
 } from "@/components/ui/dialog";
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+} from "@/components/ui/card";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
+import { Button } from "@/components/ui/button";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Badge } from "@/components/ui/badge";
+import { ScrollArea } from "@/components/ui/scroll-area";
+
+import {
+  LogOut,
+  Loader2,
+  PlusCircle,
+  Pencil,
+  Trash2,
+  MessageSquare,
+  Mail,
+  FolderKanban,
+} from "lucide-react";
 import EditFeedbackForm from "@/components/admin/EditFeedbackForm";
 import EditContactForm from "@/components/admin/EditContactForm";
 import AddProjectForm from "@/components/admin/AddProjectForm";
 import EditProjectForm from "@/components/admin/EditProjectForm";
 import { useAuth } from "@/context/AuthContext";
+import { toast } from "react-toastify";
 
 const AdminPage = () => {
   const { user, loading, signOut } = useAuth();
@@ -47,6 +76,12 @@ const AdminPage = () => {
   const [isAddProjectDialogOpen, setIsAddProjectDialogOpen] =
     useState<boolean>(false);
   const [isEditDialogOpen, setIsEditDialogOpen] = useState<boolean>(false);
+  const [isDeleting, setIsDeleting] = useState<string | null>(null);
+  const [isDeleteDialogOpen, setIsDeleteDialogOpen] = useState<boolean>(false);
+  const [deleteInfo, setDeleteInfo] = useState<{
+    id: string;
+    type: string;
+  } | null>(null);
 
   useEffect(() => {
     if (!loading && !user) {
@@ -71,6 +106,7 @@ const AdminPage = () => {
         },
         (error) => {
           console.error("Error fetching feedback submissions:", error);
+          toast.error("Failed to fetch feedback submissions");
         }
       );
 
@@ -85,6 +121,7 @@ const AdminPage = () => {
         },
         (error) => {
           console.error("Error fetching contact submissions:", error);
+          toast.error("Failed to fetch contact submissions");
         }
       );
 
@@ -99,6 +136,7 @@ const AdminPage = () => {
         },
         (error) => {
           console.error("Error fetching projects:", error);
+          toast.error("Failed to fetch projects");
         }
       );
 
@@ -111,21 +149,23 @@ const AdminPage = () => {
   }, [user]);
 
   const handleDelete = async (id: string, type: string) => {
-    if (confirm(`Are you sure you want to delete this ${type} submission?`)) {
-      try {
-        await deleteDoc(doc(db, type, id));
-        console.log(`Deleted ${type} submission with ID: ${id}`);
-      } catch (error) {
-        console.error(`Error deleting ${type} submission:`, error);
-      }
+    try {
+      setIsDeleting(id);
+      await deleteDoc(doc(db, type, id));
+      toast.success(
+        `${type.charAt(0).toUpperCase() + type.slice(1)} deleted successfully`
+      );
+    } catch (error) {
+      console.error(`Error deleting ${type} submission:`, error);
+      toast.error(`Failed to delete ${type}`);
+    } finally {
+      setIsDeleting(null);
     }
   };
 
   const handleEdit = (
-    submission: FeedbackSubmission | ContactSubmission | Project,
-    type: string
+    submission: FeedbackSubmission | ContactSubmission | Project
   ) => {
-    console.log(`Editing ${type} submission:`, submission);
     setSelectedSubmission(submission);
     setEditMode(true);
     setIsEditDialogOpen(true);
@@ -141,21 +181,38 @@ const AdminPage = () => {
         ...updatedSubmission,
         updatedAt: new Date(),
       });
-      console.log(
-        `Updated ${type} submission with ID: ${updatedSubmission.id}`
+      toast.success(
+        `${type.charAt(0).toUpperCase() + type.slice(1)} updated successfully`
       );
       setSelectedSubmission(null);
       setEditMode(false);
       setIsEditDialogOpen(false);
     } catch (error) {
       console.error(`Error updating ${type} submission:`, error);
+      toast.error(`Failed to update ${type}`);
+    }
+  };
+
+  const confirmDelete = (id: string, type: string) => {
+    setDeleteInfo({ id, type });
+    setIsDeleteDialogOpen(true);
+  };
+
+  const handleConfirmDelete = async () => {
+    if (deleteInfo) {
+      await handleDelete(deleteInfo.id, deleteInfo.type);
+      setIsDeleteDialogOpen(false);
+      setDeleteInfo(null);
     }
   };
 
   if (loading) {
     return (
-      <div className="flex justify-center items-center h-screen">
-        Loading...
+      <div className="flex h-screen items-center justify-center">
+        <div className="flex items-center gap-2">
+          <Loader2 className="h-6 w-6 animate-spin" />
+          <span className="text-lg font-medium">Loading...</span>
+        </div>
       </div>
     );
   }
@@ -165,281 +222,325 @@ const AdminPage = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gray-100 p-6">
-      <header className="flex justify-between items-center mb-6">
-        <h1 className="text-4xl font-bold">Admin Dashboard</h1>
-        <button
-          onClick={signOut}
-          className="px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700 transition"
-        >
-          Logout
-        </button>
-      </header>
-
-      {/* Tabs */}
-      <div className="mb-6">
-        <nav className="flex space-x-4 border-b">
-          <button
-            onClick={() => setActiveTab("feedback")}
-            className={`py-2 px-4 ${
-              activeTab === "feedback"
-                ? "border-b-2 border-blue-500 text-blue-500"
-                : "text-gray-600 hover:text-blue-500"
-            }`}
-          >
-            Feedback Submissions
-          </button>
-          <button
-            onClick={() => setActiveTab("contact")}
-            className={`py-2 px-4 ${
-              activeTab === "contact"
-                ? "border-b-2 border-blue-500 text-blue-500"
-                : "text-gray-600 hover:text-blue-500"
-            }`}
-          >
-            Contact Submissions
-          </button>
-          <button
-            onClick={() => setActiveTab("projects")}
-            className={`py-2 px-4 ${
-              activeTab === "projects"
-                ? "border-b-2 border-blue-500 text-blue-500"
-                : "text-gray-600 hover:text-blue-500"
-            }`}
-          >
-            Projects
-          </button>
-        </nav>
+    <div className="min-h-screen bg-background">
+      <div className="border-b">
+        <div className="flex h-16 items-center px-4 md:px-6">
+          <h1 className="text-2xl font-semibold">Admin Dashboard</h1>
+          <div className="ml-auto flex items-center gap-4">
+            <Button variant="ghost" size="icon" onClick={signOut}>
+              <LogOut className="h-5 w-5" />
+            </Button>
+          </div>
+        </div>
       </div>
 
-      {/* Submissions */}
-      {activeTab === "feedback" && (
-        <section>
-          <h2 className="text-2xl font-semibold mb-4">
-            Feedback Form Submissions
-          </h2>
-          <div className="overflow-x-auto">
-            <table className="min-w-full bg-white shadow-md rounded-lg overflow-hidden">
-              <thead className="bg-gray-200">
-                <tr>
-                  <th className="py-2 px-4 border-b">Name</th>
-                  <th className="py-2 px-4 border-b">Company</th>
-                  <th className="py-2 px-4 border-b">Email</th>
-                  <th className="py-2 px-4 border-b">Rating</th>
-                  <th className="py-2 px-4 border-b">Feedback</th>
-                  <th className="py-2 px-4 border-b">Submitted At</th>
-                  <th className="py-2 px-4 border-b">Actions</th>
-                </tr>
-              </thead>
-              <tbody>
-                {feedbackSubmissions.length === 0 ? (
-                  <tr>
-                    <td colSpan={7} className="py-4 text-center text-gray-500">
-                      No feedback submissions found.
-                    </td>
-                  </tr>
-                ) : (
-                  feedbackSubmissions.map((submission) => (
-                    <tr key={submission.id} className="hover:bg-gray-100">
-                      <td className="py-2 px-4 border-b">{submission.name}</td>
-                      <td className="py-2 px-4 border-b">
-                        {submission.company || "N/A"}
-                      </td>
-                      <td className="py-2 px-4 border-b">
-                        {submission.email || "N/A"}
-                      </td>
-                      <td className="py-2 px-4 border-b">
-                        {submission.rating ?? "N/A"}
-                      </td>
-                      <td className="py-2 px-4 border-b">
-                        {submission.feedback}
-                      </td>
-                      <td className="py-2 px-4 border-b">
-                        {submission.createdAt?.toDate().toLocaleString()}
-                      </td>
-                      <td className="py-2 px-4 border-b">
-                        <button
-                          onClick={() => handleEdit(submission, "feedback")}
-                          className="px-2 py-1 bg-yellow-500 text-white rounded mr-2 hover:bg-yellow-600 transition"
-                        >
-                          Edit
-                        </button>
-                        <button
-                          onClick={() =>
-                            handleDelete(submission.id, "feedback")
-                          }
-                          className="px-2 py-1 bg-red-500 text-white rounded hover:bg-red-600 transition"
-                        >
-                          Delete
-                        </button>
-                      </td>
-                    </tr>
-                  ))
-                )}
-              </tbody>
-            </table>
-          </div>
-        </section>
-      )}
+      <div className="container mx-auto py-6">
+        <Tabs
+          defaultValue={activeTab}
+          onValueChange={setActiveTab}
+          className="space-y-6"
+        >
+          <div className="flex items-center justify-between">
+            <TabsList>
+              <TabsTrigger value="feedback" className="flex items-center gap-2">
+                <MessageSquare className="h-4 w-4" />
+                Feedback
+              </TabsTrigger>
+              <TabsTrigger value="contact" className="flex items-center gap-2">
+                <Mail className="h-4 w-4" />
+                Contact
+              </TabsTrigger>
+              <TabsTrigger value="projects" className="flex items-center gap-2">
+                <FolderKanban className="h-4 w-4" />
+                Projects
+              </TabsTrigger>
+            </TabsList>
 
-      {activeTab === "contact" && (
-        <section>
-          <h2 className="text-2xl font-semibold mb-4">
-            Contact Form Submissions
-          </h2>
-          <div className="overflow-x-auto">
-            <table className="min-w-full bg-white shadow-md rounded-lg overflow-hidden">
-              <thead className="bg-gray-200">
-                <tr>
-                  <th className="py-2 px-4 border-b">Name</th>
-                  <th className="py-2 px-4 border-b">Email</th>
-                  <th className="py-2 px-4 border-b">Subject</th>
-                  <th className="py-2 px-4 border-b">Message</th>
-                  <th className="py-2 px-4 border-b">Submitted At</th>
-                  <th className="py-2 px-4 border-b">Actions</th>
-                </tr>
-              </thead>
-              <tbody>
-                {contactSubmissions.length === 0 ? (
-                  <tr>
-                    <td colSpan={6} className="py-4 text-center text-gray-500">
-                      No contact submissions found.
-                    </td>
-                  </tr>
-                ) : (
-                  contactSubmissions.map((submission) => (
-                    <tr key={submission.id} className="hover:bg-gray-100">
-                      <td className="py-2 px-4 border-b">{submission.name}</td>
-                      <td className="py-2 px-4 border-b">{submission.email}</td>
-                      <td className="py-2 px-4 border-b">
-                        {submission.subject}
-                      </td>
-                      <td className="py-2 px-4 border-b">
-                        {submission.message}
-                      </td>
-                      <td className="py-2 px-4 border-b">
-                        {submission.createdAt?.toDate().toLocaleString()}
-                      </td>
-                      <td className="py-2 px-4 border-b">
-                        <button
-                          onClick={() => handleEdit(submission, "contact")}
-                          className="px-2 py-1 bg-yellow-500 text-white rounded mr-2 hover:bg-yellow-600 transition"
-                        >
-                          Edit
-                        </button>
-                        <button
-                          onClick={() => handleDelete(submission.id, "contact")}
-                          className="px-2 py-1 bg-red-500 text-white rounded hover:bg-red-600 transition"
-                        >
-                          Delete
-                        </button>
-                      </td>
-                    </tr>
-                  ))
-                )}
-              </tbody>
-            </table>
+            {activeTab === "projects" && (
+              <Dialog
+                open={isAddProjectDialogOpen}
+                onOpenChange={setIsAddProjectDialogOpen}
+              >
+                <DialogTrigger asChild>
+                  <Button className="flex items-center gap-2">
+                    <PlusCircle className="h-4 w-4" />
+                    Add Project
+                  </Button>
+                </DialogTrigger>
+                <DialogContent className="sm:max-w-lg">
+                  <DialogHeader>
+                    <DialogTitle>Add New Project</DialogTitle>
+                  </DialogHeader>
+                  <AddProjectForm
+                    onClose={() => setIsAddProjectDialogOpen(false)}
+                  />
+                </DialogContent>
+              </Dialog>
+            )}
           </div>
-        </section>
-      )}
 
-      {activeTab === "projects" && (
-        <section>
-          <div className="flex justify-between items-center mb-4">
-            <h2 className="text-2xl font-semibold">Projects</h2>
-            <Dialog
-              open={isAddProjectDialogOpen}
-              onOpenChange={setIsAddProjectDialogOpen}
-            >
-              <DialogTrigger asChild>
-                <button
-                  onClick={() => setIsAddProjectDialogOpen(true)}
-                  className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
-                >
-                  Add New Project
-                </button>
-              </DialogTrigger>
-              <DialogContent className="sm:max-w-lg">
-                <DialogHeader>
-                  <DialogTitle>Add New Project</DialogTitle>
-                  <DialogClose className="btn-close" />
-                </DialogHeader>
-                <AddProjectForm
-                  onClose={() => setIsAddProjectDialogOpen(false)}
-                />
-              </DialogContent>
-            </Dialog>
-          </div>
-          <div className="overflow-x-auto">
-            <table className="min-w-full bg-white shadow-md rounded-lg overflow-hidden">
-              <thead className="bg-gray-200">
-                <tr>
-                  <th className="py-2 px-4 border-b">Name</th>
-                  <th className="py-2 px-4 border-b">Category</th>
-                  <th className="py-2 px-4 border-b">Image</th>
-                  <th className="py-2 px-4 border-b">Actions</th>
-                </tr>
-              </thead>
-              <tbody>
-                {projects.length === 0 ? (
-                  <tr>
-                    <td colSpan={4} className="py-4 text-center text-gray-500">
-                      No projects found.
-                    </td>
-                  </tr>
-                ) : (
-                  projects.map((project) => (
-                    <tr key={project.id} className="hover:bg-gray-100">
-                      <td className="py-2 px-4 border-b">{project.name}</td>
-                      <td className="py-2 px-4 border-b">{project.category}</td>
-                      <td className="py-2 px-4 border-b">
-                        <img
-                          src={project.imageUrl}
-                          alt={project.name}
-                          className="h-16 w-16 object-cover rounded"
-                        />
-                      </td>
-                      <td className="py-2 px-4 border-b">
-                        <button
-                          onClick={() => handleEdit(project, "projects")}
-                          className="px-2 py-1 bg-yellow-500 text-white rounded mr-2 hover:bg-yellow-600 transition"
-                        >
-                          Edit
-                        </button>
-                        <button
-                          onClick={() => handleDelete(project.id, "projects")}
-                          className="px-2 py-1 bg-red-500 text-white rounded hover:bg-red-600 transition"
-                        >
-                          Delete
-                        </button>
-                      </td>
-                    </tr>
-                  ))
-                )}
-              </tbody>
-            </table>
-          </div>
-        </section>
-      )}
+          <TabsContent value="feedback" className="space-y-4">
+            <Card>
+              <CardHeader>
+                <CardTitle>Feedback Submissions</CardTitle>
+                <CardDescription>
+                  Manage and review customer feedback submissions
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <ScrollArea className="h-[600px]">
+                  <Table>
+                    <TableHeader>
+                      <TableRow>
+                        <TableHead>Name</TableHead>
+                        <TableHead>Company</TableHead>
+                        <TableHead>Email</TableHead>
+                        <TableHead>Rating</TableHead>
+                        <TableHead>Feedback</TableHead>
+                        <TableHead>Date</TableHead>
+                        <TableHead className="text-right">Actions</TableHead>
+                      </TableRow>
+                    </TableHeader>
+                    <TableBody>
+                      {feedbackSubmissions.length === 0 ? (
+                        <TableRow>
+                          <TableCell
+                            colSpan={7}
+                            className="text-center text-muted-foreground"
+                          >
+                            No feedback submissions found
+                          </TableCell>
+                        </TableRow>
+                      ) : (
+                        feedbackSubmissions.map((submission) => (
+                          <TableRow key={submission.id}>
+                            <TableCell className="font-medium">
+                              {submission.name}
+                            </TableCell>
+                            <TableCell>{submission.company || "N/A"}</TableCell>
+                            <TableCell>{submission.email || "N/A"}</TableCell>
+                            <TableCell>
+                              <Badge variant="secondary">
+                                {submission.rating ?? "N/A"}
+                              </Badge>
+                            </TableCell>
+                            <TableCell className="max-w-[200px] truncate">
+                              {submission.feedback}
+                            </TableCell>
+                            <TableCell>
+                              {submission.createdAt
+                                ?.toDate()
+                                .toLocaleDateString()}
+                            </TableCell>
+                            <TableCell className="text-right">
+                              <div className="flex justify-end gap-2">
+                                <Button
+                                  variant="ghost"
+                                  size="icon"
+                                  onClick={() => handleEdit(submission)}
+                                >
+                                  <Pencil className="h-4 w-4" />
+                                </Button>
+                                <Button
+                                  variant="ghost"
+                                  size="icon"
+                                  onClick={() =>
+                                    confirmDelete(submission.id, "feedback")
+                                  }
+                                  disabled={isDeleting === submission.id}
+                                >
+                                  {isDeleting === submission.id ? (
+                                    <Loader2 className="h-4 w-4 animate-spin" />
+                                  ) : (
+                                    <Trash2 className="h-4 w-4 text-destructive" />
+                                  )}
+                                </Button>
+                              </div>
+                            </TableCell>
+                          </TableRow>
+                        ))
+                      )}
+                    </TableBody>
+                  </Table>
+                </ScrollArea>
+              </CardContent>
+            </Card>
+          </TabsContent>
 
-      {/* Edit Submission Dialog */}
+          <TabsContent value="contact" className="space-y-4">
+            <Card>
+              <CardHeader>
+                <CardTitle>Contact Submissions</CardTitle>
+                <CardDescription>
+                  Manage and review contact form submissions
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <ScrollArea className="h-[600px]">
+                  <Table>
+                    <TableHeader>
+                      <TableRow>
+                        <TableHead>Name</TableHead>
+                        <TableHead>Email</TableHead>
+                        <TableHead>Subject</TableHead>
+                        <TableHead>Message</TableHead>
+                        <TableHead>Date</TableHead>
+                        <TableHead className="text-right">Actions</TableHead>
+                      </TableRow>
+                    </TableHeader>
+                    <TableBody>
+                      {contactSubmissions.length === 0 ? (
+                        <TableRow>
+                          <TableCell
+                            colSpan={6}
+                            className="text-center text-muted-foreground"
+                          >
+                            No contact submissions found
+                          </TableCell>
+                        </TableRow>
+                      ) : (
+                        contactSubmissions.map((submission) => (
+                          <TableRow key={submission.id}>
+                            <TableCell className="font-medium">
+                              {submission.name}
+                            </TableCell>
+                            <TableCell>{submission.email}</TableCell>
+                            <TableCell>{submission.subject}</TableCell>
+                            <TableCell className="max-w-[200px] truncate">
+                              {submission.message}
+                            </TableCell>
+                            <TableCell>
+                              {submission.createdAt
+                                ?.toDate()
+                                .toLocaleDateString()}
+                            </TableCell>
+                            <TableCell className="text-right">
+                              <div className="flex justify-end gap-2">
+                                <Button
+                                  variant="ghost"
+                                  size="icon"
+                                  onClick={() => handleEdit(submission)}
+                                >
+                                  <Pencil className="h-4 w-4" />
+                                </Button>
+                                <Button
+                                  variant="ghost"
+                                  size="icon"
+                                  onClick={() =>
+                                    confirmDelete(submission.id, "contact")
+                                  }
+                                  disabled={isDeleting === submission.id}
+                                >
+                                  {isDeleting === submission.id ? (
+                                    <Loader2 className="h-4 w-4 animate-spin" />
+                                  ) : (
+                                    <Trash2 className="h-4 w-4 text-destructive" />
+                                  )}
+                                </Button>
+                              </div>
+                            </TableCell>
+                          </TableRow>
+                        ))
+                      )}
+                    </TableBody>
+                  </Table>
+                </ScrollArea>
+              </CardContent>
+            </Card>
+          </TabsContent>
+
+          <TabsContent value="projects" className="space-y-4">
+            <Card>
+              <CardHeader>
+                <CardTitle>Projects</CardTitle>
+                <CardDescription>
+                  Manage and organize your portfolio projects
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <ScrollArea className="h-[600px]">
+                  <Table>
+                    <TableHeader>
+                      <TableRow>
+                        <TableHead>Preview</TableHead>
+                        <TableHead>Name</TableHead>
+                        <TableHead>Category</TableHead>
+                        <TableHead className="text-right">Actions</TableHead>
+                      </TableRow>
+                    </TableHeader>
+                    <TableBody>
+                      {projects.length === 0 ? (
+                        <TableRow>
+                          <TableCell
+                            colSpan={4}
+                            className="text-center text-muted-foreground"
+                          >
+                            No projects found
+                          </TableCell>
+                        </TableRow>
+                      ) : (
+                        projects.map((project) => (
+                          <TableRow key={project.id}>
+                            <TableCell>
+                              <img
+                                src={project.imageUrl}
+                                alt={project.name}
+                                className="h-12 w-12 rounded-md object-cover"
+                              />
+                            </TableCell>
+                            <TableCell className="font-medium">
+                              {project.name}
+                            </TableCell>
+                            <TableCell>
+                              <Badge variant="secondary">
+                                {project.category}
+                              </Badge>
+                            </TableCell>
+                            <TableCell className="text-right">
+                              <div className="flex justify-end gap-2">
+                                <Button
+                                  variant="ghost"
+                                  size="icon"
+                                  onClick={() => handleEdit(project)}
+                                >
+                                  <Pencil className="h-4 w-4" />
+                                </Button>
+                                <Button
+                                  variant="ghost"
+                                  size="icon"
+                                  onClick={() =>
+                                    confirmDelete(project.id, "projects")
+                                  }
+                                  disabled={isDeleting === project.id}
+                                >
+                                  {isDeleting === project.id ? (
+                                    <Loader2 className="h-4 w-4 animate-spin" />
+                                  ) : (
+                                    <Trash2 className="h-4 w-4 text-destructive" />
+                                  )}
+                                </Button>
+                              </div>
+                            </TableCell>
+                          </TableRow>
+                        ))
+                      )}
+                    </TableBody>
+                  </Table>
+                </ScrollArea>
+              </CardContent>
+            </Card>
+          </TabsContent>
+        </Tabs>
+      </div>
+
       {selectedSubmission && (
         <Dialog open={isEditDialogOpen} onOpenChange={setIsEditDialogOpen}>
-          <DialogTrigger asChild>
-            <button className="hidden">Open</button>
-          </DialogTrigger>
           <DialogContent className="sm:max-w-lg">
             <DialogHeader>
               <DialogTitle>
-                Edit{" "}
-                {activeTab === "feedback"
-                  ? "Feedback"
-                  : activeTab === "contact"
-                  ? "Contact"
-                  : "Project"}{" "}
+                Edit {activeTab.charAt(0).toUpperCase() + activeTab.slice(1)}{" "}
                 Submission
               </DialogTitle>
-              <DialogClose className="btn-close" />
             </DialogHeader>
             {activeTab === "feedback" && (
               <EditFeedbackForm
@@ -465,6 +566,26 @@ const AdminPage = () => {
           </DialogContent>
         </Dialog>
       )}
+
+      <Dialog open={isDeleteDialogOpen} onOpenChange={setIsDeleteDialogOpen}>
+        <DialogContent>
+          <DialogHeader>
+            <DialogTitle>Confirm Deletion</DialogTitle>
+          </DialogHeader>
+          <p>Are you sure you want to delete this {deleteInfo?.type}?</p>
+          <DialogFooter>
+            <Button
+              variant="ghost"
+              onClick={() => setIsDeleteDialogOpen(false)}
+            >
+              Cancel
+            </Button>
+            <Button variant="destructive" onClick={handleConfirmDelete}>
+              Delete
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 };

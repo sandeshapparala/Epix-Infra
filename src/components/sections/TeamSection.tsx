@@ -7,13 +7,13 @@ import {ContactCard} from "@/components/team/contact-card";
 
 const teamMembers = [
     {
-        name: "Eswar Sai",
+        name: "Gavarrraju Eswar Sai",
         role: "7386440344",
         image: "/Images/esw.jpg",
         initials: "SJ"
     },
     {
-        name: "Jaya Prakash",
+        name: "Kandula Jaya Prakash",
         role: "9032069013",
         image: "/Images/jprakash.jpg",
         initials: "MC"
