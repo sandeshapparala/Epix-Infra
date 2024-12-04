@@ -1,3 +1,4 @@
+
 "use client";
 
 import { motion } from "framer-motion";
@@ -21,7 +22,6 @@ const categories = [
         title: "Luxury Wardrobes",
         images: [
             "/Images/interior/wardrobe1.jpg",
-            "/Images/interior/wardrobe2.jpg",
             "/Images/interior/wardrobe3.jpg",
 
         ],
