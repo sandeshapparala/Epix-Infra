@@ -145,6 +145,8 @@ export default function Footer() {
                     className="mt-16 pt-8 border-t border-white/10 text-center text-gray-400"
                 >
                     <p>Epix Infra © {new Date().getFullYear()} All Right Reserved</p>
+                    <span> </span>
+                    <p>Developed by <link  href="https://sandesh.io"/>Sandesh</p>
                 </motion.div>
             </div>
         </footer>
