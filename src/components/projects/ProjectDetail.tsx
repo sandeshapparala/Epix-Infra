@@ -277,7 +277,7 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
                 <video
                   controls
                   className="absolute inset-0 w-full h-full object-cover"
-                  src={project.video.url}
+                  src={project.video.asset?.url}
                 >
                   Your browser does not support the video tag.
                 </video>
