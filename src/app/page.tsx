@@ -25,9 +25,10 @@ const Page = () => {
   <main>
     <About />
     <HomeTheaterSection />
+    <HomeProjects />
+
     <InteriorSection />
     <ServicesSlider />
-    <HomeProjects />
     <TestimonialsSection />
     <WhatsappIcon />
     <TeamSection/>
