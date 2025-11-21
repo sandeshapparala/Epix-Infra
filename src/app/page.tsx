@@ -26,7 +26,6 @@ const Page = () => {
     <About />
     <HomeTheaterSection />
     <HomeProjects />
-
     <InteriorSection />
     <ServicesSlider />
     <TestimonialsSection />
