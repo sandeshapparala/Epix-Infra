@@ -37,7 +37,7 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
     : "/placeholder-project.jpg";
 
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
-  const gallery = project.gallery || [];
+  const gallery = (project.gallery || []).filter(img => img?.asset?._ref);
 
   const openLightbox = (index: number) => setLightboxIndex(index);
   const closeLightbox = () => setLightboxIndex(null);
@@ -242,7 +242,7 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
               </div>
             ) : (
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {gallery.map((img, idx) => {
+                {gallery.filter(img => img?.asset?._ref).map((img, idx) => {
                   const src = urlFor(img).width(1400).height(900).url();
                   return (
                     <button
