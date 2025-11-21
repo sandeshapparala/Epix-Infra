@@ -6,6 +6,7 @@ import About from "@/components/sections/About";
 import HomeTheaterSection from "@/components/home-theater/HomeTheaterSection";
 import { InteriorSection } from "@/components/interior-design/InteriorSection";
 import ServicesSlider from "@/components/sections/Services";
+import HomeProjects from "@/components/sections/HomeProjects";
 import { TestimonialsSection } from "@/components/Testimonials";
 
 import {TeamSection} from "@/components/sections/TeamSection";
@@ -26,6 +27,7 @@ const Page = () => {
     <HomeTheaterSection />
     <InteriorSection />
     <ServicesSlider />
+    <HomeProjects />
     <TestimonialsSection />
     <WhatsappIcon />
     <TeamSection/>

@@ -14,11 +14,13 @@ import { useState } from "react";
 import Image from "next/image";
 
 // Import images
-import home_theater from "@/Images/Home_theater.jpg";
+import home_theater from "/public/Images/hero/hometheater1.jpg";
 import electric1 from "@/Images/electric1.jpg";
-import interior from "@/Images/interior2.jpg";
+import interior from "/public/Images/hero/interior2.jpg";
+import dining from "/public/Images/hero/living_room2.jpg";
 import lighting from "@/Images/lighting.jpg";
 import luxary from "@/Images/luxary.jpg";
+// import epixhero3 from "@/Images/epixHero3.jpg";
 
 const HeroSlider = () => {
   const [activeSlideIndex, setActiveSlideIndex] = useState(0);
@@ -35,6 +37,12 @@ const HeroSlider = () => {
       title: "Modern interiors designed for style and comfort.",
       link: "/",
       category: "Crafting Spaces That Inspire",
+    },
+    {
+      image: dining,
+      title: "Elegant dining spaces for memorable gatherings.",
+      link: "/",
+      category: "Designs for Life's Best Moments",
     },
     {
       image: electric1,
