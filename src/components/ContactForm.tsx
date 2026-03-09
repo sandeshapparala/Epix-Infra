@@ -1,15 +1,11 @@
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+﻿// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 //@ts-nocheck
 /* eslint-disable */
-// src/components/ContactForm/ContactForm.tsx
-
-
 "use client";
 
 import React, { useState } from "react";
 import { collection, addDoc, Timestamp } from "firebase/firestore";
 import { db } from "@/lib/firebase";
-import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import {
@@ -21,372 +17,552 @@ import {
 } from "@/components/ui/select";
 import { Label } from "@/components/ui/label";
 import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-  CardDescription,
-} from "@/components/ui/card";
-
-import {
   Loader2,
   Home,
   Paintbrush,
   Building2,
   Lightbulb,
   Sofa,
+  CheckCircle2,
+  ChevronRight,
+  Tv2,
+  Speaker,
+  Armchair,
+  Cpu,
 } from "lucide-react";
 import { toast } from "react-toastify";
+import { motion, AnimatePresence } from "framer-motion";
 
 interface ContactFormProps {
   onClose: () => void;
 }
 
-interface FormData {
-  name: string;
-  email: string;
-  phone: string;
-  location: string;
-  service: string;
-  message: string;
-  roomDimensions?: {
-    length: string;
-    width: string;
-    height: string;
-  };
-  numberOfRooms?: string;
+const audioLayouts = [
+  { value: "2.0", label: "2.0   â€” Stereo" },
+  { value: "2.1", label: "2.1   â€” Stereo + Subwoofer" },
+  { value: "5.1", label: "5.1   â€” Standard Surround" },
+  { value: "5.1.2", label: "5.1.2 â€” Surround + 2 Height" },
+  { value: "5.1.4", label: "5.1.4 â€” Surround + 4 Height" },
+  { value: "7.1", label: "7.1   â€” Extended Surround" },
+  { value: "7.1.2", label: "7.1.2 â€” Extended + 2 Height (Atmos)" },
+  { value: "7.1.4", label: "7.1.4 â€” Extended + 4 Height (Atmos)" },
+  { value: "9.1.2", label: "9.1.2 â€” Wide + 2 Height" },
+  { value: "9.1.4", label: "9.1.4 â€” Wide + 4 Height" },
+  { value: "11.1.4", label: "11.1.4 â€” Reference Atmos" },
+];
+
+const speakerBrands = [
+  "Bowers & Wilkins",
+  "KEF",
+  "Klipsch",
+  "Focal",
+  "Monitor Audio",
+  "Wharfedale",
+  "JBL",
+  "Polk Audio",
+  "Sonance",
+  "GoldenEar",
+];
+
+const avBrands = [
+  "Denon",
+  "Yamaha",
+  "Marantz",
+  "Onkyo",
+  "Arcam",
+  "Pioneer",
+  "Emotiva",
+];
+
+const projectorBrands = ["Epson", "BenQ", "Sony", "JVC", "Optoma"];
+
+const services = [
+  { value: "home-theater", label: "Home Theater", icon: Home },
+  { value: "interior-work", label: "Interior Work", icon: Paintbrush },
+  { value: "elevation-work", label: "Elevation Work", icon: Building2 },
+  { value: "electrical-work", label: "Electrical Work", icon: Lightbulb },
+  { value: "furniture-work", label: "Furniture Work", icon: Sofa },
+];
+
+/* â”€â”€ pill-style multi-select â”€â”€ */
+function BrandPills({
+  title,
+  icon: Icon,
+  options,
+  selected,
+  onToggle,
+}: {
+  title: string;
+  icon: React.ElementType;
+  options: string[];
+  selected: string[];
+  onToggle: (v: string) => void;
+}) {
+  return (
+    <div className="space-y-2.5">
+      <div className="flex items-center gap-2">
+        <Icon size={14} className="text-amber-400" />
+        <span className="text-xs font-semibold tracking-widest uppercase text-white/40">
+          {title}
+        </span>
+      </div>
+      <div className="flex flex-wrap gap-2">
+        {options.map((brand) => {
+          const active = selected.includes(brand);
+          return (
+            <button
+              key={brand}
+              type="button"
+              onClick={() => onToggle(brand)}
+              className={`text-xs px-3 py-1.5 rounded-sm border transition-all duration-200 ${
+                active
+                  ? "bg-amber-400 border-amber-400 text-black font-semibold"
+                  : "border-white/15 text-white/50 hover:border-white/35 hover:text-white/80"
+              }`}
+            >
+              {brand}
+            </button>
+          );
+        })}
+      </div>
+    </div>
+  );
 }
 
-const ContactForm: React.FC<ContactFormProps> = ({ onClose }) => {
-  const [formData, setFormData] = useState<FormData>({
+/* â”€â”€ labelled input â”€â”€ */
+function Field({
+  label,
+  required,
+  children,
+}: {
+  label: string;
+  required?: boolean;
+  children: React.ReactNode;
+}) {
+  return (
+    <div className="space-y-1.5">
+      <label className="text-xs font-medium tracking-wide text-white/50 uppercase">
+        {label}
+        {required && <span className="text-amber-400 ml-0.5">*</span>}
+      </label>
+      {children}
+    </div>
+  );
+}
+
+const inputCls =
+  "bg-white/[0.04] border-white/10 text-white placeholder:text-white/20 focus:border-amber-400/60 focus:ring-0 rounded-sm h-11 text-sm";
+const selectTriggerCls =
+  "bg-white/[0.04] border-white/10 text-white focus:border-amber-400/60 rounded-sm h-11 text-sm [&>span]:text-white/60";
+
+export default function ContactForm({ onClose }: ContactFormProps) {
+  const [loading, setLoading] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+
+  const [form, setForm] = useState({
     name: "",
     email: "",
     phone: "",
     location: "",
     service: "",
     message: "",
-    roomDimensions: {
-      length: "",
-      width: "",
-      height: "",
-    },
+    // home theater specific
+    audioLayout: "",
+    roomLength: "",
+    roomWidth: "",
+    roomHeight: "",
+    screenSize: "",
+    speakerBrands: [] as string[],
+    avBrands: [] as string[],
+    projectorBrands: [] as string[],
+    // interior
     numberOfRooms: "",
   });
-  const [loading, setLoading] = useState(false);
 
-  const services = [
-    { value: "home-theater", label: "Home Theater", icon: Home },
-    { value: "interior-work", label: "Interior Work", icon: Paintbrush },
-    { value: "elevation-work", label: "Elevation Work", icon: Building2 },
-    { value: "electrical-work", label: "Electrical Work", icon: Lightbulb },
-    { value: "furniture-work", label: "Furniture Work", icon: Sofa },
-  ];
+  const set = (key: string, val: unknown) =>
+    setForm((p) => ({ ...p, [key]: val }));
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    const { name, value } = e.target;
-    if (name.startsWith("roomDimensions.")) {
-      const dimension = name.split(".")[1];
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-      // @ts-expect-error
-      setFormData((prev) => ({
-        ...prev,
-        roomDimensions: {
-          ...prev.roomDimensions,
-          [dimension]: value,
-        },
-      }));
-    } else {
-      setFormData((prev) => ({ ...prev, [name]: value }));
-    }
-  };
-
-  const handleServiceChange = (value: string) => {
-    setFormData((prev) => ({
-      ...prev,
-      service: value,
-      // Reset conditional fields when service changes
-      roomDimensions: {
-        length: "",
-        width: "",
-        height: "",
-      },
-      numberOfRooms: "",
+  const toggleBrand = (
+    key: "speakerBrands" | "avBrands" | "projectorBrands",
+    val: string,
+  ) =>
+    setForm((p) => ({
+      ...p,
+      [key]: p[key].includes(val)
+        ? p[key].filter((b) => b !== val)
+        : [...p[key], val],
     }));
-  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-
     try {
-      const dataToSubmit: any = {
-        ...formData,
+      const payload: any = {
+        name: form.name,
+        email: form.email,
+        phone: form.phone,
+        location: form.location,
+        service: form.service,
+        message: form.message,
         createdAt: Timestamp.now(),
       };
 
-      // Only include room dimensions if all fields are filled
-      if (
-        formData.service === "home-theater" &&
-        Object.values(formData.roomDimensions || {}).some((v) => v !== "")
-      ) {
-        dataToSubmit.roomDimensions = formData.roomDimensions;
-      } else {
-        delete dataToSubmit.roomDimensions;
+      if (form.service === "home-theater") {
+        payload.audioLayout = form.audioLayout;
+        payload.screenSize = form.screenSize;
+        payload.speakerBrands = form.speakerBrands;
+        payload.avBrands = form.avBrands;
+        payload.projectorBrands = form.projectorBrands;
+        if (form.roomLength || form.roomWidth || form.roomHeight) {
+          payload.roomDimensions = {
+            length: form.roomLength,
+            width: form.roomWidth,
+            height: form.roomHeight,
+          };
+        }
       }
 
-      await addDoc(collection(db, "contact"), dataToSubmit);
-      toast.success("Message sent successfully!");
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        location: "",
-        service: "",
-        message: "",
-        roomDimensions: {
-          length: "",
-          width: "",
-          height: "",
-        },
-        numberOfRooms: "",
-      });
-      onClose();
-    } catch (err: unknown) {
-      console.error("Failed to submit the form. Please try again.", err);
+      if (form.service === "interior-work" && form.numberOfRooms) {
+        payload.numberOfRooms = form.numberOfRooms;
+      }
+
+      await addDoc(collection(db, "contact"), payload);
+      setSubmitted(true);
+      toast.success("Quote request submitted!");
+    } catch (err) {
+      console.error(err);
+      toast.error("Failed to submit. Please try again.");
     }
     setLoading(false);
   };
 
-  return (
-    <Card className="w-full max-w-2xl mx-auto overflow-y-scroll">
-      <CardHeader className="text-center space-y-2">
-        <CardTitle className="text-3xl font-bold">Get in Touch</CardTitle>
-        <CardDescription>
-          Fill out the form below and we&#39;ll get back to you as soon as
-          possible.
-        </CardDescription>
-      </CardHeader>
-      <CardContent>
-        <form onSubmit={handleSubmit} className="space-y-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="space-y-2">
-              <Label htmlFor="name" className="text-sm font-medium">
-                Full Name
-              </Label>
-              <Input
-                id="name"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                required
-                placeholder="John Doe"
-                className="w-full"
-              />
-            </div>
+  /* â”€â”€ Success state â”€â”€ */
+  if (submitted) {
+    return (
+      <div className="flex flex-col items-center justify-center py-16 gap-5 text-center">
+        <div className="w-16 h-16 rounded-full bg-amber-400/10 border border-amber-400/30 flex items-center justify-center">
+          <CheckCircle2 className="text-amber-400" size={32} />
+        </div>
+        <div>
+          <p className="text-white text-xl font-semibold">Quote Request Sent</p>
+          <p className="text-white/40 text-sm mt-1 max-w-xs">
+            We&#39;ll review your requirements and get back to you within 24
+            hours.
+          </p>
+        </div>
+        <button
+          onClick={onClose}
+          className="mt-2 text-xs tracking-widest uppercase text-amber-400 hover:text-amber-300 transition-colors"
+        >
+          Close
+        </button>
+      </div>
+    );
+  }
 
-            <div className="space-y-2">
-              <Label htmlFor="email" className="text-sm font-medium">
-                Email Address
-              </Label>
+  const isHT = form.service === "home-theater";
+
+  return (
+    <div className="bg-[#0a0a0a] text-white">
+      {/* Header */}
+      <div className="border-b border-white/[0.07] px-7 py-6">
+        <div className="flex items-center gap-3 mb-1">
+          <span className="w-5 h-[1px] bg-amber-400" />
+          <span className="text-amber-400 text-[0.65rem] tracking-[0.3em] uppercase font-medium">
+            EPix Infra
+          </span>
+        </div>
+        <h2 className="text-2xl font-semibold text-white">Get a Quote</h2>
+        <p className="text-white/35 text-sm mt-1">
+          Tell us about your project and we&#39;ll build a tailored proposal.
+        </p>
+      </div>
+
+      {/* Form */}
+      <form onSubmit={handleSubmit} className="px-7 py-6 space-y-7">
+        {/* â”€â”€ Contact details â”€â”€ */}
+        <div>
+          <p className="text-[0.6rem] tracking-[0.3em] uppercase text-white/25 font-medium mb-4">
+            Contact Details
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <Field label="Full Name" required>
               <Input
-                id="email"
+                name="name"
+                value={form.name}
+                onChange={(e) => set("name", e.target.value)}
+                placeholder="John Doe"
+                required
+                className={inputCls}
+              />
+            </Field>
+            <Field label="Email Address" required>
+              <Input
                 type="email"
                 name="email"
-                value={formData.email}
-                onChange={handleChange}
-                required
+                value={form.email}
+                onChange={(e) => set("email", e.target.value)}
                 placeholder="john@example.com"
-                className="w-full"
+                required
+                className={inputCls}
               />
-            </div>
-
-            <div className="space-y-2">
-              <Label htmlFor="phone" className="text-sm font-medium">
-                Phone Number
-              </Label>
+            </Field>
+            <Field label="Phone Number" required>
               <Input
-                id="phone"
                 type="tel"
                 name="phone"
-                value={formData.phone}
-                onChange={handleChange}
+                value={form.phone}
+                onChange={(e) => set("phone", e.target.value)}
+                placeholder="+91 98765 43210"
                 required
-                placeholder="(555) 000-0000"
-                className="w-full"
+                className={inputCls}
               />
-            </div>
-
-            <div className="space-y-2">
-              <Label htmlFor="location" className="text-sm font-medium">
-                Your Location
-              </Label>
+            </Field>
+            <Field label="Your City / Location" required>
               <Input
-                id="location"
                 name="location"
-                value={formData.location}
-                onChange={handleChange}
+                value={form.location}
+                onChange={(e) => set("location", e.target.value)}
+                placeholder="Mumbai, Delhiâ€¦"
                 required
-                placeholder="City, State"
-                className="w-full"
+                className={inputCls}
               />
-            </div>
+            </Field>
           </div>
+        </div>
 
-          <div className="space-y-2">
-            <Label htmlFor="service" className="text-sm font-medium">
-              Service Required
-            </Label>
-            <Select
-              value={formData.service}
-              onValueChange={handleServiceChange}
-              required
+        {/* â”€â”€ Service â”€â”€ */}
+        <div>
+          <p className="text-[0.6rem] tracking-[0.3em] uppercase text-white/25 font-medium mb-4">
+            Service Required
+          </p>
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
+            {services.map(({ value, label, icon: Icon }) => {
+              const active = form.service === value;
+              return (
+                <button
+                  key={value}
+                  type="button"
+                  onClick={() => set("service", value)}
+                  className={`flex items-center gap-2.5 px-4 py-3 rounded-sm border text-left transition-all duration-200 ${
+                    active
+                      ? "bg-amber-400/10 border-amber-400/50 text-white"
+                      : "border-white/10 text-white/45 hover:border-white/25 hover:text-white/70"
+                  }`}
+                >
+                  <Icon
+                    size={15}
+                    className={active ? "text-amber-400" : "text-white/30"}
+                  />
+                  <span className="text-xs font-medium">{label}</span>
+                </button>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* â”€â”€ Home Theater section â”€â”€ */}
+        <AnimatePresence>
+          {isHT && (
+            <motion.div
+              key="ht-fields"
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: "auto" }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.4, ease: "easeInOut" }}
+              className="overflow-hidden"
             >
-              <SelectTrigger className="w-full">
-                <SelectValue placeholder="Select a service" />
-              </SelectTrigger>
-              <SelectContent>
-                {services.map(({ value, label, icon: Icon }) => (
-                  <SelectItem key={value} value={value}>
-                    <div className="flex items-center gap-2">
-                      <Icon className="h-4 w-4" />
-                      <span>{label}</span>
-                    </div>
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
-          </div>
+              <div className="space-y-6">
+                {/* section divider */}
+                <div className="flex items-center gap-3">
+                  <Tv2 size={13} className="text-amber-400" />
+                  <p className="text-[0.6rem] tracking-[0.3em] uppercase text-white/25 font-medium">
+                    Home Theater Specifications
+                  </p>
+                  <span className="flex-1 h-[1px] bg-white/[0.06]" />
+                </div>
 
-          {formData.service === "home-theater" && (
-            <div className="space-y-4">
-              <div className="flex items-center justify-between">
-                <Label className="text-sm font-medium">
-                  Room Dimensions (in feet)
-                </Label>
-                <span className="text-sm text-muted-foreground">
-                  (Optional)
-                </span>
+                {/* Audio layout + Screen size */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <Field label="Audio Channel Layout">
+                    <Select
+                      value={form.audioLayout}
+                      onValueChange={(v) => set("audioLayout", v)}
+                    >
+                      <SelectTrigger className={selectTriggerCls}>
+                        <SelectValue placeholder="Select layout" />
+                      </SelectTrigger>
+                      <SelectContent className="bg-[#111] border-white/10 text-white">
+                        {audioLayouts.map((l) => (
+                          <SelectItem
+                            key={l.value}
+                            value={l.value}
+                            className="text-white/70 focus:bg-amber-400/10 focus:text-amber-400"
+                          >
+                            {l.label}
+                          </SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
+                  </Field>
+
+                  <Field label="Screen / Projection Size">
+                    <Select
+                      value={form.screenSize}
+                      onValueChange={(v) => set("screenSize", v)}
+                    >
+                      <SelectTrigger className={selectTriggerCls}>
+                        <SelectValue placeholder="Select screen size" />
+                      </SelectTrigger>
+                      <SelectContent className="bg-[#111] border-white/10 text-white">
+                        {[
+                          'Up to 80"',
+                          '80" â€“ 100"',
+                          '100" â€“ 120"',
+                          '120" â€“ 140"',
+                          '140" â€“ 160"',
+                          '160"+ (Reference)',
+                        ].map((s) => (
+                          <SelectItem
+                            key={s}
+                            value={s}
+                            className="text-white/70 focus:bg-amber-400/10 focus:text-amber-400"
+                          >
+                            {s}
+                          </SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
+                  </Field>
+                </div>
+
+                {/* Room dimensions */}
+                <div>
+                  <p className="text-xs text-white/30 mb-3">
+                    Room Dimensions{" "}
+                    <span className="text-white/20">(feet â€” optional)</span>
+                  </p>
+                  <div className="grid grid-cols-3 gap-3">
+                    {(["Length", "Width", "Height"] as const).map((dim) => (
+                      <Field key={dim} label={dim}>
+                        <Input
+                          type="number"
+                          min="0"
+                          step="0.1"
+                          placeholder={dim}
+                          value={
+                            form[`room${dim}` as keyof typeof form] as string
+                          }
+                          onChange={(e) => set(`room${dim}`, e.target.value)}
+                          className={inputCls}
+                        />
+                      </Field>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Brand preferences */}
+                <div className="space-y-5 p-4 border border-white/[0.07] rounded-sm bg-white/[0.02]">
+                  <p className="text-[0.6rem] tracking-[0.3em] uppercase text-white/25 font-medium">
+                    Preferred Brands{" "}
+                    <span className="text-white/20 normal-case tracking-normal">
+                      (optional â€” select all that apply)
+                    </span>
+                  </p>
+                  <BrandPills
+                    title="Speakers"
+                    icon={Speaker}
+                    options={speakerBrands}
+                    selected={form.speakerBrands}
+                    onToggle={(v) => toggleBrand("speakerBrands", v)}
+                  />
+                  <BrandPills
+                    title="AV Receivers & Amplifiers"
+                    icon={Cpu}
+                    options={avBrands}
+                    selected={form.avBrands}
+                    onToggle={(v) => toggleBrand("avBrands", v)}
+                  />
+                  <BrandPills
+                    title="Projectors"
+                    icon={Tv2}
+                    options={projectorBrands}
+                    selected={form.projectorBrands}
+                    onToggle={(v) => toggleBrand("projectorBrands", v)}
+                  />
+                </div>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div className="space-y-2">
-                  <Label
-                    htmlFor="length"
-                    className="text-xs text-muted-foreground"
-                  >
-                    Length
-                  </Label>
-                  <Input
-                    id="length"
-                    name="roomDimensions.length"
-                    type="number"
-                    value={formData.roomDimensions?.length}
-                    onChange={handleChange}
-                    placeholder="Length"
-                    min="0"
-                    step="0.1"
-                  />
-                </div>
-                <div className="space-y-2">
-                  <Label
-                    htmlFor="width"
-                    className="text-xs text-muted-foreground"
-                  >
-                    Width
-                  </Label>
-                  <Input
-                    id="width"
-                    name="roomDimensions.width"
-                    type="number"
-                    value={formData.roomDimensions?.width}
-                    onChange={handleChange}
-                    placeholder="Width"
-                    min="0"
-                    step="0.1"
-                  />
-                </div>
-                <div className="space-y-2">
-                  <Label
-                    htmlFor="height"
-                    className="text-xs text-muted-foreground"
-                  >
-                    Height
-                  </Label>
-                  <Input
-                    id="height"
-                    name="roomDimensions.height"
-                    type="number"
-                    value={formData.roomDimensions?.height}
-                    onChange={handleChange}
-                    placeholder="Height"
-                    min="0"
-                    step="0.1"
-                  />
-                </div>
-              </div>
-            </div>
+            </motion.div>
           )}
+        </AnimatePresence>
 
-          {formData.service === "interior-work" && (
-            <div className="space-y-2">
-              <Label htmlFor="numberOfRooms" className="text-sm font-medium">
-                Number of Rooms
-              </Label>
-              <Input
-                id="numberOfRooms"
-                name="numberOfRooms"
-                type="number"
-                value={formData.numberOfRooms}
-                onChange={handleChange}
-                required
-                placeholder="Enter number of rooms"
-                min="1"
-                className="w-full"
-              />
-            </div>
-          )}
-
-          <div className="space-y-2">
-            <Label htmlFor="message" className="text-sm font-medium">
-              Project Details
-            </Label>
-            <Textarea
-              id="message"
-              name="message"
-              value={formData.message}
-              onChange={handleChange}
-              required
-              placeholder="Please describe your project requirements..."
-              className="min-h-[120px] resize-y"
-            />
-          </div>
-
-          <div className="flex justify-end space-x-4 pt-4">
-            <Button
-              type="button"
-              variant="outline"
-              onClick={onClose}
-              disabled={loading}
-              className="w-24"
+        {/* â”€â”€ Interior: number of rooms â”€â”€ */}
+        <AnimatePresence>
+          {form.service === "interior-work" && (
+            <motion.div
+              key="interior-fields"
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: "auto" }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.35 }}
+              className="overflow-hidden"
             >
-              Cancel
-            </Button>
-            <Button type="submit" disabled={loading} className="w-24">
-              {loading ? (
-                <>
-                  <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                  Sending...
-                </>
-              ) : (
-                "Submit"
-              )}
-            </Button>
-          </div>
-        </form>
-      </CardContent>
-    </Card>
+              <Field label="Number of Rooms" required>
+                <Input
+                  type="number"
+                  min="1"
+                  value={form.numberOfRooms}
+                  onChange={(e) => set("numberOfRooms", e.target.value)}
+                  placeholder="e.g. 4"
+                  className={inputCls}
+                />
+              </Field>
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        {/* â”€â”€ Project details â”€â”€ */}
+        <Field label="Project Details" required>
+          <Textarea
+            name="message"
+            value={form.message}
+            onChange={(e) => set("message", e.target.value)}
+            required
+            placeholder="Describe your vision, budget range, timeline, or anything relevantâ€¦"
+            className={`${inputCls} min-h-[110px] resize-none h-auto py-3`}
+          />
+        </Field>
+
+        {/* â”€â”€ Actions â”€â”€ */}
+        <div className="flex items-center justify-between pt-2 border-t border-white/[0.07]">
+          <button
+            type="button"
+            onClick={onClose}
+            className="text-white/30 hover:text-white/60 text-xs tracking-widest uppercase transition-colors"
+          >
+            Cancel
+          </button>
+          <button
+            type="submit"
+            disabled={loading || !form.service}
+            className="group relative overflow-hidden bg-amber-400 hover:bg-amber-300 disabled:bg-white/10 disabled:text-white/20 text-black text-xs font-semibold tracking-[0.18em] uppercase px-8 py-3.5 transition-all duration-300 flex items-center gap-2"
+          >
+            {loading ? (
+              <>
+                <Loader2 size={14} className="animate-spin" /> Submittingâ€¦
+              </>
+            ) : (
+              <>
+                <span>Submit Request</span>
+                <ChevronRight
+                  size={14}
+                  className="transition-transform group-hover:translate-x-0.5"
+                />
+              </>
+            )}
+          </button>
+        </div>
+      </form>
+    </div>
   );
-};
-
-export default ContactForm;
+}

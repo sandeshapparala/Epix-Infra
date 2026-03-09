@@ -16,10 +16,26 @@ export interface FeedbackSubmission {
 
 export interface ContactSubmission {
   id: string;
+  // contact
   name: string;
   email: string;
-  subject: string;
+  phone?: string;
+  location?: string;
+  // meta
+  service?: string;
   message: string;
+  budget?: string;
+  timeline?: string;
+  // home theater spec
+  audioLayout?: string;
+  screenSize?: string;
+  roomDimensions?: { length: string; width: string; height: string };
+  // brand preferences
+  processorBrands?: string[];
+  avrBrands?: string[];
+  powerAmpBrands?: string[];
+  speakerBrands?: string[];
+  subwooferBrands?: string[];
   createdAt: any;
   updatedAt?: any;
 }

@@ -1,7 +1,6 @@
 // import type { Metadata } from "next";
 
 import "./globals.css";
-import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/next";
@@ -60,8 +59,6 @@ export default function RootLayout({
       </head>
 
       <body className={`antialiased`}>
-        <Navbar />
-
         <AuthProvider>{children}</AuthProvider>
         <SpeedInsights />
         <Analytics />
