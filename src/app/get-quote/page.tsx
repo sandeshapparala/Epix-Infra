@@ -25,6 +25,7 @@ import {
   Tv2,
   Speaker,
   Cpu,
+  Monitor,
   ArrowLeft,
   Phone,
   Mail,
@@ -60,6 +61,7 @@ const avrBrands = ["Marantz", "Denon", "Anthem"];
 const powerAmpBrands = ["Rotel", "Tonewinner"];
 const speakerBrands = ["Sonus Faber", "Focal", "Klipsch", "Canton"];
 const subwooferBrands = ["SVS"];
+const projectorBrands = ["BenQ", "Sony"];
 
 const labelCls =
   "block text-xs font-semibold tracking-wider text-gray-400 uppercase mb-2";
@@ -98,13 +100,18 @@ function BrandPills({
   options,
   selected,
   onToggle,
+  otherValue,
+  onOtherChange,
 }: {
   title: string;
   icon: React.ElementType;
   options: string[];
   selected: string[];
   onToggle: (v: string) => void;
+  otherValue?: string;
+  onOtherChange?: (v: string) => void;
 }) {
+  const othersActive = selected.includes("Others");
   return (
     <div className="space-y-3">
       <div className="flex items-center gap-2">
@@ -131,7 +138,26 @@ function BrandPills({
             </button>
           );
         })}
+        <button
+          type="button"
+          onClick={() => onToggle("Others")}
+          className={`text-xs px-3.5 py-2 rounded-lg border font-medium transition-all duration-200 ${
+            othersActive
+              ? "bg-amber-400 border-amber-400 text-white shadow-sm"
+              : "bg-white border-dashed border-gray-300 text-gray-400 hover:border-amber-300 hover:text-amber-600"
+          }`}
+        >
+          Others
+        </button>
       </div>
+      {othersActive && onOtherChange !== undefined && (
+        <Input
+          value={otherValue || ""}
+          onChange={(e) => onOtherChange(e.target.value)}
+          placeholder="Enter brand name…"
+          className={inputCls}
+        />
+      )}
     </div>
   );
 }
@@ -187,6 +213,13 @@ export default function GetQuotePage() {
     powerAmpBrands: [] as string[],
     speakerBrands: [] as string[],
     subwooferBrands: [] as string[],
+    projectorBrands: [] as string[],
+    processorOther: "",
+    avrOther: "",
+    powerAmpOther: "",
+    speakerOther: "",
+    subwooferOther: "",
+    projectorOther: "",
   });
 
   const set = (key: string, val: unknown) =>
@@ -198,7 +231,8 @@ export default function GetQuotePage() {
       | "avrBrands"
       | "powerAmpBrands"
       | "speakerBrands"
-      | "subwooferBrands",
+      | "subwooferBrands"
+      | "projectorBrands",
     val: string,
   ) =>
     setForm((p) => ({
@@ -228,6 +262,13 @@ export default function GetQuotePage() {
         powerAmpBrands: form.powerAmpBrands,
         speakerBrands: form.speakerBrands,
         subwooferBrands: form.subwooferBrands,
+        projectorBrands: form.projectorBrands,
+        ...(form.processorOther && { processorOther: form.processorOther }),
+        ...(form.avrOther && { avrOther: form.avrOther }),
+        ...(form.powerAmpOther && { powerAmpOther: form.powerAmpOther }),
+        ...(form.speakerOther && { speakerOther: form.speakerOther }),
+        ...(form.subwooferOther && { subwooferOther: form.subwooferOther }),
+        ...(form.projectorOther && { projectorOther: form.projectorOther }),
         createdAt: Timestamp.now(),
       };
       if (form.roomLength || form.roomWidth || form.roomHeight) {
@@ -478,6 +519,8 @@ export default function GetQuotePage() {
                     options={processorBrands}
                     selected={form.processorBrands}
                     onToggle={(v) => toggleBrand("processorBrands", v)}
+                    otherValue={form.processorOther}
+                    onOtherChange={(v) => set("processorOther", v)}
                   />
                   <div className="h-px bg-gray-100" />
                   <BrandPills
@@ -486,6 +529,8 @@ export default function GetQuotePage() {
                     options={avrBrands}
                     selected={form.avrBrands}
                     onToggle={(v) => toggleBrand("avrBrands", v)}
+                    otherValue={form.avrOther}
+                    onOtherChange={(v) => set("avrOther", v)}
                   />
                   <div className="h-px bg-gray-100" />
                   <BrandPills
@@ -494,6 +539,8 @@ export default function GetQuotePage() {
                     options={powerAmpBrands}
                     selected={form.powerAmpBrands}
                     onToggle={(v) => toggleBrand("powerAmpBrands", v)}
+                    otherValue={form.powerAmpOther}
+                    onOtherChange={(v) => set("powerAmpOther", v)}
                   />
                   <div className="h-px bg-gray-100" />
                   <BrandPills
@@ -502,6 +549,8 @@ export default function GetQuotePage() {
                     options={speakerBrands}
                     selected={form.speakerBrands}
                     onToggle={(v) => toggleBrand("speakerBrands", v)}
+                    otherValue={form.speakerOther}
+                    onOtherChange={(v) => set("speakerOther", v)}
                   />
                   <div className="h-px bg-gray-100" />
                   <BrandPills
@@ -510,6 +559,18 @@ export default function GetQuotePage() {
                     options={subwooferBrands}
                     selected={form.subwooferBrands}
                     onToggle={(v) => toggleBrand("subwooferBrands", v)}
+                    otherValue={form.subwooferOther}
+                    onOtherChange={(v) => set("subwooferOther", v)}
+                  />
+                  <div className="h-px bg-gray-100" />
+                  <BrandPills
+                    title="Projectors"
+                    icon={Monitor}
+                    options={projectorBrands}
+                    selected={form.projectorBrands}
+                    onToggle={(v) => toggleBrand("projectorBrands", v)}
+                    otherValue={form.projectorOther}
+                    onOtherChange={(v) => set("projectorOther", v)}
                   />
                 </div>
               </SectionCard>
@@ -632,11 +693,6 @@ export default function GetQuotePage() {
                   emoji: "🎯",
                   title: "No obligation, free quote",
                   desc: "Detailed proposal with zero pressure.",
-                },
-                {
-                  emoji: "🏅",
-                  title: "5-year warranty",
-                  desc: "All installations fully backed.",
                 },
                 {
                   emoji: "🔊",

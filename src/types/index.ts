@@ -36,6 +36,13 @@ export interface ContactSubmission {
   powerAmpBrands?: string[];
   speakerBrands?: string[];
   subwooferBrands?: string[];
+  projectorBrands?: string[];
+  processorOther?: string;
+  avrOther?: string;
+  powerAmpOther?: string;
+  speakerOther?: string;
+  subwooferOther?: string;
+  projectorOther?: string;
   createdAt: any;
   updatedAt?: any;
 }
