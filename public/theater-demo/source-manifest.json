@@ -1,0 +1,118 @@
+{
+  "retrievedAt": "2026-10-13T17:22:31.8133190Z",
+  "models": [
+    {
+      "file": "models/2-chair-row-draco.gltf",
+      "sourceUrl": "https://theaters.audioadvice.com/3dModels/default/seating/2-chair-row-draco.gltf",
+      "bytes": 233980,
+      "sha256": "fae2080a5bf23acda238eeeb9ff47baef831d487d19aac77630807f9bef77279",
+      "meshes": [
+        "Mesh_0.004"
+      ],
+      "requiredExtensions": [
+        "KHR_draco_mesh_compression"
+      ],
+      "licenseStatus": "Reuse permission not established. Reference assets for the requested local demonstration."
+    },
+    {
+      "file": "models/3-chair-row-draco.gltf",
+      "sourceUrl": "https://theaters.audioadvice.com/3dModels/default/seating/3-chair-row-draco.gltf",
+      "bytes": 291378,
+      "sha256": "15ad0437271547578d38e237da32197ad751b6a34792936ed71c6d0eba91b4a0",
+      "meshes": [
+        "Mesh_0.004"
+      ],
+      "requiredExtensions": [
+        "KHR_draco_mesh_compression"
+      ],
+      "licenseStatus": "Reuse permission not established. Reference assets for the requested local demonstration."
+    },
+    {
+      "file": "models/4-chair-row-draco.gltf",
+      "sourceUrl": "https://theaters.audioadvice.com/3dModels/default/seating/4-chair-row-draco.gltf",
+      "bytes": 355035,
+      "sha256": "3f9699bb7965c0992cc0925240c0d58a42ce86ccdfb4350261a959eaa6cf9bb2",
+      "meshes": [
+        "Mesh_0.008"
+      ],
+      "requiredExtensions": [
+        "KHR_draco_mesh_compression"
+      ],
+      "licenseStatus": "Reuse permission not established. Reference assets for the requested local demonstration."
+    },
+    {
+      "file": "models/5-chair-row-draco.gltf",
+      "sourceUrl": "https://theaters.audioadvice.com/3dModels/default/seating/5-chair-row-draco.gltf",
+      "bytes": 417169,
+      "sha256": "a75dff690b831127773782d5eac33c8faef9d13a8530036a8d4a0951d4488375",
+      "meshes": [
+        "Mesh_0.012"
+      ],
+      "requiredExtensions": [
+        "KHR_draco_mesh_compression"
+      ],
+      "licenseStatus": "Reuse permission not established. Reference assets for the requested local demonstration."
+    },
+    {
+      "file": "models/projector-no-mount-draco.gltf",
+      "sourceUrl": "https://theaters.audioadvice.com/3dModels/default/projector/projector-no-mount-draco.gltf",
+      "bytes": 519289,
+      "sha256": "21fead20a19cc74e86bb854b2f23e7ad55cb7ecbd0bc6f6dd204af911a0f956d",
+      "meshes": [
+        "Mesh_0.001"
+      ],
+      "requiredExtensions": [
+        "KHR_draco_mesh_compression"
+      ],
+      "licenseStatus": "Reuse permission not established. Reference assets for the requested local demonstration."
+    },
+    {
+      "file": "models/all-speakers-draco.gltf",
+      "sourceUrl": "https://theaters.audioadvice.com/3dModels/default/speakers/all-speakers-draco.gltf",
+      "bytes": 6216063,
+      "sha256": "8c0e6ee9d86d04e3ba77717323e0c345e9ca0155093c2d91ce249520315e7ac7",
+      "meshes": [
+        "bookshelf_mesh",
+        "center_mesh",
+        "tower_mesh",
+        "ceiling_mesh",
+        "ceiling_grill_mesh",
+        "sub_mesh",
+        "Mesh"
+      ],
+      "requiredExtensions": [
+        "KHR_draco_mesh_compression"
+      ],
+      "licenseStatus": "Reuse permission not established. Reference assets for the requested local demonstration."
+    },
+    {
+      "file": "models/tv-draco.gltf",
+      "sourceUrl": "https://theaters.audioadvice.com/3dModels/default/television/tv-draco.gltf",
+      "bytes": 120566,
+      "sha256": "722eddcfa14a578d6b5e5b6c20aedab2c0f7c969bc91c11b9cdaa31f2db6bb01",
+      "meshes": [
+        "frame_mesh",
+        "screen_mesh"
+      ],
+      "requiredExtensions": [
+        "KHR_draco_mesh_compression"
+      ],
+      "licenseStatus": "Reuse permission not established. Reference assets for the requested local demonstration."
+    }
+  ],
+  "textures": [
+    {
+      "file": "carpet-bump-map.jpg",
+      "sourceUrl": "https://theaters.audioadvice.com/img/textures/carpet-bump-map.jpg",
+      "sha256": "c98fbe8f3ba637dad31794bdeb2618264f4d9b91de9a7adc8ae5eeee94a2c590",
+      "licenseStatus": "Reuse permission not established."
+    },
+    {
+      "file": "background-gradient.jpg",
+      "sourceUrl": "https://theaters.audioadvice.com/img/textures/background-gradient.jpg",
+      "sha256": "978e597802db7bb5a5e5181010172515a5cf83b5a2dd82254ee62a1175744115",
+      "licenseStatus": "Reuse permission not established."
+    }
+  ],
+  "decoderSource": "Installed three package; Draco decoder included with its notices."
+}
