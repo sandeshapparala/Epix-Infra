@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useRef } from 'react'
+import Image from 'next/image'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
@@ -63,7 +64,7 @@ export default function Footer() {
                             whileInView={{ opacity: 1, x: 0 }}
                             className="text-3xl font-bold text-[#C8B496]"
                         >
-                            Epix Infra
+                            <Image src="/brand/epix-infra-logo.webp" alt="Epix Infra — Interior, Exterior, Home Theatre" width={240} height={111} className="rounded-md bg-white p-2 object-contain" />
                         </motion.h2>
                         <p className="text-gray-400">
                             At Epix Infra, we redefine living spaces by blending innovation with expertise to deliver immersive experiences that exceed expectations.

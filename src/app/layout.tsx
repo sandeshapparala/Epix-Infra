@@ -13,6 +13,15 @@ export const metadata = {
   keywords:
     "Epix Infra, home theater solutions, interior designing, architectural lighting, electrical expertise, modern interiors, Hyderabad",
   authors: [{ name: "Epix Infra", url: "https://epixinfra.com" }],
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon-32x32.png", type: "image/png", sizes: "32x32" },
+      { url: "/favicon-16x16.png", type: "image/png", sizes: "16x16" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
+  },
+  manifest: "/site.webmanifest",
   viewport: "width=device-width, initial-scale=1.0",
   openGraph: {
     type: "website",
@@ -54,7 +63,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" type="image/jpeg" href="/logo.jpg" />
         <link rel="canonical" href="https://epixinfra.com" />
       </head>
 

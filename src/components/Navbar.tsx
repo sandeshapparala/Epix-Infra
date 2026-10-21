@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import logoWhite from "@/Images/logo_white.png";
+import brandLogo from "@/Images/logo_white.png";
 import gsap from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
@@ -109,30 +109,18 @@ const Navbar = () => {
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-[68px]">
-            {/* ── Logo (crossfade white ↔ colour) ── */}
+            {/* Approved artwork on a white backing stays readable over the hero. */}
             <Link
               href="/"
               onClick={() => navigateToSection("hero")}
-              className="flex-shrink-0 relative w-[130px] h-[44px]"
+              className="flex-shrink-0 relative w-[148px] h-[54px] overflow-hidden rounded-md bg-white"
             >
-              {/* Colour logo — visible when scrolled */}
               <Image
-                src="/logo.png"
-                alt="EPix Infra"
+                src={brandLogo}
+                alt="Epix Infra"
                 fill
-                className={`object-contain transition-opacity duration-400 ${
-                  scrolled ? "opacity-100" : "opacity-0"
-                }`}
-                priority
-              />
-              {/* White logo — visible over dark hero */}
-              <Image
-                src={logoWhite}
-                alt="EPix Infra"
-                fill
-                className={`object-contain transition-opacity duration-400 ${
-                  scrolled ? "opacity-0" : "opacity-100"
-                }`}
+                sizes="148px"
+                className="object-contain"
                 priority
               />
             </Link>
