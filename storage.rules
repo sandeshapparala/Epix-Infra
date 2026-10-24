@@ -1,0 +1,34 @@
+rules_version = '2';
+
+service firebase.storage {
+  match /b/{bucket}/o {
+    // Public-site administration is independent of marketing roles and always
+    // requires an explicit positive custom claim.
+    function publicSiteAdmin() {
+      return request.auth != null
+             && ('publicSiteAdmin' in request.auth.token)
+             && request.auth.token.publicSiteAdmin == true;
+    }
+
+    // Marketing evidence is written and read only by the trusted server.
+    match /marketing-evidence/{path=**} {
+      allow read, write: if false;
+    }
+
+    // Project previews and quotation PDFs are private; authenticated API
+    // downloads recheck project ownership before serving any bytes.
+    match /theater-private/{path=**} { allow read, write: if false; }
+
+    // Preserve the current public website's project-image behavior.
+    match /projects/{path=**} {
+      allow read: if true;
+      allow write: if publicSiteAdmin()
+                   && request.resource.size < 10 * 1024 * 1024
+                   && request.resource.contentType.matches('image/.*');
+    }
+
+    match /{path=**} {
+      allow read, write: if false;
+    }
+  }
+}

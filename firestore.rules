@@ -1,0 +1,75 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function signedIn() {
+      return request.auth != null;
+    }
+
+    // Public-site administration is a separate authority from marketing roles.
+    // A positive custom claim prevents arbitrary Firebase accounts and
+    // marketing-only identities from inheriting privileged legacy access.
+    function publicSiteAdmin() {
+      return signedIn()
+             && ('publicSiteAdmin' in request.auth.token)
+             && request.auth.token.publicSiteAdmin == true;
+    }
+
+    // Marketing data is server-only. Firebase Admin bypasses Rules, while all
+    // browser access is denied regardless of authentication.
+    match /marketingUsers/{path=**} {
+      allow read, write: if false;
+    }
+    match /marketingUserStates/{path=**} {
+      allow read, write: if false;
+    }
+    match /marketingVisits/{path=**} {
+      allow read, write: if false;
+    }
+    match /marketingEvidence/{path=**} {
+      allow read, write: if false;
+    }
+    match /marketingIdempotency/{path=**} {
+      allow read, write: if false;
+    }
+    match /marketingLocationChallenges/{path=**} {
+      allow read, write: if false;
+    }
+    match /marketingSettings/{path=**} {
+      allow read, write: if false;
+    }
+    match /marketingAudit/{path=**} {
+      allow read, write: if false;
+    }
+
+    // Theatre access is checked by the trusted API, including ownership,
+    // current membership, price permissions and per-employee discount limits.
+    match /theaterUsers/{path=**} { allow read, write: if false; }
+    match /theaterProjects/{path=**} { allow read, write: if false; }
+    match /theaterQuotes/{path=**} { allow read, write: if false; }
+    match /theaterPrices/{path=**} { allow read, write: if false; }
+    match /theaterServiceRates/{path=**} { allow read, write: if false; }
+    match /theaterRequests/{path=**} { allow read, write: if false; }
+    match /theaterAudit/{path=**} { allow read, write: if false; }
+    match /theaterMedia/{path=**} { allow read, write: if false; }
+
+    // Existing public-site paths remain browser-backed, but privileged actions
+    // require the dedicated positive claim above.
+    match /contact/{submissionId} {
+      allow create: if true;
+      allow read, update, delete: if publicSiteAdmin();
+    }
+    match /feedback/{feedbackId} {
+      allow read, create: if true;
+      allow update, delete: if publicSiteAdmin();
+    }
+    match /projects/{projectId} {
+      allow read: if true;
+      allow create, update, delete: if publicSiteAdmin();
+    }
+
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

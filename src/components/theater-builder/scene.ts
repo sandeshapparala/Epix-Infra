@@ -2,13 +2,14 @@ import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 import { DRACOLoader } from "three/examples/jsm/loaders/DRACOLoader.js";
-import { calculateDesign, constrainObjectMove, rowWidth, seatOffset, seatingPosition, type ObjectPosition, type CameraView, type TheaterDesign } from "./design";
+import { calculateDesign, constrainObjectMove, rowMotionBounds, riserWidth, SEATING_CLEARANCE, rowWidth, seatOffset, seatingPosition, type ObjectPosition, type CameraView, type TheaterDesign } from "./design";
+import { formatLength, type LengthUnit } from "@/lib/theater/measurements";
 
 const BASE = "/theater-demo/";
 const MODEL_FILES = ["2-chair-row-draco.gltf", "3-chair-row-draco.gltf", "4-chair-row-draco.gltf", "5-chair-row-draco.gltf", "all-speakers-draco.gltf", "projector-no-mount-draco.gltf", "tv-draco.gltf"];
 const FINISH = { graphite: { wall: "#363b42", panel: "#222830" }, walnut: { wall: "#614b3f", panel: "#3c2d25" }, midnight: { wall: "#243b54", panel: "#17283c" } };
 export type SceneHandle = {
-  update: (design: TheaterDesign, view: CameraView) => void;
+  update: (design: TheaterDesign, view: CameraView, units?: LengthUnit) => void;
   zoom: (amount: number) => void;
   resetCamera: () => void;
   capture: () => string;
@@ -147,6 +148,11 @@ export function createTheaterScene(canvas: HTMLCanvasElement, onProgress: (loade
     if (!m) { m = new THREE.MeshStandardMaterial({ color, roughness }); materials.set(key, m); ownedMaterials.add(m); }
     return m;
   }
+  // A colour-picker drag updates these two materials instead of allocating one
+  // GPU material per colour encountered on the wheel.
+  const roomWallMaterial = new THREE.MeshStandardMaterial({ roughness: 0.8 });
+  const roomPanelMaterial = new THREE.MeshStandardMaterial({ roughness: 0.8 });
+  ownedMaterials.add(roomWallMaterial); ownedMaterials.add(roomPanelMaterial);
   function box(size: [number, number, number], position: [number, number, number], mat: THREE.Material) {
     const mesh = reuse("box", () => new THREE.Mesh(unitBox, mat));
     mesh.material = mat; mesh.scale.set(...size); mesh.position.set(...position);
@@ -237,15 +243,22 @@ export function createTheaterScene(canvas: HTMLCanvasElement, onProgress: (loade
     }
     camera.updateProjectionMatrix(); controls.update();
   }
-  let pending: { design: TheaterDesign; view: CameraView } | undefined;
-  function update(design: TheaterDesign, view: CameraView) { currentDesign = design; currentView = view; pending = { design, view }; }
-  function applyDesign(d: TheaterDesign, view: CameraView) {
+  let currentUnits: LengthUnit = "ft";
+  let pending: { design: TheaterDesign; view: CameraView; units: LengthUnit } | undefined;
+  function update(design: TheaterDesign, view: CameraView, units: LengthUnit = currentUnits) { currentDesign = design; currentView = view; currentUnits = units; pending = { design, view, units }; }
+  function applyDesign(d: TheaterDesign, view: CameraView, units: LengthUnit) {
     const started = performance.now();
     currentDesign = d; currentView = view;
     if (disposed || !loadedModels) return;
     counts.clear(); pool.forEach(object => { object.visible = false; });
     const { screen, viewingDistance, sound, projector } = calculateDesign(d);
-    const colors = FINISH[d.finish];
+    if (d.finish === "custom") {
+      roomWallMaterial.color.set(d.wallColor ?? "#596978");
+      roomPanelMaterial.color.copy(roomWallMaterial.color).multiplyScalar(0.62);
+    } else {
+      roomWallMaterial.color.set(FINISH[d.finish].wall);
+      roomPanelMaterial.color.set(FINISH[d.finish].panel);
+    }
     const frontZ = -d.depth / 2;
     const primaryZ = sound.listener[2];
     const offset = sound.listener[0];
@@ -253,8 +266,8 @@ export function createTheaterScene(canvas: HTMLCanvasElement, onProgress: (loade
     carpet.repeat.set(d.width * 3, d.depth * 3);
     floor.bumpMap = carpet; floor.bumpScale = 0.035;
     box([d.width + 0.18, 0.14, d.depth + 0.18], [0, -0.08, 0], floor);
-    const wall = material(colors.wall);
-    const panel = material(colors.panel);
+    const wall = roomWallMaterial;
+    const panel = roomPanelMaterial;
     box([d.width, d.height, 0.12], [0, d.height / 2, frontZ - 0.06], wall);
     box([0.12, d.height, d.depth], [-d.width / 2 - 0.06, d.height / 2, 0], wall);
     // Right and rear walls are cut away to make the layout readable.
@@ -279,10 +292,10 @@ export function createTheaterScene(canvas: HTMLCanvasElement, onProgress: (loade
       const rowPosition = seatingPosition(d, row);
       const [rowX, elevation, z] = rowPosition;
       if (row > 0) {
-        box([Math.min(d.width - 0.18, rowWidth(d.seats) + 0.35), elevation, d.rowSpacing], [rowX, elevation / 2, z + 0.05], panel);
-        box([rowWidth(d.seats) + 0.3, 0.016, 0.025], [rowX, elevation + 0.015, z - d.rowSpacing / 2 + 0.04], strip);
+        box([riserWidth(d), elevation, SEATING_CLEARANCE.depth], [rowX, elevation / 2, z], panel);
+        box([riserWidth(d) - 0.05, 0.016, 0.025], [rowX, elevation + 0.015, z - SEATING_CLEARANCE.depth / 2 + 0.04], strip);
       }
-      draggable.push({ id: `row-${row}`, object: model(rowModel, rowWidth(d.seats), rowPosition, Math.PI, 1.15, 1.4) });
+      draggable.push({ id: `row-${row}`, object: model(rowModel, rowWidth(d.seats), rowPosition, Math.PI, SEATING_CLEARANCE.height, SEATING_CLEARANCE.depth) });
     }
     const speakerPack = models.get("all-speakers-draco.gltf")!;
     const source = (name: string) => { const object = speakerPack.getObjectByName(name); if (!object) throw new Error(`The speaker asset is missing ${name}.`); return object; };
@@ -299,12 +312,12 @@ export function createTheaterScene(canvas: HTMLCanvasElement, onProgress: (loade
       const z = projector[2];
       draggable.push({ id: "projector", object: model(models.get("projector-no-mount-draco.gltf")!, 0.45, projector, 0, 0.18, 0.44) });
       box([0.045, Math.max(0.02, d.height - projector[1] - 0.18), 0.045], [projector[0], (d.height + projector[1] + 0.18) / 2, z], frame);
-      if (d.dimensions) ruler([0, d.height - 0.48, frontZ + 0.2], [0, d.height - 0.48, z], `Throw ${(projector[2] - frontZ).toFixed(2)} m`);
+      if (d.dimensions) ruler([0, d.height - 0.48, frontZ + 0.2], [0, d.height - 0.48, z], `Throw ${formatLength(projector[2] - frontZ, units)}`);
     }
     if (d.dimensions) {
-      ruler([-d.width / 2, 0.2, d.depth / 2 + 0.2], [d.width / 2, 0.2, d.depth / 2 + 0.2], `${d.width.toFixed(2)} m wide`);
-      ruler([d.width / 2 + 0.2, 0.2, frontZ], [d.width / 2 + 0.2, 0.2, d.depth / 2], `${d.depth.toFixed(2)} m deep`);
-      ruler([offset, 0.28, frontZ + 0.18], [offset, 0.28, primaryZ], `Viewing ${viewingDistance.toFixed(2)} m`);
+      ruler([-d.width / 2, 0.2, d.depth / 2 + 0.2], [d.width / 2, 0.2, d.depth / 2 + 0.2], `${formatLength(d.width, units)} wide`);
+      ruler([d.width / 2 + 0.2, 0.2, frontZ], [d.width / 2 + 0.2, 0.2, d.depth / 2], `${formatLength(d.depth, units)} deep`);
+      ruler([offset, 0.28, frontZ + 0.18], [offset, 0.28, primaryZ], `Viewing ${formatLength(viewingDistance, units)}`);
     }
     ambient.intensity = d.lights ? 2.2 : 0.36;
     key.intensity = d.lights ? 3.5 : 0.6;
@@ -318,8 +331,9 @@ export function createTheaterScene(canvas: HTMLCanvasElement, onProgress: (loade
     if (selectedObject) {
       selection.setFromObject(selectedObject.object);
       const p = selectedObject.object.position;
-      const limits = selected === "projector" ? [Math.max(frontZ + 0.22, frontZ + screen.width * d.throwMin), Math.min(d.depth / 2 - 0.22, frontZ + screen.width * d.throwMax)] : [frontZ + 0.7, d.depth / 2 - 0.7];
-      if (limits[0] <= limits[1]) ruler([p.x, p.y + 0.03, limits[0]], [p.x, p.y + 0.03, limits[1]], selected === "projector" ? "Projector throw track" : "Forward / backward only");
+      const rowBounds = selected.startsWith("row-") ? rowMotionBounds(d, Number(selected.slice(4))) : null;
+      const limits = selected === "projector" ? [Math.max(frontZ + 0.22, frontZ + screen.width * d.throwMin), Math.min(d.depth / 2 - 0.22, frontZ + screen.width * d.throwMax)] : [frontZ + rowBounds!.min, frontZ + rowBounds!.max];
+      if (limits[0] <= limits[1] && (!rowBounds || rowBounds.valid)) ruler([p.x, p.y + 0.03, limits[0]], [p.x, p.y + 0.03, limits[1]], selected === "projector" ? "Projector throw track" : "Safe seating track");
     }
     dirty = true; renderer.shadowMap.needsUpdate = true;
     canvas.dataset.updateMs = (performance.now() - started).toFixed(2);
@@ -330,7 +344,7 @@ export function createTheaterScene(canvas: HTMLCanvasElement, onProgress: (loade
   let animation = 0;
   const render = () => {
     if (disposed) return;
-    if (pending && loadedModels) { const next = pending; pending = undefined; applyDesign(next.design, next.view); }
+    if (pending && loadedModels) { const next = pending; pending = undefined; applyDesign(next.design, next.view, next.units); }
     controls.update();
     if (dirty && !document.hidden) { renderer.render(scene, camera); dirty = false; }
     animation = requestAnimationFrame(render);
@@ -368,7 +382,7 @@ export function createTheaterScene(canvas: HTMLCanvasElement, onProgress: (loade
     update,
     zoom: amount => { const direction = camera.position.clone().sub(controls.target); direction.multiplyScalar(amount > 0 ? 0.85 : 1.18); camera.position.copy(controls.target).add(direction); controls.update(); },
     resetCamera: () => { if (currentDesign) applyCamera(currentDesign, currentView, true); },
-    capture: () => { if (pending && loadedModels) { const next = pending; pending = undefined; applyDesign(next.design, next.view); } renderer.render(scene, camera); return renderer.domElement.toDataURL("image/png"); },
+    capture: () => { if (pending && loadedModels) { const next = pending; pending = undefined; applyDesign(next.design, next.view, next.units); } renderer.render(scene, camera); return renderer.domElement.toDataURL("image/png"); },
     dispose: () => { disposed = true; cancelAnimationFrame(animation); observer.disconnect(); canvas.removeEventListener("pointerdown", pointerDown, true); canvas.removeEventListener("pointermove", pointerMove, true); canvas.removeEventListener("pointerup", pointerUp, true); canvas.removeEventListener("pointercancel", pointerUp, true); controls.dispose(); selection.geometry.dispose(); (selection.material as THREE.Material).dispose(); clearContent(); releaseImports(); draco.dispose(); renderer.dispose(); },
   } };
 }

@@ -156,3 +156,32 @@ Editable design backup, with a clear explanation of its software-only purpose.
 Twelve tests cover movement-axis locks, track limits, legacy override migration,
 fit checks and saved data. Browser inspection confirms no lateral input and a
 sideways gesture leaves row X at zero; print-media layout was visually inspected.
+
+
+## Physical seating stops (21 October 2026)
+
+Dragging and exact position inputs use the same connected safe track. Row indices
+keep front-to-back order, even after a large pointer jump. The representative chair
+is 1.4 m deep and 1.15 m tall, with 0.30 m clear between footprints and at the rear
+wall, plus a 1 m front approach beyond the 0.2 m screen face. A 60-degree horizontal
+viewing-angle ceiling further limits front-row proximity. These are configurable
+concept policies, not certified recline or local building-code requirements. Final
+clearances need the chosen chair's extended dimensions and the installer's survey.
+
+Cabinet dimensions include yaw through a conservative horizontal bounding radius.
+Seats and raised platforms stop before fixed equipment; the moving side surrounds
+also stop before front/rear cabinets, other seating or room edges. Riser geometry
+uses the same footprint as collision checking. Subwoofers are placed behind the
+front pair with clearance. All ceiling, front and rear speakers and the projector
+remain fixed during seat drags; only SL/SR follow the first row.
+
+Room, screen and seating edits fit rows into legal positions if possible. Impossible
+changes are rejected with an explanation beside the controls. Restoring an older
+project repairs row order and clearance; physically impossible projects are rejected
+before replacing the current workspace. Equipment selection uses supplied dimensions
+when known and rejects combinations that cannot fit. Quote snapshots remain intact.
+
+Verification adds boundary drags in both directions, ordered three-row tests,
+non-tunnelling, fixed-equipment separation, projector preservation, old-layout
+repair and a 216-configuration room/layout matrix. The full domain suite has
+44 passing tests, with TypeScript and production build checks.

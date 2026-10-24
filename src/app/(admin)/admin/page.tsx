@@ -47,7 +47,8 @@ import { useAuth } from "@/context/AuthContext";
 import { toast } from "react-toastify";
 
 const AdminPage = () => {
-  const { user, loading, signOut } = useAuth();
+  const { user: signedInUser, publicSiteAdmin, loading, signOut } = useAuth();
+  const user = publicSiteAdmin ? signedInUser : null;
   const router = useRouter();
   const [activeTab, setActiveTab] = useState<string>("feedback");
   const [feedbackSubmissions, setFeedbackSubmissions] = useState<

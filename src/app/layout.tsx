@@ -1,7 +1,7 @@
 // import type { Metadata } from "next";
 
 import "./globals.css";
-import Footer from "@/components/Footer";
+import SiteFooter from "@/components/SiteFooter";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/next";
 import { AuthProvider } from "@/context/AuthContext";
@@ -70,7 +70,7 @@ export default function RootLayout({
         <AuthProvider>{children}</AuthProvider>
         <SpeedInsights />
         <Analytics />
-        <Footer />
+        <SiteFooter />
       </body>
     </html>
   );

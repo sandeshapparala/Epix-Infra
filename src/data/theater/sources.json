@@ -1,0 +1,65 @@
+[
+  {
+    "brand": "Canton",
+    "file": "CANTON_01-10-2025.pdf",
+    "sha256": "bd480f86cce11c0cd621a8e5fa0c93d8574e7b533d6dd70321f17d9d5db59481",
+    "pages": 43,
+    "products": 86
+  },
+  {
+    "brand": "JVC",
+    "file": "Dealer Price List. (JVC All Models) Dt. 01.04.2026..pdf",
+    "sha256": "5b935dba1397d9d625485f468621fcc13b40f982d5606ce2ec842710148f5145",
+    "pages": 1,
+    "products": 6
+  },
+  {
+    "brand": "Denon",
+    "file": "Denon - PTC Price list - February 2025.pdf",
+    "sha256": "25d94c64daee7bb3ab0aba79d2bc324e1842c743bb94ef044e67d0ee375c81f4",
+    "pages": 6,
+    "products": 56
+  },
+  {
+    "brand": "FAITH",
+    "file": "FAITH MRP  INWALL PRICE LIST MAY 2025.pdf",
+    "sha256": "7f526787afe911dbe86649e621501906a88341bd5629a70bd3967fc2cd2db514",
+    "pages": 2,
+    "products": 13
+  },
+  {
+    "brand": "KEF",
+    "file": "KEF PRICE LIST - OCT'2024 .pdf",
+    "sha256": "e0068b7c38d892933c1e12efd5e62d7099e9354d7c3bdd3ba091ad7c2012c3c6",
+    "pages": 8,
+    "products": 72
+  },
+  {
+    "brand": "Klipsch",
+    "file": "KLIPSCH PRICELIST---1-12-24.pdf",
+    "sha256": "ce098dd0becd651d2a9a6fbd763d6b5f482d730d083e4fceed9f52d414df1d1d",
+    "pages": 4,
+    "products": 85
+  },
+  {
+    "brand": "SVS",
+    "file": "MRP_SVS_Subwoofers_(19.05.2025).pdf",
+    "sha256": "a1007338df6c3f4f9c29839df75cf703e80341a33fd420f38d772d1ffe3e6624",
+    "pages": 1,
+    "products": 15
+  },
+  {
+    "brand": "Onkyo",
+    "file": "OnkyoNov24.pdf",
+    "sha256": "f529f1ee359d46c052b01f1e33709b7a2950b6e7b92750f8280a80139ed84465",
+    "pages": 1,
+    "products": 13
+  },
+  {
+    "brand": "Polk",
+    "file": "POLK AUDIO PRICE LIST-FEB'2026 _260520_195051.pdf",
+    "sha256": "144e11b8e138f60ecbc6ef24d41374637bec7631f467dc4c7d07cb42a450b008",
+    "pages": 5,
+    "products": 69
+  }
+]

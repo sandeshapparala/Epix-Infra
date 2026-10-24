@@ -26,11 +26,14 @@
 
 # debug
 npm-debug.log*
+pnpm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+!.env.example
+!**/.env.example
 
 # vercel
 .vercel
@@ -44,3 +47,15 @@ next-env.d.ts
 /.dist
 .dist
 /dist
+apps/marketing/src/app/(admin)/admin/reports/.gitkeep
+
+# nested workspace test artifacts
+**/coverage/
+**/playwright-report/
+**/test-results/
+
+# Private theatre runtime data, emulators and downloaded QA tools
+/.theater-data/
+*-debug.log
+__pycache__/
+*.pyc
