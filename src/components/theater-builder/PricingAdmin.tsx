@@ -14,6 +14,12 @@ import {
 import type { Price, Product } from "@/lib/theater/types";
 import { rupees } from "@/lib/theater/types";
 import { api } from "@/lib/theater/client";
+import {
+  filterPricingProducts,
+  PRICING_TYPES,
+  pricingCategoryLabel,
+  pricingType,
+} from "@/lib/theater/pricing-filters";
 import { ProductImage } from "./CatalogDialog";
 import styles from "./sales.module.css";
 
@@ -50,6 +56,8 @@ export default function PricingAdmin() {
   const [products, setProducts] = useState<Product[]>([]),
     [search, setSearch] = useState(""),
     [brand, setBrand] = useState(""),
+    [type, setType] = useState(""),
+    [category, setCategory] = useState(""),
     [pending, setPending] = useState(false),
     [page, setPage] = useState(0),
     [selected, setSelected] = useState<string[]>([]);
@@ -79,23 +87,46 @@ export default function PricingAdmin() {
   }, []);
   const filtered = useMemo(
     () =>
-      products.filter(
-        (p) =>
-          (!search ||
-            `${p.id} ${p.brand} ${p.model}`
-              .toLowerCase()
-              .includes(search.toLowerCase())) &&
-          (!brand || p.brand === brand) &&
-          (!pending ||
-            p.price.amountPaise === null ||
-            p.price.taxBasis === "unknown" ||
-            p.price.unit === "unknown" ||
-            p.price.gstRate === null),
-      ),
-    [products, search, brand, pending],
+      filterPricingProducts(products, {
+        search,
+        brand,
+        type,
+        category,
+        pending,
+      }),
+    [products, search, brand, type, category, pending],
   );
-  const visible = filtered.slice(page * 30, page * 30 + 30);
-  useEffect(() => setPage(0), [search, brand, pending]);
+  const categories = useMemo(
+    () =>
+      [
+        ...new Set(
+          products
+            .filter((p) => !type || pricingType(p.category) === type)
+            .map((p) => p.category),
+        ),
+      ].sort((a, b) =>
+        pricingCategoryLabel(a).localeCompare(pricingCategoryLabel(b)),
+      ),
+    [products, type],
+  );
+  const activeFilters = !!(search || brand || type || category || pending);
+  const currentPage = Math.min(
+    page,
+    Math.max(0, Math.ceil(filtered.length / 30) - 1),
+  );
+  const visible = filtered.slice(currentPage * 30, currentPage * 30 + 30);
+  useEffect(() => {
+    setPage(0);
+    // A new filtered view starts a fresh bulk selection; hidden rows cannot be edited accidentally.
+    setSelected([]);
+  }, [search, brand, type, category, pending]);
+  function clearFilters() {
+    setSearch("");
+    setBrand("");
+    setType("");
+    setCategory("");
+    setPending(false);
+  }
   async function submit(changes: Change[]) {
     setBusy(true);
     try {
@@ -290,35 +321,93 @@ export default function PricingAdmin() {
           </button>
         </div>
       </div>
-      <div className={styles.pricingFilters}>
-        <label className={styles.search}>
-          <Search size={17} />
-          <input
-            aria-label="Search pricing catalog"
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-            placeholder="Search model, brand or product ID"
-          />
-        </label>
-        <label>
-          Brand
-          <select value={brand} onChange={(e) => setBrand(e.target.value)}>
-            <option value="">All brands</option>
-            {[...new Set(products.map((p) => p.brand))].sort().map((b) => (
-              <option key={b}>{b}</option>
-            ))}
-          </select>
-        </label>
-        <label className={styles.checkbox}>
-          <input
-            type="checkbox"
-            checked={pending}
-            onChange={(e) => setPending(e.target.checked)}
-          />{" "}
-          Needs price confirmation
-        </label>
-        <span>{filtered.length} entries</span>
-      </div>
+      <section
+        className={styles.pricingFilterPanel}
+        aria-label="Filter pricing catalog"
+      >
+        <div className={styles.pricingFilters}>
+          <label className={styles.search}>
+            Search catalog
+            <Search size={17} aria-hidden="true" />
+            <input
+              aria-label="Search pricing catalog"
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              placeholder="Model, series, category or product ID"
+            />
+          </label>
+          <label>
+            Company / brand
+            <select value={brand} onChange={(e) => setBrand(e.target.value)}>
+              <option value="">All companies</option>
+              {[...new Set(products.map((p) => p.brand))].sort().map((b) => (
+                <option key={b}>{b}</option>
+              ))}
+            </select>
+          </label>
+          <label>
+            Equipment type
+            <select
+              value={type}
+              onChange={(e) => {
+                const nextType = e.target.value;
+                setType(nextType);
+                if (category && nextType && pricingType(category) !== nextType)
+                  setCategory("");
+              }}
+            >
+              <option value="">All types</option>
+              {PRICING_TYPES.filter((t) =>
+                products.some((p) => pricingType(p.category) === t.value),
+              ).map((t) => (
+                <option key={t.value} value={t.value}>
+                  {t.label}
+                </option>
+              ))}
+            </select>
+          </label>
+          <label>
+            Category
+            <select
+              value={category}
+              onChange={(e) => setCategory(e.target.value)}
+            >
+              <option value="">All categories</option>
+              {categories.map((c) => (
+                <option key={c} value={c}>
+                  {pricingCategoryLabel(c)}
+                </option>
+              ))}
+            </select>
+          </label>
+        </div>
+        <div className={styles.pricingFilterSummary}>
+          <label className={styles.checkbox}>
+            <input
+              type="checkbox"
+              checked={pending}
+              onChange={(e) => setPending(e.target.checked)}
+            />{" "}
+            Needs price confirmation
+          </label>
+          <span role="status" aria-live="polite">
+            {loading
+              ? "Loading catalog…"
+              : `${filtered.length} of ${products.length} models`}
+          </span>
+          <button
+            className={styles.secondary}
+            disabled={!activeFilters}
+            onClick={clearFilters}
+          >
+            <X size={14} aria-hidden="true" /> Clear filters
+          </button>
+        </div>
+        <p className={styles.pricingFilterHint}>
+          Combine filters to narrow the catalog. CSV export includes matching
+          models only. Changing filters clears bulk selection.
+        </p>
+      </section>
       <div className={styles.adminStatus} role="status">
         {message}
       </div>
@@ -455,6 +544,7 @@ export default function PricingAdmin() {
                     <span>
                       <small>{p.brand}</small>
                       <strong>{p.model}</strong>
+                      <small>{pricingCategoryLabel(p.category)}</small>
                       <em>{p.id}</em>
                     </span>
                   </div>
@@ -501,21 +591,30 @@ export default function PricingAdmin() {
         {!visible.length && (
           <div className={styles.empty} role="status">
             {loading
-              ? "Loading catalog prices�"
-              : "No matching catalog entries."}
+              ? "Loading catalog prices…"
+              : "No models match these filters. Try another company or category, or clear the filters."}
+            {!loading && activeFilters && (
+              <button className={styles.secondary} onClick={clearFilters}>
+                Clear filters
+              </button>
+            )}
           </div>
         )}
       </div>
       <div className={styles.pagination}>
-        <button disabled={page === 0} onClick={() => setPage((p) => p - 1)}>
+        <button
+          disabled={currentPage === 0}
+          onClick={() => setPage(currentPage - 1)}
+        >
           Previous
         </button>
         <span>
-          Page {page + 1} of {Math.max(1, Math.ceil(filtered.length / 30))}
+          Page {currentPage + 1} of{" "}
+          {Math.max(1, Math.ceil(filtered.length / 30))}
         </span>
         <button
-          disabled={(page + 1) * 30 >= filtered.length}
-          onClick={() => setPage((p) => p + 1)}
+          disabled={(currentPage + 1) * 30 >= filtered.length}
+          onClick={() => setPage(currentPage + 1)}
         >
           Next
         </button>

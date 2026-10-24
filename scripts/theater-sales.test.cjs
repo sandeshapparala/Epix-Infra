@@ -30,6 +30,38 @@ const {
   priceChanges,
 } = require("../src/lib/theater/validation.ts");
 const products = require("../src/data/theater/products.json");
+const { filterPricingProducts, pricingType, pricingCategoryLabel, PRICING_TYPES } = require("../src/lib/theater/pricing-filters.ts");
+const noPricingFilters = { search: "", brand: "", type: "", category: "", pending: false };
+
+test("pricing filters combine company, equipment type, category and trimmed model search", () => {
+  const reference = products.find((p) => p.brand === "KEF" && p.category === "bookshelf");
+  assert.ok(reference);
+  const result = filterPricingProducts(products, {
+    ...noPricingFilters, brand: "KEF", type: "speakers", category: "bookshelf",
+    search: `  ${reference.model.toLowerCase()}  `,
+  });
+  assert.ok(result.some((p) => p.id === reference.id));
+  assert.ok(result.every((p) => p.brand === "KEF" && p.category === "bookshelf"));
+  assert.equal(filterPricingProducts(products, { ...noPricingFilters, type: "projectors", category: "bookshelf" }).length, 0);
+});
+
+test("pricing equipment groups cover the complete source catalog without duplicates or omissions", () => {
+  const groups = PRICING_TYPES.flatMap((t) => filterPricingProducts(products, { ...noPricingFilters, type: t.value }));
+  assert.equal(groups.length, products.length);
+  assert.equal(new Set(groups.map((p) => p.id)).size, products.length);
+  assert.equal(filterPricingProducts(products, noPricingFilters).length, products.length);
+  assert.equal(pricingType("future-accessory-category"), "accessories");
+  assert.equal(pricingCategoryLabel("in-wall"), "In-wall speakers");
+});
+
+test("pricing confirmation filter and category search keep the source billing rules", () => {
+  const pending = filterPricingProducts(products, { ...noPricingFilters, pending: true, brand: "Denon", type: "electronics" });
+  assert.ok(pending.length > 0);
+  assert.ok(pending.every((p) => p.brand === "Denon" && (p.price.amountPaise === null || p.price.taxBasis === "unknown" || p.price.unit === "unknown" || p.price.gstRate === null)));
+  const ceiling = filterPricingProducts(products, { ...noPricingFilters, search: "in-ceiling" });
+  assert.ok(ceiling.length > 0);
+  assert.ok(ceiling.every((p) => p.category === "ceiling"));
+});
 const sources = require("../src/data/theater/sources.json");
 const { feetAndInches, formatLength, lengthStep, METRES_PER_FOOT, METRES_PER_INCH } = require("../src/lib/theater/measurements.ts");
 const { visualDesign } = require("../src/lib/theater/visual-design.ts");

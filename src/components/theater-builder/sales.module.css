@@ -155,7 +155,8 @@
   padding-left: 36px !important;
 }
 .filters .checkbox,
-.pricingFilters .checkbox {
+.pricingFilters .checkbox,
+.pricingFilterSummary .checkbox {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -956,23 +957,78 @@
   color: #647582;
   max-width: 560px;
 }
+.pricingFilterPanel {
+  margin: 24px 0 16px;
+  padding: 20px;
+  background: white;
+  border: 1px solid #d9e3e9;
+  border-radius: 9px;
+}
 .pricingFilters {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  flex-wrap: wrap;
-  margin: 24px 0 8px;
+  display: grid;
+  grid-template-columns: minmax(240px, 1.4fr) repeat(3, minmax(0, 1fr));
+  align-items: end;
+  gap: 16px;
 }
 .pricingFilters > label {
+  min-width: 0;
   margin: 0;
 }
 .pricingFilters > .search {
-  flex: 1;
-  min-width: 250px;
+  min-width: 0;
 }
-.pricingFilters > span {
+.pricingFilters > .search > svg {
+  top: auto;
+  bottom: 14px;
+}
+.pricingFilterSummary {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+.pricingFilterSummary > label {
+  min-height: 44px;
+  cursor: pointer;
   font-size: 12px;
-  color: #647582;
+}
+.pricingFilterSummary > span {
+  margin-left: auto;
+  font-size: 13px;
+  font-weight: 600;
+}
+.pricingFilterSummary > button {
+  min-height: 44px;
+}
+.pricingFilterHint {
+  margin: 8px 0 0;
+  font-size: 12px;
+  line-height: 1.6;
+  color: #526977;
+}
+@media (max-width: 1100px) {
+  .pricingFilters {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 520px) {
+  .pricingFilterPanel {
+    padding: 16px;
+  }
+  .pricingFilters {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .pricingFilterSummary {
+    gap: 8px 16px;
+  }
+  .pricingFilterSummary > label {
+    flex-basis: 100%;
+  }
+  .pricingFilterSummary > span {
+    margin-left: 0;
+    margin-right: auto;
+  }
 }
 .pricingTable {
   overflow: auto;
