@@ -31,6 +31,7 @@ export default function TheaterBuilder() {
   const [design, setDesign] = useState<TheaterDesign>(() => fitSeatingLayout(DEFAULT_DESIGN).design ?? { ...DEFAULT_DESIGN });
   const studio = useTheaterSales(design, setDesign);
   const selectedProjector = studio.products.find(p => p.id === studio.equipment.slots.projector?.productId);
+  const selectedTV = studio.products.find(p => p.id === studio.equipment.slots.tv?.productId);
   const [reportImage, setReportImage] = useState("");
   const [selected, setSelected] = useState("");
   const [panel, setPanel] = useState<Panel>("room");
@@ -66,9 +67,10 @@ export default function TheaterBuilder() {
     setPreset(""); setExportedFile(null); setNotice("");
   }
   function applyLayout(candidate: TheaterDesign) {
-    const fitted = fitSeatingLayout(visualDesign(candidate, studio.equipment, studio.products));
+    const configured = visualDesign(candidate, studio.equipment, studio.products);
+    const fitted = fitSeatingLayout(configured);
     if (!fitted.design) { setLayoutError(fitted.reason); setNotice(fitted.reason); return false; }
-    setDesign({ ...candidate, positions: fitted.design.positions, rowSpacing: fitted.design.rowSpacing });
+    setDesign({ ...candidate, diagonal: configured.diagonal, aspect: configured.aspect, positions: fitted.design.positions, rowSpacing: fitted.design.rowSpacing });
     setLayoutError(""); setNotice(""); setExportedFile(null); return true;
   }
   const selectionPosition = selected.startsWith("row-") ? seatingPosition(design, Number(selected.slice(4))) : selected === "projector" ? calculated.projector : calculated.sound.speakers.find(s => s.id === selected)?.position;
@@ -257,7 +259,10 @@ export default function TheaterBuilder() {
             <div className={styles.sectionLead}><h3>A bigger picture.</h3><p>Choose your display and explore the view from your seat.</p></div>
             {choices("display", "Display type", [{ value: "projector", label: "Projector" }, { value: "tv", label: "Flat-panel TV" }])}
             {choices("aspect", "Screen aspect ratio", design.display === "tv" ? [{ value: "16:9", label: "16:9 widescreen" }] : [{ value: "16:9", label: "16:9" }, { value: "2.4:1", label: "2.4:1 cinema" }])}
-            {range("diagonal", "Screen diagonal", 1, value => `${value}″`)}
+            {design.display === "tv" && <EquipmentSlot studio={studio} slot="tv" />}
+            {design.display === "tv" && selectedTV?.specs.diagonalInches
+              ? <div className={styles.infoNote}>{selectedTV.brand} {selectedTV.model} has a fixed {selectedTV.specs.diagonalInches}″ screen. Choose another display or remove the model to adjust the diagonal.</div>
+              : range("diagonal", "Screen diagonal", 1, value => `${value}″`)}
             <div className={styles.resultCard}><span>Image dimensions</span><strong>{measurement(calculated.screen.width)} × {measurement(calculated.screen.height)}</strong><span>Horizontal viewing angle</span><strong>{calculated.angle.toFixed(1)}°</strong></div>
             {design.display === "projector" && <>
               <EquipmentSlot studio={studio} slot="projector" />

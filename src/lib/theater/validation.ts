@@ -77,6 +77,7 @@ const fields = z
         slots: z
           .object({
             projector: selection.optional(),
+            tv: selection.optional(),
             front: selection.optional(),
             center: selection.optional(),
             surround: selection.optional(),

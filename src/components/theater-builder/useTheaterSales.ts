@@ -24,7 +24,7 @@ import {
   type QuoteSnapshot,
   type QuoteHistory,
 } from "@/lib/theater/types";
-import { applyProjector, calculateQuote } from "@/lib/theater/quote";
+import { applyProjector, applyTV, calculateQuote } from "@/lib/theater/quote";
 import { parseProject } from "@/lib/theater/validation";
 
 import { api, downloadQuote } from "@/lib/theater/client";
@@ -129,6 +129,8 @@ export function useTheaterSales(
     if (fitted.design)
       setDesign((current) => ({
         ...current,
+        diagonal: fitted.design!.diagonal,
+        aspect: fitted.design!.aspect,
         positions: fitted.design!.positions,
         rowSpacing: fitted.design!.rowSpacing,
       }));
@@ -175,6 +177,8 @@ export function useTheaterSales(
     if (!fitted.design) throw new Error(fitted.reason);
     setDesign({
       ...parsed,
+      diagonal: fitted.design.diagonal,
+      aspect: fitted.design.aspect,
       positions: fitted.design.positions,
       rowSpacing: fitted.design.rowSpacing,
     });
@@ -204,15 +208,17 @@ export function useTheaterSales(
     const candidate =
       slot === "projector"
         ? applyProjector(design, p)
-        : slot === "front"
-          ? {
-              ...design,
-              front:
-                p.category === "in-wall"
-                  ? ("in-wall" as const)
-                  : ("tower" as const),
-            }
-          : design;
+        : slot === "tv"
+          ? applyTV(design, p)
+          : slot === "front"
+            ? {
+                ...design,
+                front:
+                  p.category === "in-wall"
+                    ? ("in-wall" as const)
+                    : ("tower" as const),
+              }
+            : design;
     const fitted = fitSeatingLayout(
       visualDesign(candidate, nextEquipment, products),
     );

@@ -2,6 +2,7 @@ import type { TheaterDesign } from "../../components/theater-builder/design";
 
 export type Slot =
   | "projector"
+  | "tv"
   | "front"
   | "center"
   | "surround"
@@ -32,6 +33,7 @@ export type Product = {
   image: string | null;
   quoteImage?: string;
   imageSource?: string;
+  imageKind?: "photo" | "service";
   finishes: string[];
   price: Price;
   issues: string[];
@@ -45,6 +47,10 @@ export type Product = {
     atmos?: boolean;
     impedanceOhms?: number;
     sourceUrl?: string;
+    diagonalInches?: number;
+    resolution?: string;
+    nativeAspect?: string;
+    lightSource?: string;
     externalAmpChannels?: number;
     powerAmpDirect?: boolean;
     dimensions?: [number, number, number];
@@ -178,13 +184,14 @@ export type QuoteHistory = {
 };
 export const SLOT_LABELS: Record<Slot, string> = {
   projector: "Projector",
+  tv: "TV / professional display",
   front: "Front left & right",
   center: "Centre speaker",
   surround: "Side surrounds",
   rear: "Rear surrounds",
   height: "Height / Atmos",
   subwoofer: "Subwoofers",
-  receiver: "AV receiver",
+  receiver: "AV receiver / processor",
   amplifier: "Additional amplifier",
   package: "Theatre package",
   extra: "Accessories & other equipment",

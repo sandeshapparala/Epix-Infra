@@ -132,6 +132,35 @@ test("anonymous, invalid-token and unregistered Firebase accounts cannot read th
     200,
   );
 });
+test("new catalog TV and Marantz separates save and generate an owner-protected illustrated quotation", async () => {
+  const catalogResponse = await catalogRoute.GET(request("alice", "/api/theater/catalog"));
+  const catalog = (await catalogResponse.json()).products;
+  assert.equal(catalog.length, 496);
+  const draft = structuredClone(state());
+  draft.design = { ...draft.design, display: "tv", diagonal: 43, aspect: "16:9" };
+  draft.equipment.slots = {
+    tv: { productId: "sony-fw-43ez20l", finish: "" },
+    receiver: { productId: "marantz-av30", finish: "" },
+    amplifier: { productId: "marantz-amp-20", finish: "" },
+  };
+  const id = crypto.randomUUID();
+  const saved = await projectRoutes.POST(request("alice", undefined, { id, version: 0, state: draft }));
+  assert.equal(saved.status, 200);
+  const generated = await quoteRoutes.POST(request("alice", "/api/theater/quotes", {
+    projectId: id, requestId: crypto.randomUUID(), state: draft,
+    priceRevisions: Object.fromEntries(Object.values(draft.equipment.slots).map(s => [s.productId, catalog.find(p => p.id === s.productId).price.revision])),
+  }));
+  assert.equal(generated.status, 200);
+  const quote = await generated.json();
+  assert.equal(quote.state.equipment.slots.tv.productId, "sony-fw-43ez20l");
+  assert.equal(quote.state.design.diagonal, 43);
+  assert.ok(quote.calculation.lines.some(l => l.productId === "sony-fw-43ez20l"));
+  assert.ok(quote.calculation.lines.some(l => l.productId === "marantz-av30"));
+  const pdf = await pdfRoute.GET(request("alice"), params(quote.id));
+  assert.equal(pdf.status, 200);
+  assert.ok((await pdf.arrayBuffer()).byteLength > 20000);
+  assert.equal((await pdfRoute.GET(request("bob"), params(quote.id))).status, 404);
+});
 let aliceProject, bobProject, firstQuote;
 test("project creation stamps its creator; employee lists and direct reads are isolated", async () => {
   for (const who of ["alice", "bob"]) {

@@ -20,6 +20,7 @@ import {
   type SalesProject,
 } from "@/lib/theater/types";
 import styles from "./sales.module.css";
+import { pricingCategoryLabel } from "@/lib/theater/pricing-filters";
 
 export function ProductImage({
   product,
@@ -72,6 +73,12 @@ const specNames: Record<string, string> = {
   mountingDepth: "Mounting depth",
   packageContents: "Included equipment",
   packageReceiverChannels: "Included receiver channels",
+  diagonalInches: "Display diagonal (inches)",
+  resolution: "Native resolution",
+  nativeAspect: "Native aspect ratio",
+  lightSource: "Light source",
+  externalAmpChannels: "Power-amplifier channels",
+  powerAmpDirect: "Direct power-amplifier input",
 };
 function specValue(key: string, value: unknown) {
   if (key === "packageContents" && value && typeof value === "object")
@@ -317,7 +324,7 @@ export default function CatalogDialog({
                     .sort()
                     .map((c) => (
                       <option key={c} value={c}>
-                        {c.replaceAll("-", " ")}
+                        {pricingCategoryLabel(c)}
                       </option>
                     ))}
                 </select>

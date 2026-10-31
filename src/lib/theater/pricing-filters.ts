@@ -14,6 +14,28 @@ const CATEGORIES: Record<string, { label: string; type: string }> = {
   "stereo-speaker": { label: "Stereo speakers", type: "speakers" },
   subwoofer: { label: "Subwoofers", type: "subwoofers" },
   projector: { label: "Projectors", type: "projectors" },
+  "business-projector": {
+    label: "Business / installation projectors",
+    type: "projectors",
+  },
+  "professional-display": { label: "Professional displays", type: "displays" },
+  "av-processor": {
+    label: "AV processors / preamplifiers",
+    type: "electronics",
+  },
+  "power-amplifier": { label: "Cinema power amplifiers", type: "electronics" },
+  "integrated-amplifier": {
+    label: "Stereo integrated amplifiers",
+    type: "electronics",
+  },
+  "streaming-amplifier": {
+    label: "Streaming / distribution amplifiers",
+    type: "electronics",
+  },
+  "stereo-receiver": { label: "Stereo receivers", type: "electronics" },
+  "cd-player": { label: "CD / SACD players", type: "electronics" },
+  "network-player": { label: "Network audio players", type: "electronics" },
+  "software-license": { label: "Software licences", type: "accessories" },
   receiver: { label: "AV receivers", type: "electronics" },
   amplifier: { label: "Amplifiers", type: "electronics" },
   package: { label: "Theatre packages", type: "packages" },
@@ -25,7 +47,8 @@ export const PRICING_TYPES = [
   { value: "speakers", label: "Speakers" },
   { value: "subwoofers", label: "Subwoofers" },
   { value: "projectors", label: "Projectors" },
-  { value: "electronics", label: "Receivers & amplifiers" },
+  { value: "displays", label: "TVs & professional displays" },
+  { value: "electronics", label: "AV electronics" },
   { value: "packages", label: "Theatre packages" },
   { value: "accessories", label: "Accessories & other equipment" },
 ];

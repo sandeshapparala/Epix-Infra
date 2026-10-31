@@ -233,8 +233,13 @@ if __name__ == "__main__":
     products,manifest=extract(Path(args.source))
     (OUT/"products.json").write_text(json.dumps(products,ensure_ascii=False,indent=2),encoding="utf-8")
     (OUT/"sources.json").write_text(json.dumps(manifest,indent=2),encoding="utf-8")
+    # Preserve and deterministically rebuild the later supplied catalogs when
+    # rerunning the original nine-list import.
+    import runpy
+    additions_source=Path(args.source)/'new'
+    if (additions_source/'Marantz Price List Oct 2026.pdf').exists():
+        runpy.run_path(str(ROOT/'scripts/import-theater-catalog-additions.py'))['main'](additions_source)
     # Reviewed manufacturer images supplement price lists without product photos.
     # Rebuild the immutable JPEGs consumed by the quotation renderer as well.
-    import runpy
     runpy.run_path(str(ROOT/"scripts/prepare-theater-images.py"))["prepare"]()
     print(json.dumps(dict(products=len(products),images=sum(bool(p['image']) for p in products),sources=manifest),indent=2))

@@ -61,5 +61,59 @@
     "sha256": "144e11b8e138f60ecbc6ef24d41374637bec7631f467dc4c7d07cb42a450b008",
     "pages": 5,
     "products": 69
+  },
+  {
+    "brand": "Marantz",
+    "file": "Marantz Price List July 2026.pdf",
+    "sha256": "f48b510ac746242a21735abb2c821e62cc97df83f8186db345d755d50559f2db",
+    "pages": 5,
+    "parsedProducts": 35,
+    "products": 2,
+    "effectiveDate": "2026-07-01"
+  },
+  {
+    "brand": "Marantz",
+    "file": "Marantz Price List Oct 2026.pdf",
+    "sha256": "dd4d44b7116d5d241796baefedf7439b9aa01b6496c243f3bc36a64d9dbb08e4",
+    "pages": 5,
+    "parsedProducts": 38,
+    "products": 38,
+    "effectiveDate": "2026-10-01"
+  },
+  {
+    "brand": "Sony",
+    "file": "SONY PRICE LIST MRP APRIL 2026.pdf",
+    "sha256": "303da4361d6ecd66b4e084cfc6b0faf540c5c1e5625c8100f000df7872dab023",
+    "pages": 1,
+    "parsedProducts": 36,
+    "products": 36,
+    "effectiveDate": "2026-04-01"
+  },
+  {
+    "brand": "BenQ",
+    "file": "4 Pager AI Cinema (W2720i & W4100i) Full Page Low Res.pdf",
+    "sha256": "414e38be7521e733200491b70718371991e2e7ac11d0371c816345ad2bd8d063",
+    "pages": 6,
+    "parsedProducts": 2,
+    "products": 2,
+    "effectiveDate": "Undated brochure"
+  },
+  {
+    "brand": "BenQ",
+    "file": "GP520 Leaflet Low Res.pdf",
+    "sha256": "9abb7c1d8f982a08e4a2ad1f798dd7aaf1504bf4f4862940775c7de70e7d29f8",
+    "pages": 2,
+    "parsedProducts": 1,
+    "products": 1,
+    "effectiveDate": "Undated brochure"
+  },
+  {
+    "brand": "BenQ",
+    "file": "TK705STi Leaflet Low Res.pdf",
+    "sha256": "fb251363009fa70ad76f03370e26effe1c5b5a038a475682e8dd23b8ce2e2d31",
+    "pages": 2,
+    "parsedProducts": 2,
+    "products": 2,
+    "effectiveDate": "Undated brochure"
   }
 ]

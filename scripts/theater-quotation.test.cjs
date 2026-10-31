@@ -38,7 +38,7 @@ test("sign-in returns to the builder by default and preserves safe theatre desti
 });
 test("every catalog model has a local photo and a bounded quotation JPEG", async () => {
   const products = require("../src/data/theater/products.json");
-  assert.equal(products.length, 415);
+  assert.equal(products.length, 496);
   for (const p of products) {
     assert.ok(p.image, p.id);
     assert.ok(fs.existsSync(path.join(__dirname, "../public", p.image)), p.id);

@@ -109,15 +109,15 @@ function state() {
     exclusions: "",
   };
 }
-test("all nine source catalogs import with unique identifiers and existing images", () => {
-  assert.equal(products.length, 415);
-  assert.equal(sources.length, 9);
-  assert.equal(new Set(products.map((p) => p.id)).size, 415);
+test("all supplied catalogs import with unique identifiers and existing images", () => {
+  assert.equal(products.length, 496);
+  assert.equal(sources.length, 15);
+  assert.equal(new Set(products.map((p) => p.id)).size, 496);
   assert.deepEqual(
     sources.map((s) => s.products),
-    [86, 6, 56, 13, 72, 85, 15, 13, 69],
+    [86, 6, 56, 13, 72, 85, 15, 13, 69, 2, 38, 36, 2, 1, 2],
   );
-  assert.equal(products.filter((p) => p.image).length, 415);
+  assert.equal(products.filter((p) => p.image).length, 496);
   for (const p of products) {
     assert.ok(p.description || p.model);
     assert.ok(p.source.page > 0);
@@ -439,7 +439,7 @@ test("an LCR-only package still requires surrounds, bass and amplification", () 
   assert.equal(q.lines.length, 1);
   assert.ok(q.missing.includes("Side surrounds"));
   assert.ok(q.missing.includes("Subwoofers"));
-  assert.ok(q.missing.includes("AV receiver"));
+  assert.ok(q.missing.includes("AV receiver / processor"));
   assert.ok(!q.missing.includes("Front left & right"));
 });
 test("a packaged receiver cannot silently support an eleven-channel upgrade", () => {

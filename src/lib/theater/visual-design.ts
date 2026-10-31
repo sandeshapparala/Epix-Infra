@@ -8,8 +8,12 @@ export function visualDesign(
   const projector = products.find(
     (p) => p.id === equipment.slots.projector?.productId,
   );
+  const tv = products.find((p) => p.id === equipment.slots.tv?.productId);
   const configured = {
     ...design,
+    ...(design.display === "tv" && tv?.specs.diagonalInches
+      ? { diagonal: tv.specs.diagonalInches, aspect: "16:9" as const }
+      : {}),
     ...(projector?.specs.lumens ? { lumens: projector.specs.lumens } : {}),
     ...(projector?.specs.throwMin && projector.specs.throwMax
       ? {

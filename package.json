@@ -11,7 +11,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test:theater": "node --test scripts/theater-design.test.mjs scripts/theater-sales.test.cjs scripts/theater-access.test.cjs scripts/theater-quotation.test.cjs",
+    "test:theater": "node --test scripts/theater-design.test.mjs scripts/theater-sales.test.cjs scripts/theater-access.test.cjs scripts/theater-quotation.test.cjs scripts/theater-catalog-additions.test.cjs",
     "test:theater:firebase": "node --test --test-concurrency=1 scripts/theater-access.test.cjs scripts/theater-firebase.test.cjs",
     "theater:seed-emulator": "node scripts/seed-theater-emulator.cjs",
     "theater:provision": "node scripts/provision-theater.cjs",

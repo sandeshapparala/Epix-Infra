@@ -1,0 +1,430 @@
+{
+  "sony-fw-98bz53l": {
+    "image": "/theater-catalog/sony-fw-98bz53l.webp",
+    "imageSource": "https://www.sony.jp/bravia-biz/products/FW-BZ53L/",
+    "imageUrl": "https://sony.scene7.com/is/image/sonyglobalsolutions/fw-98bz53l_20240417?wid=640&fmt=png-alpha",
+    "imageSha256": "718cb3ae90495d1fd9ebe1ac67d0ce7d4ce64c5711226404c1129f403883b0b9",
+    "reviewedOn": "2026-10-31",
+    "specs": {
+      "sourceUrl": "https://pro.sony/ue_US/products/pro-displays/fw-98bz53l"
+    }
+  },
+  "sony-fw-98bz30l": {
+    "image": "/theater-catalog/sony-fw-98bz30l.webp",
+    "imageSource": "https://officewonderland.com/products/sony-fw-98bz30l-bravia-98-uhd-4k-hdr-commercial-monitor",
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0595/2487/4349/files/Sony-FW-98BZ30L-BRAVIA-98-UHD-4k-HDR-Commercial-Monitor.png?v=1725855663",
+    "imageSha256": "f4f386dff85430577c971c2fc59fd71b52219bf91d3e6d37f6b535f171f7eeb0",
+    "reviewedOn": "2026-10-31",
+    "specs": {
+      "sourceUrl": "https://pro.sony/ue_US/products/pro-displays/fw-98bz30l"
+    }
+  },
+  "sony-fw-85bz40l": {
+    "image": "/theater-catalog/sony-fw-85bz40l.webp",
+    "imageSource": "https://officewonderland.com/products/sony-fw-85bz40l-85-exceptionally-bright-4k-hdr-professional-display",
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0595/2487/4349/files/Sony-FW-85BZ40L-85-Exceptionally-bright-4K-HDR-Professional-Display.png?v=1725855575",
+    "imageSha256": "a36284de8574b85eba75a664d0dff0420abbc61a0c9602a45c0734676a24290b",
+    "reviewedOn": "2026-10-31",
+    "specs": {
+      "sourceUrl": "https://pro.sony/ue_US/products/pro-displays/fw-85bz40l"
+    }
+  },
+  "sony-fw-85bz30l": {
+    "image": "/theater-catalog/sony-fw-85bz30l.webp",
+    "imageSource": "https://officewonderland.com/products/sony-fw-85bz30l-bravia-85-uhd-4k-hdr-commercial-monitor",
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0595/2487/4349/files/Sony-FW-85BZ30L-BRAVIA-85-UHD-4k-HDR-Commercial-Monitor.jpg?v=1725855685",
+    "imageSha256": "b9cfa13a30e0fd014dd0b7196bc6e37a8f790ce6229f68c8df3daab46d1905ee",
+    "reviewedOn": "2026-10-31",
+    "specs": {
+      "sourceUrl": "https://pro.sony/ue_US/products/pro-displays/fw-85bz30l"
+    }
+  },
+  "sony-fw-75bz40l": {
+    "image": "/theater-catalog/sony-fw-75bz40l.webp",
+    "imageSource": "https://officewonderland.com/products/sony-fw-75bz40l-75-exceptionally-bright-4k-hdr-professional-display",
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0595/2487/4349/files/Sony-FW-75BZ40L-75-Exceptionally-bright-4K-HDR-Professional-Display.png?v=1725855560",
+    "imageSha256": "29351b8bbdcafd94d84f8c22a86c58e3fd291f5fee84347dcb987f0d03b15fba",
+    "reviewedOn": "2026-10-31",
+    "specs": {
+      "sourceUrl": "https://pro.sony/ue_US/products/pro-displays/fw-75bz40l"
+    }
+  },
+  "sony-fw-75bz35l": {
+    "image": "/theater-catalog/sony-fw-75bz35l.webp",
+    "imageSource": "https://officewonderland.com/products/sony-fw-75bz35l-75-bravia-4k-hdr-professional-display",
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0595/2487/4349/files/Sony-FW-75BZ35L-75-BRAVIA-4K-HDR-Professional-Display.png?v=1725855602",
+    "imageSha256": "b0aa241b70d1fa4a97d414eaef4157df703030277f1943683fedb3135e512a00",
+    "reviewedOn": "2026-10-31",
+    "specs": {
+      "sourceUrl": "https://pro.sony/ue_US/products/pro-displays/fw-75bz35l"
+    }
+  },
+  "sony-fw-75bz30l": {
+    "image": "/theater-catalog/sony-fw-75bz30l.webp",
+    "imageSource": "https://officewonderland.com/products/sony-fw-75bz30l-bravia-75-uhd-4k-hdr-commercial-monitor",
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0595/2487/4349/files/Sony-FW-75BZ30L-BRAVIA-75-UHD-4k-HDR-Commercial-Monitor.jpg?v=1725855708",
+    "imageSha256": "d3f0d5abacd34df972853e84cc528a3158a3053754113f76089bb1b90f9e7941",
+    "reviewedOn": "2026-10-31",
+    "specs": {
+      "sourceUrl": "https://pro.sony/ue_US/products/pro-displays/fw-75bz30l"
+    }
+  },
+  "sony-fw-75ez20l": {
+    "image": "/theater-catalog/sony-fw-75ez20l.webp",
+    "imageSource": "https://officewonderland.com/products/sony-bravia-fw-75ez20l-75-class-hdr-4k-uhd-commercial-led-display",
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0595/2487/4349/files/Sony-BRAVIA-FW-75EZ20L-75-Class-HDR-4K-UHD-Commercial-LED-Display.png?v=1725867033",
+    "imageSha256": "8dd195691cfd8b879ba5d46400838b852a4f0a4393510d6f519ab255e4aa801e",
+    "reviewedOn": "2026-10-31",
+    "specs": {
+      "sourceUrl": "https://pro.sony/ue_US/products/pro-displays/fw-75ez20l"
+    }
+  },
+  "sony-fw-65bz40l": {
+    "image": "/theater-catalog/sony-fw-65bz40l.webp",
+    "imageSource": "https://officewonderland.com/products/sony-fw-65bz40l-65-exceptionally-bright-4k-hdr-professional-display",
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0595/2487/4349/files/Sony-FW-65BZ40L-65-Exceptionally-bright-4K-HDR-Professional-Display.png?v=1725855537",
+    "imageSha256": "49f9f8318e04eaa3a83952e6ee76447f958e82201f90a59df67f939c62dcd22d",
+    "reviewedOn": "2026-10-31",
+    "specs": {
+      "sourceUrl": "https://pro.sony/ue_US/products/pro-displays/fw-65bz40l"
+    }
+  },
+  "sony-fw-65bz35l": {
+    "image": "/theater-catalog/sony-fw-65bz35l.webp",
+    "imageSource": "https://officewonderland.com/products/sony-fw-65bz35l-65-bravia-4k-hdr-professional-display",
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0595/2487/4349/files/Sony-FW-65BZ35L-65-BRAVIA-4K-HDR-Professional-Display.png?v=1725855625",
+    "imageSha256": "9735d37d309b37cec3d541dd4de812df02a78c76af246b02799c56d845fb3848",
+    "reviewedOn": "2026-10-31",
+    "specs": {
+      "sourceUrl": "https://pro.sony/ue_US/products/pro-displays/fw-65bz35l"
+    }
+  },
+  "sony-fw-65bz30l": {
+    "image": "/theater-catalog/sony-fw-65bz30l.webp",
+    "imageSource": "https://officewonderland.com/products/sony-fw-65bz30l-bravia-65-uhd-4k-hdr-commercial-monitor",
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0595/2487/4349/files/Sony-FW-65BZ30L-BRAVIA-65-UHD-4k-HDR-Commercial-Monitor.jpg?v=1725855723",
+    "imageSha256": "98f16e6fde1496b81b09846b7d84b2632d0fe50696a3fcee38ad31b8f110dfd9",
+    "reviewedOn": "2026-10-31",
+    "specs": {
+      "sourceUrl": "https://pro.sony/ue_US/products/pro-displays/fw-65bz30l"
+    }
+  },
+  "sony-fw-65ez20l": {
+    "image": "/theater-catalog/sony-fw-65ez20l.webp",
+    "imageSource": "https://officewonderland.com/products/sony-bravia-fw-65ez20l-65-class-hdr-4k-uhd-commercial-led-display",
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0595/2487/4349/files/Sony-BRAVIA-FW-65EZ20L-65-Class-HDR-4K-UHD-Commercial-LED-Display.png?v=1725867043",
+    "imageSha256": "b0f74003df59657b32c642c4de770347503b57520e1d37345659e162308f6cad",
+    "reviewedOn": "2026-10-31",
+    "specs": {
+      "sourceUrl": "https://pro.sony/ue_US/products/pro-displays/fw-65ez20l"
+    }
+  },
+  "sony-fw-55bz40l": {
+    "image": "/theater-catalog/sony-fw-55bz40l.webp",
+    "imageSource": "https://officewonderland.com/products/sony-fw-55bz40l-55-exceptionally-bright-4k-hdr-professional-display",
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0595/2487/4349/files/Sony-FW-55BZ40L-55-inch-Exceptionally-bright-4K-HDR-Professional-Display.jpg?v=1725853877",
+    "imageSha256": "9c9084291528a35769b52cc2aa94aaf6806fab0810ce1922c4cdeb932cb51196",
+    "reviewedOn": "2026-10-31",
+    "specs": {
+      "sourceUrl": "https://pro.sony/ue_US/products/pro-displays/fw-55bz40l"
+    }
+  },
+  "sony-fw-55bz35l": {
+    "image": "/theater-catalog/sony-fw-55bz35l.webp",
+    "imageSource": "https://officewonderland.com/products/sony-fw-55bz35l-55-bravia-4k-hdr-professional-display",
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0595/2487/4349/files/Sony-FW-55BZ35L-55-BRAVIA-4K-HDR-Professional-Display.png?v=1725855649",
+    "imageSha256": "4aceac91173c0adf0ebdc1db97aa79a2c172adf2ffd79247a9cca3c35e373871",
+    "reviewedOn": "2026-10-31",
+    "specs": {
+      "sourceUrl": "https://pro.sony/ue_US/products/pro-displays/fw-55bz35l"
+    }
+  },
+  "sony-fw-55bz30l": {
+    "image": "/theater-catalog/sony-fw-55bz30l.webp",
+    "imageSource": "https://officewonderland.com/products/sony-fw-55bz30l-bravia-55-uhd-4k-hdr-commercial-monitor",
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0595/2487/4349/files/Sony-FW-55BZ30L-BRAVIA-55-UHD-4k-HDR-Commercial-Monitor.jpg?v=1725855745",
+    "imageSha256": "bd708831db8eab24c1d16b4e796aac7685ed71936e8a2fd115a56002144c6c2c",
+    "reviewedOn": "2026-10-31",
+    "specs": {
+      "sourceUrl": "https://pro.sony/ue_US/products/pro-displays/fw-55bz30l"
+    }
+  },
+  "sony-fw-55ez20l": {
+    "image": "/theater-catalog/sony-fw-55ez20l.webp",
+    "imageSource": "https://officewonderland.com/products/sony-bravia-fw-55ez20l-55-class-hdr-4k-uhd-commercial-led-display",
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0595/2487/4349/files/Sony-BRAVIA-FW-55EZ20L-55-Class-HDR-4K-UHD-Commercial-LED-Display.png?v=1725867079",
+    "imageSha256": "c42f8430f28ff58dab83ea72d2889c65531618d526e5e5bab13962a5b2efab29",
+    "reviewedOn": "2026-10-31",
+    "specs": {
+      "sourceUrl": "https://pro.sony/ue_US/products/pro-displays/fw-55ez20l"
+    }
+  },
+  "sony-fw-50bz30l": {
+    "image": "/theater-catalog/sony-fw-50bz30l.webp",
+    "imageSource": "https://officewonderland.com/products/sony-fw-50bz30l-bravia-50-uhd-4k-hdr-commercial-monitor",
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0595/2487/4349/files/Sony-FW-50BZ30L-BRAVIA-50-UHD-4k-HDR-Commercial-Monitor.jpg?v=1725855770",
+    "imageSha256": "e8049cadcc3c6fa8e870058669f20301e4258ff348ded5e427213f96f953cb1b",
+    "reviewedOn": "2026-10-31",
+    "specs": {
+      "sourceUrl": "https://pro.sony/ue_US/products/pro-displays/fw-50bz30l"
+    }
+  },
+  "sony-fw-50ez20l": {
+    "image": "/theater-catalog/sony-fw-50ez20l.webp",
+    "imageSource": "https://officewonderland.com/products/sony-bravia-fw-50ez20l-50-class-hdr-4k-uhd-commercial-led-display",
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0595/2487/4349/files/Sony-BRAVIA-FW-50EZ20L-50-Class-HDR-4K-UHD-Commercial-LED-Display.png?v=1725867094",
+    "imageSha256": "429ebf29b68bd9417dab2da4ae479eb0c635ab9831fa3041e18f92ec262c7cf6",
+    "reviewedOn": "2026-10-31",
+    "specs": {
+      "sourceUrl": "https://pro.sony/ue_US/products/pro-displays/fw-50ez20l"
+    }
+  },
+  "sony-fw-43bz30l": {
+    "image": "/theater-catalog/sony-fw-43bz30l.webp",
+    "imageSource": "https://officewonderland.com/products/sony-fw-43bz30l-bravia-43-uhd-4k-hdr-commercial-monitor",
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0595/2487/4349/files/Sony-FW-43BZ30L-BRAVIA-43-UHD-4k-HDR-Commercial-Monitor.jpg?v=1725855782",
+    "imageSha256": "8a19d64a2204885e391270f53eac3bb991d93376a905bb4a75e804b7599a0931",
+    "reviewedOn": "2026-10-31",
+    "specs": {
+      "sourceUrl": "https://pro.sony/ue_US/products/pro-displays/fw-43bz30l"
+    }
+  },
+  "sony-fw-43ez20l": {
+    "image": "/theater-catalog/sony-fw-43ez20l.webp",
+    "imageSource": "https://fireowls.com/products/fw43ez20l-sony-professional-fw-43ez20l-digital-signage-display",
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0861/8573/8535/files/1078830969_a9342e4b-2998-4171-975f-edb044725b02.jpg?v=1769747217",
+    "imageSha256": "d5c414265b8d0d81aa11727a9dd993011f1ad22ec8dfd2c0f12ad20b611170b1",
+    "reviewedOn": "2026-10-31",
+    "specs": {
+      "sourceUrl": "https://pro.sony/ue_US/products/pro-displays/fw-43ez20l"
+    }
+  },
+  "sony-vpl-xw7000": {
+    "image": "/theater-catalog/sony-vpl-xw7000.webp",
+    "imageSource": "https://www.sony.jp/video-projector/products/VPL-XW7000/",
+    "imageUrl": "https://www.sony.jp/products/picture/vpl-xw7000.jpg",
+    "imageSha256": "c639d0df6b1a604424b55139765e080e92c23747d98dc947be055c3197f35b11",
+    "reviewedOn": "2026-10-31",
+    "specs": {
+      "lumens": 3200,
+      "throwMin": 1.35,
+      "throwMax": 2.84,
+      "sourceUrl": "https://pro.sony/s3/2022/04/21094715/73942.008-SONY-XW7000-Projector-Data-SheetMR.pdf",
+      "lightSource": "Laser",
+      "resolution": "3840 × 2160",
+      "nativeAspect": "16:9",
+      "dimensions": [
+        0.46,
+        0.21,
+        0.517
+      ]
+    }
+  },
+  "sony-vpl-xw5000": {
+    "image": "/theater-catalog/sony-vpl-xw5000.webp",
+    "imageSource": "https://www.sony.jp/video-projector/products/VPL-XW5000/",
+    "imageUrl": "https://www.sony.jp/products/picture/vpl-xw5000.jpg",
+    "imageSha256": "12b654f3ab335d4f8218e158ad5f027842ae90707ad491361cc4329b870bc79f",
+    "reviewedOn": "2026-10-31",
+    "specs": {
+      "lumens": 2000,
+      "throwMin": 1.38,
+      "throwMax": 2.21,
+      "sourceUrl": "https://www.sony.jp/video-projector/products/VPL-XW5000/",
+      "lightSource": "Laser",
+      "resolution": "3840 × 2160",
+      "nativeAspect": "16:9",
+      "dimensions": [
+        0.46,
+        0.2,
+        0.472
+      ]
+    }
+  },
+  "sony-vpl-fhz101l": {
+    "image": "/theater-catalog/sony-vpl-fhz101l.webp",
+    "imageSource": "https://www.sony.jp/vpl/products/VPL-FHZ101L/",
+    "imageUrl": "https://www.sony.jp/products/picture/VPL-FHZ101L_VPL-FHZ101LB.jpg",
+    "imageSha256": "28ffbec52e66b3437a0a5ffdbae9defe8579761b9a699fc3aa7cb9aeb789adad",
+    "reviewedOn": "2026-10-31",
+    "specs": {
+      "lumens": 10000,
+      "resolution": "1920 × 1200",
+      "nativeAspect": "16:10",
+      "lightSource": "Laser",
+      "sourceUrl": "https://pro.sony/s3/2020/11/18104118/MK20404V1_l.pdf"
+    },
+    "issues": [
+      "Interchangeable lens required: confirm lens selection and throw range separately; no fixed throw ratio is assumed."
+    ]
+  },
+  "sony-vpl-fhz91l": {
+    "image": "/theater-catalog/sony-vpl-fhz91l.webp",
+    "imageSource": "https://www.sony.jp/vpl/products/VPL-FHZ91L/",
+    "imageUrl": "https://www.sony.jp/products/picture/VPL-FHZ91L_VPL-FHZ91LB.jpg",
+    "imageSha256": "2b4e9c52b5ae67425475bd6d5917e7a64901b9248372a69396ee254e1e59aa27",
+    "reviewedOn": "2026-10-31",
+    "specs": {
+      "lumens": 9000,
+      "resolution": "1920 × 1200",
+      "nativeAspect": "16:10",
+      "lightSource": "Laser",
+      "sourceUrl": "https://pro.sony/s3/2020/11/18104118/MK20404V1_l.pdf"
+    },
+    "issues": [
+      "Interchangeable lens required: confirm lens selection and throw range separately; no fixed throw ratio is assumed."
+    ]
+  },
+  "sony-vpl-phz61": {
+    "image": "/theater-catalog/sony-vpl-phz61.webp",
+    "imageSource": "https://www.sony.jp/vpl/products/VPL-PHZ61/",
+    "imageUrl": "https://www.sony.jp/products/picture/VPL-PHZ61.jpg",
+    "imageSha256": "0798567cd0e1704bd7da108064a357cfaf2f8223c4e28a60b80f7b20235cf414",
+    "reviewedOn": "2026-10-31",
+    "specs": {
+      "lumens": 6400,
+      "throwMin": 1.23,
+      "throwMax": 1.97,
+      "sourceUrl": "https://pro.sony/s3/2022/11/15150546/PHZ61_51_brochure_highres_EN_Oct_2022_Final.pdf",
+      "lightSource": "Laser",
+      "resolution": "1920 × 1200",
+      "nativeAspect": "16:10"
+    }
+  },
+  "sony-vpl-phz51": {
+    "image": "/theater-catalog/sony-vpl-phz51.webp",
+    "imageSource": "https://www.sony.jp/vpl/products/VPL-PHZ51/",
+    "imageUrl": "https://www.sony.jp/products/picture/VPL-PHZ51.jpg",
+    "imageSha256": "683c05e76081c0df79cfff86cce30ecf460283a20259b806d909e13636cb84e2",
+    "reviewedOn": "2026-10-31",
+    "specs": {
+      "lumens": 5300,
+      "throwMin": 1.23,
+      "throwMax": 1.97,
+      "sourceUrl": "https://pro.sony/s3/2022/11/15150546/PHZ61_51_brochure_highres_EN_Oct_2022_Final.pdf",
+      "lightSource": "Laser",
+      "resolution": "1920 × 1200",
+      "nativeAspect": "16:10"
+    }
+  },
+  "sony-vpll-z4015": {
+    "image": "/theater-catalog/sony-vpll-z4015.webp",
+    "imageSource": "https://www.sony.jp/vpl/products/VPLL-Z4015/",
+    "imageUrl": "https://www.sony.jp/products/picture/VPLL-Z4015.jpg",
+    "imageSha256": "0eb64136d4b23ee70e3205494d8278247d8ddc0db1d9a1d903462e02ddc92a5c",
+    "reviewedOn": "2026-10-31"
+  },
+  "sony-vpll-z4111": {
+    "image": "/theater-catalog/sony-vpll-z4111.webp",
+    "imageSource": "https://www.sony.jp/vpl/products/VPLL-Z4111/",
+    "imageUrl": "https://www.sony.jp/products/picture/VPLL-Z4111.jpg",
+    "imageSha256": "29d86a4d9370ab5db26a7d7b4f7bb05fbe0e2a5a5cc92459933d7cc2e4afda8a",
+    "reviewedOn": "2026-10-31"
+  },
+  "sony-vpll-z4019": {
+    "image": "/theater-catalog/sony-vpll-z4019.webp",
+    "imageSource": "https://www.sony.jp/vpl/products/VPLL-Z4019/",
+    "imageUrl": "https://www.sony.jp/products/picture/VPLL-Z4019.jpg",
+    "imageSha256": "8a613e00346025926d7f9625b68f42186110cbda6082821e320ed2b51a592c4a",
+    "reviewedOn": "2026-10-31"
+  },
+  "sony-vpl-xw8100": {
+    "image": "/theater-catalog/sony-vpl-xw8100.webp",
+    "imageSource": "https://www.audioadvice.com/products/sony-bravia-projector-9-4k-hdr-laser-home-theater-projector",
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0572/3281/8260/files/vplxw8100b_es_3q_2400606_01.jpg?v=1727382804",
+    "imageSha256": "f095299a6196bc4aa7f71113cd84d1c31cfc39b46ff748770af87329a880292b",
+    "reviewedOn": "2026-10-31",
+    "specs": {
+      "lumens": 3400,
+      "throwMin": 1.35,
+      "throwMax": 2.84,
+      "sourceUrl": "https://pro.sony/s3/2024/09/10093825/VPL-XW6100ES-and-VPL-XW8100ES-Home-Cinema-Brochure-EN.pdf",
+      "lightSource": "Laser",
+      "resolution": "3840 × 2160",
+      "nativeAspect": "16:9",
+      "dimensions": [
+        0.46,
+        0.21,
+        0.517
+      ]
+    }
+  },
+  "sony-vpl-xw5100": {
+    "image": "/theater-catalog/sony-vpl-xw5100.webp",
+    "imageSource": "https://www.audioadvice.com/products/sony-bravia-projector-7-vpl-xw5100es-4k-hdr-projector",
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0572/3281/8260/files/vplxw5100b_3q_241119_01.jpg?v=1743531404",
+    "imageSha256": "fa9bac19ea0587b043501fb712a3bc1542fba6c624211622cc4fbae118823d8d",
+    "reviewedOn": "2026-10-31",
+    "specs": {
+      "lumens": 2200,
+      "throwMin": 1.38,
+      "throwMax": 2.21,
+      "sourceUrl": "https://pro.sony/s3/2025/03/05163722/VPL-XW5100ES-Home-Cinema-Brochure-EN.pdf",
+      "lightSource": "Laser",
+      "resolution": "3840 × 2160",
+      "nativeAspect": "16:9",
+      "dimensions": [
+        0.46,
+        0.2,
+        0.472
+      ]
+    }
+  },
+  "sony-vpl-cxz10": {
+    "image": "/theater-catalog/sony-vpl-cxz10.webp",
+    "imageSource": "https://supremeindia.com/products/sony-projector-vpl-cxz10",
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0635/8188/0407/files/01_745bd419-e775-4aa6-941d-ffbc7cd9e91d.png?v=1753948045",
+    "imageSha256": "2e0d83047d78fbabbbc6a89ffdb2dc013991ffa5962a3ff974e41e830d67a245",
+    "reviewedOn": "2026-10-31",
+    "specs": {
+      "lumens": 5000,
+      "throwMin": 1.41,
+      "throwMax": 2.27,
+      "sourceUrl": "https://pro.sony/s3/2020/02/14134136/BP000908_VPS_VPL-CWZ10-CXZ10_Leaflet_EN.pdf",
+      "lightSource": "Laser",
+      "resolution": "1024 × 768",
+      "nativeAspect": "4:3"
+    }
+  },
+  "sony-wq-bs1": {
+    "image": "/theater-catalog/sony-wq-bs1.webp",
+    "imageKind": "service",
+    "imageSource": "Catalog identity card; no physical product photo supplied for this code.",
+    "reviewedOn": "2026-10-31"
+  },
+  "sony-zm2810-1y": {
+    "image": "/theater-catalog/sony-zm2810-1y.webp",
+    "imageKind": "service",
+    "imageSource": "Catalog identity card; no physical product photo supplied for this code.",
+    "reviewedOn": "2026-10-31"
+  },
+  "sony-zm2810-2y": {
+    "image": "/theater-catalog/sony-zm2810-2y.webp",
+    "imageKind": "service",
+    "imageSource": "Catalog identity card; no physical product photo supplied for this code.",
+    "reviewedOn": "2026-10-31"
+  },
+  "sony-zm2810-3y": {
+    "image": "/theater-catalog/sony-zm2810-3y.webp",
+    "imageKind": "service",
+    "imageSource": "Catalog identity card; no physical product photo supplied for this code.",
+    "reviewedOn": "2026-10-31"
+  },
+  "marantz-cinema-30": {
+    "specs": {
+      "sourceUrl": "https://www.marantz.com/on/demandware.static/-/Library-Sites-marantz_europe_shared/default/dw1573b45c/archive-downloads/Marantz_Infosheet_CINEMA%2030_EU.pdf"
+    }
+  },
+  "benq-gp520": {
+    "image": "/theater-catalog/benq-gp520.webp",
+    "imageSource": "https://www.benq.com/en-in/projector/cinema/gp520.html",
+    "imageUrl": "https://image.benq.com/is/image/benqco/gp520-right30?wid=960&fmt=png-alpha",
+    "imageSha256": "1557fb50b7442efd1adfae452370fc3b492b7bd06a504c8a87709aa58606b7d0",
+    "reviewedOn": "2026-10-31"
+  },
+  "marantz-cinema-40": {
+    "specs": {
+      "sourceUrl": "https://www.marantz.com/en/product/av-receivers/cinema-40/CINEMA40.html"
+    }
+  }
+}

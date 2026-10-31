@@ -26,6 +26,7 @@ export function requirements(audio: string): Partial<Record<Slot, number>> {
     receiver: 1,
     amplifier: 0,
     projector: 1,
+    tv: 1,
     package: 1,
   };
 }
@@ -48,7 +49,7 @@ export function activeSlots(
   products: Product[] = [],
 ): Slot[] {
   const slots: Slot[] =
-    state.design.display === "projector" ? ["projector"] : [];
+    state.design.display === "projector" ? ["projector"] : ["tv"];
   const packaged = state.equipment.mode === "package";
   if (packaged) slots.push("package");
   if (packaged && !state.equipment.slots.package) return [...slots, "receiver"];
@@ -135,6 +136,16 @@ export function compatibility(
         slot,
       });
   }
+  if (
+    slot === "tv" &&
+    p.specs.diagonalInches !== undefined &&
+    (d.diagonal !== p.specs.diagonalInches || d.aspect !== "16:9")
+  )
+    issues.push({
+      level: "error",
+      slot,
+      text: `${p.model} is a fixed ${p.specs.diagonalInches}-inch 16:9 display. Choose a different model to change its physical screen size.`,
+    });
   if (slot === "package" && !p.specs.packageContents)
     issues.push({
       level: "error",
@@ -281,11 +292,25 @@ export function calculateQuote(
   }
   for (const x of state.equipment.extras)
     add(x.productId, x.finish, x.quantity, SLOT_LABELS.extra, "extra");
+  // Legacy projects can still quote a custom display service instead of a catalog TV.
   if (
     state.design.display === "tv" &&
-    !state.services.some((s) => s.category === "display" && s.amountPaise > 0)
+    !state.equipment.slots.tv &&
+    state.services.some((s) => s.category === "display" && s.amountPaise > 0)
+  ) {
+    const i = missing.indexOf(SLOT_LABELS.tv);
+    if (i >= 0) missing.splice(i, 1);
+  }
+  if (
+    state.design.display === "tv" &&
+    state.equipment.slots.tv &&
+    state.services.some((s) => s.category === "display" && s.amountPaise > 0)
   )
-    missing.push("TV price (add a Display line under Scope)");
+    issues.push({
+      level: "warning",
+      slot: "tv",
+      text: "A catalog display and a separate display scope line are both priced. Review the scope to avoid charging twice for the same display.",
+    });
   if (
     state.design.display === "projector" &&
     !state.services.some((s) => s.category === "screen" && s.amountPaise > 0)
@@ -306,6 +331,17 @@ export function calculateQuote(
     (receiver.specs.processedChannels ?? 0) >= channels
   ) {
     if (!amp) missing.push("Additional power amplifier");
+    else if (
+      amp.specs.powerAmpDirect === true &&
+      amp.specs.externalAmpChannels !== undefined &&
+      amp.specs.externalAmpChannels <
+        channels - (receiver.specs.amplifiedChannels ?? 0)
+    )
+      issues.push({
+        level: "error",
+        slot: "amplifier",
+        text: `${amp.model} provides ${amp.specs.externalAmpChannels} power-amplifier channels; ${receiver.model} needs ${channels - (receiver.specs.amplifiedChannels ?? 0)} external channels for ${state.design.audio}.`,
+      });
     else
       issues.push({
         level: "warning",
@@ -398,6 +434,19 @@ export function applyProjector(
     ...(product.specs.lumens ? { lumens: product.specs.lumens } : {}),
     ...(product.specs.throwMin && product.specs.throwMax
       ? { throwMin: product.specs.throwMin, throwMax: product.specs.throwMax }
+      : {}),
+  };
+}
+export function applyTV(
+  design: SalesProject["design"],
+  product: Product,
+): SalesProject["design"] {
+  return {
+    ...design,
+    display: "tv",
+    aspect: "16:9",
+    ...(product.specs.diagonalInches
+      ? { diagonal: product.specs.diagonalInches }
       : {}),
   };
 }

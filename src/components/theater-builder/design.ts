@@ -333,7 +333,7 @@ export function calculateDesign(d: TheaterDesign) {
 export const NUMBER_LIMITS = {
   width: [3, 8], depth: [4, 12], height: [2.2, 4], seats: [2, 5], rows: [1, 3],
   distance: [1.8, 7], rowSpacing: [1.2, 2.4], riser: [0.1, 0.45], aisleWidth: [0.4, 1.2],
-  diagonal: [65, 180], lumens: [500, 6000], gain: [0.6, 1.5], throwMin: [0.5, 3], throwMax: [0.5, 4],
+  diagonal: [43, 180], lumens: [500, 15000], gain: [0.6, 1.5], throwMin: [0.5, 3], throwMax: [0.5, 4],
 } as const;
 export function parseSavedDesign(raw: string): TheaterDesign {
   const saved = JSON.parse(raw);

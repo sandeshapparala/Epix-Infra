@@ -14458,5 +14458,3253 @@
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/df288ffea7c418d166a60775.jpg"
+  },
+  {
+    "id": "marantz-grand-horizon",
+    "brand": "Marantz",
+    "model": "Grand Horizon",
+    "category": "active-speaker",
+    "roles": [
+      "extra"
+    ],
+    "series": "Horizon",
+    "description": "Total Amplifier Power (FTC) 370W (FTC Power Output Rating) | Marantz Rise™ Amplifier | Marantz Radiance™ 360° Seamless Fabric | HEOS® Built-in | Marantz AuraControl™ | Marantz Mirage™ DSP",
+    "image": "/theater-catalog/marantz-grand-horizon.webp",
+    "finishes": [],
+    "specs": {},
+    "issues": [
+      "GST rate requires confirmation; not stated in the supplied document."
+    ],
+    "source": {
+      "file": "Marantz Price List Oct 2026.pdf",
+      "page": 1,
+      "effectiveDate": "2026-10-01",
+      "sha256": "dd4d44b7116d5d241796baefedf7439b9aa01b6496c243f3bc36a64d9dbb08e4"
+    },
+    "price": {
+      "amountPaise": 79990000,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
+      "revision": 0
+    },
+    "imageSource": "Marantz Price List Oct 2026.pdf · page 1",
+    "previousSources": [
+      {
+        "file": "Marantz Price List July 2026.pdf",
+        "page": 1,
+        "effectiveDate": "2026-07-01",
+        "sha256": "f48b510ac746242a21735abb2c821e62cc97df83f8186db345d755d50559f2db"
+      }
+    ],
+    "quoteImage": "/theater-catalog/quotation/e331b37f485fe8cce4b1dc75.jpg"
+  },
+  {
+    "id": "marantz-horizon",
+    "brand": "Marantz",
+    "model": "Horizon",
+    "category": "active-speaker",
+    "roles": [
+      "extra"
+    ],
+    "series": "Horizon",
+    "description": "Total Amplifier Power (FTC) 310 W (FTC Power Output Rating) | Marantz Rise™ Amplifier | Marantz Radiance™ 360° Seamless Fabric | HEOS® Built-in | Marantz AuraControl™ | Marantz Mirage™ DSP",
+    "image": "/theater-catalog/marantz-horizon.webp",
+    "finishes": [],
+    "specs": {},
+    "issues": [
+      "GST rate requires confirmation; not stated in the supplied document."
+    ],
+    "source": {
+      "file": "Marantz Price List Oct 2026.pdf",
+      "page": 1,
+      "effectiveDate": "2026-10-01",
+      "sha256": "dd4d44b7116d5d241796baefedf7439b9aa01b6496c243f3bc36a64d9dbb08e4"
+    },
+    "price": {
+      "amountPaise": 62690000,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
+      "revision": 0
+    },
+    "imageSource": "Marantz Price List Oct 2026.pdf · page 1",
+    "previousSources": [
+      {
+        "file": "Marantz Price List July 2026.pdf",
+        "page": 1,
+        "effectiveDate": "2026-07-01",
+        "sha256": "f48b510ac746242a21735abb2c821e62cc97df83f8186db345d755d50559f2db"
+      }
+    ],
+    "quoteImage": "/theater-catalog/quotation/e331b37f485fe8cce4b1dc75.jpg"
+  },
+  {
+    "id": "marantz-horizon-tripod",
+    "brand": "Marantz",
+    "model": "Horizon Tripod",
+    "category": "accessory",
+    "roles": [
+      "extra"
+    ],
+    "series": "Horizon",
+    "description": "Pedestal for the Marantz Horizon Wireless Speaker",
+    "image": "/theater-catalog/marantz-horizon-tripod.webp",
+    "finishes": [],
+    "specs": {},
+    "issues": [
+      "GST rate requires confirmation; not stated in the supplied document."
+    ],
+    "source": {
+      "file": "Marantz Price List Oct 2026.pdf",
+      "page": 1,
+      "effectiveDate": "2026-10-01",
+      "sha256": "dd4d44b7116d5d241796baefedf7439b9aa01b6496c243f3bc36a64d9dbb08e4"
+    },
+    "price": {
+      "amountPaise": 9990000,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
+      "revision": 0
+    },
+    "imageSource": "Marantz Price List Oct 2026.pdf · page 1",
+    "previousSources": [
+      {
+        "file": "Marantz Price List July 2026.pdf",
+        "page": 1,
+        "effectiveDate": "2026-07-01",
+        "sha256": "f48b510ac746242a21735abb2c821e62cc97df83f8186db345d755d50559f2db"
+      }
+    ],
+    "quoteImage": "/theater-catalog/quotation/e00c333d9eb4083f3857b490.jpg"
+  },
+  {
+    "id": "marantz-model-m1",
+    "brand": "Marantz",
+    "model": "MODEL M1",
+    "category": "streaming-amplifier",
+    "roles": [
+      "extra"
+    ],
+    "series": "Streaming & Distribution",
+    "description": "Power (8 ohm) 100 W+100 W (8 Ω, THD 0.05%) | Digital Inputs HDMI (eARC), TOSLINK| Bluetooth Receive BT 4.2.X | AirPlay AirPlay 2 | Roon Tested",
+    "image": "/theater-catalog/marantz-model-m1.webp",
+    "finishes": [],
+    "specs": {},
+    "issues": [
+      "GST rate requires confirmation; not stated in the supplied document."
+    ],
+    "source": {
+      "file": "Marantz Price List Oct 2026.pdf",
+      "page": 1,
+      "effectiveDate": "2026-10-01",
+      "sha256": "dd4d44b7116d5d241796baefedf7439b9aa01b6496c243f3bc36a64d9dbb08e4"
+    },
+    "price": {
+      "amountPaise": 11490000,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
+      "revision": 0
+    },
+    "imageSource": "Marantz Price List Oct 2026.pdf · page 1",
+    "previousSources": [
+      {
+        "file": "Marantz Price List July 2026.pdf",
+        "page": 1,
+        "effectiveDate": "2026-07-01",
+        "sha256": "f48b510ac746242a21735abb2c821e62cc97df83f8186db345d755d50559f2db"
+      }
+    ],
+    "quoteImage": "/theater-catalog/quotation/1370271c5672d7133bf52b01.jpg"
+  },
+  {
+    "id": "marantz-model-m4",
+    "brand": "Marantz",
+    "model": "MODEL M4",
+    "category": "streaming-amplifier",
+    "roles": [
+      "extra"
+    ],
+    "series": "Streaming & Distribution",
+    "description": "Crafted in Shirakawa, Japan | 8 Channels 100 Watts (Per Channel)| Four Zones | Dolby Digital | HEOS Built-in | AirPlay 2 | Control System Compatibility via TCP/IP Creston, Control4, AMX",
+    "image": "/theater-catalog/marantz-model-m4.webp",
+    "finishes": [],
+    "specs": {},
+    "issues": [
+      "GST rate requires confirmation; not stated in the supplied document."
+    ],
+    "source": {
+      "file": "Marantz Price List Oct 2026.pdf",
+      "page": 1,
+      "effectiveDate": "2026-10-01",
+      "sha256": "dd4d44b7116d5d241796baefedf7439b9aa01b6496c243f3bc36a64d9dbb08e4"
+    },
+    "price": {
+      "amountPaise": 39990000,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
+      "revision": 0
+    },
+    "imageSource": "Marantz Price List Oct 2026.pdf · page 1",
+    "previousSources": [
+      {
+        "file": "Marantz Price List July 2026.pdf",
+        "page": 1,
+        "effectiveDate": "2026-07-01",
+        "sha256": "f48b510ac746242a21735abb2c821e62cc97df83f8186db345d755d50559f2db"
+      }
+    ],
+    "quoteImage": "/theater-catalog/quotation/e7006de25a9e03fe38bcb7fc.jpg"
+  },
+  {
+    "id": "marantz-mm-7025",
+    "brand": "Marantz",
+    "model": "MM-7025",
+    "category": "power-amplifier",
+    "roles": [
+      "amplifier"
+    ],
+    "series": "AV Separates",
+    "description": "2X140W @8OHMS XLR Audio Inputs DC Triggers",
+    "image": "/theater-catalog/marantz-mm-7025.webp",
+    "finishes": [],
+    "specs": {
+      "externalAmpChannels": 2,
+      "powerAmpDirect": true
+    },
+    "issues": [
+      "GST rate requires confirmation; not stated in the supplied document."
+    ],
+    "source": {
+      "file": "Marantz Price List Oct 2026.pdf",
+      "page": 1,
+      "effectiveDate": "2026-10-01",
+      "sha256": "dd4d44b7116d5d241796baefedf7439b9aa01b6496c243f3bc36a64d9dbb08e4"
+    },
+    "price": {
+      "amountPaise": 12990000,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
+      "revision": 0
+    },
+    "imageSource": "Marantz Price List Oct 2026.pdf · page 1",
+    "previousSources": [
+      {
+        "file": "Marantz Price List July 2026.pdf",
+        "page": 1,
+        "effectiveDate": "2026-07-01",
+        "sha256": "f48b510ac746242a21735abb2c821e62cc97df83f8186db345d755d50559f2db"
+      }
+    ],
+    "quoteImage": "/theater-catalog/quotation/17099213acee04c9d5e39db0.jpg"
+  },
+  {
+    "id": "marantz-mm-7055",
+    "brand": "Marantz",
+    "model": "MM-7055",
+    "category": "power-amplifier",
+    "roles": [
+      "amplifier"
+    ],
+    "series": "AV Separates",
+    "description": "5X140W @8OHMS XLR Audio Inputs DC Triggers Ultra Bandwidth for SACD Frequencies",
+    "image": "/theater-catalog/marantz-mm-7055.webp",
+    "finishes": [],
+    "specs": {
+      "externalAmpChannels": 5,
+      "powerAmpDirect": true
+    },
+    "issues": [
+      "GST rate requires confirmation; not stated in the supplied document."
+    ],
+    "source": {
+      "file": "Marantz Price List Oct 2026.pdf",
+      "page": 1,
+      "effectiveDate": "2026-10-01",
+      "sha256": "dd4d44b7116d5d241796baefedf7439b9aa01b6496c243f3bc36a64d9dbb08e4"
+    },
+    "price": {
+      "amountPaise": 15990000,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
+      "revision": 0
+    },
+    "imageSource": "Marantz Price List Oct 2026.pdf · page 1",
+    "previousSources": [
+      {
+        "file": "Marantz Price List July 2026.pdf",
+        "page": 1,
+        "effectiveDate": "2026-07-01",
+        "sha256": "f48b510ac746242a21735abb2c821e62cc97df83f8186db345d755d50559f2db"
+      }
+    ],
+    "quoteImage": "/theater-catalog/quotation/ed491b86f2a41ad55ffe7dba.jpg"
+  },
+  {
+    "id": "marantz-mm-8077",
+    "brand": "Marantz",
+    "model": "MM-8077",
+    "category": "power-amplifier",
+    "roles": [
+      "amplifier"
+    ],
+    "series": "AV Separates",
+    "description": "7X150W @8OHMS XLR Audio Inputs DC Triggers Ultra Bandwidth for SACD Frequencies",
+    "image": "/theater-catalog/marantz-mm-8077.webp",
+    "finishes": [],
+    "specs": {
+      "externalAmpChannels": 7,
+      "powerAmpDirect": true
+    },
+    "issues": [
+      "GST rate requires confirmation; not stated in the supplied document."
+    ],
+    "source": {
+      "file": "Marantz Price List Oct 2026.pdf",
+      "page": 1,
+      "effectiveDate": "2026-10-01",
+      "sha256": "dd4d44b7116d5d241796baefedf7439b9aa01b6496c243f3bc36a64d9dbb08e4"
+    },
+    "price": {
+      "amountPaise": 33990000,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
+      "revision": 0
+    },
+    "imageSource": "Marantz Price List Oct 2026.pdf · page 1",
+    "previousSources": [
+      {
+        "file": "Marantz Price List July 2026.pdf",
+        "page": 1,
+        "effectiveDate": "2026-07-01",
+        "sha256": "f48b510ac746242a21735abb2c821e62cc97df83f8186db345d755d50559f2db"
+      }
+    ],
+    "quoteImage": "/theater-catalog/quotation/bfd4fe419d0c1bbd9e986b73.jpg"
+  },
+  {
+    "id": "marantz-av30",
+    "brand": "Marantz",
+    "model": "AV30",
+    "category": "av-processor",
+    "roles": [
+      "receiver"
+    ],
+    "series": "AV Separates",
+    "description": "11.4-Channel Balanced AV Preamplifier Powered by HEOS™ | Crafted in Shirakawa, Japan | 7 HDMI Inputs plus Earc | 8K and Dolby Atmos",
+    "image": "/theater-catalog/marantz-av30.webp",
+    "finishes": [],
+    "specs": {
+      "amplifiedChannels": 0,
+      "processedChannels": 11,
+      "atmos": true
+    },
+    "issues": [
+      "GST rate requires confirmation; not stated in the supplied document."
+    ],
+    "source": {
+      "file": "Marantz Price List Oct 2026.pdf",
+      "page": 2,
+      "effectiveDate": "2026-10-01",
+      "sha256": "dd4d44b7116d5d241796baefedf7439b9aa01b6496c243f3bc36a64d9dbb08e4"
+    },
+    "price": {
+      "amountPaise": 54990000,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
+      "revision": 0
+    },
+    "imageSource": "Marantz Price List Oct 2026.pdf · page 2",
+    "previousSources": [
+      {
+        "file": "Marantz Price List July 2026.pdf",
+        "page": 2,
+        "effectiveDate": "2026-07-01",
+        "sha256": "f48b510ac746242a21735abb2c821e62cc97df83f8186db345d755d50559f2db"
+      }
+    ],
+    "quoteImage": "/theater-catalog/quotation/47eeb56bf12f72bdd62ad6c3.jpg"
+  },
+  {
+    "id": "marantz-amp30",
+    "brand": "Marantz",
+    "model": "AMP30",
+    "category": "power-amplifier",
+    "roles": [
+      "amplifier"
+    ],
+    "series": "AV Separates",
+    "description": "6-Channel Power Amplifier with 200 Watts and Exclusive HDAM | Crafted in Shirakawa, Japan | Class D Amplification",
+    "image": "/theater-catalog/marantz-amp30.webp",
+    "finishes": [],
+    "specs": {
+      "externalAmpChannels": 6,
+      "powerAmpDirect": true
+    },
+    "issues": [
+      "GST rate requires confirmation; not stated in the supplied document."
+    ],
+    "source": {
+      "file": "Marantz Price List Oct 2026.pdf",
+      "page": 2,
+      "effectiveDate": "2026-10-01",
+      "sha256": "dd4d44b7116d5d241796baefedf7439b9aa01b6496c243f3bc36a64d9dbb08e4"
+    },
+    "price": {
+      "amountPaise": 54900000,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
+      "revision": 0
+    },
+    "imageSource": "Marantz Price List Oct 2026.pdf · page 2",
+    "previousSources": [
+      {
+        "file": "Marantz Price List July 2026.pdf",
+        "page": 2,
+        "effectiveDate": "2026-07-01",
+        "sha256": "f48b510ac746242a21735abb2c821e62cc97df83f8186db345d755d50559f2db"
+      }
+    ],
+    "quoteImage": "/theater-catalog/quotation/733b5eec444781a66afeb44a.jpg"
+  },
+  {
+    "id": "marantz-av20",
+    "brand": "Marantz",
+    "model": "AV20",
+    "category": "av-processor",
+    "roles": [
+      "receiver"
+    ],
+    "series": "AV Separates",
+    "description": "Reference 13.4 Channel Balanced AV Preamplifier and Powered by HEOS™ | 7 HDMI Inputs plus eARC | 8K and Dolby Atmos | 3D Audio",
+    "image": "/theater-catalog/marantz-av20.webp",
+    "finishes": [],
+    "specs": {
+      "amplifiedChannels": 0,
+      "processedChannels": 13,
+      "atmos": true
+    },
+    "issues": [
+      "GST rate requires confirmation; not stated in the supplied document."
+    ],
+    "source": {
+      "file": "Marantz Price List Oct 2026.pdf",
+      "page": 2,
+      "effectiveDate": "2026-10-01",
+      "sha256": "dd4d44b7116d5d241796baefedf7439b9aa01b6496c243f3bc36a64d9dbb08e4"
+    },
+    "price": {
+      "amountPaise": 79990000,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
+      "revision": 0
+    },
+    "imageSource": "Marantz Price List Oct 2026.pdf · page 2",
+    "previousSources": [
+      {
+        "file": "Marantz Price List July 2026.pdf",
+        "page": 2,
+        "effectiveDate": "2026-07-01",
+        "sha256": "f48b510ac746242a21735abb2c821e62cc97df83f8186db345d755d50559f2db"
+      }
+    ],
+    "quoteImage": "/theater-catalog/quotation/889ad73c3e1c691c08bad3a1.jpg"
+  },
+  {
+    "id": "marantz-amp-20",
+    "brand": "Marantz",
+    "model": "AMP 20",
+    "category": "power-amplifier",
+    "roles": [
+      "amplifier"
+    ],
+    "series": "AV Separates",
+    "description": "Reference 12 Channel Amplifier with 200W and Exclusive HDAM | Balanced & Unbalanced: 12ch (Exclusive use by a selector switch.) |",
+    "image": "/theater-catalog/marantz-amp-20.webp",
+    "finishes": [],
+    "specs": {
+      "externalAmpChannels": 12,
+      "powerAmpDirect": true
+    },
+    "issues": [
+      "GST rate requires confirmation; not stated in the supplied document."
+    ],
+    "source": {
+      "file": "Marantz Price List Oct 2026.pdf",
+      "page": 2,
+      "effectiveDate": "2026-10-01",
+      "sha256": "dd4d44b7116d5d241796baefedf7439b9aa01b6496c243f3bc36a64d9dbb08e4"
+    },
+    "price": {
+      "amountPaise": 79990000,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
+      "revision": 0
+    },
+    "imageSource": "Marantz Price List Oct 2026.pdf · page 2",
+    "previousSources": [
+      {
+        "file": "Marantz Price List July 2026.pdf",
+        "page": 2,
+        "effectiveDate": "2026-07-01",
+        "sha256": "f48b510ac746242a21735abb2c821e62cc97df83f8186db345d755d50559f2db"
+      }
+    ],
+    "quoteImage": "/theater-catalog/quotation/2deeba5d9e1ad66f514ed589.jpg"
+  },
+  {
+    "id": "marantz-av-10",
+    "brand": "Marantz",
+    "model": "AV 10",
+    "category": "av-processor",
+    "roles": [
+      "receiver"
+    ],
+    "series": "AV Separates",
+    "description": "15.4ch audio processing | 17.4ch XLR pre-out | 2ch XLR input | Toroidal transformer & Copper plated chassis | 7x HDMI inputs - all 8K / 3x outputs | Dolby Atmos (up to 9.1.6) | 1 DTS:X up to 15ch |Auro 3D up to 13ch |Gold plated terminals",
+    "image": "/theater-catalog/marantz-av-10.webp",
+    "finishes": [],
+    "specs": {
+      "amplifiedChannels": 0,
+      "processedChannels": 15,
+      "atmos": true
+    },
+    "issues": [
+      "GST rate requires confirmation; not stated in the supplied document."
+    ],
+    "source": {
+      "file": "Marantz Price List Oct 2026.pdf",
+      "page": 2,
+      "effectiveDate": "2026-10-01",
+      "sha256": "dd4d44b7116d5d241796baefedf7439b9aa01b6496c243f3bc36a64d9dbb08e4"
+    },
+    "price": {
+      "amountPaise": 126400000,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
+      "revision": 0
+    },
+    "imageSource": "Marantz Price List Oct 2026.pdf · page 2",
+    "previousSources": [
+      {
+        "file": "Marantz Price List July 2026.pdf",
+        "page": 2,
+        "effectiveDate": "2026-07-01",
+        "sha256": "f48b510ac746242a21735abb2c821e62cc97df83f8186db345d755d50559f2db"
+      }
+    ],
+    "quoteImage": "/theater-catalog/quotation/ef6e2a96a784981dfd46942f.jpg"
+  },
+  {
+    "id": "marantz-amp-10",
+    "brand": "Marantz",
+    "model": "AMP 10",
+    "category": "power-amplifier",
+    "roles": [
+      "amplifier"
+    ],
+    "series": "AV Separates",
+    "description": "Marantz New ID with a level meter | 16 channel Class D amplification | 200W + 200W at 8ohms, single driven | 400W + 400W at 8ohms in BTL mode | 16 channel 1 XLR/RCA inputs | SMPS and Toroidal power transformer",
+    "image": "/theater-catalog/marantz-amp-10.webp",
+    "finishes": [],
+    "specs": {
+      "externalAmpChannels": 16,
+      "powerAmpDirect": true
+    },
+    "issues": [
+      "GST rate requires confirmation; not stated in the supplied document."
+    ],
+    "source": {
+      "file": "Marantz Price List Oct 2026.pdf",
+      "page": 2,
+      "effectiveDate": "2026-10-01",
+      "sha256": "dd4d44b7116d5d241796baefedf7439b9aa01b6496c243f3bc36a64d9dbb08e4"
+    },
+    "price": {
+      "amountPaise": 126400000,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
+      "revision": 0
+    },
+    "imageSource": "Marantz Price List Oct 2026.pdf · page 2",
+    "previousSources": [
+      {
+        "file": "Marantz Price List July 2026.pdf",
+        "page": 2,
+        "effectiveDate": "2026-07-01",
+        "sha256": "f48b510ac746242a21735abb2c821e62cc97df83f8186db345d755d50559f2db"
+      }
+    ],
+    "quoteImage": "/theater-catalog/quotation/2deeba5d9e1ad66f514ed589.jpg"
+  },
+  {
+    "id": "marantz-cinema-30",
+    "brand": "Marantz",
+    "model": "Cinema 30",
+    "category": "receiver",
+    "roles": [
+      "receiver"
+    ],
+    "series": "Cinema",
+    "description": "Crafted in Shirakawa, Japan 11.4 Channels 250 Watts per Channel 7 HDMI Inputs plus eARC 8K & Dolby Atmos HEOS Built-in",
+    "image": "/theater-catalog/marantz-cinema-30.webp",
+    "finishes": [],
+    "specs": {
+      "amplifiedChannels": 11,
+      "processedChannels": 13,
+      "atmos": true,
+      "sourceUrl": "https://www.marantz.com/on/demandware.static/-/Library-Sites-marantz_europe_shared/default/dw1573b45c/archive-downloads/Marantz_Infosheet_CINEMA%2030_EU.pdf"
+    },
+    "issues": [
+      "GST rate requires confirmation; not stated in the supplied document."
+    ],
+    "source": {
+      "file": "Marantz Price List Oct 2026.pdf",
+      "page": 2,
+      "effectiveDate": "2026-10-01",
+      "sha256": "dd4d44b7116d5d241796baefedf7439b9aa01b6496c243f3bc36a64d9dbb08e4"
+    },
+    "price": {
+      "amountPaise": 78990000,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
+      "revision": 0
+    },
+    "imageSource": "Marantz Price List Oct 2026.pdf · page 2",
+    "previousSources": [
+      {
+        "file": "Marantz Price List July 2026.pdf",
+        "page": 2,
+        "effectiveDate": "2026-07-01",
+        "sha256": "f48b510ac746242a21735abb2c821e62cc97df83f8186db345d755d50559f2db"
+      }
+    ],
+    "quoteImage": "/theater-catalog/quotation/edcf31fb3e43f832f03ce331.jpg"
+  },
+  {
+    "id": "marantz-cinema-40",
+    "brand": "Marantz",
+    "model": "Cinema 40",
+    "category": "receiver",
+    "roles": [
+      "receiver"
+    ],
+    "series": "Cinema",
+    "description": "•200W x 9ch (6 ohms, 1%, 1ch driven) •Porthole display and large trap door design • Hidden 2-line full-size display •Full setup and control via front panel buttons •Advanced audio components • Zone 3 pre-outs • Made in Japan",
+    "image": "/theater-catalog/marantz-cinema-40.webp",
+    "finishes": [],
+    "specs": {
+      "amplifiedChannels": 9,
+      "processedChannels": 11,
+      "atmos": true,
+      "sourceUrl": "https://www.marantz.com/en/product/av-receivers/cinema-40/CINEMA40.html"
+    },
+    "issues": [
+      "GST rate requires confirmation; not stated in the supplied document."
+    ],
+    "source": {
+      "file": "Marantz Price List Oct 2026.pdf",
+      "page": 2,
+      "effectiveDate": "2026-10-01",
+      "sha256": "dd4d44b7116d5d241796baefedf7439b9aa01b6496c243f3bc36a64d9dbb08e4"
+    },
+    "price": {
+      "amountPaise": 48990000,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
+      "revision": 0
+    },
+    "imageSource": "Marantz Price List Oct 2026.pdf · page 2",
+    "previousSources": [
+      {
+        "file": "Marantz Price List July 2026.pdf",
+        "page": 2,
+        "effectiveDate": "2026-07-01",
+        "sha256": "f48b510ac746242a21735abb2c821e62cc97df83f8186db345d755d50559f2db"
+      }
+    ],
+    "quoteImage": "/theater-catalog/quotation/edcf31fb3e43f832f03ce331.jpg"
+  },
+  {
+    "id": "marantz-cinema-50",
+    "brand": "Marantz",
+    "model": "Cinema 50",
+    "category": "receiver",
+    "roles": [
+      "receiver"
+    ],
+    "series": "Cinema",
+    "description": "• 185W x 9ch • 11.4ch processing, 11.4ch pre-out 4x independent subwoofer outputs • 4x independent subwoofer outputs • Dolby Atmos (5.1.2, 5.1.4, 7.1.2, 7.1.4*) • 6 29 HDMI inputs - all 8K / 3 HDMI outputs (2 main + zone 2 out) • Dirac Live (by update, licence required)",
+    "image": "/theater-catalog/marantz-cinema-50.webp",
+    "finishes": [],
+    "specs": {
+      "amplifiedChannels": 9,
+      "processedChannels": 11,
+      "atmos": true
+    },
+    "issues": [
+      "GST rate requires confirmation; not stated in the supplied document."
+    ],
+    "source": {
+      "file": "Marantz Price List July 2026.pdf",
+      "page": 3,
+      "effectiveDate": "2026-07-01",
+      "sha256": "f48b510ac746242a21735abb2c821e62cc97df83f8186db345d755d50559f2db"
+    },
+    "price": {
+      "amountPaise": 29990000,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
+      "revision": 0
+    },
+    "imageSource": "Marantz Price List July 2026.pdf · page 3",
+    "quoteImage": "/theater-catalog/quotation/f1bd4de38435fe06ef75dd34.jpg"
+  },
+  {
+    "id": "marantz-cinema-60",
+    "brand": "Marantz",
+    "model": "Cinema 60",
+    "category": "receiver",
+    "roles": [
+      "receiver"
+    ],
+    "series": "Cinema",
+    "description": "• 180W x 7ch (6 ohms, 1%, 1ch driven) • Dolby Atmos (up to 5.1.2), DTS:X • HEOS Wireless Multi-Room Audio • AirPlay2, Bluetooth, Internet Radio, 23 Spotify Connect, Tidal, Deezer, Amazon Music HD • Bluetooth Headphone support",
+    "image": "/theater-catalog/marantz-cinema-60.webp",
+    "finishes": [],
+    "specs": {
+      "amplifiedChannels": 7,
+      "processedChannels": 7,
+      "atmos": true
+    },
+    "issues": [
+      "GST rate requires confirmation; not stated in the supplied document."
+    ],
+    "source": {
+      "file": "Marantz Price List July 2026.pdf",
+      "page": 3,
+      "effectiveDate": "2026-07-01",
+      "sha256": "f48b510ac746242a21735abb2c821e62cc97df83f8186db345d755d50559f2db"
+    },
+    "price": {
+      "amountPaise": 23190000,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
+      "revision": 0
+    },
+    "imageSource": "Marantz Price List July 2026.pdf · page 3",
+    "quoteImage": "/theater-catalog/quotation/cad6b3253a968089aa0458a7.jpg"
+  },
+  {
+    "id": "marantz-cinema-70s",
+    "brand": "Marantz",
+    "model": "Cinema 70s",
+    "category": "receiver",
+    "roles": [
+      "receiver"
+    ],
+    "series": "Cinema",
+    "description": "• 90W x 7ch (6 ohms, 1%, 1ch driven) • Dolby Atmos (up to 5.1.2), Dolby Atmos Height Virtualization• DTS:X, DTS Virtual:X• 8K enhanced, 4K/120Hz• 6 HDMI (3x 8K) inputs / 1 output,eARC support • HDR10+, Dynamic HDR, ALLM, VRR, QFT",
+    "image": "/theater-catalog/marantz-cinema-70s.webp",
+    "finishes": [],
+    "specs": {
+      "amplifiedChannels": 7,
+      "processedChannels": 7,
+      "atmos": true
+    },
+    "issues": [
+      "GST rate requires confirmation; not stated in the supplied document."
+    ],
+    "source": {
+      "file": "Marantz Price List Oct 2026.pdf",
+      "page": 3,
+      "effectiveDate": "2026-10-01",
+      "sha256": "dd4d44b7116d5d241796baefedf7439b9aa01b6496c243f3bc36a64d9dbb08e4"
+    },
+    "price": {
+      "amountPaise": 19090000,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
+      "revision": 0
+    },
+    "imageSource": "Marantz Price List Oct 2026.pdf · page 3",
+    "previousSources": [
+      {
+        "file": "Marantz Price List July 2026.pdf",
+        "page": 3,
+        "effectiveDate": "2026-07-01",
+        "sha256": "f48b510ac746242a21735abb2c821e62cc97df83f8186db345d755d50559f2db"
+      }
+    ],
+    "quoteImage": "/theater-catalog/quotation/bd36113717d00aa67da03e00.jpg"
+  },
+  {
+    "id": "marantz-stereo-70s",
+    "brand": "Marantz",
+    "model": "STEREO 70s",
+    "category": "stereo-receiver",
+    "roles": [
+      "extra"
+    ],
+    "series": "Stereo",
+    "description": "• Slimline Stereo Reciever • 100 W x 2ch (6 ohms) • Class A/B • HDMI 6 In & Out 1 • Subwoofer Out - 2 • AirPlay2, Bluetooth, Internet Radio, Spotify Connect, Tidal, Deezer, Amazon Music HD",
+    "image": "/theater-catalog/marantz-stereo-70s.webp",
+    "finishes": [],
+    "specs": {
+      "amplifiedChannels": 2,
+      "processedChannels": 2,
+      "atmos": false
+    },
+    "issues": [
+      "GST rate requires confirmation; not stated in the supplied document."
+    ],
+    "source": {
+      "file": "Marantz Price List Oct 2026.pdf",
+      "page": 3,
+      "effectiveDate": "2026-10-01",
+      "sha256": "dd4d44b7116d5d241796baefedf7439b9aa01b6496c243f3bc36a64d9dbb08e4"
+    },
+    "price": {
+      "amountPaise": 15290000,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
+      "revision": 0
+    },
+    "imageSource": "Marantz Price List Oct 2026.pdf · page 3",
+    "previousSources": [
+      {
+        "file": "Marantz Price List July 2026.pdf",
+        "page": 3,
+        "effectiveDate": "2026-07-01",
+        "sha256": "f48b510ac746242a21735abb2c821e62cc97df83f8186db345d755d50559f2db"
+      }
+    ],
+    "quoteImage": "/theater-catalog/quotation/a1679065c1958180c56b49db.jpg"
+  },
+  {
+    "id": "marantz-pm-6007",
+    "brand": "Marantz",
+    "model": "PM 6007",
+    "category": "integrated-amplifier",
+    "roles": [
+      "extra"
+    ],
+    "series": "Stereo Components",
+    "description": "Digital Input - 45 watts per channel into 8 ohms and 60 watts per channel into 4 ohms - Powered by a Toroidal power transformer",
+    "image": "/theater-catalog/marantz-pm-6007.webp",
+    "finishes": [],
+    "specs": {},
+    "issues": [
+      "GST rate requires confirmation; not stated in the supplied document."
+    ],
+    "source": {
+      "file": "Marantz Price List Oct 2026.pdf",
+      "page": 3,
+      "effectiveDate": "2026-10-01",
+      "sha256": "dd4d44b7116d5d241796baefedf7439b9aa01b6496c243f3bc36a64d9dbb08e4"
+    },
+    "price": {
+      "amountPaise": 11990000,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
+      "revision": 0
+    },
+    "imageSource": "Marantz Price List Oct 2026.pdf · page 3",
+    "previousSources": [
+      {
+        "file": "Marantz Price List July 2026.pdf",
+        "page": 3,
+        "effectiveDate": "2026-07-01",
+        "sha256": "f48b510ac746242a21735abb2c821e62cc97df83f8186db345d755d50559f2db"
+      }
+    ],
+    "quoteImage": "/theater-catalog/quotation/60f7dc4a70e4c7ef37a617c8.jpg"
+  },
+  {
+    "id": "marantz-pm-7000n",
+    "brand": "Marantz",
+    "model": "PM 7000N",
+    "category": "integrated-amplifier",
+    "roles": [
+      "extra"
+    ],
+    "series": "Stereo Components",
+    "description": "60W per channel driving 8 ohm loads • Wide range of connectivity • Premium Marantz SPKT-1+ speaker terminals • Play vinyl with exceptional clarity",
+    "image": "/theater-catalog/marantz-pm-7000n.webp",
+    "finishes": [],
+    "specs": {},
+    "issues": [
+      "GST rate requires confirmation; not stated in the supplied document."
+    ],
+    "source": {
+      "file": "Marantz Price List Oct 2026.pdf",
+      "page": 3,
+      "effectiveDate": "2026-10-01",
+      "sha256": "dd4d44b7116d5d241796baefedf7439b9aa01b6496c243f3bc36a64d9dbb08e4"
+    },
+    "price": {
+      "amountPaise": 23290000,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
+      "revision": 0
+    },
+    "imageSource": "Marantz Price List Oct 2026.pdf · page 3",
+    "previousSources": [
+      {
+        "file": "Marantz Price List July 2026.pdf",
+        "page": 3,
+        "effectiveDate": "2026-07-01",
+        "sha256": "f48b510ac746242a21735abb2c821e62cc97df83f8186db345d755d50559f2db"
+      }
+    ],
+    "quoteImage": "/theater-catalog/quotation/6e0701cab2981725fc30f2eb.jpg"
+  },
+  {
+    "id": "marantz-cd-6007",
+    "brand": "Marantz",
+    "model": "CD 6007",
+    "category": "cd-player",
+    "roles": [
+      "extra"
+    ],
+    "series": "CD / SACD",
+    "description": "Versatile playback for all your audio - High quality AK4490 D/A conversion - Best amplifier connection - High-quality sound even from demanding headphones",
+    "image": "/theater-catalog/marantz-cd-6007.webp",
+    "finishes": [],
+    "specs": {},
+    "issues": [
+      "GST rate requires confirmation; not stated in the supplied document."
+    ],
+    "source": {
+      "file": "Marantz Price List Oct 2026.pdf",
+      "page": 4,
+      "effectiveDate": "2026-10-01",
+      "sha256": "dd4d44b7116d5d241796baefedf7439b9aa01b6496c243f3bc36a64d9dbb08e4"
+    },
+    "price": {
+      "amountPaise": 11990000,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
+      "revision": 0
+    },
+    "imageSource": "Marantz Price List Oct 2026.pdf · page 4",
+    "previousSources": [
+      {
+        "file": "Marantz Price List July 2026.pdf",
+        "page": 3,
+        "effectiveDate": "2026-07-01",
+        "sha256": "f48b510ac746242a21735abb2c821e62cc97df83f8186db345d755d50559f2db"
+      }
+    ],
+    "quoteImage": "/theater-catalog/quotation/c8d8e8a86f13675553e2372a.jpg"
+  },
+  {
+    "id": "marantz-model-30",
+    "brand": "Marantz",
+    "model": "Model 30",
+    "category": "integrated-amplifier",
+    "roles": [
+      "extra"
+    ],
+    "series": "Stereo Components",
+    "description": "MODEL 30 continues the renowned heritage of exquisite Marantz amplifiers. Tuned by the Marantz Sound Master who channeled his passion, experience, and extraordinary ear into the amplifier design.",
+    "image": "/theater-catalog/marantz-model-30.webp",
+    "finishes": [],
+    "specs": {},
+    "issues": [
+      "GST rate requires confirmation; not stated in the supplied document."
+    ],
+    "source": {
+      "file": "Marantz Price List Oct 2026.pdf",
+      "page": 4,
+      "effectiveDate": "2026-10-01",
+      "sha256": "dd4d44b7116d5d241796baefedf7439b9aa01b6496c243f3bc36a64d9dbb08e4"
+    },
+    "price": {
+      "amountPaise": 44690000,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
+      "revision": 0
+    },
+    "imageSource": "Marantz Price List Oct 2026.pdf · page 4",
+    "previousSources": [
+      {
+        "file": "Marantz Price List July 2026.pdf",
+        "page": 3,
+        "effectiveDate": "2026-07-01",
+        "sha256": "f48b510ac746242a21735abb2c821e62cc97df83f8186db345d755d50559f2db"
+      }
+    ],
+    "quoteImage": "/theater-catalog/quotation/fe7fd73ede64cec7822b8646.jpg"
+  },
+  {
+    "id": "marantz-sacd30n",
+    "brand": "Marantz",
+    "model": "SACD30N",
+    "category": "cd-player",
+    "roles": [
+      "extra"
+    ],
+    "series": "CD / SACD",
+    "description": "The SACD 30n continues the renowned heritage of exquisite Marantz components. The SACD 30n is tuned by the Marantz Sound Master, who channeled his passion, experience, and extraordinary ear.",
+    "image": "/theater-catalog/marantz-sacd30n.webp",
+    "finishes": [],
+    "specs": {},
+    "issues": [
+      "GST rate requires confirmation; not stated in the supplied document."
+    ],
+    "source": {
+      "file": "Marantz Price List Oct 2026.pdf",
+      "page": 4,
+      "effectiveDate": "2026-10-01",
+      "sha256": "dd4d44b7116d5d241796baefedf7439b9aa01b6496c243f3bc36a64d9dbb08e4"
+    },
+    "price": {
+      "amountPaise": 46990000,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
+      "revision": 0
+    },
+    "imageSource": "Marantz Price List Oct 2026.pdf · page 4",
+    "previousSources": [
+      {
+        "file": "Marantz Price List July 2026.pdf",
+        "page": 4,
+        "effectiveDate": "2026-07-01",
+        "sha256": "f48b510ac746242a21735abb2c821e62cc97df83f8186db345d755d50559f2db"
+      }
+    ],
+    "quoteImage": "/theater-catalog/quotation/7f6e54f68776365006084684.jpg"
+  },
+  {
+    "id": "marantz-model-40n",
+    "brand": "Marantz",
+    "model": "Model 40n",
+    "category": "integrated-amplifier",
+    "roles": [
+      "extra"
+    ],
+    "series": "Stereo Components",
+    "description": "Integrated Stereo Amplifier With Streaming Built-In,Marantz has reimagined the integrated amplifier for the digital age while preserving a luxurious analog feel and sound.",
+    "image": "/theater-catalog/marantz-model-40n.webp",
+    "finishes": [],
+    "specs": {},
+    "issues": [
+      "GST rate requires confirmation; not stated in the supplied document."
+    ],
+    "source": {
+      "file": "Marantz Price List Oct 2026.pdf",
+      "page": 4,
+      "effectiveDate": "2026-10-01",
+      "sha256": "dd4d44b7116d5d241796baefedf7439b9aa01b6496c243f3bc36a64d9dbb08e4"
+    },
+    "price": {
+      "amountPaise": 44690000,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
+      "revision": 0
+    },
+    "imageSource": "Marantz Price List Oct 2026.pdf · page 4",
+    "previousSources": [
+      {
+        "file": "Marantz Price List July 2026.pdf",
+        "page": 4,
+        "effectiveDate": "2026-07-01",
+        "sha256": "f48b510ac746242a21735abb2c821e62cc97df83f8186db345d755d50559f2db"
+      }
+    ],
+    "quoteImage": "/theater-catalog/quotation/1105c8b4e4705fc11d2d3ae4.jpg"
+  },
+  {
+    "id": "marantz-model-50",
+    "brand": "Marantz",
+    "model": "Model 50",
+    "category": "integrated-amplifier",
+    "roles": [
+      "extra"
+    ],
+    "series": "Stereo Components",
+    "description": "Power Output (8 / 4 Ohm RMS) 70 W / 100 W | Pre-out / Main-in Yes + subwoofer / - | HDAM version SA3, SA2 | Speaker A / B Yes | Audio Inputs : 6",
+    "image": "/theater-catalog/marantz-model-50.webp",
+    "finishes": [],
+    "specs": {},
+    "issues": [
+      "GST rate requires confirmation; not stated in the supplied document."
+    ],
+    "source": {
+      "file": "Marantz Price List Oct 2026.pdf",
+      "page": 4,
+      "effectiveDate": "2026-10-01",
+      "sha256": "dd4d44b7116d5d241796baefedf7439b9aa01b6496c243f3bc36a64d9dbb08e4"
+    },
+    "price": {
+      "amountPaise": 43490000,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
+      "revision": 0
+    },
+    "imageSource": "Marantz Price List Oct 2026.pdf · page 4",
+    "previousSources": [
+      {
+        "file": "Marantz Price List July 2026.pdf",
+        "page": 4,
+        "effectiveDate": "2026-07-01",
+        "sha256": "f48b510ac746242a21735abb2c821e62cc97df83f8186db345d755d50559f2db"
+      }
+    ],
+    "quoteImage": "/theater-catalog/quotation/1105c8b4e4705fc11d2d3ae4.jpg"
+  },
+  {
+    "id": "marantz-cd-50n",
+    "brand": "Marantz",
+    "model": "CD 50N",
+    "category": "cd-player",
+    "roles": [
+      "extra"
+    ],
+    "series": "CD / SACD",
+    "description": "Artisinal Design | CD & CD-R/RW Support | Exclusive HDAM | DAC inputs plus HDMI ARC | HEOS Built-in | Marantz Musical Digital Filtering",
+    "image": "/theater-catalog/marantz-cd-50n.webp",
+    "finishes": [],
+    "specs": {},
+    "issues": [
+      "GST rate requires confirmation; not stated in the supplied document."
+    ],
+    "source": {
+      "file": "Marantz Price List Oct 2026.pdf",
+      "page": 4,
+      "effectiveDate": "2026-10-01",
+      "sha256": "dd4d44b7116d5d241796baefedf7439b9aa01b6496c243f3bc36a64d9dbb08e4"
+    },
+    "price": {
+      "amountPaise": 29990000,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
+      "revision": 0
+    },
+    "imageSource": "Marantz Price List Oct 2026.pdf · page 4",
+    "previousSources": [
+      {
+        "file": "Marantz Price List July 2026.pdf",
+        "page": 4,
+        "effectiveDate": "2026-07-01",
+        "sha256": "f48b510ac746242a21735abb2c821e62cc97df83f8186db345d755d50559f2db"
+      }
+    ],
+    "quoteImage": "/theater-catalog/quotation/fb76be71f7530a15e2269e6b.jpg"
+  },
+  {
+    "id": "marantz-model-60n",
+    "brand": "Marantz",
+    "model": "MODEL 60n",
+    "category": "integrated-amplifier",
+    "roles": [
+      "extra"
+    ],
+    "series": "Stereo Components",
+    "description": "60W Per Channel | HEOS® Built-in | HDMI ARC | Marantz HDAM® Circuits | Hi-Res Audio Support | CD and MM phono inputs",
+    "image": "/theater-catalog/marantz-model-60n.webp",
+    "finishes": [],
+    "specs": {},
+    "issues": [
+      "GST rate requires confirmation; not stated in the supplied document."
+    ],
+    "source": {
+      "file": "Marantz Price List Oct 2026.pdf",
+      "page": 4,
+      "effectiveDate": "2026-10-01",
+      "sha256": "dd4d44b7116d5d241796baefedf7439b9aa01b6496c243f3bc36a64d9dbb08e4"
+    },
+    "price": {
+      "amountPaise": 25490000,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
+      "revision": 0
+    },
+    "imageSource": "Marantz Price List Oct 2026.pdf · page 4",
+    "previousSources": [
+      {
+        "file": "Marantz Price List July 2026.pdf",
+        "page": 4,
+        "effectiveDate": "2026-07-01",
+        "sha256": "f48b510ac746242a21735abb2c821e62cc97df83f8186db345d755d50559f2db"
+      }
+    ],
+    "quoteImage": "/theater-catalog/quotation/84a1d7019b45b41f6c2ea86a.jpg"
+  },
+  {
+    "id": "marantz-cd-60",
+    "brand": "Marantz",
+    "model": "CD 60",
+    "category": "cd-player",
+    "roles": [
+      "extra"
+    ],
+    "series": "CD / SACD",
+    "description": "CD 60 CD PLAYER With its modern style and The Most Musical Sound, CD 60 inspires listeners to discover new details in their favorite CDs.",
+    "image": "/theater-catalog/marantz-cd-60.webp",
+    "finishes": [],
+    "specs": {},
+    "issues": [
+      "GST rate requires confirmation; not stated in the supplied document."
+    ],
+    "source": {
+      "file": "Marantz Price List Oct 2026.pdf",
+      "page": 4,
+      "effectiveDate": "2026-10-01",
+      "sha256": "dd4d44b7116d5d241796baefedf7439b9aa01b6496c243f3bc36a64d9dbb08e4"
+    },
+    "price": {
+      "amountPaise": 17990000,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
+      "revision": 0
+    },
+    "imageSource": "Marantz Price List Oct 2026.pdf · page 4",
+    "previousSources": [
+      {
+        "file": "Marantz Price List July 2026.pdf",
+        "page": 4,
+        "effectiveDate": "2026-07-01",
+        "sha256": "f48b510ac746242a21735abb2c821e62cc97df83f8186db345d755d50559f2db"
+      }
+    ],
+    "quoteImage": "/theater-catalog/quotation/38de0285edb0679cb9999b76.jpg"
+  },
+  {
+    "id": "marantz-pm10",
+    "brand": "Marantz",
+    "model": "PM10",
+    "category": "integrated-amplifier",
+    "roles": [
+      "extra"
+    ],
+    "series": "Stereo Components",
+    "description": "Reference Integrated Stereo Amplifier with 1 200W and Custom HDAM",
+    "image": "/theater-catalog/marantz-pm10.webp",
+    "finishes": [],
+    "specs": {},
+    "issues": [
+      "GST rate requires confirmation; not stated in the supplied document."
+    ],
+    "source": {
+      "file": "Marantz Price List Oct 2026.pdf",
+      "page": 5,
+      "effectiveDate": "2026-10-01",
+      "sha256": "dd4d44b7116d5d241796baefedf7439b9aa01b6496c243f3bc36a64d9dbb08e4"
+    },
+    "price": {
+      "amountPaise": 109990000,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
+      "revision": 0
+    },
+    "imageSource": "Marantz Price List Oct 2026.pdf · page 5",
+    "previousSources": [
+      {
+        "file": "Marantz Price List July 2026.pdf",
+        "page": 4,
+        "effectiveDate": "2026-07-01",
+        "sha256": "f48b510ac746242a21735abb2c821e62cc97df83f8186db345d755d50559f2db"
+      }
+    ],
+    "quoteImage": "/theater-catalog/quotation/1df5ae73fc2fa02784fa58cd.jpg"
+  },
+  {
+    "id": "marantz-sa-10",
+    "brand": "Marantz",
+    "model": "SA-10",
+    "category": "cd-player",
+    "roles": [
+      "extra"
+    ],
+    "series": "CD / SACD",
+    "description": "SA-10 Refence Series SACD/CD Player with USB DAC and Digital Inputs",
+    "image": "/theater-catalog/marantz-sa-10.webp",
+    "finishes": [],
+    "specs": {},
+    "issues": [
+      "GST rate requires confirmation; not stated in the supplied document."
+    ],
+    "source": {
+      "file": "Marantz Price List Oct 2026.pdf",
+      "page": 5,
+      "effectiveDate": "2026-10-01",
+      "sha256": "dd4d44b7116d5d241796baefedf7439b9aa01b6496c243f3bc36a64d9dbb08e4"
+    },
+    "price": {
+      "amountPaise": 81990000,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
+      "revision": 0
+    },
+    "imageSource": "Marantz Price List Oct 2026.pdf · page 5",
+    "previousSources": [
+      {
+        "file": "Marantz Price List July 2026.pdf",
+        "page": 4,
+        "effectiveDate": "2026-07-01",
+        "sha256": "f48b510ac746242a21735abb2c821e62cc97df83f8186db345d755d50559f2db"
+      }
+    ],
+    "quoteImage": "/theater-catalog/quotation/6d7b15ded01d2bea48210bbd.jpg"
+  },
+  {
+    "id": "marantz-sacd10",
+    "brand": "Marantz",
+    "model": "SACD10",
+    "category": "cd-player",
+    "roles": [
+      "extra"
+    ],
+    "series": "CD / SACD",
+    "description": "High-Performance Reference SACD Player with SACDM-3 transport mechanism | DSD 1 256 and PCM 384 / 32 support",
+    "image": "/theater-catalog/marantz-sacd10.webp",
+    "finishes": [],
+    "specs": {},
+    "issues": [
+      "GST rate requires confirmation; not stated in the supplied document."
+    ],
+    "source": {
+      "file": "Marantz Price List Oct 2026.pdf",
+      "page": 5,
+      "effectiveDate": "2026-10-01",
+      "sha256": "dd4d44b7116d5d241796baefedf7439b9aa01b6496c243f3bc36a64d9dbb08e4"
+    },
+    "price": {
+      "amountPaise": 129990000,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
+      "revision": 0
+    },
+    "imageSource": "Marantz Price List Oct 2026.pdf · page 5",
+    "previousSources": [
+      {
+        "file": "Marantz Price List July 2026.pdf",
+        "page": 4,
+        "effectiveDate": "2026-07-01",
+        "sha256": "f48b510ac746242a21735abb2c821e62cc97df83f8186db345d755d50559f2db"
+      }
+    ],
+    "quoteImage": "/theater-catalog/quotation/d8f16bce99cb3ac1fe889d5b.jpg"
+  },
+  {
+    "id": "marantz-link-10n",
+    "brand": "Marantz",
+    "model": "LINK 10n",
+    "category": "network-player",
+    "roles": [
+      "extra"
+    ],
+    "series": "Network Audio",
+    "description": "Reference 2.1 Channel Fully Featured 1 Streaming Preamplifier Powered by HEOS™",
+    "image": "/theater-catalog/marantz-link-10n.webp",
+    "finishes": [],
+    "specs": {},
+    "issues": [
+      "GST rate requires confirmation; not stated in the supplied document."
+    ],
+    "source": {
+      "file": "Marantz Price List Oct 2026.pdf",
+      "page": 5,
+      "effectiveDate": "2026-10-01",
+      "sha256": "dd4d44b7116d5d241796baefedf7439b9aa01b6496c243f3bc36a64d9dbb08e4"
+    },
+    "price": {
+      "amountPaise": 189990000,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
+      "revision": 0
+    },
+    "imageSource": "Marantz Price List Oct 2026.pdf · page 5",
+    "previousSources": [
+      {
+        "file": "Marantz Price List July 2026.pdf",
+        "page": 4,
+        "effectiveDate": "2026-07-01",
+        "sha256": "f48b510ac746242a21735abb2c821e62cc97df83f8186db345d755d50559f2db"
+      }
+    ],
+    "quoteImage": "/theater-catalog/quotation/3d87679a357d5373a04f3ee9.jpg"
+  },
+  {
+    "id": "marantz-model-10",
+    "brand": "Marantz",
+    "model": "Model 10",
+    "category": "integrated-amplifier",
+    "roles": [
+      "extra"
+    ],
+    "series": "Stereo Components",
+    "description": "Reference Integrated Amplifier with 250W 2 and All-New Marantz SMPS",
+    "image": "/theater-catalog/marantz-model-10.webp",
+    "finishes": [],
+    "specs": {},
+    "issues": [
+      "GST rate requires confirmation; not stated in the supplied document."
+    ],
+    "source": {
+      "file": "Marantz Price List Oct 2026.pdf",
+      "page": 5,
+      "effectiveDate": "2026-10-01",
+      "sha256": "dd4d44b7116d5d241796baefedf7439b9aa01b6496c243f3bc36a64d9dbb08e4"
+    },
+    "price": {
+      "amountPaise": 239990000,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
+      "revision": 0
+    },
+    "imageSource": "Marantz Price List Oct 2026.pdf · page 5",
+    "previousSources": [
+      {
+        "file": "Marantz Price List July 2026.pdf",
+        "page": 5,
+        "effectiveDate": "2026-07-01",
+        "sha256": "f48b510ac746242a21735abb2c821e62cc97df83f8186db345d755d50559f2db"
+      }
+    ],
+    "quoteImage": "/theater-catalog/quotation/9173ad0a719666669547361e.jpg"
+  },
+  {
+    "id": "marantz-cinema-50-series-2",
+    "brand": "Marantz",
+    "model": "Cinema 50 Series 2",
+    "category": "receiver",
+    "roles": [
+      "receiver"
+    ],
+    "series": "Cinema Series 2",
+    "description": "• 185W x 9ch • 11.4ch processing, 11.4ch pre- out 4x independent subwoofer outputs • 4x independent subwoofer outputs • Dolby Atmos Channel Expander • 6 HDMI inputs - all 8K / 3 HDMI outputs (2 main + zone 2 out) • Dirac Live (by update, licence required)",
+    "image": "/theater-catalog/marantz-cinema-50-series-2.webp",
+    "finishes": [],
+    "specs": {
+      "amplifiedChannels": 9,
+      "processedChannels": 11,
+      "atmos": true
+    },
+    "issues": [
+      "GST rate requires confirmation; not stated in the supplied document."
+    ],
+    "source": {
+      "file": "Marantz Price List Oct 2026.pdf",
+      "page": 3,
+      "effectiveDate": "2026-10-01",
+      "sha256": "dd4d44b7116d5d241796baefedf7439b9aa01b6496c243f3bc36a64d9dbb08e4"
+    },
+    "price": {
+      "amountPaise": 31490000,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
+      "revision": 0
+    },
+    "imageSource": "Marantz Price List Oct 2026.pdf · page 3",
+    "quoteImage": "/theater-catalog/quotation/fac36e67dd75a2c01714400b.jpg"
+  },
+  {
+    "id": "marantz-cinema-60-series-2",
+    "brand": "Marantz",
+    "model": "Cinema 60 Series 2",
+    "category": "receiver",
+    "roles": [
+      "receiver"
+    ],
+    "series": "Cinema Series 2",
+    "description": "• 180W x 7ch (6 ohms, 1%, 1ch driven) • 32-bit, 8-Channel DAC • HEOS Wireless Multi-Room Audio • AirPlay2, Bluetooth, Internet Radio, Spotify Connect, Tidal, Deezer, Amazon Music HD • Channel Level Monitoring Added",
+    "image": "/theater-catalog/marantz-cinema-60-series-2.webp",
+    "finishes": [],
+    "specs": {
+      "amplifiedChannels": 7,
+      "processedChannels": 7,
+      "atmos": true
+    },
+    "issues": [
+      "GST rate requires confirmation; not stated in the supplied document."
+    ],
+    "source": {
+      "file": "Marantz Price List Oct 2026.pdf",
+      "page": 3,
+      "effectiveDate": "2026-10-01",
+      "sha256": "dd4d44b7116d5d241796baefedf7439b9aa01b6496c243f3bc36a64d9dbb08e4"
+    },
+    "price": {
+      "amountPaise": 24490000,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
+      "revision": 0
+    },
+    "imageSource": "Marantz Price List Oct 2026.pdf · page 3",
+    "quoteImage": "/theater-catalog/quotation/06d2fb5597f94708ac4d906a.jpg"
+  },
+  {
+    "id": "marantz-model-70",
+    "brand": "Marantz",
+    "model": "Model 70",
+    "category": "integrated-amplifier",
+    "roles": [
+      "extra"
+    ],
+    "series": "Stereo Components",
+    "description": "2-Channel Integrated Amplifier | 50 W + 50 W (8 ohms, 20 Hz–20 kHz, 0.1% THD) | HDMI ARC | Bluetooth Receive and Transmit | Larger toroidal transformer",
+    "image": "/theater-catalog/marantz-model-70.webp",
+    "finishes": [],
+    "specs": {},
+    "issues": [
+      "GST rate requires confirmation; not stated in the supplied document."
+    ],
+    "source": {
+      "file": "Marantz Price List Oct 2026.pdf",
+      "page": 3,
+      "effectiveDate": "2026-10-01",
+      "sha256": "dd4d44b7116d5d241796baefedf7439b9aa01b6496c243f3bc36a64d9dbb08e4"
+    },
+    "price": {
+      "amountPaise": 16490000,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
+      "revision": 0
+    },
+    "imageSource": "Marantz Price List Oct 2026.pdf · page 3",
+    "quoteImage": "/theater-catalog/quotation/69c5551d8cde4069498aecef.jpg"
+  },
+  {
+    "id": "marantz-cd70",
+    "brand": "Marantz",
+    "model": "CD70",
+    "category": "cd-player",
+    "roles": [
+      "extra"
+    ],
+    "series": "CD / SACD",
+    "description": "Upgraded high-performance DAC | Marantz HDAM-SA2 circuitry | USB-A high-resolution playback | Supports FLAC, ALAC and DSD | Dedicated headphone amplifier",
+    "image": "/theater-catalog/marantz-cd70.webp",
+    "finishes": [],
+    "specs": {},
+    "issues": [
+      "GST rate requires confirmation; not stated in the supplied document."
+    ],
+    "source": {
+      "file": "Marantz Price List Oct 2026.pdf",
+      "page": 3,
+      "effectiveDate": "2026-10-01",
+      "sha256": "dd4d44b7116d5d241796baefedf7439b9aa01b6496c243f3bc36a64d9dbb08e4"
+    },
+    "price": {
+      "amountPaise": 11990000,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
+      "revision": 0
+    },
+    "imageSource": "Marantz Price List Oct 2026.pdf · page 3",
+    "quoteImage": "/theater-catalog/quotation/f47eae58a16a3dd06756ad18.jpg"
+  },
+  {
+    "id": "marantz-mcr-60n-dab",
+    "brand": "Marantz",
+    "model": "MCR 60n DAB",
+    "category": "network-player",
+    "roles": [
+      "extra"
+    ],
+    "series": "Network Audio",
+    "description": "Compact All-in-One Hi-Fi System Powered by HEOS™ with CD Player, HDMI eARC and MM Phono Stage | 65W + 65W Amplification into 4 Ohms | Powered by HEOS™ multi-room streaming",
+    "image": "/theater-catalog/marantz-mcr-60n-dab.webp",
+    "finishes": [],
+    "specs": {},
+    "issues": [
+      "GST rate requires confirmation; not stated in the supplied document."
+    ],
+    "source": {
+      "file": "Marantz Price List Oct 2026.pdf",
+      "page": 4,
+      "effectiveDate": "2026-10-01",
+      "sha256": "dd4d44b7116d5d241796baefedf7439b9aa01b6496c243f3bc36a64d9dbb08e4"
+    },
+    "price": {
+      "amountPaise": 17990000,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
+      "revision": 0
+    },
+    "imageSource": "Marantz Price List Oct 2026.pdf · page 4",
+    "quoteImage": "/theater-catalog/quotation/248e187b0767644f5ef276f9.jpg"
+  },
+  {
+    "id": "sony-fw-98bz53l",
+    "brand": "Sony",
+    "model": "FW-98BZ53L",
+    "category": "professional-display",
+    "roles": [
+      "tv"
+    ],
+    "series": "BZ53",
+    "description": "98-inch BRAVIA BZ53 professional 4K display. Sony product code 12635601.",
+    "image": "/theater-catalog/sony-fw-98bz53l.webp",
+    "finishes": [],
+    "specs": {
+      "diagonalInches": 98,
+      "resolution": "3840 × 2160",
+      "nativeAspect": "16:9",
+      "sourceUrl": "https://pro.sony/ue_US/products/pro-displays/fw-98bz53l"
+    },
+    "issues": [
+      "GST rate requires confirmation; not stated in the supplied document."
+    ],
+    "source": {
+      "file": "SONY PRICE LIST MRP APRIL 2026.pdf",
+      "page": 1,
+      "effectiveDate": "2026-04-01",
+      "sha256": "303da4361d6ecd66b4e084cfc6b0faf540c5c1e5625c8100f000df7872dab023"
+    },
+    "price": {
+      "amountPaise": 184300000,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
+      "revision": 0
+    },
+    "imageSource": "https://www.sony.jp/bravia-biz/products/FW-BZ53L/",
+    "quoteImage": "/theater-catalog/quotation/b2d5105bfe23a170eb8782ab.jpg"
+  },
+  {
+    "id": "sony-fw-98bz30l",
+    "brand": "Sony",
+    "model": "FW-98BZ30L",
+    "category": "professional-display",
+    "roles": [
+      "tv"
+    ],
+    "series": "BZ30",
+    "description": "98-inch BRAVIA BZ30 professional 4K display. Sony product code 12679101.",
+    "image": "/theater-catalog/sony-fw-98bz30l.webp",
+    "finishes": [],
+    "specs": {
+      "diagonalInches": 98,
+      "resolution": "3840 × 2160",
+      "nativeAspect": "16:9",
+      "sourceUrl": "https://pro.sony/ue_US/products/pro-displays/fw-98bz30l"
+    },
+    "issues": [
+      "GST rate requires confirmation; not stated in the supplied document."
+    ],
+    "source": {
+      "file": "SONY PRICE LIST MRP APRIL 2026.pdf",
+      "page": 1,
+      "effectiveDate": "2026-04-01",
+      "sha256": "303da4361d6ecd66b4e084cfc6b0faf540c5c1e5625c8100f000df7872dab023"
+    },
+    "price": {
+      "amountPaise": 138200000,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
+      "revision": 0
+    },
+    "imageSource": "https://officewonderland.com/products/sony-fw-98bz30l-bravia-98-uhd-4k-hdr-commercial-monitor",
+    "quoteImage": "/theater-catalog/quotation/60387dabc8e9a94f41fb28f6.jpg"
+  },
+  {
+    "id": "sony-fw-85bz40l",
+    "brand": "Sony",
+    "model": "FW-85BZ40L",
+    "category": "professional-display",
+    "roles": [
+      "tv"
+    ],
+    "series": "BZ40",
+    "description": "85-inch BRAVIA BZ40 professional 4K display. Sony product code 12606801.",
+    "image": "/theater-catalog/sony-fw-85bz40l.webp",
+    "finishes": [],
+    "specs": {
+      "diagonalInches": 85,
+      "resolution": "3840 × 2160",
+      "nativeAspect": "16:9",
+      "sourceUrl": "https://pro.sony/ue_US/products/pro-displays/fw-85bz40l"
+    },
+    "issues": [
+      "GST rate requires confirmation; not stated in the supplied document."
+    ],
+    "source": {
+      "file": "SONY PRICE LIST MRP APRIL 2026.pdf",
+      "page": 1,
+      "effectiveDate": "2026-04-01",
+      "sha256": "303da4361d6ecd66b4e084cfc6b0faf540c5c1e5625c8100f000df7872dab023"
+    },
+    "price": {
+      "amountPaise": 64500000,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
+      "revision": 0
+    },
+    "imageSource": "https://officewonderland.com/products/sony-fw-85bz40l-85-exceptionally-bright-4k-hdr-professional-display",
+    "quoteImage": "/theater-catalog/quotation/6f89ceed32fbaae780c81c50.jpg"
+  },
+  {
+    "id": "sony-fw-85bz30l",
+    "brand": "Sony",
+    "model": "FW-85BZ30L",
+    "category": "professional-display",
+    "roles": [
+      "tv"
+    ],
+    "series": "BZ30",
+    "description": "85-inch BRAVIA BZ30 professional 4K display. Sony product code 12605601.",
+    "image": "/theater-catalog/sony-fw-85bz30l.webp",
+    "finishes": [],
+    "specs": {
+      "diagonalInches": 85,
+      "resolution": "3840 × 2160",
+      "nativeAspect": "16:9",
+      "sourceUrl": "https://pro.sony/ue_US/products/pro-displays/fw-85bz30l"
+    },
+    "issues": [
+      "GST rate requires confirmation; not stated in the supplied document."
+    ],
+    "source": {
+      "file": "SONY PRICE LIST MRP APRIL 2026.pdf",
+      "page": 1,
+      "effectiveDate": "2026-04-01",
+      "sha256": "303da4361d6ecd66b4e084cfc6b0faf540c5c1e5625c8100f000df7872dab023"
+    },
+    "price": {
+      "amountPaise": 46000000,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
+      "revision": 0
+    },
+    "imageSource": "https://officewonderland.com/products/sony-fw-85bz30l-bravia-85-uhd-4k-hdr-commercial-monitor",
+    "quoteImage": "/theater-catalog/quotation/489ddf5f8544fe78775b2eac.jpg"
+  },
+  {
+    "id": "sony-fw-75bz40l",
+    "brand": "Sony",
+    "model": "FW-75BZ40L",
+    "category": "professional-display",
+    "roles": [
+      "tv"
+    ],
+    "series": "BZ40",
+    "description": "75-inch BRAVIA BZ40 professional 4K display. Sony product code 12606901.",
+    "image": "/theater-catalog/sony-fw-75bz40l.webp",
+    "finishes": [],
+    "specs": {
+      "diagonalInches": 75,
+      "resolution": "3840 × 2160",
+      "nativeAspect": "16:9",
+      "sourceUrl": "https://pro.sony/ue_US/products/pro-displays/fw-75bz40l"
+    },
+    "issues": [
+      "GST rate requires confirmation; not stated in the supplied document."
+    ],
+    "source": {
+      "file": "SONY PRICE LIST MRP APRIL 2026.pdf",
+      "page": 1,
+      "effectiveDate": "2026-04-01",
+      "sha256": "303da4361d6ecd66b4e084cfc6b0faf540c5c1e5625c8100f000df7872dab023"
+    },
+    "price": {
+      "amountPaise": 46000000,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
+      "revision": 0
+    },
+    "imageSource": "https://officewonderland.com/products/sony-fw-75bz40l-75-exceptionally-bright-4k-hdr-professional-display",
+    "quoteImage": "/theater-catalog/quotation/31839a2802641453bb20e81f.jpg"
+  },
+  {
+    "id": "sony-fw-75bz35l",
+    "brand": "Sony",
+    "model": "FW-75BZ35L",
+    "category": "professional-display",
+    "roles": [
+      "tv"
+    ],
+    "series": "BZ35",
+    "description": "75-inch BRAVIA BZ35 professional 4K display. Sony product code 12631701.",
+    "image": "/theater-catalog/sony-fw-75bz35l.webp",
+    "finishes": [],
+    "specs": {
+      "diagonalInches": 75,
+      "resolution": "3840 × 2160",
+      "nativeAspect": "16:9",
+      "sourceUrl": "https://pro.sony/ue_US/products/pro-displays/fw-75bz35l"
+    },
+    "issues": [
+      "GST rate requires confirmation; not stated in the supplied document."
+    ],
+    "source": {
+      "file": "SONY PRICE LIST MRP APRIL 2026.pdf",
+      "page": 1,
+      "effectiveDate": "2026-04-01",
+      "sha256": "303da4361d6ecd66b4e084cfc6b0faf540c5c1e5625c8100f000df7872dab023"
+    },
+    "price": {
+      "amountPaise": 41400000,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
+      "revision": 0
+    },
+    "imageSource": "https://officewonderland.com/products/sony-fw-75bz35l-75-bravia-4k-hdr-professional-display",
+    "quoteImage": "/theater-catalog/quotation/c837395ca2e9dda13b45335d.jpg"
+  },
+  {
+    "id": "sony-fw-75bz30l",
+    "brand": "Sony",
+    "model": "FW-75BZ30L",
+    "category": "professional-display",
+    "roles": [
+      "tv"
+    ],
+    "series": "BZ30",
+    "description": "75-inch BRAVIA BZ30 professional 4K display. Sony product code 12605801.",
+    "image": "/theater-catalog/sony-fw-75bz30l.webp",
+    "finishes": [],
+    "specs": {
+      "diagonalInches": 75,
+      "resolution": "3840 × 2160",
+      "nativeAspect": "16:9",
+      "sourceUrl": "https://pro.sony/ue_US/products/pro-displays/fw-75bz30l"
+    },
+    "issues": [
+      "GST rate requires confirmation; not stated in the supplied document."
+    ],
+    "source": {
+      "file": "SONY PRICE LIST MRP APRIL 2026.pdf",
+      "page": 1,
+      "effectiveDate": "2026-04-01",
+      "sha256": "303da4361d6ecd66b4e084cfc6b0faf540c5c1e5625c8100f000df7872dab023"
+    },
+    "price": {
+      "amountPaise": 32200000,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
+      "revision": 0
+    },
+    "imageSource": "https://officewonderland.com/products/sony-fw-75bz30l-bravia-75-uhd-4k-hdr-commercial-monitor",
+    "quoteImage": "/theater-catalog/quotation/7c10e8b89d8282dbe274095b.jpg"
+  },
+  {
+    "id": "sony-fw-75ez20l",
+    "brand": "Sony",
+    "model": "FW-75EZ20L",
+    "category": "professional-display",
+    "roles": [
+      "tv"
+    ],
+    "series": "EZ20",
+    "description": "75-inch BRAVIA EZ20 professional 4K display. Sony product code 12633401.",
+    "image": "/theater-catalog/sony-fw-75ez20l.webp",
+    "finishes": [],
+    "specs": {
+      "diagonalInches": 75,
+      "resolution": "3840 × 2160",
+      "nativeAspect": "16:9",
+      "sourceUrl": "https://pro.sony/ue_US/products/pro-displays/fw-75ez20l"
+    },
+    "issues": [
+      "GST rate requires confirmation; not stated in the supplied document."
+    ],
+    "source": {
+      "file": "SONY PRICE LIST MRP APRIL 2026.pdf",
+      "page": 1,
+      "effectiveDate": "2026-04-01",
+      "sha256": "303da4361d6ecd66b4e084cfc6b0faf540c5c1e5625c8100f000df7872dab023"
+    },
+    "price": {
+      "amountPaise": 25300000,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
+      "revision": 0
+    },
+    "imageSource": "https://officewonderland.com/products/sony-bravia-fw-75ez20l-75-class-hdr-4k-uhd-commercial-led-display",
+    "quoteImage": "/theater-catalog/quotation/41d01fca0b92ad71e011382e.jpg"
+  },
+  {
+    "id": "sony-fw-65bz40l",
+    "brand": "Sony",
+    "model": "FW-65BZ40L",
+    "category": "professional-display",
+    "roles": [
+      "tv"
+    ],
+    "series": "BZ40",
+    "description": "65-inch BRAVIA BZ40 professional 4K display. Sony product code 12607101.",
+    "image": "/theater-catalog/sony-fw-65bz40l.webp",
+    "finishes": [],
+    "specs": {
+      "diagonalInches": 65,
+      "resolution": "3840 × 2160",
+      "nativeAspect": "16:9",
+      "sourceUrl": "https://pro.sony/ue_US/products/pro-displays/fw-65bz40l"
+    },
+    "issues": [
+      "GST rate requires confirmation; not stated in the supplied document."
+    ],
+    "source": {
+      "file": "SONY PRICE LIST MRP APRIL 2026.pdf",
+      "page": 1,
+      "effectiveDate": "2026-04-01",
+      "sha256": "303da4361d6ecd66b4e084cfc6b0faf540c5c1e5625c8100f000df7872dab023"
+    },
+    "price": {
+      "amountPaise": 27600000,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
+      "revision": 0
+    },
+    "imageSource": "https://officewonderland.com/products/sony-fw-65bz40l-65-exceptionally-bright-4k-hdr-professional-display",
+    "quoteImage": "/theater-catalog/quotation/78b928ee113338fcb691faf9.jpg"
+  },
+  {
+    "id": "sony-fw-65bz35l",
+    "brand": "Sony",
+    "model": "FW-65BZ35L",
+    "category": "professional-display",
+    "roles": [
+      "tv"
+    ],
+    "series": "BZ35",
+    "description": "65-inch BRAVIA BZ35 professional 4K display. Sony product code 12631801.",
+    "image": "/theater-catalog/sony-fw-65bz35l.webp",
+    "finishes": [],
+    "specs": {
+      "diagonalInches": 65,
+      "resolution": "3840 × 2160",
+      "nativeAspect": "16:9",
+      "sourceUrl": "https://pro.sony/ue_US/products/pro-displays/fw-65bz35l"
+    },
+    "issues": [
+      "GST rate requires confirmation; not stated in the supplied document."
+    ],
+    "source": {
+      "file": "SONY PRICE LIST MRP APRIL 2026.pdf",
+      "page": 1,
+      "effectiveDate": "2026-04-01",
+      "sha256": "303da4361d6ecd66b4e084cfc6b0faf540c5c1e5625c8100f000df7872dab023"
+    },
+    "price": {
+      "amountPaise": 23000000,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
+      "revision": 0
+    },
+    "imageSource": "https://officewonderland.com/products/sony-fw-65bz35l-65-bravia-4k-hdr-professional-display",
+    "quoteImage": "/theater-catalog/quotation/84a350de642782118b868e12.jpg"
+  },
+  {
+    "id": "sony-fw-65bz30l",
+    "brand": "Sony",
+    "model": "FW-65BZ30L",
+    "category": "professional-display",
+    "roles": [
+      "tv"
+    ],
+    "series": "BZ30",
+    "description": "65-inch BRAVIA BZ30 professional 4K display. Sony product code 12606001.",
+    "image": "/theater-catalog/sony-fw-65bz30l.webp",
+    "finishes": [],
+    "specs": {
+      "diagonalInches": 65,
+      "resolution": "3840 × 2160",
+      "nativeAspect": "16:9",
+      "sourceUrl": "https://pro.sony/ue_US/products/pro-displays/fw-65bz30l"
+    },
+    "issues": [
+      "GST rate requires confirmation; not stated in the supplied document."
+    ],
+    "source": {
+      "file": "SONY PRICE LIST MRP APRIL 2026.pdf",
+      "page": 1,
+      "effectiveDate": "2026-04-01",
+      "sha256": "303da4361d6ecd66b4e084cfc6b0faf540c5c1e5625c8100f000df7872dab023"
+    },
+    "price": {
+      "amountPaise": 18400000,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
+      "revision": 0
+    },
+    "imageSource": "https://officewonderland.com/products/sony-fw-65bz30l-bravia-65-uhd-4k-hdr-commercial-monitor",
+    "quoteImage": "/theater-catalog/quotation/ed93575604d1b2b284f04244.jpg"
+  },
+  {
+    "id": "sony-fw-65ez20l",
+    "brand": "Sony",
+    "model": "FW-65EZ20L",
+    "category": "professional-display",
+    "roles": [
+      "tv"
+    ],
+    "series": "EZ20",
+    "description": "65-inch BRAVIA EZ20 professional 4K display. Sony product code 12633801.",
+    "image": "/theater-catalog/sony-fw-65ez20l.webp",
+    "finishes": [],
+    "specs": {
+      "diagonalInches": 65,
+      "resolution": "3840 × 2160",
+      "nativeAspect": "16:9",
+      "sourceUrl": "https://pro.sony/ue_US/products/pro-displays/fw-65ez20l"
+    },
+    "issues": [
+      "GST rate requires confirmation; not stated in the supplied document."
+    ],
+    "source": {
+      "file": "SONY PRICE LIST MRP APRIL 2026.pdf",
+      "page": 1,
+      "effectiveDate": "2026-04-01",
+      "sha256": "303da4361d6ecd66b4e084cfc6b0faf540c5c1e5625c8100f000df7872dab023"
+    },
+    "price": {
+      "amountPaise": 16100000,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
+      "revision": 0
+    },
+    "imageSource": "https://officewonderland.com/products/sony-bravia-fw-65ez20l-65-class-hdr-4k-uhd-commercial-led-display",
+    "quoteImage": "/theater-catalog/quotation/d436544a3759e33da7f6083c.jpg"
+  },
+  {
+    "id": "sony-fw-55bz40l",
+    "brand": "Sony",
+    "model": "FW-55BZ40L",
+    "category": "professional-display",
+    "roles": [
+      "tv"
+    ],
+    "series": "BZ40",
+    "description": "55-inch BRAVIA BZ40 professional 4K display. Sony product code 12607401.",
+    "image": "/theater-catalog/sony-fw-55bz40l.webp",
+    "finishes": [],
+    "specs": {
+      "diagonalInches": 55,
+      "resolution": "3840 × 2160",
+      "nativeAspect": "16:9",
+      "sourceUrl": "https://pro.sony/ue_US/products/pro-displays/fw-55bz40l"
+    },
+    "issues": [
+      "GST rate requires confirmation; not stated in the supplied document."
+    ],
+    "source": {
+      "file": "SONY PRICE LIST MRP APRIL 2026.pdf",
+      "page": 1,
+      "effectiveDate": "2026-04-01",
+      "sha256": "303da4361d6ecd66b4e084cfc6b0faf540c5c1e5625c8100f000df7872dab023"
+    },
+    "price": {
+      "amountPaise": 20700000,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
+      "revision": 0
+    },
+    "imageSource": "https://officewonderland.com/products/sony-fw-55bz40l-55-exceptionally-bright-4k-hdr-professional-display",
+    "quoteImage": "/theater-catalog/quotation/7fe072b91c1c0742f7beffaa.jpg"
+  },
+  {
+    "id": "sony-fw-55bz35l",
+    "brand": "Sony",
+    "model": "FW-55BZ35L",
+    "category": "professional-display",
+    "roles": [
+      "tv"
+    ],
+    "series": "BZ35",
+    "description": "55-inch BRAVIA BZ35 professional 4K display. Sony product code 12632001.",
+    "image": "/theater-catalog/sony-fw-55bz35l.webp",
+    "finishes": [],
+    "specs": {
+      "diagonalInches": 55,
+      "resolution": "3840 × 2160",
+      "nativeAspect": "16:9",
+      "sourceUrl": "https://pro.sony/ue_US/products/pro-displays/fw-55bz35l"
+    },
+    "issues": [
+      "GST rate requires confirmation; not stated in the supplied document."
+    ],
+    "source": {
+      "file": "SONY PRICE LIST MRP APRIL 2026.pdf",
+      "page": 1,
+      "effectiveDate": "2026-04-01",
+      "sha256": "303da4361d6ecd66b4e084cfc6b0faf540c5c1e5625c8100f000df7872dab023"
+    },
+    "price": {
+      "amountPaise": 18400000,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
+      "revision": 0
+    },
+    "imageSource": "https://officewonderland.com/products/sony-fw-55bz35l-55-bravia-4k-hdr-professional-display",
+    "quoteImage": "/theater-catalog/quotation/85f7b58622a5adbb6bf9ffcd.jpg"
+  },
+  {
+    "id": "sony-fw-55bz30l",
+    "brand": "Sony",
+    "model": "FW-55BZ30L",
+    "category": "professional-display",
+    "roles": [
+      "tv"
+    ],
+    "series": "BZ30",
+    "description": "55-inch BRAVIA BZ30 professional 4K display. Sony product code 12606201.",
+    "image": "/theater-catalog/sony-fw-55bz30l.webp",
+    "finishes": [],
+    "specs": {
+      "diagonalInches": 55,
+      "resolution": "3840 × 2160",
+      "nativeAspect": "16:9",
+      "sourceUrl": "https://pro.sony/ue_US/products/pro-displays/fw-55bz30l"
+    },
+    "issues": [
+      "GST rate requires confirmation; not stated in the supplied document."
+    ],
+    "source": {
+      "file": "SONY PRICE LIST MRP APRIL 2026.pdf",
+      "page": 1,
+      "effectiveDate": "2026-04-01",
+      "sha256": "303da4361d6ecd66b4e084cfc6b0faf540c5c1e5625c8100f000df7872dab023"
+    },
+    "price": {
+      "amountPaise": 13800000,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
+      "revision": 0
+    },
+    "imageSource": "https://officewonderland.com/products/sony-fw-55bz30l-bravia-55-uhd-4k-hdr-commercial-monitor",
+    "quoteImage": "/theater-catalog/quotation/b14f41104b3364212e884815.jpg"
+  },
+  {
+    "id": "sony-fw-55ez20l",
+    "brand": "Sony",
+    "model": "FW-55EZ20L",
+    "category": "professional-display",
+    "roles": [
+      "tv"
+    ],
+    "series": "EZ20",
+    "description": "55-inch BRAVIA EZ20 professional 4K display. Sony product code 12634201.",
+    "image": "/theater-catalog/sony-fw-55ez20l.webp",
+    "finishes": [],
+    "specs": {
+      "diagonalInches": 55,
+      "resolution": "3840 × 2160",
+      "nativeAspect": "16:9",
+      "sourceUrl": "https://pro.sony/ue_US/products/pro-displays/fw-55ez20l"
+    },
+    "issues": [
+      "GST rate requires confirmation; not stated in the supplied document."
+    ],
+    "source": {
+      "file": "SONY PRICE LIST MRP APRIL 2026.pdf",
+      "page": 1,
+      "effectiveDate": "2026-04-01",
+      "sha256": "303da4361d6ecd66b4e084cfc6b0faf540c5c1e5625c8100f000df7872dab023"
+    },
+    "price": {
+      "amountPaise": 11500000,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
+      "revision": 0
+    },
+    "imageSource": "https://officewonderland.com/products/sony-bravia-fw-55ez20l-55-class-hdr-4k-uhd-commercial-led-display",
+    "quoteImage": "/theater-catalog/quotation/55b6609b62b42ba73005775b.jpg"
+  },
+  {
+    "id": "sony-fw-50bz30l",
+    "brand": "Sony",
+    "model": "FW-50BZ30L",
+    "category": "professional-display",
+    "roles": [
+      "tv"
+    ],
+    "series": "BZ30",
+    "description": "50-inch BRAVIA BZ30 professional 4K display. Sony product code 12606401.",
+    "image": "/theater-catalog/sony-fw-50bz30l.webp",
+    "finishes": [],
+    "specs": {
+      "diagonalInches": 50,
+      "resolution": "3840 × 2160",
+      "nativeAspect": "16:9",
+      "sourceUrl": "https://pro.sony/ue_US/products/pro-displays/fw-50bz30l"
+    },
+    "issues": [
+      "GST rate requires confirmation; not stated in the supplied document."
+    ],
+    "source": {
+      "file": "SONY PRICE LIST MRP APRIL 2026.pdf",
+      "page": 1,
+      "effectiveDate": "2026-04-01",
+      "sha256": "303da4361d6ecd66b4e084cfc6b0faf540c5c1e5625c8100f000df7872dab023"
+    },
+    "price": {
+      "amountPaise": 11500000,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
+      "revision": 0
+    },
+    "imageSource": "https://officewonderland.com/products/sony-fw-50bz30l-bravia-50-uhd-4k-hdr-commercial-monitor",
+    "quoteImage": "/theater-catalog/quotation/18708c56a142781cf760362d.jpg"
+  },
+  {
+    "id": "sony-fw-50ez20l",
+    "brand": "Sony",
+    "model": "FW-50EZ20L",
+    "category": "professional-display",
+    "roles": [
+      "tv"
+    ],
+    "series": "EZ20",
+    "description": "50-inch BRAVIA EZ20 professional 4K display. Sony product code 12634601.",
+    "image": "/theater-catalog/sony-fw-50ez20l.webp",
+    "finishes": [],
+    "specs": {
+      "diagonalInches": 50,
+      "resolution": "3840 × 2160",
+      "nativeAspect": "16:9",
+      "sourceUrl": "https://pro.sony/ue_US/products/pro-displays/fw-50ez20l"
+    },
+    "issues": [
+      "GST rate requires confirmation; not stated in the supplied document."
+    ],
+    "source": {
+      "file": "SONY PRICE LIST MRP APRIL 2026.pdf",
+      "page": 1,
+      "effectiveDate": "2026-04-01",
+      "sha256": "303da4361d6ecd66b4e084cfc6b0faf540c5c1e5625c8100f000df7872dab023"
+    },
+    "price": {
+      "amountPaise": 10100000,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
+      "revision": 0
+    },
+    "imageSource": "https://officewonderland.com/products/sony-bravia-fw-50ez20l-50-class-hdr-4k-uhd-commercial-led-display",
+    "quoteImage": "/theater-catalog/quotation/566f2375a1518f3419fc2f9b.jpg"
+  },
+  {
+    "id": "sony-fw-43bz30l",
+    "brand": "Sony",
+    "model": "FW-43BZ30L",
+    "category": "professional-display",
+    "roles": [
+      "tv"
+    ],
+    "series": "BZ30",
+    "description": "43-inch BRAVIA BZ30 professional 4K display. Sony product code 12606501.",
+    "image": "/theater-catalog/sony-fw-43bz30l.webp",
+    "finishes": [],
+    "specs": {
+      "diagonalInches": 43,
+      "resolution": "3840 × 2160",
+      "nativeAspect": "16:9",
+      "sourceUrl": "https://pro.sony/ue_US/products/pro-displays/fw-43bz30l"
+    },
+    "issues": [
+      "GST rate requires confirmation; not stated in the supplied document."
+    ],
+    "source": {
+      "file": "SONY PRICE LIST MRP APRIL 2026.pdf",
+      "page": 1,
+      "effectiveDate": "2026-04-01",
+      "sha256": "303da4361d6ecd66b4e084cfc6b0faf540c5c1e5625c8100f000df7872dab023"
+    },
+    "price": {
+      "amountPaise": 9200000,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
+      "revision": 0
+    },
+    "imageSource": "https://officewonderland.com/products/sony-fw-43bz30l-bravia-43-uhd-4k-hdr-commercial-monitor",
+    "quoteImage": "/theater-catalog/quotation/13ef4edf05eea7fd59479adb.jpg"
+  },
+  {
+    "id": "sony-fw-43ez20l",
+    "brand": "Sony",
+    "model": "FW-43EZ20L",
+    "category": "professional-display",
+    "roles": [
+      "tv"
+    ],
+    "series": "EZ20",
+    "description": "43-inch BRAVIA EZ20 professional 4K display. Sony product code 12635101.",
+    "image": "/theater-catalog/sony-fw-43ez20l.webp",
+    "finishes": [],
+    "specs": {
+      "diagonalInches": 43,
+      "resolution": "3840 × 2160",
+      "nativeAspect": "16:9",
+      "sourceUrl": "https://pro.sony/ue_US/products/pro-displays/fw-43ez20l"
+    },
+    "issues": [
+      "GST rate requires confirmation; not stated in the supplied document."
+    ],
+    "source": {
+      "file": "SONY PRICE LIST MRP APRIL 2026.pdf",
+      "page": 1,
+      "effectiveDate": "2026-04-01",
+      "sha256": "303da4361d6ecd66b4e084cfc6b0faf540c5c1e5625c8100f000df7872dab023"
+    },
+    "price": {
+      "amountPaise": 8200000,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
+      "revision": 0
+    },
+    "imageSource": "https://fireowls.com/products/fw43ez20l-sony-professional-fw-43ez20l-digital-signage-display",
+    "quoteImage": "/theater-catalog/quotation/9a2ace055343ca43ff2c58c7.jpg"
+  },
+  {
+    "id": "sony-wq-bs1",
+    "brand": "Sony",
+    "model": "WQ-BS1",
+    "category": "software-license",
+    "roles": [
+      "extra"
+    ],
+    "series": "Accessories",
+    "description": "BRAVIA Signage software licence for professional displays.",
+    "image": "/theater-catalog/sony-wq-bs1.webp",
+    "finishes": [],
+    "specs": {},
+    "issues": [
+      "GST rate requires confirmation; not stated in the supplied document."
+    ],
+    "source": {
+      "file": "SONY PRICE LIST MRP APRIL 2026.pdf",
+      "page": 1,
+      "effectiveDate": "2026-04-01",
+      "sha256": "303da4361d6ecd66b4e084cfc6b0faf540c5c1e5625c8100f000df7872dab023"
+    },
+    "price": {
+      "amountPaise": 1500000,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
+      "revision": 0
+    },
+    "imageSource": "Catalog identity card; no physical product photo supplied for this code.",
+    "imageKind": "service",
+    "quoteImage": "/theater-catalog/quotation/b9408a34b67dd492615ff27a.jpg"
+  },
+  {
+    "id": "sony-zm2810-1y",
+    "brand": "Sony",
+    "model": "ZM2810-1Y",
+    "category": "accessory",
+    "roles": [
+      "extra"
+    ],
+    "series": "Accessories",
+    "description": "Pro Bravia accessory; Sony product code 50668869.",
+    "image": "/theater-catalog/sony-zm2810-1y.webp",
+    "finishes": [],
+    "specs": {},
+    "issues": [
+      "Accessory code only: the price list does not identify its product or service type. Confirm description, coverage and billing unit before ordering.",
+      "GST rate requires confirmation; not stated in the supplied document."
+    ],
+    "source": {
+      "file": "SONY PRICE LIST MRP APRIL 2026.pdf",
+      "page": 1,
+      "effectiveDate": "2026-04-01",
+      "sha256": "303da4361d6ecd66b4e084cfc6b0faf540c5c1e5625c8100f000df7872dab023"
+    },
+    "price": {
+      "amountPaise": 566400,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unknown",
+      "packSize": null,
+      "revision": 0
+    },
+    "imageSource": "Catalog identity card; no physical product photo supplied for this code.",
+    "imageKind": "service",
+    "quoteImage": "/theater-catalog/quotation/5c88f36b130e3b1db9694410.jpg"
+  },
+  {
+    "id": "sony-zm2810-2y",
+    "brand": "Sony",
+    "model": "ZM2810-2Y",
+    "category": "accessory",
+    "roles": [
+      "extra"
+    ],
+    "series": "Accessories",
+    "description": "Pro Bravia accessory; Sony product code 50669047.",
+    "image": "/theater-catalog/sony-zm2810-2y.webp",
+    "finishes": [],
+    "specs": {},
+    "issues": [
+      "Accessory code only: the price list does not identify its product or service type. Confirm description, coverage and billing unit before ordering.",
+      "GST rate requires confirmation; not stated in the supplied document."
+    ],
+    "source": {
+      "file": "SONY PRICE LIST MRP APRIL 2026.pdf",
+      "page": 1,
+      "effectiveDate": "2026-04-01",
+      "sha256": "303da4361d6ecd66b4e084cfc6b0faf540c5c1e5625c8100f000df7872dab023"
+    },
+    "price": {
+      "amountPaise": 1132800,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unknown",
+      "packSize": null,
+      "revision": 0
+    },
+    "imageSource": "Catalog identity card; no physical product photo supplied for this code.",
+    "imageKind": "service",
+    "quoteImage": "/theater-catalog/quotation/d9cbcc6c8c94f4cedabc0174.jpg"
+  },
+  {
+    "id": "sony-zm2810-3y",
+    "brand": "Sony",
+    "model": "ZM2810-3Y",
+    "category": "accessory",
+    "roles": [
+      "extra"
+    ],
+    "series": "Accessories",
+    "description": "Pro Bravia accessory; Sony product code 50669048.",
+    "image": "/theater-catalog/sony-zm2810-3y.webp",
+    "finishes": [],
+    "specs": {},
+    "issues": [
+      "Accessory code only: the price list does not identify its product or service type. Confirm description, coverage and billing unit before ordering.",
+      "GST rate requires confirmation; not stated in the supplied document."
+    ],
+    "source": {
+      "file": "SONY PRICE LIST MRP APRIL 2026.pdf",
+      "page": 1,
+      "effectiveDate": "2026-04-01",
+      "sha256": "303da4361d6ecd66b4e084cfc6b0faf540c5c1e5625c8100f000df7872dab023"
+    },
+    "price": {
+      "amountPaise": 1699200,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unknown",
+      "packSize": null,
+      "revision": 0
+    },
+    "imageSource": "Catalog identity card; no physical product photo supplied for this code.",
+    "imageKind": "service",
+    "quoteImage": "/theater-catalog/quotation/035bf100319347535d9e757f.jpg"
+  },
+  {
+    "id": "sony-vpl-fhz101l",
+    "brand": "Sony",
+    "model": "VPL-FHZ101L",
+    "category": "business-projector",
+    "roles": [
+      "projector"
+    ],
+    "series": "F Series",
+    "description": "Business PJ F Series projector. Sony product code 90288203.",
+    "image": "/theater-catalog/sony-vpl-fhz101l.webp",
+    "finishes": [],
+    "specs": {
+      "lumens": 10000,
+      "resolution": "1920 × 1200",
+      "nativeAspect": "16:10",
+      "lightSource": "Laser",
+      "sourceUrl": "https://pro.sony/s3/2020/11/18104118/MK20404V1_l.pdf"
+    },
+    "issues": [
+      "Business / installation projector: confirm native aspect ratio, cinema suitability and chosen lens on site.",
+      "GST rate requires confirmation; not stated in the supplied document.",
+      "Interchangeable lens required: confirm lens selection and throw range separately; no fixed throw ratio is assumed."
+    ],
+    "source": {
+      "file": "SONY PRICE LIST MRP APRIL 2026.pdf",
+      "page": 1,
+      "effectiveDate": "2026-04-01",
+      "sha256": "303da4361d6ecd66b4e084cfc6b0faf540c5c1e5625c8100f000df7872dab023"
+    },
+    "price": {
+      "amountPaise": 110600000,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
+      "revision": 0
+    },
+    "imageSource": "https://www.sony.jp/vpl/products/VPL-FHZ101L/",
+    "quoteImage": "/theater-catalog/quotation/6515c484b40e5d709b2205f6.jpg"
+  },
+  {
+    "id": "sony-vpl-fhz91l",
+    "brand": "Sony",
+    "model": "VPL-FHZ91L",
+    "category": "business-projector",
+    "roles": [
+      "projector"
+    ],
+    "series": "F Series",
+    "description": "Business PJ F Series projector. Sony product code 90285703.",
+    "image": "/theater-catalog/sony-vpl-fhz91l.webp",
+    "finishes": [],
+    "specs": {
+      "lumens": 9000,
+      "resolution": "1920 × 1200",
+      "nativeAspect": "16:10",
+      "lightSource": "Laser",
+      "sourceUrl": "https://pro.sony/s3/2020/11/18104118/MK20404V1_l.pdf"
+    },
+    "issues": [
+      "Business / installation projector: confirm native aspect ratio, cinema suitability and chosen lens on site.",
+      "GST rate requires confirmation; not stated in the supplied document.",
+      "Interchangeable lens required: confirm lens selection and throw range separately; no fixed throw ratio is assumed."
+    ],
+    "source": {
+      "file": "SONY PRICE LIST MRP APRIL 2026.pdf",
+      "page": 1,
+      "effectiveDate": "2026-04-01",
+      "sha256": "303da4361d6ecd66b4e084cfc6b0faf540c5c1e5625c8100f000df7872dab023"
+    },
+    "price": {
+      "amountPaise": 101400000,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
+      "revision": 0
+    },
+    "imageSource": "https://www.sony.jp/vpl/products/VPL-FHZ91L/",
+    "quoteImage": "/theater-catalog/quotation/6515c484b40e5d709b2205f6.jpg"
+  },
+  {
+    "id": "sony-vpl-phz61",
+    "brand": "Sony",
+    "model": "VPL-PHZ61",
+    "category": "business-projector",
+    "roles": [
+      "projector"
+    ],
+    "series": "P Series",
+    "description": "Business PJ P Series projector. Sony product code 92228570.",
+    "image": "/theater-catalog/sony-vpl-phz61.webp",
+    "finishes": [],
+    "specs": {
+      "lumens": 6400,
+      "throwMin": 1.23,
+      "throwMax": 1.97,
+      "sourceUrl": "https://pro.sony/s3/2022/11/15150546/PHZ61_51_brochure_highres_EN_Oct_2022_Final.pdf",
+      "lightSource": "Laser",
+      "resolution": "1920 × 1200",
+      "nativeAspect": "16:10"
+    },
+    "issues": [
+      "Business / installation projector: confirm native aspect ratio, cinema suitability and chosen lens on site.",
+      "GST rate requires confirmation; not stated in the supplied document."
+    ],
+    "source": {
+      "file": "SONY PRICE LIST MRP APRIL 2026.pdf",
+      "page": 1,
+      "effectiveDate": "2026-04-01",
+      "sha256": "303da4361d6ecd66b4e084cfc6b0faf540c5c1e5625c8100f000df7872dab023"
+    },
+    "price": {
+      "amountPaise": 35000000,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
+      "revision": 0
+    },
+    "imageSource": "https://www.sony.jp/vpl/products/VPL-PHZ61/",
+    "quoteImage": "/theater-catalog/quotation/b4a345a8ea5f4fa8994b14fa.jpg"
+  },
+  {
+    "id": "sony-vpl-phz51",
+    "brand": "Sony",
+    "model": "VPL-PHZ51",
+    "category": "business-projector",
+    "roles": [
+      "projector"
+    ],
+    "series": "P Series",
+    "description": "Business PJ P Series projector. Sony product code 92228673.",
+    "image": "/theater-catalog/sony-vpl-phz51.webp",
+    "finishes": [],
+    "specs": {
+      "lumens": 5300,
+      "throwMin": 1.23,
+      "throwMax": 1.97,
+      "sourceUrl": "https://pro.sony/s3/2022/11/15150546/PHZ61_51_brochure_highres_EN_Oct_2022_Final.pdf",
+      "lightSource": "Laser",
+      "resolution": "1920 × 1200",
+      "nativeAspect": "16:10"
+    },
+    "issues": [
+      "Business / installation projector: confirm native aspect ratio, cinema suitability and chosen lens on site.",
+      "GST rate requires confirmation; not stated in the supplied document."
+    ],
+    "source": {
+      "file": "SONY PRICE LIST MRP APRIL 2026.pdf",
+      "page": 1,
+      "effectiveDate": "2026-04-01",
+      "sha256": "303da4361d6ecd66b4e084cfc6b0faf540c5c1e5625c8100f000df7872dab023"
+    },
+    "price": {
+      "amountPaise": 27500000,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
+      "revision": 0
+    },
+    "imageSource": "https://www.sony.jp/vpl/products/VPL-PHZ51/",
+    "quoteImage": "/theater-catalog/quotation/b4a345a8ea5f4fa8994b14fa.jpg"
+  },
+  {
+    "id": "sony-vpl-cxz10",
+    "brand": "Sony",
+    "model": "VPL-CXZ10",
+    "category": "business-projector",
+    "roles": [
+      "projector"
+    ],
+    "series": "P Series",
+    "description": "Business PJ P Series projector. Sony product code 90283172.",
+    "image": "/theater-catalog/sony-vpl-cxz10.webp",
+    "finishes": [],
+    "specs": {
+      "lumens": 5000,
+      "throwMin": 1.41,
+      "throwMax": 2.27,
+      "sourceUrl": "https://pro.sony/s3/2020/02/14134136/BP000908_VPS_VPL-CWZ10-CXZ10_Leaflet_EN.pdf",
+      "lightSource": "Laser",
+      "resolution": "1024 × 768",
+      "nativeAspect": "4:3"
+    },
+    "issues": [
+      "Business / installation projector: confirm native aspect ratio, cinema suitability and chosen lens on site.",
+      "GST rate requires confirmation; not stated in the supplied document."
+    ],
+    "source": {
+      "file": "SONY PRICE LIST MRP APRIL 2026.pdf",
+      "page": 1,
+      "effectiveDate": "2026-04-01",
+      "sha256": "303da4361d6ecd66b4e084cfc6b0faf540c5c1e5625c8100f000df7872dab023"
+    },
+    "price": {
+      "amountPaise": 15000000,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
+      "revision": 0
+    },
+    "imageSource": "https://supremeindia.com/products/sony-projector-vpl-cxz10",
+    "quoteImage": "/theater-catalog/quotation/9972292c2c1fd2aad20e894b.jpg"
+  },
+  {
+    "id": "sony-vpll-z4015",
+    "brand": "Sony",
+    "model": "VPLL-Z4015",
+    "category": "accessory",
+    "roles": [
+      "extra"
+    ],
+    "series": "Accessories",
+    "description": "Business PJ accessory; Sony product code 92230308.",
+    "image": "/theater-catalog/sony-vpll-z4015.webp",
+    "finishes": [],
+    "specs": {},
+    "issues": [
+      "GST rate requires confirmation; not stated in the supplied document."
+    ],
+    "source": {
+      "file": "SONY PRICE LIST MRP APRIL 2026.pdf",
+      "page": 1,
+      "effectiveDate": "2026-04-01",
+      "sha256": "303da4361d6ecd66b4e084cfc6b0faf540c5c1e5625c8100f000df7872dab023"
+    },
+    "price": {
+      "amountPaise": 32500000,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
+      "revision": 0
+    },
+    "imageSource": "https://www.sony.jp/vpl/products/VPLL-Z4015/",
+    "quoteImage": "/theater-catalog/quotation/13805dec0ae8a6ef6fe4aa1a.jpg"
+  },
+  {
+    "id": "sony-vpll-z4111",
+    "brand": "Sony",
+    "model": "VPLL-Z4111",
+    "category": "accessory",
+    "roles": [
+      "extra"
+    ],
+    "series": "Accessories",
+    "description": "Business PJ accessory; Sony product code 92229608.",
+    "image": "/theater-catalog/sony-vpll-z4111.webp",
+    "finishes": [],
+    "specs": {},
+    "issues": [
+      "GST rate requires confirmation; not stated in the supplied document."
+    ],
+    "source": {
+      "file": "SONY PRICE LIST MRP APRIL 2026.pdf",
+      "page": 1,
+      "effectiveDate": "2026-04-01",
+      "sha256": "303da4361d6ecd66b4e084cfc6b0faf540c5c1e5625c8100f000df7872dab023"
+    },
+    "price": {
+      "amountPaise": 18000000,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
+      "revision": 0
+    },
+    "imageSource": "https://www.sony.jp/vpl/products/VPLL-Z4111/",
+    "quoteImage": "/theater-catalog/quotation/ae2b03a34d39b6b39132b6f4.jpg"
+  },
+  {
+    "id": "sony-vpll-z4019",
+    "brand": "Sony",
+    "model": "VPLL-Z4019",
+    "category": "accessory",
+    "roles": [
+      "extra"
+    ],
+    "series": "Accessories",
+    "description": "Business PJ accessory; Sony product code 92230208.",
+    "image": "/theater-catalog/sony-vpll-z4019.webp",
+    "finishes": [],
+    "specs": {},
+    "issues": [
+      "GST rate requires confirmation; not stated in the supplied document."
+    ],
+    "source": {
+      "file": "SONY PRICE LIST MRP APRIL 2026.pdf",
+      "page": 1,
+      "effectiveDate": "2026-04-01",
+      "sha256": "303da4361d6ecd66b4e084cfc6b0faf540c5c1e5625c8100f000df7872dab023"
+    },
+    "price": {
+      "amountPaise": 22500000,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
+      "revision": 0
+    },
+    "imageSource": "https://www.sony.jp/vpl/products/VPLL-Z4019/",
+    "quoteImage": "/theater-catalog/quotation/2c69c1f6f901c04cfb12f99d.jpg"
+  },
+  {
+    "id": "sony-vpl-xw7000",
+    "brand": "Sony",
+    "model": "VPL-XW7000",
+    "category": "projector",
+    "roles": [
+      "projector"
+    ],
+    "series": "4K",
+    "description": "Home PJ 4K projector. Sony product code 92226873.",
+    "image": "/theater-catalog/sony-vpl-xw7000.webp",
+    "finishes": [],
+    "specs": {
+      "lumens": 3200,
+      "throwMin": 1.35,
+      "throwMax": 2.84,
+      "sourceUrl": "https://pro.sony/s3/2022/04/21094715/73942.008-SONY-XW7000-Projector-Data-SheetMR.pdf",
+      "lightSource": "Laser",
+      "resolution": "3840 × 2160",
+      "nativeAspect": "16:9",
+      "dimensions": [
+        0.46,
+        0.21,
+        0.517
+      ]
+    },
+    "issues": [
+      "GST rate requires confirmation; not stated in the supplied document."
+    ],
+    "source": {
+      "file": "SONY PRICE LIST MRP APRIL 2026.pdf",
+      "page": 1,
+      "effectiveDate": "2026-04-01",
+      "sha256": "303da4361d6ecd66b4e084cfc6b0faf540c5c1e5625c8100f000df7872dab023"
+    },
+    "price": {
+      "amountPaise": 129000000,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
+      "revision": 0
+    },
+    "imageSource": "https://www.sony.jp/video-projector/products/VPL-XW7000/",
+    "quoteImage": "/theater-catalog/quotation/95cd97beae440f7a7e39ee83.jpg"
+  },
+  {
+    "id": "sony-vpl-xw5000",
+    "brand": "Sony",
+    "model": "VPL-XW5000",
+    "category": "projector",
+    "roles": [
+      "projector"
+    ],
+    "series": "4K",
+    "description": "Home PJ 4K projector. Sony product code 92227073.",
+    "image": "/theater-catalog/sony-vpl-xw5000.webp",
+    "finishes": [],
+    "specs": {
+      "lumens": 2000,
+      "throwMin": 1.38,
+      "throwMax": 2.21,
+      "sourceUrl": "https://www.sony.jp/video-projector/products/VPL-XW5000/",
+      "lightSource": "Laser",
+      "resolution": "3840 × 2160",
+      "nativeAspect": "16:9",
+      "dimensions": [
+        0.46,
+        0.2,
+        0.472
+      ]
+    },
+    "issues": [
+      "GST rate requires confirmation; not stated in the supplied document."
+    ],
+    "source": {
+      "file": "SONY PRICE LIST MRP APRIL 2026.pdf",
+      "page": 1,
+      "effectiveDate": "2026-04-01",
+      "sha256": "303da4361d6ecd66b4e084cfc6b0faf540c5c1e5625c8100f000df7872dab023"
+    },
+    "price": {
+      "amountPaise": 55000000,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
+      "revision": 0
+    },
+    "imageSource": "https://www.sony.jp/video-projector/products/VPL-XW5000/",
+    "quoteImage": "/theater-catalog/quotation/82e761ee69f91cc4417e62d2.jpg"
+  },
+  {
+    "id": "sony-vpl-xw8100",
+    "brand": "Sony",
+    "model": "VPL-XW8100",
+    "category": "projector",
+    "roles": [
+      "projector"
+    ],
+    "series": "4K",
+    "description": "Home PJ 4K projector. Sony product code 92235270.",
+    "image": "/theater-catalog/sony-vpl-xw8100.webp",
+    "finishes": [],
+    "specs": {
+      "lumens": 3400,
+      "throwMin": 1.35,
+      "throwMax": 2.84,
+      "sourceUrl": "https://pro.sony/s3/2024/09/10093825/VPL-XW6100ES-and-VPL-XW8100ES-Home-Cinema-Brochure-EN.pdf",
+      "lightSource": "Laser",
+      "resolution": "3840 × 2160",
+      "nativeAspect": "16:9",
+      "dimensions": [
+        0.46,
+        0.21,
+        0.517
+      ]
+    },
+    "issues": [
+      "GST rate requires confirmation; not stated in the supplied document."
+    ],
+    "source": {
+      "file": "SONY PRICE LIST MRP APRIL 2026.pdf",
+      "page": 1,
+      "effectiveDate": "2026-04-01",
+      "sha256": "303da4361d6ecd66b4e084cfc6b0faf540c5c1e5625c8100f000df7872dab023"
+    },
+    "price": {
+      "amountPaise": 175000000,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
+      "revision": 0
+    },
+    "imageSource": "https://www.audioadvice.com/products/sony-bravia-projector-9-4k-hdr-laser-home-theater-projector",
+    "quoteImage": "/theater-catalog/quotation/4658540fb354e79045e41bf8.jpg"
+  },
+  {
+    "id": "sony-vpl-xw5100",
+    "brand": "Sony",
+    "model": "VPL-XW5100",
+    "category": "projector",
+    "roles": [
+      "projector"
+    ],
+    "series": "4K",
+    "description": "Home PJ 4K projector. Sony product code 92235670.",
+    "image": "/theater-catalog/sony-vpl-xw5100.webp",
+    "finishes": [],
+    "specs": {
+      "lumens": 2200,
+      "throwMin": 1.38,
+      "throwMax": 2.21,
+      "sourceUrl": "https://pro.sony/s3/2025/03/05163722/VPL-XW5100ES-Home-Cinema-Brochure-EN.pdf",
+      "lightSource": "Laser",
+      "resolution": "3840 × 2160",
+      "nativeAspect": "16:9",
+      "dimensions": [
+        0.46,
+        0.2,
+        0.472
+      ]
+    },
+    "issues": [
+      "GST rate requires confirmation; not stated in the supplied document."
+    ],
+    "source": {
+      "file": "SONY PRICE LIST MRP APRIL 2026.pdf",
+      "page": 1,
+      "effectiveDate": "2026-04-01",
+      "sha256": "303da4361d6ecd66b4e084cfc6b0faf540c5c1e5625c8100f000df7872dab023"
+    },
+    "price": {
+      "amountPaise": 65000000,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
+      "revision": 0
+    },
+    "imageSource": "https://www.audioadvice.com/products/sony-bravia-projector-7-vpl-xw5100es-4k-hdr-projector",
+    "quoteImage": "/theater-catalog/quotation/48a97d9f3b8dcc1d7661fc44.jpg"
+  },
+  {
+    "id": "benq-w2720i",
+    "brand": "BenQ",
+    "model": "W2720i",
+    "category": "projector",
+    "roles": [
+      "projector"
+    ],
+    "series": "Smart Home Cinema",
+    "description": "4K UHD 4LED smart projector. AI picture quality tuning; Android TV with pre-installed Netflix; 1.3× optical zoom; 98% Rec.709.",
+    "image": "/theater-catalog/benq-w2720i.webp",
+    "finishes": [],
+    "specs": {
+      "lumens": 2500,
+      "throwMin": 1,
+      "throwMax": 1.3,
+      "resolution": "3840 × 2160",
+      "nativeAspect": "16:9",
+      "lightSource": "4LED"
+    },
+    "issues": [
+      "Verify enclosure dimension axis order before installation; the brochure labels are ambiguous.",
+      "Price requires confirmation; brochure contains no selling price.",
+      "GST rate requires confirmation; not stated in the supplied document."
+    ],
+    "source": {
+      "file": "4 Pager AI Cinema (W2720i & W4100i) Full Page Low Res.pdf",
+      "page": 6,
+      "effectiveDate": "Undated brochure",
+      "sha256": "414e38be7521e733200491b70718371991e2e7ac11d0371c816345ad2bd8d063"
+    },
+    "price": {
+      "amountPaise": null,
+      "taxBasis": "unknown",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
+      "revision": 0
+    },
+    "imageSource": "4 Pager AI Cinema (W2720i & W4100i) Full Page Low Res.pdf · page 6",
+    "quoteImage": "/theater-catalog/quotation/aead1b86fa38f1211756daa7.jpg"
+  },
+  {
+    "id": "benq-w4100i",
+    "brand": "BenQ",
+    "model": "W4100i",
+    "category": "projector",
+    "roles": [
+      "projector"
+    ],
+    "series": "Smart Home Cinema",
+    "description": "4K UHD 4LED smart projector. AI Cinema; HDR10+; FILMMAKER MODE; HLG; Android TV; 1.3× optical zoom.",
+    "image": "/theater-catalog/benq-w4100i.webp",
+    "finishes": [],
+    "specs": {
+      "lumens": 3200,
+      "throwMin": 1.15,
+      "throwMax": 1.5,
+      "resolution": "3840 × 2160",
+      "nativeAspect": "16:9",
+      "lightSource": "4LED"
+    },
+    "issues": [
+      "Verify enclosure dimension axis order before installation; the brochure labels are ambiguous.",
+      "Price requires confirmation; brochure contains no selling price.",
+      "GST rate requires confirmation; not stated in the supplied document."
+    ],
+    "source": {
+      "file": "4 Pager AI Cinema (W2720i & W4100i) Full Page Low Res.pdf",
+      "page": 6,
+      "effectiveDate": "Undated brochure",
+      "sha256": "414e38be7521e733200491b70718371991e2e7ac11d0371c816345ad2bd8d063"
+    },
+    "price": {
+      "amountPaise": null,
+      "taxBasis": "unknown",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
+      "revision": 0
+    },
+    "imageSource": "4 Pager AI Cinema (W2720i & W4100i) Full Page Low Res.pdf · page 6",
+    "quoteImage": "/theater-catalog/quotation/5ac15605437844a5660b9411.jpg"
+  },
+  {
+    "id": "benq-gp520",
+    "brand": "BenQ",
+    "model": "GP520",
+    "category": "projector",
+    "roles": [
+      "projector"
+    ],
+    "series": "Smart Home Cinema",
+    "description": "4K UHD 4LED smart projector. Google TV with official Netflix; MEMC; automatic focus, keystone, screen fit and obstacle avoidance; 12W × 2 speakers.",
+    "image": "/theater-catalog/benq-gp520.webp",
+    "finishes": [],
+    "specs": {
+      "lumens": 2600,
+      "throwMin": 1.2,
+      "throwMax": 1.2,
+      "resolution": "3840 × 2160",
+      "nativeAspect": "16:9",
+      "lightSource": "4LED"
+    },
+    "issues": [
+      "Verify enclosure dimension axis order before installation; the brochure labels are ambiguous.",
+      "Price requires confirmation; brochure contains no selling price.",
+      "GST rate requires confirmation; not stated in the supplied document."
+    ],
+    "source": {
+      "file": "GP520 Leaflet Low Res.pdf",
+      "page": 2,
+      "effectiveDate": "Undated brochure",
+      "sha256": "9abb7c1d8f982a08e4a2ad1f798dd7aaf1504bf4f4862940775c7de70e7d29f8"
+    },
+    "price": {
+      "amountPaise": null,
+      "taxBasis": "unknown",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
+      "revision": 0
+    },
+    "imageSource": "https://www.benq.com/en-in/projector/cinema/gp520.html",
+    "quoteImage": "/theater-catalog/quotation/a962d4b8c010d3cc8069e8a0.jpg"
+  },
+  {
+    "id": "benq-tk705i",
+    "brand": "BenQ",
+    "model": "TK705i",
+    "category": "projector",
+    "roles": [
+      "projector"
+    ],
+    "series": "Smart Home Cinema",
+    "description": "4K UHD 4LED smart projector. Google TV; HDR10+; auto focus, screen fit, obstacle avoidance and eye protection; 1.0–1.3:1 lens; 8W treVolo × 2.",
+    "image": "/theater-catalog/benq-tk705i.webp",
+    "finishes": [],
+    "specs": {
+      "lumens": 3000,
+      "throwMin": 1,
+      "throwMax": 1.3,
+      "resolution": "3840 × 2160",
+      "nativeAspect": "16:9",
+      "lightSource": "4LED"
+    },
+    "issues": [
+      "Verify enclosure dimension axis order before installation; the brochure labels are ambiguous.",
+      "Price requires confirmation; brochure contains no selling price.",
+      "GST rate requires confirmation; not stated in the supplied document."
+    ],
+    "source": {
+      "file": "TK705STi Leaflet Low Res.pdf",
+      "page": 1,
+      "effectiveDate": "Undated brochure",
+      "sha256": "fb251363009fa70ad76f03370e26effe1c5b5a038a475682e8dd23b8ce2e2d31"
+    },
+    "price": {
+      "amountPaise": null,
+      "taxBasis": "unknown",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
+      "revision": 0
+    },
+    "imageSource": "TK705STi Leaflet Low Res.pdf · page 1",
+    "quoteImage": "/theater-catalog/quotation/bcb4bad34c5c276f2b834a1a.jpg"
+  },
+  {
+    "id": "benq-tk705sti",
+    "brand": "BenQ",
+    "model": "TK705STi",
+    "category": "projector",
+    "roles": [
+      "projector"
+    ],
+    "series": "Smart Home Cinema",
+    "description": "4K UHD 4LED smart projector. Google TV; HDR10+; auto focus, screen fit, obstacle avoidance and eye protection; short-throw 0.8:1 lens; 8W treVolo × 2.",
+    "image": "/theater-catalog/benq-tk705sti.webp",
+    "finishes": [],
+    "specs": {
+      "lumens": 3000,
+      "throwMin": 0.8,
+      "throwMax": 0.8,
+      "resolution": "3840 × 2160",
+      "nativeAspect": "16:9",
+      "lightSource": "4LED"
+    },
+    "issues": [
+      "Verify enclosure dimension axis order before installation; the brochure labels are ambiguous.",
+      "Price requires confirmation; brochure contains no selling price.",
+      "GST rate requires confirmation; not stated in the supplied document."
+    ],
+    "source": {
+      "file": "TK705STi Leaflet Low Res.pdf",
+      "page": 1,
+      "effectiveDate": "Undated brochure",
+      "sha256": "fb251363009fa70ad76f03370e26effe1c5b5a038a475682e8dd23b8ce2e2d31"
+    },
+    "price": {
+      "amountPaise": null,
+      "taxBasis": "unknown",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
+      "revision": 0
+    },
+    "imageSource": "TK705STi Leaflet Low Res.pdf · page 1",
+    "quoteImage": "/theater-catalog/quotation/bcb4bad34c5c276f2b834a1a.jpg"
   }
 ]

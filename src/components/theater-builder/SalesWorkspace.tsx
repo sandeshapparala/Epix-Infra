@@ -91,7 +91,7 @@ export function SoundEquipment({ studio }: { studio: TheaterSales }) {
     (p) => p.id === studio.equipment.slots.front?.productId,
   );
   const slots = activeSlots(studio.state, studio.products).filter(
-    (s) => s !== "projector" && s !== "extra",
+    (s) => s !== "projector" && s !== "tv" && s !== "extra",
   ) as Exclude<Slot, "extra">[];
   if (!studio.member) return <ModelSignIn />;
   return (
