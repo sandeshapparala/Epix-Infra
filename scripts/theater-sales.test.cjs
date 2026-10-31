@@ -128,7 +128,7 @@ test("all supplied catalogs import with unique identifiers and existing images",
 });
 test("source ambiguities remain unresolved and accessory grilles are not offered as speakers", () => {
   assert.equal(product("polk-r200-unit").price.unit, "unknown");
-  assert.equal(product("faith-fc-690").price.taxBasis, "exclusive");
+  assert.equal(product("faith-fc-690").price.taxBasis, "inclusive");
   assert.equal(product("canton-alpha-1").price.amountPaise, null);
   assert.ok(
     products.filter(
@@ -492,6 +492,47 @@ test('wide speakers and every ceiling pair stay installed when the primary row m
       else assert.notDeepEqual(next.position,s.position);
     }
   }
+});
+
+test('confirmed Canton and FAITH billing preserves every supplied amount and resolves only approved metadata', () => {
+  const reviewed=products.filter(p=>['Canton','FAITH'].includes(p.brand));
+  assert.equal(reviewed.length,99);
+  // Fingerprint of all 99 original PDF-backed ID/amount pairs, including POR nulls.
+  assert.equal(require('node:crypto').createHash('sha256').update(JSON.stringify(reviewed.map(p=>[p.id,p.price.amountPaise]))).digest('hex'),
+    'be4486044eccf1bf82f35da0fa696e46a1a9165d161da9b5aab514668175d021');
+  assert.equal(reviewed.filter(p=>p.price.unit==='set').length,4);
+  for(const p of reviewed) {
+    assert.equal(p.price.unit,p.brand==='Canton' && p.model.startsWith('Movie ')?'set':'unit',p.id);
+    assert.equal(p.price.packSize,1,p.id);
+    assert.equal(p.price.taxBasis,'inclusive',p.id);
+    assert.equal(p.price.gstRate,null,p.id);
+    assert.ok(!p.issues.includes('Selling unit requires confirmation'),p.id);
+    assert.ok(!p.issues.includes('Tax inclusion requires confirmation'),p.id);
+  }
+  const pending=filterPricingProducts(products,{...noPricingFilters,brand:'Canton',pending:true});
+  assert.deepEqual(pending.map(p=>p.id),['canton-alpha-1','canton-alpha-2']);
+  assert.equal(filterPricingProducts(products,{...noPricingFilters,brand:'FAITH',pending:true}).length,0);
+});
+
+test('confirmed individual speakers bill each piece while Canton Movie packages bill one complete set without added tax', () => {
+  const s=state();
+  s.design.audio='5.1.2';
+  s.equipment.slots.front={productId:'canton-reference-5-gs',finish:''};
+  s.equipment.slots.height={productId:'faith-fc-690',finish:''};
+  let q=calculateQuote(s,products);
+  const front=q.lines.find(l=>l.productId==='canton-reference-5-gs');
+  const height=q.lines.find(l=>l.productId==='faith-fc-690');
+  assert.ok(front); assert.ok(height);
+  assert.equal(front.quantity,2); assert.equal(front.totalPaise,172200000);
+  assert.equal(height.quantity,2); assert.equal(height.totalPaise,4000000);
+  assert.equal(q.taxPaise,0);
+  s.equipment={mode:'package',slots:{package:{productId:'canton-movie-95-black-white',finish:''}},extras:[]};
+  q=calculateQuote(s,products);
+  const movie=q.lines.find(l=>l.productId==='canton-movie-95-black-white');
+  assert.equal(movie.quantity,1); assert.equal(movie.totalPaise,8800000);
+  assert.equal(q.taxPaise,0);
+  s.discountPercent=20;
+  assert.equal(calculateQuote(s,products).lines.find(l=>l.productId===movie.productId).totalPaise,7040000);
 });
 
 test('all final source amounts, including old exclusive and unknown tax metadata, use the same discounted total', () => {

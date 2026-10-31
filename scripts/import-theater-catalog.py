@@ -231,11 +231,13 @@ if __name__ == "__main__":
     parser=argparse.ArgumentParser();parser.add_argument("--source",default=str(ROOT.parent/"home 3d"));args=parser.parse_args()
     OUT.mkdir(parents=True,exist_ok=True);IMAGES.mkdir(parents=True,exist_ok=True)
     products,manifest=extract(Path(args.source))
+    import runpy
+    # Keep the later customer-confirmed billing rules on every source rebuild.
+    runpy.run_path(str(ROOT/'scripts/apply-theater-billing-policy.py'))['apply_confirmed_billing'](products)
     (OUT/"products.json").write_text(json.dumps(products,ensure_ascii=False,indent=2),encoding="utf-8")
     (OUT/"sources.json").write_text(json.dumps(manifest,indent=2),encoding="utf-8")
     # Preserve and deterministically rebuild the later supplied catalogs when
     # rerunning the original nine-list import.
-    import runpy
     additions_source=Path(args.source)/'new'
     if (additions_source/'Marantz Price List Oct 2026.pdf').exists():
         runpy.run_path(str(ROOT/'scripts/import-theater-catalog-additions.py'))['main'](additions_source)

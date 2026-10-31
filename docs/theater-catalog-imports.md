@@ -104,3 +104,37 @@ an explicit override over 10% is rejected by project and quotation APIs. Individ
 Rotel power amplifiers expose their verified channel counts; both supplied
 7.1.4 amplification bundles can fill the receiver/processor selection as an
 11-channel electronics system. They never supply or suppress speaker selections.
+
+## Canton and FAITH billing confirmation - 31 October 2026
+
+The customer confirmed Canton individual products and all FAITH speakers per
+piece, and the four Canton Movie packages per complete set. The 99 original
+PDF-backed amounts are unchanged, including the two Canton POR entries with no
+numeric source amount. Each piece or complete Movie package is one billable unit;
+the six speakers in a Movie package do not multiply its printed package price.
+
+All printed amounts are the final selling amounts, with no extra GST, per the
+customer's explicit instruction. FAITH's source footer says GST Extra; that source
+wording is superseded by this selling-price policy, rather than used to increase
+the printed prices. Inclusive billing metadata records this policy, with no
+separate tax rate asserted. Original PDF hashes, pages and effective dates remain.
+
+`python scripts/apply-theater-billing-policy.py` reapplies this confirmation to
+the seed catalog without changing amounts or accessing Firestore. The original
+nine-list importer calls the same policy during rebuilds. Administrator overrides
+and issued quotation snapshots remain untouched.
+
+Research completed **before editing the data**, checked 31 October 2026:
+
+| Evidence | Finding | Limits |
+| --- | --- | --- |
+| [Canton international distributors](https://www.canton.de/en/company/sales-force-international/) | Canton names AV Nirvana Distribution in India, matching the supplied list's issuer and phone. | Distributor identity is verified; this page does not publish current Indian model prices. |
+| [Reference 5 GS at The Audio Co.](https://theaudio.co/products/canton-reference-5-gs-edition-floorstanding-speaker-pair) | Exact model listed at INR 1,722,000 per pair, taxes included. This equals two times the PDF's INR 861,000. | Supports the per-piece interpretation for this model. It does not verify every model, all latest MRPs, or this retailer's authorisation. |
+| [Canton Movie 95](https://www.canton.de/en/products/series/movie-sets/products/type/home-theater-speaker/movie-95/03435) | Manufacturer identifies a 5.1 home-cinema set. | The manufacturer's overseas price is not substituted for the Indian PDF amount. |
+| [FAITH home-theatre catalogue](https://www.faithelectronics.in/shop/category/speakers-home-theater-speakers-11) | Exact FC/FL/FS/FH models are present, but displayed prices are INR 0 placeholders. | No usable current public price or definitive piece/pair billing rule was found. Per-piece billing comes from the customer's confirmation. |
+
+The supplied lists are the approved price authority. Online comparisons are
+corroboration, not replacements or a claim that every 2025 price is the latest
+October 2026 market price. Similar model generations and foreign-market prices
+must not be substituted. Missing source amounts stay pending; an existing live
+administrator-confirmed amount, such as Alpha 1, continues to take precedence.

@@ -13,9 +13,7 @@
     "finishes": [],
     "specs": {},
     "issues": [
-      "Price requires confirmation",
-      "Tax inclusion requires confirmation",
-      "Selling unit requires confirmation"
+      "Price requires confirmation"
     ],
     "source": {
       "file": "CANTON_01-10-2025.pdf",
@@ -25,10 +23,10 @@
     },
     "price": {
       "amountPaise": null,
-      "taxBasis": "unknown",
-      "gstRate": 18,
-      "unit": "unknown",
-      "packSize": null,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/49f04383010f7b32a4ff74d6.jpg"
@@ -47,9 +45,7 @@
     "finishes": [],
     "specs": {},
     "issues": [
-      "Price requires confirmation",
-      "Tax inclusion requires confirmation",
-      "Selling unit requires confirmation"
+      "Price requires confirmation"
     ],
     "source": {
       "file": "CANTON_01-10-2025.pdf",
@@ -59,10 +55,10 @@
     },
     "price": {
       "amountPaise": null,
-      "taxBasis": "unknown",
-      "gstRate": 18,
-      "unit": "unknown",
-      "packSize": null,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/f98c89387e4fbd1fb91d99dc.jpg"
@@ -83,10 +79,7 @@
       "White"
     ],
     "specs": {},
-    "issues": [
-      "Tax inclusion requires confirmation",
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "CANTON_01-10-2025.pdf",
       "page": 2,
@@ -95,10 +88,10 @@
     },
     "price": {
       "amountPaise": 162650000,
-      "taxBasis": "unknown",
-      "gstRate": 18,
-      "unit": "unknown",
-      "packSize": null,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/d1a7f0a79a5ca6ed07c2250b.jpg"
@@ -119,10 +112,7 @@
       "White"
     ],
     "specs": {},
-    "issues": [
-      "Tax inclusion requires confirmation",
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "CANTON_01-10-2025.pdf",
       "page": 2,
@@ -131,10 +121,10 @@
     },
     "price": {
       "amountPaise": 131400000,
-      "taxBasis": "unknown",
-      "gstRate": 18,
-      "unit": "unknown",
-      "packSize": null,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/f96b9f96c2ce7415133e4de0.jpg"
@@ -155,10 +145,7 @@
       "White"
     ],
     "specs": {},
-    "issues": [
-      "Tax inclusion requires confirmation",
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "CANTON_01-10-2025.pdf",
       "page": 3,
@@ -167,10 +154,10 @@
     },
     "price": {
       "amountPaise": 108450000,
-      "taxBasis": "unknown",
-      "gstRate": 18,
-      "unit": "unknown",
-      "packSize": null,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/f96b9f96c2ce7415133e4de0.jpg"
@@ -191,10 +178,7 @@
       "White"
     ],
     "specs": {},
-    "issues": [
-      "Tax inclusion requires confirmation",
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "CANTON_01-10-2025.pdf",
       "page": 3,
@@ -203,10 +187,10 @@
     },
     "price": {
       "amountPaise": 72300000,
-      "taxBasis": "unknown",
-      "gstRate": 18,
-      "unit": "unknown",
-      "packSize": null,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/f96b9f96c2ce7415133e4de0.jpg"
@@ -226,10 +210,7 @@
       "Cherry"
     ],
     "specs": {},
-    "issues": [
-      "Tax inclusion requires confirmation",
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "CANTON_01-10-2025.pdf",
       "page": 4,
@@ -238,10 +219,10 @@
     },
     "price": {
       "amountPaise": 72300000,
-      "taxBasis": "unknown",
-      "gstRate": 18,
-      "unit": "unknown",
-      "packSize": null,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/5ac8fcd04599bf0be2b9baed.jpg"
@@ -259,10 +240,7 @@
     "image": "/theater-catalog/canton-reference-5-gs.webp",
     "finishes": [],
     "specs": {},
-    "issues": [
-      "Tax inclusion requires confirmation",
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "CANTON_01-10-2025.pdf",
       "page": 4,
@@ -271,10 +249,10 @@
     },
     "price": {
       "amountPaise": 86100000,
-      "taxBasis": "unknown",
-      "gstRate": 18,
-      "unit": "unknown",
-      "packSize": null,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/1055b0bc246760c3b562dde4.jpg"
@@ -295,10 +273,7 @@
       "White"
     ],
     "specs": {},
-    "issues": [
-      "Tax inclusion requires confirmation",
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "CANTON_01-10-2025.pdf",
       "page": 5,
@@ -307,10 +282,10 @@
     },
     "price": {
       "amountPaise": 49300000,
-      "taxBasis": "unknown",
-      "gstRate": 18,
-      "unit": "unknown",
-      "packSize": null,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/f96b9f96c2ce7415133e4de0.jpg"
@@ -330,10 +305,7 @@
       "Cherry"
     ],
     "specs": {},
-    "issues": [
-      "Tax inclusion requires confirmation",
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "CANTON_01-10-2025.pdf",
       "page": 5,
@@ -342,10 +314,10 @@
     },
     "price": {
       "amountPaise": 54250000,
-      "taxBasis": "unknown",
-      "gstRate": 18,
-      "unit": "unknown",
-      "packSize": null,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/617d3af06bb7a6563ee4a134.jpg"
@@ -368,10 +340,7 @@
       "White"
     ],
     "specs": {},
-    "issues": [
-      "Tax inclusion requires confirmation",
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "CANTON_01-10-2025.pdf",
       "page": 6,
@@ -380,10 +349,10 @@
     },
     "price": {
       "amountPaise": 32700000,
-      "taxBasis": "unknown",
-      "gstRate": 18,
-      "unit": "unknown",
-      "packSize": null,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/a137c646ce3ba215558d5371.jpg"
@@ -405,10 +374,7 @@
       "Cherry"
     ],
     "specs": {},
-    "issues": [
-      "Tax inclusion requires confirmation",
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "CANTON_01-10-2025.pdf",
       "page": 6,
@@ -417,10 +383,10 @@
     },
     "price": {
       "amountPaise": 32750000,
-      "taxBasis": "unknown",
-      "gstRate": 18,
-      "unit": "unknown",
-      "packSize": null,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/92d700e434707336fa93f383.jpg"
@@ -438,10 +404,7 @@
     "image": "/theater-catalog/canton-reference-center.webp",
     "finishes": [],
     "specs": {},
-    "issues": [
-      "Tax inclusion requires confirmation",
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "CANTON_01-10-2025.pdf",
       "page": 7,
@@ -450,10 +413,10 @@
     },
     "price": {
       "amountPaise": 44400000,
-      "taxBasis": "unknown",
-      "gstRate": 18,
-      "unit": "unknown",
-      "packSize": null,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/0515217c00581c2c31e723e7.jpg"
@@ -471,10 +434,7 @@
     "image": "/theater-catalog/canton-reference-sub.webp",
     "finishes": [],
     "specs": {},
-    "issues": [
-      "Tax inclusion requires confirmation",
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "CANTON_01-10-2025.pdf",
       "page": 7,
@@ -483,10 +443,10 @@
     },
     "price": {
       "amountPaise": 57550000,
-      "taxBasis": "unknown",
-      "gstRate": 18,
-      "unit": "unknown",
-      "packSize": null,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/d71ad013b64b174061975035.jpg"
@@ -507,10 +467,7 @@
       "White"
     ],
     "specs": {},
-    "issues": [
-      "Tax inclusion requires confirmation",
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "CANTON_01-10-2025.pdf",
       "page": 8,
@@ -519,10 +476,10 @@
     },
     "price": {
       "amountPaise": 45000000,
-      "taxBasis": "unknown",
-      "gstRate": 18,
-      "unit": "unknown",
-      "packSize": null,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/98df4e50689b54f004908f59.jpg"
@@ -542,10 +499,7 @@
       "Walnut"
     ],
     "specs": {},
-    "issues": [
-      "Tax inclusion requires confirmation",
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "CANTON_01-10-2025.pdf",
       "page": 8,
@@ -554,10 +508,10 @@
     },
     "price": {
       "amountPaise": 45000000,
-      "taxBasis": "unknown",
-      "gstRate": 18,
-      "unit": "unknown",
-      "packSize": null,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/dfe3657da5f5ee3228087d07.jpg"
@@ -578,10 +532,7 @@
       "White"
     ],
     "specs": {},
-    "issues": [
-      "Tax inclusion requires confirmation",
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "CANTON_01-10-2025.pdf",
       "page": 9,
@@ -590,10 +541,10 @@
     },
     "price": {
       "amountPaise": 37800000,
-      "taxBasis": "unknown",
-      "gstRate": 18,
-      "unit": "unknown",
-      "packSize": null,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/f3887b4e3d59de9d273c060a.jpg"
@@ -613,10 +564,7 @@
       "Walnut"
     ],
     "specs": {},
-    "issues": [
-      "Tax inclusion requires confirmation",
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "CANTON_01-10-2025.pdf",
       "page": 9,
@@ -625,10 +573,10 @@
     },
     "price": {
       "amountPaise": 37800000,
-      "taxBasis": "unknown",
-      "gstRate": 18,
-      "unit": "unknown",
-      "packSize": null,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/d92c7f96bb9189a2f39ce2cb.jpg"
@@ -649,10 +597,7 @@
       "White"
     ],
     "specs": {},
-    "issues": [
-      "Tax inclusion requires confirmation",
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "CANTON_01-10-2025.pdf",
       "page": 10,
@@ -661,10 +606,10 @@
     },
     "price": {
       "amountPaise": 30400000,
-      "taxBasis": "unknown",
-      "gstRate": 18,
-      "unit": "unknown",
-      "packSize": null,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/ef028b9e37366137fbb3ec1b.jpg"
@@ -684,10 +629,7 @@
       "Walnut"
     ],
     "specs": {},
-    "issues": [
-      "Tax inclusion requires confirmation",
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "CANTON_01-10-2025.pdf",
       "page": 10,
@@ -696,10 +638,10 @@
     },
     "price": {
       "amountPaise": 30400000,
-      "taxBasis": "unknown",
-      "gstRate": 18,
-      "unit": "unknown",
-      "packSize": null,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/563298ed6df4d1325c4f97fa.jpg"
@@ -722,10 +664,7 @@
       "White"
     ],
     "specs": {},
-    "issues": [
-      "Tax inclusion requires confirmation",
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "CANTON_01-10-2025.pdf",
       "page": 11,
@@ -734,10 +673,10 @@
     },
     "price": {
       "amountPaise": 13900000,
-      "taxBasis": "unknown",
-      "gstRate": 18,
-      "unit": "unknown",
-      "packSize": null,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/7f50205973d5d3e09f39ed6d.jpg"
@@ -757,10 +696,7 @@
     "image": "/theater-catalog/canton-vento-30-walunt.webp",
     "finishes": [],
     "specs": {},
-    "issues": [
-      "Tax inclusion requires confirmation",
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "CANTON_01-10-2025.pdf",
       "page": 11,
@@ -769,10 +705,10 @@
     },
     "price": {
       "amountPaise": 12050000,
-      "taxBasis": "unknown",
-      "gstRate": 18,
-      "unit": "unknown",
-      "packSize": null,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/45fe9de450dff4c9ce147a12.jpg"
@@ -795,10 +731,7 @@
       "White"
     ],
     "specs": {},
-    "issues": [
-      "Tax inclusion requires confirmation",
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "CANTON_01-10-2025.pdf",
       "page": 12,
@@ -807,10 +740,10 @@
     },
     "price": {
       "amountPaise": 12050000,
-      "taxBasis": "unknown",
-      "gstRate": 18,
-      "unit": "unknown",
-      "packSize": null,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/71fcad00d4d7b5b7d1a09375.jpg"
@@ -832,10 +765,7 @@
       "Walnut"
     ],
     "specs": {},
-    "issues": [
-      "Tax inclusion requires confirmation",
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "CANTON_01-10-2025.pdf",
       "page": 12,
@@ -844,10 +774,10 @@
     },
     "price": {
       "amountPaise": 12050000,
-      "taxBasis": "unknown",
-      "gstRate": 18,
-      "unit": "unknown",
-      "packSize": null,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/c6f94d018dfd13390af3a9e0.jpg"
@@ -870,10 +800,7 @@
       "White"
     ],
     "specs": {},
-    "issues": [
-      "Tax inclusion requires confirmation",
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "CANTON_01-10-2025.pdf",
       "page": 13,
@@ -882,10 +809,10 @@
     },
     "price": {
       "amountPaise": 10250000,
-      "taxBasis": "unknown",
-      "gstRate": 18,
-      "unit": "unknown",
-      "packSize": null,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/f3b0b6c9fa4b18ac00e8edd2.jpg"
@@ -905,10 +832,7 @@
     "image": "/theater-catalog/canton-vento-10-walunt.webp",
     "finishes": [],
     "specs": {},
-    "issues": [
-      "Tax inclusion requires confirmation",
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "CANTON_01-10-2025.pdf",
       "page": 13,
@@ -917,10 +841,10 @@
     },
     "price": {
       "amountPaise": 10250000,
-      "taxBasis": "unknown",
-      "gstRate": 18,
-      "unit": "unknown",
-      "packSize": null,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/3e462dc5cc1444b1ad579ed0.jpg"
@@ -941,10 +865,7 @@
       "White"
     ],
     "specs": {},
-    "issues": [
-      "Tax inclusion requires confirmation",
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "CANTON_01-10-2025.pdf",
       "page": 14,
@@ -953,10 +874,10 @@
     },
     "price": {
       "amountPaise": 21500000,
-      "taxBasis": "unknown",
-      "gstRate": 18,
-      "unit": "unknown",
-      "packSize": null,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/907e0bd676114d78101dae9a.jpg"
@@ -976,10 +897,7 @@
       "Walnut"
     ],
     "specs": {},
-    "issues": [
-      "Tax inclusion requires confirmation",
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "CANTON_01-10-2025.pdf",
       "page": 14,
@@ -988,10 +906,10 @@
     },
     "price": {
       "amountPaise": 21500000,
-      "taxBasis": "unknown",
-      "gstRate": 18,
-      "unit": "unknown",
-      "packSize": null,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/9fb95047ceb595fc034ca7a3.jpg"
@@ -1011,10 +929,7 @@
     "image": "/theater-catalog/canton-ar-8.webp",
     "finishes": [],
     "specs": {},
-    "issues": [
-      "Tax inclusion requires confirmation",
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "CANTON_01-10-2025.pdf",
       "page": 15,
@@ -1023,10 +938,10 @@
     },
     "price": {
       "amountPaise": 10400000,
-      "taxBasis": "unknown",
-      "gstRate": 18,
-      "unit": "unknown",
-      "packSize": null,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/a07e7b99f43f497b877c1a4f.jpg"
@@ -1047,10 +962,7 @@
       "White"
     ],
     "specs": {},
-    "issues": [
-      "Tax inclusion requires confirmation",
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "CANTON_01-10-2025.pdf",
       "page": 15,
@@ -1059,10 +971,10 @@
     },
     "price": {
       "amountPaise": 32500000,
-      "taxBasis": "unknown",
-      "gstRate": 18,
-      "unit": "unknown",
-      "packSize": null,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/7a91dbf0bfdfdd1ca82de616.jpg"
@@ -1082,10 +994,7 @@
       "Walnut"
     ],
     "specs": {},
-    "issues": [
-      "Tax inclusion requires confirmation",
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "CANTON_01-10-2025.pdf",
       "page": 16,
@@ -1094,10 +1003,10 @@
     },
     "price": {
       "amountPaise": 32500000,
-      "taxBasis": "unknown",
-      "gstRate": 18,
-      "unit": "unknown",
-      "packSize": null,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/3fe6e4b0fe206144dcbb4450.jpg"
@@ -1115,10 +1024,7 @@
     "image": "/theater-catalog/canton-townus-100.webp",
     "finishes": [],
     "specs": {},
-    "issues": [
-      "Tax inclusion requires confirmation",
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "CANTON_01-10-2025.pdf",
       "page": 16,
@@ -1127,10 +1033,10 @@
     },
     "price": {
       "amountPaise": 31350000,
-      "taxBasis": "unknown",
-      "gstRate": 18,
-      "unit": "unknown",
-      "packSize": null,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/c9ad356c2aef28f53e5454b3.jpg"
@@ -1151,10 +1057,7 @@
       "White"
     ],
     "specs": {},
-    "issues": [
-      "Tax inclusion requires confirmation",
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "CANTON_01-10-2025.pdf",
       "page": 17,
@@ -1163,10 +1066,10 @@
     },
     "price": {
       "amountPaise": 25950000,
-      "taxBasis": "unknown",
-      "gstRate": 18,
-      "unit": "unknown",
-      "packSize": null,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/a601f0280a7b78365faa9fa3.jpg"
@@ -1186,10 +1089,7 @@
       "Walnut"
     ],
     "specs": {},
-    "issues": [
-      "Tax inclusion requires confirmation",
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "CANTON_01-10-2025.pdf",
       "page": 17,
@@ -1198,10 +1098,10 @@
     },
     "price": {
       "amountPaise": 25950000,
-      "taxBasis": "unknown",
-      "gstRate": 18,
-      "unit": "unknown",
-      "packSize": null,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/fbfe99e05e40ff7c662e0c26.jpg"
@@ -1224,10 +1124,7 @@
       "White"
     ],
     "specs": {},
-    "issues": [
-      "Tax inclusion requires confirmation",
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "CANTON_01-10-2025.pdf",
       "page": 18,
@@ -1236,10 +1133,10 @@
     },
     "price": {
       "amountPaise": 10950000,
-      "taxBasis": "unknown",
-      "gstRate": 18,
-      "unit": "unknown",
-      "packSize": null,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/49b9ae72d7cc3b1717b14c4e.jpg"
@@ -1261,10 +1158,7 @@
       "Walnut"
     ],
     "specs": {},
-    "issues": [
-      "Tax inclusion requires confirmation",
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "CANTON_01-10-2025.pdf",
       "page": 18,
@@ -1273,10 +1167,10 @@
     },
     "price": {
       "amountPaise": 10950000,
-      "taxBasis": "unknown",
-      "gstRate": 18,
-      "unit": "unknown",
-      "packSize": null,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/345c01a8f472a10c5c6676a5.jpg"
@@ -1299,10 +1193,7 @@
       "White"
     ],
     "specs": {},
-    "issues": [
-      "Tax inclusion requires confirmation",
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "CANTON_01-10-2025.pdf",
       "page": 19,
@@ -1311,10 +1202,10 @@
     },
     "price": {
       "amountPaise": 7950000,
-      "taxBasis": "unknown",
-      "gstRate": 18,
-      "unit": "unknown",
-      "packSize": null,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/3ec5343e158dd7bf6a3069cf.jpg"
@@ -1336,10 +1227,7 @@
       "Walnut"
     ],
     "specs": {},
-    "issues": [
-      "Tax inclusion requires confirmation",
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "CANTON_01-10-2025.pdf",
       "page": 19,
@@ -1348,10 +1236,10 @@
     },
     "price": {
       "amountPaise": 7950000,
-      "taxBasis": "unknown",
-      "gstRate": 18,
-      "unit": "unknown",
-      "packSize": null,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/0d2c80e9d89738ad1887d892.jpg"
@@ -1372,10 +1260,7 @@
       "White"
     ],
     "specs": {},
-    "issues": [
-      "Tax inclusion requires confirmation",
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "CANTON_01-10-2025.pdf",
       "page": 20,
@@ -1384,10 +1269,10 @@
     },
     "price": {
       "amountPaise": 10510000,
-      "taxBasis": "unknown",
-      "gstRate": 18,
-      "unit": "unknown",
-      "packSize": null,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/e821cea5a91fccd136c475c5.jpg"
@@ -1407,10 +1292,7 @@
       "Walnut"
     ],
     "specs": {},
-    "issues": [
-      "Tax inclusion requires confirmation",
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "CANTON_01-10-2025.pdf",
       "page": 20,
@@ -1419,10 +1301,10 @@
     },
     "price": {
       "amountPaise": 13500000,
-      "taxBasis": "unknown",
-      "gstRate": 18,
-      "unit": "unknown",
-      "packSize": null,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/5baec93ff1664117fb69ab28.jpg"
@@ -1445,10 +1327,7 @@
       "White"
     ],
     "specs": {},
-    "issues": [
-      "Tax inclusion requires confirmation",
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "CANTON_01-10-2025.pdf",
       "page": 21,
@@ -1457,10 +1336,10 @@
     },
     "price": {
       "amountPaise": 8150000,
-      "taxBasis": "unknown",
-      "gstRate": 18,
-      "unit": "unknown",
-      "packSize": null,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/a2443d48258c014f3f00a93d.jpg"
@@ -1482,10 +1361,7 @@
       "Walnut"
     ],
     "specs": {},
-    "issues": [
-      "Tax inclusion requires confirmation",
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "CANTON_01-10-2025.pdf",
       "page": 21,
@@ -1494,10 +1370,10 @@
     },
     "price": {
       "amountPaise": 8150000,
-      "taxBasis": "unknown",
-      "gstRate": 18,
-      "unit": "unknown",
-      "packSize": null,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/8beda006dc9745fae79cb6e6.jpg"
@@ -1518,10 +1394,7 @@
       "White"
     ],
     "specs": {},
-    "issues": [
-      "Tax inclusion requires confirmation",
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "CANTON_01-10-2025.pdf",
       "page": 22,
@@ -1530,10 +1403,10 @@
     },
     "price": {
       "amountPaise": 31700000,
-      "taxBasis": "unknown",
-      "gstRate": 18,
-      "unit": "unknown",
-      "packSize": null,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/c93a7dcb988e4ab325f3a8bb.jpg"
@@ -1553,10 +1426,7 @@
       "Walnut"
     ],
     "specs": {},
-    "issues": [
-      "Tax inclusion requires confirmation",
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "CANTON_01-10-2025.pdf",
       "page": 22,
@@ -1565,10 +1435,10 @@
     },
     "price": {
       "amountPaise": 31700000,
-      "taxBasis": "unknown",
-      "gstRate": 18,
-      "unit": "unknown",
-      "packSize": null,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/fc3723b34d34d28b8040f104.jpg"
@@ -1589,10 +1459,7 @@
       "Wenge Brown"
     ],
     "specs": {},
-    "issues": [
-      "Tax inclusion requires confirmation",
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "CANTON_01-10-2025.pdf",
       "page": 23,
@@ -1601,10 +1468,10 @@
     },
     "price": {
       "amountPaise": 19000000,
-      "taxBasis": "unknown",
-      "gstRate": 18,
-      "unit": "unknown",
-      "packSize": null,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/d9e5ee2591b64e309463f4e6.jpg"
@@ -1624,10 +1491,7 @@
       "Cherry"
     ],
     "specs": {},
-    "issues": [
-      "Tax inclusion requires confirmation",
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "CANTON_01-10-2025.pdf",
       "page": 23,
@@ -1636,10 +1500,10 @@
     },
     "price": {
       "amountPaise": 19000000,
-      "taxBasis": "unknown",
-      "gstRate": 18,
-      "unit": "unknown",
-      "packSize": null,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/9f3d56c7845923d0a7e1a622.jpg"
@@ -1662,10 +1526,7 @@
       "Wenge Brown"
     ],
     "specs": {},
-    "issues": [
-      "Tax inclusion requires confirmation",
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "CANTON_01-10-2025.pdf",
       "page": 24,
@@ -1674,10 +1535,10 @@
     },
     "price": {
       "amountPaise": 9000000,
-      "taxBasis": "unknown",
-      "gstRate": 18,
-      "unit": "unknown",
-      "packSize": null,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/5f6f22aac37bb421401acc5e.jpg"
@@ -1699,10 +1560,7 @@
       "Cherry"
     ],
     "specs": {},
-    "issues": [
-      "Tax inclusion requires confirmation",
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "CANTON_01-10-2025.pdf",
       "page": 24,
@@ -1711,10 +1569,10 @@
     },
     "price": {
       "amountPaise": 9000000,
-      "taxBasis": "unknown",
-      "gstRate": 18,
-      "unit": "unknown",
-      "packSize": null,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/46017366529f87e23cf61474.jpg"
@@ -1734,10 +1592,7 @@
       "Black"
     ],
     "specs": {},
-    "issues": [
-      "Tax inclusion requires confirmation",
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "CANTON_01-10-2025.pdf",
       "page": 25,
@@ -1746,10 +1601,10 @@
     },
     "price": {
       "amountPaise": 11750000,
-      "taxBasis": "unknown",
-      "gstRate": 18,
-      "unit": "unknown",
-      "packSize": null,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/53901d5f9b825ed44c30b09d.jpg"
@@ -1769,10 +1624,7 @@
       "Cherry"
     ],
     "specs": {},
-    "issues": [
-      "Tax inclusion requires confirmation",
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "CANTON_01-10-2025.pdf",
       "page": 25,
@@ -1781,10 +1633,10 @@
     },
     "price": {
       "amountPaise": 11750000,
-      "taxBasis": "unknown",
-      "gstRate": 18,
-      "unit": "unknown",
-      "packSize": null,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/4bc7efae7e8660d88a36e150.jpg"
@@ -1802,10 +1654,7 @@
     "image": "/theater-catalog/canton-sub-650.webp",
     "finishes": [],
     "specs": {},
-    "issues": [
-      "Tax inclusion requires confirmation",
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "CANTON_01-10-2025.pdf",
       "page": 26,
@@ -1814,10 +1663,10 @@
     },
     "price": {
       "amountPaise": 25600000,
-      "taxBasis": "unknown",
-      "gstRate": 18,
-      "unit": "unknown",
-      "packSize": null,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/bef360853bfc435ca13354c5.jpg"
@@ -1838,10 +1687,7 @@
       "White"
     ],
     "specs": {},
-    "issues": [
-      "Tax inclusion requires confirmation",
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "CANTON_01-10-2025.pdf",
       "page": 26,
@@ -1850,10 +1696,10 @@
     },
     "price": {
       "amountPaise": 15700000,
-      "taxBasis": "unknown",
-      "gstRate": 18,
-      "unit": "unknown",
-      "packSize": null,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/38785bd43e50d048226cfa8f.jpg"
@@ -1874,10 +1720,7 @@
       "White"
     ],
     "specs": {},
-    "issues": [
-      "Tax inclusion requires confirmation",
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "CANTON_01-10-2025.pdf",
       "page": 27,
@@ -1886,10 +1729,10 @@
     },
     "price": {
       "amountPaise": 18250000,
-      "taxBasis": "unknown",
-      "gstRate": 18,
-      "unit": "unknown",
-      "packSize": null,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/3383baf458c33a92db53d6af.jpg"
@@ -1910,10 +1753,7 @@
       "White"
     ],
     "specs": {},
-    "issues": [
-      "Tax inclusion requires confirmation",
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "CANTON_01-10-2025.pdf",
       "page": 27,
@@ -1922,10 +1762,10 @@
     },
     "price": {
       "amountPaise": 12150000,
-      "taxBasis": "unknown",
-      "gstRate": 18,
-      "unit": "unknown",
-      "packSize": null,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/678c2a18f0b6e142c5fa7792.jpg"
@@ -1946,10 +1786,7 @@
       "White"
     ],
     "specs": {},
-    "issues": [
-      "Tax inclusion requires confirmation",
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "CANTON_01-10-2025.pdf",
       "page": 28,
@@ -1958,10 +1795,10 @@
     },
     "price": {
       "amountPaise": 11300000,
-      "taxBasis": "unknown",
-      "gstRate": 18,
-      "unit": "unknown",
-      "packSize": null,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/0bd7606faa5aed73a07b5efb.jpg"
@@ -1988,10 +1825,7 @@
         0.29
       ]
     },
-    "issues": [
-      "Tax inclusion requires confirmation",
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "CANTON_01-10-2025.pdf",
       "page": 28,
@@ -2000,10 +1834,10 @@
     },
     "price": {
       "amountPaise": 10450000,
-      "taxBasis": "unknown",
-      "gstRate": 18,
-      "unit": "unknown",
-      "packSize": null,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/1ff0a4c1c0d2ece99de70a85.jpg"
@@ -2026,10 +1860,7 @@
       "White"
     ],
     "specs": {},
-    "issues": [
-      "Tax inclusion requires confirmation",
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "CANTON_01-10-2025.pdf",
       "page": 29,
@@ -2038,10 +1869,10 @@
     },
     "price": {
       "amountPaise": 6100000,
-      "taxBasis": "unknown",
-      "gstRate": 18,
-      "unit": "unknown",
-      "packSize": null,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/2bd0ad482eb0d9e3ce777fb4.jpg"
@@ -2064,10 +1895,7 @@
       "White"
     ],
     "specs": {},
-    "issues": [
-      "Tax inclusion requires confirmation",
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "CANTON_01-10-2025.pdf",
       "page": 29,
@@ -2076,10 +1904,10 @@
     },
     "price": {
       "amountPaise": 5600000,
-      "taxBasis": "unknown",
-      "gstRate": 18,
-      "unit": "unknown",
-      "packSize": null,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/1be897df9b3fd353f57ee5bc.jpg"
@@ -2101,10 +1929,7 @@
       "Black"
     ],
     "specs": {},
-    "issues": [
-      "Tax inclusion requires confirmation",
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "CANTON_01-10-2025.pdf",
       "page": 30,
@@ -2113,10 +1938,10 @@
     },
     "price": {
       "amountPaise": 4900000,
-      "taxBasis": "unknown",
-      "gstRate": 18,
-      "unit": "unknown",
-      "packSize": null,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/1ba2a00cc2b8b29b8a4ae8f3.jpg"
@@ -2139,10 +1964,7 @@
       "White"
     ],
     "specs": {},
-    "issues": [
-      "Tax inclusion requires confirmation",
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "CANTON_01-10-2025.pdf",
       "page": 30,
@@ -2151,10 +1973,10 @@
     },
     "price": {
       "amountPaise": 5400000,
-      "taxBasis": "unknown",
-      "gstRate": 18,
-      "unit": "unknown",
-      "packSize": null,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/940892aa86b415e4439fbf59.jpg"
@@ -2177,10 +1999,7 @@
       "White"
     ],
     "specs": {},
-    "issues": [
-      "Tax inclusion requires confirmation",
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "CANTON_01-10-2025.pdf",
       "page": 31,
@@ -2189,10 +2008,10 @@
     },
     "price": {
       "amountPaise": 7300000,
-      "taxBasis": "unknown",
-      "gstRate": 18,
-      "unit": "unknown",
-      "packSize": null,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/e8be8f6b0aeed7ffa3a22f16.jpg"
@@ -2212,10 +2031,7 @@
     "image": "/theater-catalog/canton-gle-15-pro-s2.webp",
     "finishes": [],
     "specs": {},
-    "issues": [
-      "Tax inclusion requires confirmation",
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "CANTON_01-10-2025.pdf",
       "page": 31,
@@ -2224,10 +2040,10 @@
     },
     "price": {
       "amountPaise": 8000000,
-      "taxBasis": "unknown",
-      "gstRate": 18,
-      "unit": "unknown",
-      "packSize": null,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/6af5c3da7dec11767d8698ed.jpg"
@@ -2248,10 +2064,7 @@
       "White"
     ],
     "specs": {},
-    "issues": [
-      "Tax inclusion requires confirmation",
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "CANTON_01-10-2025.pdf",
       "page": 32,
@@ -2260,10 +2073,10 @@
     },
     "price": {
       "amountPaise": 8000000,
-      "taxBasis": "unknown",
-      "gstRate": 18,
-      "unit": "unknown",
-      "packSize": null,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/5cdc4298e4f6e306d4e8616d.jpg"
@@ -2286,10 +2099,7 @@
       "White"
     ],
     "specs": {},
-    "issues": [
-      "Tax inclusion requires confirmation",
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "CANTON_01-10-2025.pdf",
       "page": 32,
@@ -2298,10 +2108,10 @@
     },
     "price": {
       "amountPaise": 7100000,
-      "taxBasis": "unknown",
-      "gstRate": 18,
-      "unit": "unknown",
-      "packSize": null,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/727fb96128ce9c7100b3009e.jpg"
@@ -2322,10 +2132,7 @@
       "White"
     ],
     "specs": {},
-    "issues": [
-      "Tax inclusion requires confirmation",
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "CANTON_01-10-2025.pdf",
       "page": 33,
@@ -2334,10 +2141,10 @@
     },
     "price": {
       "amountPaise": 12150000,
-      "taxBasis": "unknown",
-      "gstRate": 18,
-      "unit": "unknown",
-      "packSize": null,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/276d5815af50981f5888e69d.jpg"
@@ -2358,10 +2165,7 @@
       "White"
     ],
     "specs": {},
-    "issues": [
-      "Tax inclusion requires confirmation",
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "CANTON_01-10-2025.pdf",
       "page": 33,
@@ -2370,10 +2174,10 @@
     },
     "price": {
       "amountPaise": 9780000,
-      "taxBasis": "unknown",
-      "gstRate": 18,
-      "unit": "unknown",
-      "packSize": null,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/e9bb95ba9caa50a044bf8024.jpg"
@@ -2394,10 +2198,7 @@
       "White"
     ],
     "specs": {},
-    "issues": [
-      "Tax inclusion requires confirmation",
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "CANTON_01-10-2025.pdf",
       "page": 34,
@@ -2406,10 +2207,10 @@
     },
     "price": {
       "amountPaise": 16500000,
-      "taxBasis": "unknown",
-      "gstRate": 18,
-      "unit": "unknown",
-      "packSize": null,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/a3a797412d63ad2b621b8274.jpg"
@@ -2430,10 +2231,7 @@
       "White"
     ],
     "specs": {},
-    "issues": [
-      "Tax inclusion requires confirmation",
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "CANTON_01-10-2025.pdf",
       "page": 34,
@@ -2442,10 +2240,10 @@
     },
     "price": {
       "amountPaise": 10750000,
-      "taxBasis": "unknown",
-      "gstRate": 18,
-      "unit": "unknown",
-      "packSize": null,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/3120ca7364b0db25738752e3.jpg"
@@ -2466,10 +2264,7 @@
       "White"
     ],
     "specs": {},
-    "issues": [
-      "Tax inclusion requires confirmation",
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "CANTON_01-10-2025.pdf",
       "page": 35,
@@ -2478,10 +2273,10 @@
     },
     "price": {
       "amountPaise": 7200000,
-      "taxBasis": "unknown",
-      "gstRate": 18,
-      "unit": "unknown",
-      "packSize": null,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/b941fb6b4afb4f05440c71be.jpg"
@@ -2509,10 +2304,7 @@
         "subwoofer": 1
       }
     },
-    "issues": [
-      "Tax inclusion requires confirmation",
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "CANTON_01-10-2025.pdf",
       "page": 35,
@@ -2521,10 +2313,10 @@
     },
     "price": {
       "amountPaise": 53250000,
-      "taxBasis": "unknown",
-      "gstRate": 18,
-      "unit": "unknown",
-      "packSize": null,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "set",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/5a0f17033f7c42b5ee91cbfb.jpg"
@@ -2549,10 +2341,7 @@
         "subwoofer": 1
       }
     },
-    "issues": [
-      "Tax inclusion requires confirmation",
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "CANTON_01-10-2025.pdf",
       "page": 36,
@@ -2561,10 +2350,10 @@
     },
     "price": {
       "amountPaise": 38600000,
-      "taxBasis": "unknown",
-      "gstRate": 18,
-      "unit": "unknown",
-      "packSize": null,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "set",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/4ea9558f554e1032b0dd7267.jpg"
@@ -2592,10 +2381,7 @@
         "subwoofer": 1
       }
     },
-    "issues": [
-      "Tax inclusion requires confirmation",
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "CANTON_01-10-2025.pdf",
       "page": 36,
@@ -2604,10 +2390,10 @@
     },
     "price": {
       "amountPaise": 9500000,
-      "taxBasis": "unknown",
-      "gstRate": 18,
-      "unit": "unknown",
-      "packSize": null,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "set",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/4dc86f5538ea17f8a7edecf6.jpg"
@@ -2635,10 +2421,7 @@
         "subwoofer": 1
       }
     },
-    "issues": [
-      "Tax inclusion requires confirmation",
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "CANTON_01-10-2025.pdf",
       "page": 37,
@@ -2647,10 +2430,10 @@
     },
     "price": {
       "amountPaise": 8800000,
-      "taxBasis": "unknown",
-      "gstRate": 18,
-      "unit": "unknown",
-      "packSize": null,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "set",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/38797da4ba8a4b86f1eba8be.jpg"
@@ -2670,10 +2453,7 @@
     "image": "/theater-catalog/canton-atelier-11.webp",
     "finishes": [],
     "specs": {},
-    "issues": [
-      "Tax inclusion requires confirmation",
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "CANTON_01-10-2025.pdf",
       "page": 37,
@@ -2682,10 +2462,10 @@
     },
     "price": {
       "amountPaise": 14850000,
-      "taxBasis": "unknown",
-      "gstRate": 18,
-      "unit": "unknown",
-      "packSize": null,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/1e0ea891c745b5c0634ad642.jpg"
@@ -2703,10 +2483,7 @@
     "image": "/theater-catalog/canton-atelier-11c.webp",
     "finishes": [],
     "specs": {},
-    "issues": [
-      "Tax inclusion requires confirmation",
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "CANTON_01-10-2025.pdf",
       "page": 38,
@@ -2715,10 +2492,10 @@
     },
     "price": {
       "amountPaise": 14850000,
-      "taxBasis": "unknown",
-      "gstRate": 18,
-      "unit": "unknown",
-      "packSize": null,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/1e0ea891c745b5c0634ad642.jpg"
@@ -2738,10 +2515,7 @@
     "image": "/theater-catalog/canton-atelier-9.webp",
     "finishes": [],
     "specs": {},
-    "issues": [
-      "Tax inclusion requires confirmation",
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "CANTON_01-10-2025.pdf",
       "page": 38,
@@ -2750,10 +2524,10 @@
     },
     "price": {
       "amountPaise": 13250000,
-      "taxBasis": "unknown",
-      "gstRate": 18,
-      "unit": "unknown",
-      "packSize": null,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/bf74b6af92af233767971d8e.jpg"
@@ -2771,10 +2545,7 @@
     "image": "/theater-catalog/canton-atelier-9c.webp",
     "finishes": [],
     "specs": {},
-    "issues": [
-      "Tax inclusion requires confirmation",
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "CANTON_01-10-2025.pdf",
       "page": 39,
@@ -2783,10 +2554,10 @@
     },
     "price": {
       "amountPaise": 13250000,
-      "taxBasis": "unknown",
-      "gstRate": 18,
-      "unit": "unknown",
-      "packSize": null,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/bf74b6af92af233767971d8e.jpg"
@@ -2806,10 +2577,7 @@
     "image": "/theater-catalog/canton-atelier-5.webp",
     "finishes": [],
     "specs": {},
-    "issues": [
-      "Tax inclusion requires confirmation",
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "CANTON_01-10-2025.pdf",
       "page": 39,
@@ -2818,10 +2586,10 @@
     },
     "price": {
       "amountPaise": 10100000,
-      "taxBasis": "unknown",
-      "gstRate": 18,
-      "unit": "unknown",
-      "packSize": null,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/91319d0296130b51affdfa50.jpg"
@@ -2839,10 +2607,7 @@
     "image": "/theater-catalog/canton-atelier-5c.webp",
     "finishes": [],
     "specs": {},
-    "issues": [
-      "Tax inclusion requires confirmation",
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "CANTON_01-10-2025.pdf",
       "page": 40,
@@ -2851,10 +2616,10 @@
     },
     "price": {
       "amountPaise": 10100000,
-      "taxBasis": "unknown",
-      "gstRate": 18,
-      "unit": "unknown",
-      "packSize": null,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/91319d0296130b51affdfa50.jpg"
@@ -2874,10 +2639,7 @@
     "image": "/theater-catalog/canton-atelier-3.webp",
     "finishes": [],
     "specs": {},
-    "issues": [
-      "Tax inclusion requires confirmation",
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "CANTON_01-10-2025.pdf",
       "page": 40,
@@ -2886,10 +2648,10 @@
     },
     "price": {
       "amountPaise": 8500000,
-      "taxBasis": "unknown",
-      "gstRate": 18,
-      "unit": "unknown",
-      "packSize": null,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/aaf5149c0c0ed800f15d36d5.jpg"
@@ -2909,10 +2671,7 @@
     "image": "/theater-catalog/canton-plus-xl-3.webp",
     "finishes": [],
     "specs": {},
-    "issues": [
-      "Tax inclusion requires confirmation",
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "CANTON_01-10-2025.pdf",
       "page": 41,
@@ -2921,10 +2680,10 @@
     },
     "price": {
       "amountPaise": 2700000,
-      "taxBasis": "unknown",
-      "gstRate": 18,
-      "unit": "unknown",
-      "packSize": null,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/ae5fa2eacbb81ee606c6f521.jpg"
@@ -2944,10 +2703,7 @@
     "image": "/theater-catalog/canton-plus-x-3.webp",
     "finishes": [],
     "specs": {},
-    "issues": [
-      "Tax inclusion requires confirmation",
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "CANTON_01-10-2025.pdf",
       "page": 41,
@@ -2956,10 +2712,10 @@
     },
     "price": {
       "amountPaise": 2350000,
-      "taxBasis": "unknown",
-      "gstRate": 18,
-      "unit": "unknown",
-      "packSize": null,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/7b72f325c38d544f4bac645e.jpg"
@@ -2979,10 +2735,7 @@
     "image": "/theater-catalog/canton-plus-mx-3.webp",
     "finishes": [],
     "specs": {},
-    "issues": [
-      "Tax inclusion requires confirmation",
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "CANTON_01-10-2025.pdf",
       "page": 42,
@@ -2991,10 +2744,10 @@
     },
     "price": {
       "amountPaise": 1600000,
-      "taxBasis": "unknown",
-      "gstRate": 18,
-      "unit": "unknown",
-      "packSize": null,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/235bcf86063629fc7780f9f8.jpg"
@@ -3014,10 +2767,7 @@
     "image": "/theater-catalog/canton-pro-xl-3.webp",
     "finishes": [],
     "specs": {},
-    "issues": [
-      "Tax inclusion requires confirmation",
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "CANTON_01-10-2025.pdf",
       "page": 42,
@@ -3026,10 +2776,10 @@
     },
     "price": {
       "amountPaise": 3150000,
-      "taxBasis": "unknown",
-      "gstRate": 18,
-      "unit": "unknown",
-      "packSize": null,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/9d94c168c3c0f2a3d3a92d1d.jpg"
@@ -3051,10 +2801,7 @@
     "specs": {
       "impedanceOhms": 8.0
     },
-    "issues": [
-      "Tax inclusion requires confirmation",
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "CANTON_01-10-2025.pdf",
       "page": 43,
@@ -3063,10 +2810,10 @@
     },
     "price": {
       "amountPaise": 2700000,
-      "taxBasis": "unknown",
-      "gstRate": 18,
-      "unit": "unknown",
-      "packSize": null,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/d4f481c0350abc1af5f1dc2d.jpg"
@@ -3086,10 +2833,7 @@
     "image": "/theater-catalog/canton-am-5.webp",
     "finishes": [],
     "specs": {},
-    "issues": [
-      "Tax inclusion requires confirmation",
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "CANTON_01-10-2025.pdf",
       "page": 43,
@@ -3098,10 +2842,10 @@
     },
     "price": {
       "amountPaise": 6750000,
-      "taxBasis": "unknown",
-      "gstRate": 18,
-      "unit": "unknown",
-      "packSize": null,
+      "taxBasis": "inclusive",
+      "gstRate": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/564e1a5bcabc9d0d704da35b.jpg"
@@ -5187,9 +4931,7 @@
     "specs": {
       "impedanceOhms": 8.0
     },
-    "issues": [
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "FAITH MRP  INWALL PRICE LIST MAY 2025.pdf",
       "page": 1,
@@ -5198,10 +4940,10 @@
     },
     "price": {
       "amountPaise": 2000000,
-      "taxBasis": "exclusive",
+      "taxBasis": "inclusive",
       "gstRate": null,
-      "unit": "unknown",
-      "packSize": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/21052936fa013f57f9d05054.jpg"
@@ -5222,9 +4964,7 @@
     "image": "/theater-catalog/faith-fl-9228.webp",
     "finishes": [],
     "specs": {},
-    "issues": [
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "FAITH MRP  INWALL PRICE LIST MAY 2025.pdf",
       "page": 1,
@@ -5233,10 +4973,10 @@
     },
     "price": {
       "amountPaise": 6500000,
-      "taxBasis": "exclusive",
+      "taxBasis": "inclusive",
       "gstRate": null,
-      "unit": "unknown",
-      "packSize": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/c7982b3aa5847b7310de3964.jpg"
@@ -5257,9 +4997,7 @@
     "image": "/theater-catalog/faith-fl-9118.webp",
     "finishes": [],
     "specs": {},
-    "issues": [
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "FAITH MRP  INWALL PRICE LIST MAY 2025.pdf",
       "page": 1,
@@ -5268,10 +5006,10 @@
     },
     "price": {
       "amountPaise": 3000000,
-      "taxBasis": "exclusive",
+      "taxBasis": "inclusive",
       "gstRate": null,
-      "unit": "unknown",
-      "packSize": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/3e767949c738ca41ed67c2c6.jpg"
@@ -5292,9 +5030,7 @@
     "image": "/theater-catalog/faith-fs-9218.webp",
     "finishes": [],
     "specs": {},
-    "issues": [
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "FAITH MRP  INWALL PRICE LIST MAY 2025.pdf",
       "page": 1,
@@ -5303,10 +5039,10 @@
     },
     "price": {
       "amountPaise": 3200000,
-      "taxBasis": "exclusive",
+      "taxBasis": "inclusive",
       "gstRate": null,
-      "unit": "unknown",
-      "packSize": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/cb0e9dd106a4946dfa95448f.jpg"
@@ -5326,9 +5062,7 @@
     "specs": {
       "impedanceOhms": 8.0
     },
-    "issues": [
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "FAITH MRP  INWALL PRICE LIST MAY 2025.pdf",
       "page": 1,
@@ -5337,10 +5071,10 @@
     },
     "price": {
       "amountPaise": 900000,
-      "taxBasis": "exclusive",
+      "taxBasis": "inclusive",
       "gstRate": null,
-      "unit": "unknown",
-      "packSize": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/5903ca33fb865f5901cea286.jpg"
@@ -5360,9 +5094,7 @@
     "specs": {
       "impedanceOhms": 8.0
     },
-    "issues": [
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "FAITH MRP  INWALL PRICE LIST MAY 2025.pdf",
       "page": 1,
@@ -5371,10 +5103,10 @@
     },
     "price": {
       "amountPaise": 1100000,
-      "taxBasis": "exclusive",
+      "taxBasis": "inclusive",
       "gstRate": null,
-      "unit": "unknown",
-      "packSize": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/5903ca33fb865f5901cea286.jpg"
@@ -5394,9 +5126,7 @@
     "specs": {
       "impedanceOhms": 8.0
     },
-    "issues": [
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "FAITH MRP  INWALL PRICE LIST MAY 2025.pdf",
       "page": 1,
@@ -5405,10 +5135,10 @@
     },
     "price": {
       "amountPaise": 1050000,
-      "taxBasis": "exclusive",
+      "taxBasis": "inclusive",
       "gstRate": null,
-      "unit": "unknown",
-      "packSize": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/2a831923d3396cda9f415a6e.jpg"
@@ -5431,9 +5161,7 @@
     "specs": {
       "impedanceOhms": 8.0
     },
-    "issues": [
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "FAITH MRP  INWALL PRICE LIST MAY 2025.pdf",
       "page": 2,
@@ -5442,10 +5170,10 @@
     },
     "price": {
       "amountPaise": 1600000,
-      "taxBasis": "exclusive",
+      "taxBasis": "inclusive",
       "gstRate": null,
-      "unit": "unknown",
-      "packSize": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/ff207f018f133df373ffc46b.jpg"
@@ -5467,9 +5195,7 @@
     "specs": {
       "impedanceOhms": 8.0
     },
-    "issues": [
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "FAITH MRP  INWALL PRICE LIST MAY 2025.pdf",
       "page": 2,
@@ -5478,10 +5204,10 @@
     },
     "price": {
       "amountPaise": 1300000,
-      "taxBasis": "exclusive",
+      "taxBasis": "inclusive",
       "gstRate": null,
-      "unit": "unknown",
-      "packSize": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/b5f1e3a5e31217e33f64ef5a.jpg"
@@ -5503,9 +5229,7 @@
     "specs": {
       "impedanceOhms": 8.0
     },
-    "issues": [
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "FAITH MRP  INWALL PRICE LIST MAY 2025.pdf",
       "page": 2,
@@ -5514,10 +5238,10 @@
     },
     "price": {
       "amountPaise": 1500000,
-      "taxBasis": "exclusive",
+      "taxBasis": "inclusive",
       "gstRate": null,
-      "unit": "unknown",
-      "packSize": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/b5f1e3a5e31217e33f64ef5a.jpg"
@@ -5538,9 +5262,7 @@
     "image": "/theater-catalog/faith-fi-21.webp",
     "finishes": [],
     "specs": {},
-    "issues": [
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "FAITH MRP  INWALL PRICE LIST MAY 2025.pdf",
       "page": 2,
@@ -5549,10 +5271,10 @@
     },
     "price": {
       "amountPaise": 2500000,
-      "taxBasis": "exclusive",
+      "taxBasis": "inclusive",
       "gstRate": null,
-      "unit": "unknown",
-      "packSize": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/40c35dfafa4142dedbaec0f6.jpg"
@@ -5573,9 +5295,7 @@
     "image": "/theater-catalog/faith-fi-22.webp",
     "finishes": [],
     "specs": {},
-    "issues": [
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "FAITH MRP  INWALL PRICE LIST MAY 2025.pdf",
       "page": 2,
@@ -5584,10 +5304,10 @@
     },
     "price": {
       "amountPaise": 5000000,
-      "taxBasis": "exclusive",
+      "taxBasis": "inclusive",
       "gstRate": null,
-      "unit": "unknown",
-      "packSize": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/97c3f27650565a4559aa5faf.jpg"
@@ -5608,9 +5328,7 @@
     "image": "/theater-catalog/faith-fi-44.webp",
     "finishes": [],
     "specs": {},
-    "issues": [
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "FAITH MRP  INWALL PRICE LIST MAY 2025.pdf",
       "page": 2,
@@ -5619,10 +5337,10 @@
     },
     "price": {
       "amountPaise": 7500000,
-      "taxBasis": "exclusive",
+      "taxBasis": "inclusive",
       "gstRate": null,
-      "unit": "unknown",
-      "packSize": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/8564b7ea615d9b92c81ed7e3.jpg"
