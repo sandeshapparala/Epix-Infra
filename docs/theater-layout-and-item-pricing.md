@@ -51,8 +51,8 @@ separate tax fields and labels.
 
 Optional customAudio and lineDiscounts fields retain compatibility with existing
 projects. Missing line overrides use the project's original default discount.
-New quotations use templateVersion 3 and pricingMode inclusive. Issued snapshots
-are immutable. Existing cached v2 PDFs are returned unchanged; historical snapshots
+New quotations use templateVersion 4 and pricingMode inclusive. Issued snapshots
+are immutable. Existing cached v2 and v3 PDFs are returned unchanged; historical snapshots
 without a cached PDF retain their original line totals when rendered.
 
 New projects default to the 11 clauses from Mr Subramanyam garu Klipsch +benq.pdf,
@@ -65,3 +65,31 @@ Verification: focused calculation/geometry/access tests, Firebase emulator API a
 private media tests, production build, Chrome interaction with the public layout
 controls, and rendered sample quotation pages. QA samples are kept outside Git in
 .theater-data.
+
+## Room fit and measured previews
+
+Rows maintain at least 1.5 ft (18 in / 0.4572 m) of clear space between the
+representative 1.4 m recliner footprints. The seating control edits this clear gap,
+not the row centre spacing. Dragging stops before rows cross or violate the gap;
+legacy short spacings are repaired by the seating fit operation.
+
+Layout status sits outside the 3D interaction area. Mouse hover or keyboard focus
+shows a brief preview; click, Enter or tap opens the full review. Rejected edits
+keep the last valid layout and explain the reason in this review.
+
+Projector placement updates automatically when image size, aspect, lens range or
+room depth changes. Distance equals image width multiplied by throw ratio. A newly
+selected lens starts at its optical midpoint; later screen changes retain the
+current zoom ratio where the room permits it. A fixed lens uses its exact ratio.
+The existing drag track permits fine adjustment within the lens and room limits.
+An impossible fit stays inside the room and produces a layout warning. There is
+no additional simulator control panel. Manufacturer specifications take precedence
+over inconsistent calculator datasets; missing lens data remains an assumption.
+
+Quotation review has a collapsible measured room preview and a feet-and-inches
+schedule. New PDF covers include this image and the same dimension schedule.
+Capture temporarily renders an annotated orbit view, then restores the user's
+camera, view and unit setting. Image and table show actual row gaps and room size,
+screen dimensions, viewing distance, aisle, riser and projector position. These
+are concept dimensions rounded to the nearest inch; product and site checks still
+apply. Template cache key: v4-measured-room.

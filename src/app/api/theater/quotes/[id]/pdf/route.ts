@@ -17,13 +17,20 @@ export async function GET(
         .uuid()
         .parse((await context.params).id),
       quote = await getQuote(actor, id);
-    const path = `theater-private/quotes/${quote.ownerUid}/${id}.${QUOTATION_TEMPLATE_VERSION}.pdf`,
-      cached =
-        ((quote.templateVersion ?? 1) < 3
-          ? await readPrivateFile(
-              `theater-private/quotes/${quote.ownerUid}/${id}.v2-illustrated.pdf`,
-            )
-          : null) ?? (await readPrivateFile(path));
+    const path = `theater-private/quotes/${quote.ownerUid}/${id}.${QUOTATION_TEMPLATE_VERSION}.pdf`;
+    const priorTemplates =
+      (quote.templateVersion ?? 1) < 3
+        ? ["v2-illustrated", "v3-item-discounts-inclusive"]
+        : quote.templateVersion === 3
+          ? ["v3-item-discounts-inclusive"]
+          : [];
+    let cached = null;
+    for (const template of [...priorTemplates, QUOTATION_TEMPLATE_VERSION]) {
+      cached = await readPrivateFile(
+        `theater-private/quotes/${quote.ownerUid}/${id}.${template}.pdf`,
+      );
+      if (cached) break;
+    }
     let bytes: Uint8Array;
     if (cached) bytes = cached.bytes;
     else {

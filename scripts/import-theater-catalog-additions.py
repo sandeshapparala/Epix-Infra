@@ -183,6 +183,7 @@ def main(source):
     sources=json.loads((DATA/'sources.json').read_text(encoding='utf8'))
     names={item['file'] for item in manifest}
     sources=[s for s in sources if s['file'] not in names]+manifest
+    runpy.run_path(str(ROOT/'scripts/apply-theater-benq-updates.py'))['apply_updates'](products,sources)
     missing=[p['id'] for p in products if not p.get('image') or not (ROOT/'public'/p['image'].lstrip('/')).exists()]
     if missing: raise ValueError(f'Missing reviewed image assets: {missing}')
     (DATA/'products.json').write_text(json.dumps(products,ensure_ascii=False,indent=2)+'\n',encoding='utf8')

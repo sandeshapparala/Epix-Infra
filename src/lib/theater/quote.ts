@@ -15,6 +15,7 @@ import {
 import { visualDesign } from "./visual-design";
 import { formatLength } from "./measurements";
 import { audioLabel, speakerLayout, type CustomAudio } from "./speaker-layout";
+import { autoProjectorPlacement } from "./projection-plan";
 import { appliedDiscount } from "./discounts";
 
 export function requirements(
@@ -433,14 +434,14 @@ export function applyProjector(
 ): SalesProject["design"] {
   const positions = { ...design.positions };
   delete positions.projector;
-  return {
+  return autoProjectorPlacement({
     ...design,
     positions,
     ...(product.specs.lumens ? { lumens: product.specs.lumens } : {}),
     ...(product.specs.throwMin && product.specs.throwMax
       ? { throwMin: product.specs.throwMin, throwMax: product.specs.throwMax }
       : {}),
-  };
+  });
 }
 export function applyTV(
   design: SalesProject["design"],

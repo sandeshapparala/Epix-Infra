@@ -348,7 +348,7 @@ export async function saveQuote(
       revision = (projectDoc.data()!.quoteRevision ?? 0) + 1,
       createdAt = new Date().toISOString();
     const snapshot: QuoteSnapshot = clean({
-      templateVersion: 3,
+      templateVersion: 4,
       company: quotationCompany,
       id,
       number: `EPIX-${new Date().getFullYear()}-${id.slice(0, 8).toUpperCase()}-R${revision}`,

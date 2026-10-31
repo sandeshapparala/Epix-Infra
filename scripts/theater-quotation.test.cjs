@@ -38,7 +38,7 @@ test("sign-in returns to the builder by default and preserves safe theatre desti
 });
 test("every catalog model has a local photo and a bounded quotation JPEG", async () => {
   const products = require("../src/data/theater/products.json");
-  assert.equal(products.length, 496);
+  assert.equal(products.length, 498);
   for (const p of products) {
     assert.ok(p.image, p.id);
     assert.ok(fs.existsSync(path.join(__dirname, "../public", p.image)), p.id);
@@ -81,7 +81,7 @@ test("illustrated PDF embeds model photos and preserves the saved quote values",
     assert.equal(p.getWidth(), 595.28);
     assert.equal(p.getHeight(), 841.89);
   }
-  assert.equal(QUOTATION_TEMPLATE_VERSION, "v3-item-discounts-inclusive");
+  assert.equal(QUOTATION_TEMPLATE_VERSION, "v4-measured-room");
 });
 test("old quote-line keys still resolve photos without using model-name guesses", () => {
   const q = sampleQuote(),

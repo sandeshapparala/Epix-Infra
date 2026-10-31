@@ -6,7 +6,7 @@ import type { SceneHandle } from "./scene";
 import styles from "./builder.module.css";
 import type { LengthUnit } from "@/lib/theater/measurements";
 
-export type ViewportHandle = Pick<SceneHandle, "capture" | "zoom" | "resetCamera">;
+export type ViewportHandle = Pick<SceneHandle, "capture" | "captureQuotation" | "zoom" | "resetCamera">;
 const TheaterViewport = forwardRef<ViewportHandle, { design: TheaterDesign; view: CameraView; units: LengthUnit; onReady: (ready: boolean) => void; onObjectMove: (id: string, position: ObjectPosition) => void; onSelect: (id: string) => void }>(function TheaterViewport({ design, view, units, onReady, onObjectMove, onSelect }, ref) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const sceneRef = useRef<SceneHandle | null>(null);
@@ -16,7 +16,7 @@ const TheaterViewport = forwardRef<ViewportHandle, { design: TheaterDesign; view
   const [error, setError] = useState("");
   const [ready, setReady] = useState(false);
   const [attempt, setAttempt] = useState(0);
-  useImperativeHandle(ref, () => ({ capture: () => sceneRef.current?.capture() ?? "", zoom: amount => sceneRef.current?.zoom(amount), resetCamera: () => sceneRef.current?.resetCamera() }), []);
+  useImperativeHandle(ref, () => ({ capture: () => sceneRef.current?.capture() ?? "", captureQuotation: () => sceneRef.current?.captureQuotation() ?? "", zoom: amount => sceneRef.current?.zoom(amount), resetCamera: () => sceneRef.current?.resetCamera() }), []);
   useEffect(() => {
     let active = true;
     setProgress(0); setError(""); setReady(false); latest.current.onReady(false);

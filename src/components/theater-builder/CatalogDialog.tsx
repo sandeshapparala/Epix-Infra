@@ -63,6 +63,7 @@ export function priceLabel(p: Product) {
     : `${rupees(p.price.amountPaise)} / ${p.price.unit === "unknown" ? "unit to confirm" : p.price.unit}`;
 }
 const specNames: Record<string, string> = {
+  warranty: "Warranty",
   lumens: "Light output",
   throwMin: "Minimum throw ratio",
   throwMax: "Maximum throw ratio",

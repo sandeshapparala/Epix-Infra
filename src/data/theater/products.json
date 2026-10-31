@@ -17639,31 +17639,32 @@
       "lumens": 3000,
       "throwMin": 1,
       "throwMax": 1.3,
-      "resolution": "3840 × 2160",
+      "resolution": "3840 x 2160",
       "nativeAspect": "16:9",
-      "lightSource": "4LED"
+      "lightSource": "4LED",
+      "sourceUrl": "https://www.benq.com/en-us/projector/home-projectors/tk705i/spec.html",
+      "warranty": "3 years on the projector (on-site), per supplied price list"
     },
     "issues": [
-      "Verify enclosure dimension axis order before installation; the brochure labels are ambiguous.",
-      "Price requires confirmation; brochure contains no selling price.",
-      "GST rate requires confirmation; not stated in the supplied document."
+      "Verify enclosure dimension axis order before installation; the brochure labels are ambiguous."
     ],
     "source": {
-      "file": "TK705STi Leaflet Low Res.pdf",
+      "file": "BenQ Home Entertainment Oct-Dec 2026 - TK705 supplied screenshot",
       "page": 1,
-      "effectiveDate": "Undated brochure",
-      "sha256": "fb251363009fa70ad76f03370e26effe1c5b5a038a475682e8dd23b8ce2e2d31"
+      "effectiveDate": "2026-10-01",
+      "sha256": "5415faa9c7bc9cf86e5691666930df02e8a1278059b9075200326f9aba750295",
+      "validUntil": "2026-12-31"
     },
     "price": {
-      "amountPaise": null,
-      "taxBasis": "unknown",
-      "gstRate": null,
+      "amountPaise": 21999000,
+      "taxBasis": "inclusive",
+      "gstRate": 0,
       "unit": "unit",
       "packSize": 1,
       "revision": 0
     },
-    "imageSource": "TK705STi Leaflet Low Res.pdf · page 1",
-    "quoteImage": "/theater-catalog/quotation/bcb4bad34c5c276f2b834a1a.jpg"
+    "imageSource": "https://www.benq.com/en-us/projector/home-projectors/tk705i.html",
+    "quoteImage": "/theater-catalog/quotation/4bb303ca116b574e612be957.jpg"
   },
   {
     "id": "benq-tk705sti",
@@ -17681,30 +17682,123 @@
       "lumens": 3000,
       "throwMin": 0.8,
       "throwMax": 0.8,
-      "resolution": "3840 × 2160",
+      "resolution": "3840 x 2160",
       "nativeAspect": "16:9",
-      "lightSource": "4LED"
+      "lightSource": "4LED",
+      "sourceUrl": "https://www.benq.com/en-us/projector/home-projectors/tk705sti/spec.html",
+      "warranty": "3 years on the projector (on-site), per supplied price list"
     },
     "issues": [
-      "Verify enclosure dimension axis order before installation; the brochure labels are ambiguous.",
-      "Price requires confirmation; brochure contains no selling price.",
-      "GST rate requires confirmation; not stated in the supplied document."
+      "Verify enclosure dimension axis order before installation; the brochure labels are ambiguous."
     ],
     "source": {
-      "file": "TK705STi Leaflet Low Res.pdf",
+      "file": "BenQ Home Entertainment Oct-Dec 2026 - TK705 supplied screenshot",
       "page": 1,
-      "effectiveDate": "Undated brochure",
-      "sha256": "fb251363009fa70ad76f03370e26effe1c5b5a038a475682e8dd23b8ce2e2d31"
+      "effectiveDate": "2026-10-01",
+      "sha256": "5415faa9c7bc9cf86e5691666930df02e8a1278059b9075200326f9aba750295",
+      "validUntil": "2026-12-31"
     },
     "price": {
-      "amountPaise": null,
-      "taxBasis": "unknown",
-      "gstRate": null,
+      "amountPaise": 23500000,
+      "taxBasis": "inclusive",
+      "gstRate": 0,
       "unit": "unit",
       "packSize": 1,
       "revision": 0
     },
-    "imageSource": "TK705STi Leaflet Low Res.pdf · page 1",
-    "quoteImage": "/theater-catalog/quotation/bcb4bad34c5c276f2b834a1a.jpg"
+    "imageSource": "https://www.benq.com/en-us/projector/home-projectors/tk705sti.html",
+    "quoteImage": "/theater-catalog/quotation/83a42b53bcba0b54d248f999.jpg"
+  },
+  {
+    "id": "benq-tk710",
+    "brand": "BenQ",
+    "model": "TK710",
+    "category": "projector",
+    "roles": [
+      "projector"
+    ],
+    "series": "4K Laser Home Cinema",
+    "finishes": [],
+    "issues": [],
+    "specs": {
+      "lumens": 3200,
+      "throwMin": 1.15,
+      "throwMax": 1.5,
+      "resolution": "3840 x 2160",
+      "nativeAspect": "16:9",
+      "lightSource": "Laser",
+      "sourceUrl": "https://www.benq.com/en-us/projector/home-projectors/tk710/spec.html",
+      "warranty": "3 years on the projector (on-site), per supplied price list",
+      "dimensions": [
+        0.3042,
+        0.1124,
+        0.2325
+      ]
+    },
+    "description": "4K UHD laser home cinema projector. 3200 ANSI lumens; 95% Rec.709; HDR10 / HLG; 4.2 ms input lag at 1080p 240 Hz.",
+    "image": "/theater-catalog/benq-tk710.webp",
+    "imageSource": "https://www.benq.com/en-us/projector/home-projectors/tk710.html",
+    "source": {
+      "file": "BenQ Home Entertainment Oct-Dec 2026 - TK710 supplied screenshot",
+      "page": 2,
+      "effectiveDate": "2026-10-01",
+      "sha256": "718db9883c0262280a36d9f9d2dd0841c79b4de3153581f1c59b19213f6621c6",
+      "validUntil": "2026-12-31"
+    },
+    "price": {
+      "amountPaise": 25999000,
+      "taxBasis": "inclusive",
+      "gstRate": 0,
+      "unit": "unit",
+      "packSize": 1,
+      "revision": 0
+    },
+    "quoteImage": "/theater-catalog/quotation/618f026ad6e01742d2ecffe0.jpg"
+  },
+  {
+    "id": "benq-tk710sti",
+    "brand": "BenQ",
+    "model": "TK710STi",
+    "category": "projector",
+    "roles": [
+      "projector"
+    ],
+    "series": "4K Laser Home Cinema",
+    "finishes": [],
+    "issues": [],
+    "specs": {
+      "lumens": 3200,
+      "throwMin": 0.69,
+      "throwMax": 0.83,
+      "resolution": "3840 x 2160",
+      "nativeAspect": "16:9",
+      "lightSource": "Laser",
+      "sourceUrl": "https://www.benq.com/en-us/projector/home-projectors/tk710sti/spec.html",
+      "warranty": "3 years on the projector (on-site), per supplied price list",
+      "dimensions": [
+        0.3042,
+        0.1124,
+        0.2535
+      ]
+    },
+    "description": "4K UHD laser short-throw smart projector. 3200 ANSI lumens; 95% Rec.709; HDR10 / HLG; 4.2 ms input lag at 1080p 240 Hz.",
+    "image": "/theater-catalog/benq-tk710sti.webp",
+    "imageSource": "https://www.benq.com/en-us/projector/home-projectors/tk710sti.html",
+    "source": {
+      "file": "BenQ Home Entertainment Oct-Dec 2026 - TK710 supplied screenshot",
+      "page": 2,
+      "effectiveDate": "2026-10-01",
+      "sha256": "718db9883c0262280a36d9f9d2dd0841c79b4de3153581f1c59b19213f6621c6",
+      "validUntil": "2026-12-31"
+    },
+    "price": {
+      "amountPaise": 29999000,
+      "taxBasis": "inclusive",
+      "gstRate": 0,
+      "unit": "unit",
+      "packSize": 1,
+      "revision": 0
+    },
+    "quoteImage": "/theater-catalog/quotation/a5b01030990317b394d19c26.jpg"
   }
 ]

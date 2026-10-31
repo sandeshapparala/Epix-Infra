@@ -10,13 +10,15 @@ import { audioLabel } from "./speaker-layout";
 import companyDefault from "../../data/theater/quotation-company.json";
 import type { QuoteSnapshot } from "./types";
 import { formatLength } from "./measurements";
+import { roomDimensions } from "./dimensions";
+import { visualDesign } from "./visual-design";
 import {
   localQuotationImage,
   quotationLogo,
   quotationProduct,
 } from "./quotation-assets";
 
-export const QUOTATION_TEMPLATE_VERSION = "v3-item-discounts-inclusive";
+export const QUOTATION_TEMPLATE_VERSION = "v4-measured-room";
 const C = {
   ink: rgb(0.075, 0.15, 0.2),
   muted: rgb(0.32, 0.39, 0.43),
@@ -293,11 +295,11 @@ export async function quotationPdf(q: QuoteSnapshot): Promise<Uint8Array> {
       /* Preview decoding never changes the saved financial values. */
     }
   }
-  ensure(147);
+  ensure(185);
   const cardTop = y;
   if (preview) {
     const boxW = 292,
-      boxH = 137,
+      boxH = 175,
       scale = Math.min(boxW / preview.width, boxH / preview.height);
     page.drawRectangle({
       x: L,
@@ -328,9 +330,9 @@ export async function quotationPdf(q: QuoteSnapshot): Promise<Uint8Array> {
     cw = width - 310;
   page.drawRectangle({
     x: cx,
-    y: cardTop - 137,
+    y: cardTop - 175,
     width: cw,
-    height: 137,
+    height: 175,
     color: C.ink,
   });
   draw(
@@ -358,12 +360,37 @@ export async function quotationPdf(q: QuoteSnapshot): Promise<Uint8Array> {
   draw(
     `Revision ${q.revision}  |  ${q.state.validityDays}-day validity`,
     cx + 14,
-    cardTop - 120,
+    cardTop - 158,
     7,
     regular,
     C.white,
   );
-  y = cardTop - 155;
+  y = cardTop - 193;
+  const dimensions = roomDimensions(
+    visualDesign(d, q.state.equipment, q.products),
+  );
+  const dimensionPairs = Math.ceil(dimensions.length / 2);
+  ensure(50 + dimensionPairs * 23);
+  section("Selected dimensions / feet & inches");
+  for (let row = 0; row < dimensionPairs; row++) {
+    ensure(25);
+    if (row % 2 === 0)
+      page.drawRectangle({ x: L, y: y - 17, width, height: 23, color: C.pale });
+    for (let column = 0; column < 2; column++) {
+      const item = dimensions[row * 2 + column];
+      if (!item) continue;
+      const x = L + column * (width / 2);
+      draw(item.label, x + 7, y - 9, 7.5, regular, C.muted);
+      right(item.value, x + width / 2 - 9, y - 9, 8, bold);
+    }
+    y -= 23;
+  }
+  y -= 5;
+  paragraph(
+    "Minimum clear gap between recliner footprints: 1 ft 6 in. Measurements are rounded to the nearest inch.",
+    7.5,
+  );
+  ensure(190);
   section("Equipment & project work");
   const tableHeader = () => {
     page.drawRectangle({ x: L, y: y - 23, width, height: 25, color: C.ink });

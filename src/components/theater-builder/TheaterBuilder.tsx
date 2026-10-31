@@ -7,7 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, ArrowUpRight, ChevronDown, X, Box, Check, ChevronRight, Download, Expand, Film, FolderOpen, Layers3, Lightbulb, Maximize2, Minus, Plus, RotateCcw, Ruler, Save, SlidersHorizontal, Sofa, Speaker, TriangleAlert, Volume2 } from "lucide-react";
 import logo from "@/Images/logo_white.png";
-import { calculateDesign, constrainObjectMove, fitSeatingLayout, rowMotionBounds, MIN_ROW_SPACING, SEATING_CLEARANCE, seatingPosition, type ObjectPosition, DEFAULT_DESIGN, NUMBER_LIMITS, parseSavedDesign, PRESETS, type CameraView, type TheaterDesign } from "./design";
+import { calculateDesign, constrainObjectMove, fitSeatingLayout, rowMotionBounds, SEATING_CLEARANCE, seatingPosition, type ObjectPosition, DEFAULT_DESIGN, NUMBER_LIMITS, parseSavedDesign, PRESETS, type CameraView, type TheaterDesign } from "./design";
 import type { ViewportHandle } from "./TheaterViewport";
 import styles from "./builder.module.css";
 import { visualDesign } from "@/lib/theater/visual-design";
@@ -15,6 +15,8 @@ import { useTheaterSales } from "./useTheaterSales";
 import SalesWorkspace, { EquipmentSlot, QuotationDock, SoundEquipment } from "./SalesWorkspace";
 import { formatLength, lengthStep, METRES_PER_INCH, type LengthUnit } from "@/lib/theater/measurements";
 import LengthInput from "./LengthInput";
+import { autoProjectorPlacement } from "@/lib/theater/projection-plan";
+import LayoutChecks from "./LayoutChecks";
 import SpeakerLayoutControl from "./SpeakerLayoutControl";
 import { audioLabel } from "@/lib/theater/speaker-layout";
 
@@ -66,12 +68,14 @@ export default function TheaterBuilder() {
   const measurement = (value: number) => formatLength(value, units);
   function moveObject(id: string, position: ObjectPosition) {
     setDesign(current => { const constrained = constrainObjectMove(visualDesign(current,studio.equipment,studio.products), id, position); return constrained ? { ...current, ...(id === "row-0" ? { distance: constrained[2] } : {}), positions: { ...current.positions, [id]: constrained } } : current; });
-    setPreset(""); setExportedFile(null); setNotice("");
+    setPreset(""); setExportedFile(null); setNotice(""); setLayoutError("");
   }
   function applyLayout(candidate: TheaterDesign) {
-    const configured = visualDesign(candidate, studio.equipment, studio.products);
+    let configured = visualDesign(candidate, studio.equipment, studio.products);
+    const projectionChanged = ["diagonal", "aspect", "throwMin", "throwMax", "depth", "display"].some(key => configured[key as keyof TheaterDesign] !== configuredDesign[key as keyof TheaterDesign]);
+    if (configured.display === "projector" && projectionChanged) configured = autoProjectorPlacement(configured, configuredDesign);
     const fitted = fitSeatingLayout(configured);
-    if (!fitted.design) { setLayoutError(fitted.reason); setNotice(fitted.reason); return false; }
+    if (!fitted.design) { setLayoutError(fitted.reason); setNotice(""); return false; }
     setDesign({ ...candidate, diagonal: configured.diagonal, aspect: configured.aspect, positions: fitted.design.positions, rowSpacing: fitted.design.rowSpacing });
     setLayoutError(""); setNotice(""); setExportedFile(null); return true;
   }
@@ -96,13 +100,13 @@ export default function TheaterBuilder() {
   function range(key: NumericKey, label: string, step = 0.05, format: (value: number) => string = measurement) {
     let [min, max]: [number, number] = [...NUMBER_LIMITS[key]];
     if (key === "distance") { const bounds = rowMotionBounds(configuredDesign, 0); min = bounds.min; max = bounds.max; }
-    if (key === "rowSpacing") { min = MIN_ROW_SPACING; max = design.depth - 1.9; }
-    const value = key === "distance" ? calculated.viewingDistance : key === "rowSpacing" ? seatingPosition(configuredDesign, 1)[2] - seatingPosition(configuredDesign, 0)[2] : design[key];
+    if (key === "rowSpacing") { min = SEATING_CLEARANCE.betweenRows; max = design.depth - 1.9 - SEATING_CLEARANCE.depth; }
+    const value = key === "distance" ? calculated.viewingDistance : key === "rowSpacing" ? seatingPosition(configuredDesign, 1)[2] - seatingPosition(configuredDesign, 0)[2] - SEATING_CLEARANCE.depth : design[key];
     const update = (next: number) => {
       if (key === "distance") {
         const row = seatingPosition(configuredDesign, 0);
         moveObject("row-0", [row[0], row[1], next]);
-      } else change(key, next);
+      } else change(key, key === "rowSpacing" ? next + SEATING_CLEARANCE.depth : next);
     };
     const isLength = LENGTH_KEYS.has(key);
     if (isLength) step = lengthStep(units);
@@ -201,7 +205,7 @@ export default function TheaterBuilder() {
         <div className={styles.stage} ref={stageRef} data-lights={design.lights} data-invalid={calculated.warnings.length > 0}>
           <Viewport ref={viewportRef} design={configuredDesign} view={view} units={units} onReady={setReady} onObjectMove={moveObject} onSelect={setSelected} />
           <div className={styles.stageHeading}><span className={styles.liveDot} /><strong>Your cinema, in perspective</strong><span>{measurement(design.width)} × {measurement(design.depth)}</span></div>
-          {calculated.warnings.length > 0 && <div className={styles.sceneWarning} role="status"><TriangleAlert size={14} />{calculated.warnings.length} layout {calculated.warnings.length === 1 ? "issue" : "issues"} — review layout checks</div>}
+
           <div className={styles.sceneTag}>{view === "orbit" ? "3D cutaway" : view === "plan" ? "Overhead plan" : "Primary seat"}{design.coverage && <span> · Illustrative coverage</span>}</div>
           <div className={styles.stageHelp}>{view === "orbit" ? "Drag seats / projector along track · Empty space to orbit" : view === "plan" ? "Drag seats / projector along track · Empty space to pan" : "The view from your first-row centre seat"}</div>
         </div>
@@ -211,10 +215,7 @@ export default function TheaterBuilder() {
           <div><span>Viewing angle</span><strong>{calculated.angle.toFixed(1)}<small>°</small></strong></div>
           <div><span>Sound layout</span><strong>{audioLabel(design)}<small> channels</small></strong></div>
         </div>
-        <details className={styles.fitDetails}>
-          <summary>{calculated.warnings.length ? <TriangleAlert size={16} /> : <Check size={16} />}<span>{calculated.warnings.length ? `${calculated.warnings.length} layout checks to review` : "Layout fit checks passed"}</span><ChevronDown size={14} /></summary>
-          <div className={styles.layoutStatus} role="status">{calculated.warnings.length ? calculated.warnings.map(warning => <p key={warning}>{warning}</p>) : <p>Concept fit checks only. Epix’s team can refine the equipment, sightlines and installation.</p>}</div>
-        </details>
+        <LayoutChecks warnings={calculated.warnings} blockedChange={layoutError}/>
       </section>
       <Tabs.Root value={panel} onValueChange={value => setPanel(value as Panel)} asChild><aside className={styles.sidebar} aria-label="Theatre configuration">
         <div className={styles.panelTitle}><SlidersHorizontal size={17} /><h2>Build your theatre</h2><span>{PANELS.findIndex(item => item.key === panel) + 1} / 4</span></div>
@@ -249,7 +250,7 @@ export default function TheaterBuilder() {
             <div className={styles.sectionLead}><h3>The best seats in the house.</h3><p>Configure real recliner rows and leave room to settle in.</p></div>
             {range("seats", "Seats per row", 1, String)}{range("rows", "Rows of seats", 1, String)}
             {range("distance", "Screen to primary seat")}
-            {design.rows > 1 && <>{range("rowSpacing", "Distance between rows")}{range("riser", "Riser height per row", 0.05)}</>}
+            {design.rows > 1 && <>{range("rowSpacing", "Clear gap between rows")}{range("riser", "Riser height per row", 0.05)}</>}
             {choices("aisle", "Aisle position", [{ value: "left", label: "Left" }, { value: "both", label: "Both sides" }, { value: "right", label: "Right" }])}
             {range("aisleWidth", "Aisle width")}
             <div className={styles.resultCard}><span>Live seating feedback</span><strong>{calculated.angle.toFixed(1)}° viewing angle</strong><span>Clearance behind last row</span><strong>{measurement(design.depth - calculated.rearExtent)}</strong></div>
@@ -271,7 +272,7 @@ export default function TheaterBuilder() {
               <div className={styles.assumptionTitle}>{selectedProjector ? `${selectedProjector.brand} ${selectedProjector.model} · projection inputs` : "Generic projector assumptions"}</div>
               {selectedProjector?.specs.throwMin ? <><div className={styles.resultCard}><span>Manufacturer light output</span><strong>{selectedProjector.specs.lumens?.toLocaleString("en-IN")} lm</strong><span>Lens throw ratio</span><strong>{selectedProjector.specs.throwMin} – {selectedProjector.specs.throwMax}</strong></div>{numeric("gain", "Screen gain", 0.1)}</> : <div className={styles.numberGrid}>{numeric("lumens", "Light output (lm)", 100)}{numeric("gain", "Screen gain", 0.1)}{numeric("throwMin", "Min. throw ratio", 0.05)}{numeric("throwMax", "Max. throw ratio", 0.05)}</div>}
               <div className={styles.resultCard}><span>Lens-to-screen range</span><strong>{measurement(calculated.minThrow)} – {measurement(calculated.maxThrow)}</strong><span>Estimated screen brightness</span><strong>{calculated.nits.toFixed(0)} <small>nits</small></strong></div>
-              <div className={styles.infoNote}>An idealized estimate using light output, screen area and gain. It does not predict HDR performance or room lighting.</div>
+              <div className={styles.infoNote}>Projector placement updates automatically when screen size or lens specifications change. You can drag it within the valid track. Brightness is an idealized estimate from light output, area and gain; it does not predict HDR performance or room lighting.</div>
             </>}
           </>}
           {panel === "sound" && <>
@@ -293,9 +294,8 @@ export default function TheaterBuilder() {
         <QuotationDock studio={studio} />
       </aside></Tabs.Root>
     </div>
-    <SalesWorkspace studio={studio} units={units} capture={() => {
-      viewportRef.current?.capture();const canvas=stageRef.current?.querySelector("canvas");if(!canvas||!ready)return "";
-      try { const copy=document.createElement("canvas");copy.width=1000;copy.height=Math.round(canvas.height/canvas.width*1000);copy.getContext("2d")?.drawImage(canvas,0,0,copy.width,copy.height);return copy.toDataURL("image/jpeg",.82); } catch {return "";}
+    <SalesWorkspace studio={studio} units={units} captureReady={ready} capture={() => {
+      try { return ready ? viewportRef.current?.captureQuotation() ?? "" : ""; } catch { return ""; }
     }} />
     <section className={styles.printReport} aria-label="Printable design report">
       <h1>EPIX INFRA — Home theatre design</h1><p>Concept design · {new Date().toLocaleDateString("en-IN")}</p>

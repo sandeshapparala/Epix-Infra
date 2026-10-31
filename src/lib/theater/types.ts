@@ -38,8 +38,9 @@ export type Product = {
   finishes: string[];
   price: Price;
   issues: string[];
-  source: { file: string; page: number; effectiveDate: string; sha256: string };
+  source: { file: string; page: number; effectiveDate: string; sha256: string; validUntil?: string };
   specs: {
+    warranty?: string;
     lumens?: number;
     throwMin?: number;
     throwMax?: number;

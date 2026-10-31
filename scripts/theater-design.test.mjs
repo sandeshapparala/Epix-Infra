@@ -241,7 +241,7 @@ const moved = (d, id, z) => ({ ...d, positions: { ...d.positions, [id]: constrai
 
 test('dragging either row through its neighbour stops at the recliner clearance', () => {
   const first = moved(DEFAULT_DESIGN, 'row-0', 100);
-  near(first.positions['row-0'][2], 5.2 - MIN_ROW_SPACING);
+  near(first.positions['row-0'][2], DEFAULT_DESIGN.distance + DEFAULT_DESIGN.rowSpacing - MIN_ROW_SPACING);
   const second = moved(DEFAULT_DESIGN, 'row-1', -100);
   near(second.positions['row-1'][2], 3.5 + MIN_ROW_SPACING);
   const separated = moved(DEFAULT_DESIGN, 'row-1', 5.8);
@@ -332,4 +332,18 @@ test('all presets and a room/row/equipment matrix either fit safely or explain r
 test('non-finite inputs and nonexistent rows never change the layout', () => {
   for (const value of [NaN,Infinity,-Infinity]) assert.equal(constrainObjectMove(DEFAULT_DESIGN,'row-0',[0,0,value]),null);
   assert.equal(constrainObjectMove(DEFAULT_DESIGN,'row--1',[0,0,3]),null);
+});
+
+test('the 18-inch clear gap survives legacy layout fitting and drag hard stops', () => {
+  const {METRES_PER_FOOT}=require('../src/lib/theater/measurements.ts');
+  near(SEATING_CLEARANCE.betweenRows,1.5*METRES_PER_FOOT);
+  const legacy={...DEFAULT_DESIGN,rowSpacing:1.7,positions:{'row-0':[0,0,3.5],'row-1':[0,.25,5.2]}};
+  const fitted=fitSeatingLayout(legacy).design;assert.ok(fitted);
+  const clearGap=d=>seatingPosition(d,1)[2]-seatingPosition(d,0)[2]-SEATING_CLEARANCE.depth;
+  assert.ok(clearGap(fitted)>=1.5*METRES_PER_FOOT-1e-6);
+  for(const [id,z] of [['row-0',100],['row-1',-100]]) {
+    const result=moved(fitted,id,z);
+    assert.ok(clearGap(result)>=1.5*METRES_PER_FOOT-1e-6);
+  }
+  assert.ok(calculateDesign(legacy).warnings.some(w=>w.includes('1 ft 6 in')));
 });

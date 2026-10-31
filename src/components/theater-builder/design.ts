@@ -1,4 +1,5 @@
 import { AUDIO_PRESETS, speakerLayout, validCustomAudio, type AudioPreset, type CustomAudio } from "../../lib/theater/speaker-layout";
+import { METRES_PER_FOOT } from "../../lib/theater/measurements";
 export type CameraView = "orbit" | "plan" | "seat";
 export type ObjectPosition = [number, number, number];
 export type ObjectPositions = Record<string, ObjectPosition>;
@@ -13,7 +14,7 @@ export function seatingPosition(d: TheaterDesign, row: number): ObjectPosition {
 // Conservative clearances for the representative 1.4 m-deep recliner model.
 // These are design assumptions, not manufacturer recline specifications.
 export const SEATING_CLEARANCE = {
-  depth: 1.4, height: 1.15, betweenRows: 0.3, front: 1, rear: 0.3,
+  depth: 1.4, height: 1.15, betweenRows: 1.5 * METRES_PER_FOOT, front: 1, rear: 0.3,
   equipment: 0.15, screenFace: 0.2, maxViewingAngle: 60,
 } as const;
 export const MIN_ROW_SPACING = SEATING_CLEARANCE.depth + SEATING_CLEARANCE.betweenRows;
@@ -177,7 +178,7 @@ export type TheaterDesign = {
 };
 export const DEFAULT_DESIGN: TheaterDesign = {
   width: 4.8, depth: 7, height: 2.8, seats: 3, rows: 2, distance: 3.5,
-  rowSpacing: 1.7, riser: 0.25, aisle: "both", aisleWidth: 0.6,
+  rowSpacing: MIN_ROW_SPACING, riser: 0.25, aisle: "both", aisleWidth: 0.6,
   display: "projector", diagonal: 120, aspect: "16:9", audio: "7.2.4",
   front: "tower", finish: "graphite", lights: true, dimensions: false,
   coverage: false, lumens: 2500, gain: 1, throwMin: 1.35, throwMax: 2.84,
@@ -300,7 +301,10 @@ export function calculateDesign(d: TheaterDesign) {
   const angle = 2 * Math.atan(screen.width / (2 * viewingDistance)) * 180 / Math.PI;
   const minThrow = screen.width * d.throwMin;
   const maxThrow = screen.width * d.throwMax;
-  const projectedDistance = Math.min(Math.max(d.depth / 2 + 0.8, minThrow), Math.min(maxThrow, d.depth - 0.55));
+  const trackMin = Math.max(0.22, minThrow), trackMax = Math.min(maxThrow, d.depth - 0.22);
+  const projectedDistance = trackMin <= trackMax
+    ? clamp((minThrow + maxThrow) / 2, trackMin, trackMax)
+    : clamp(minThrow, 0.22, d.depth - 0.22);
   const nits = d.lumens * d.gain / (Math.PI * screen.width * screen.height);
   const aisleCount = d.aisle === "both" ? 2 : 1;
   const widthNeeded = rowWidth(d.seats) + aisleCount * d.aisleWidth;
@@ -316,7 +320,7 @@ export function calculateDesign(d: TheaterDesign) {
   }
   rows.forEach((p, row) => {
     if (Math.abs(p[0]) + rowWidth(d.seats) / 2 > d.width / 2 || Math.abs(p[2]) + 0.7 > d.depth / 2 || p[1] < 0 || p[1] + 1.15 > d.height) warnings.push(`Seating row ${row + 1} extends outside the room. Move it inside or enlarge the room.`);
-    for (let other = row + 1; other < rows.length; other++) if (rows[other][2] - p[2] < MIN_ROW_SPACING * (other - row) - FIT_EPSILON) warnings.push(`Seating rows ${row + 1} and ${other + 1} overlap or lack recliner clearance. Keep their order and at least 30 cm (12 in) between chair footprints.`);
+    for (let other = row + 1; other < rows.length; other++) if (rows[other][2] - p[2] < MIN_ROW_SPACING * (other - row) - FIT_EPSILON) warnings.push(`Seating rows ${row + 1} and ${other + 1} overlap or lack recliner clearance. Keep their order and at least 1 ft 6 in (18 in) of clear space between chair footprints.`);
     if (!rowMotionBounds(d, row).valid) warnings.push(`Seating row ${row + 1} has insufficient screen, wall, equipment or row clearance. Use Auto-place all or adjust the room.`);
   });
   const projector = objectPosition(d, "projector", [0, d.height - 0.42, -d.depth / 2 + projectedDistance]);

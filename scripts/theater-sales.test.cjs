@@ -110,14 +110,14 @@ function state() {
   };
 }
 test("all supplied catalogs import with unique identifiers and existing images", () => {
-  assert.equal(products.length, 496);
-  assert.equal(sources.length, 15);
-  assert.equal(new Set(products.map((p) => p.id)).size, 496);
+  assert.equal(products.length, 498);
+  assert.equal(sources.length, 17);
+  assert.equal(new Set(products.map((p) => p.id)).size, 498);
   assert.deepEqual(
     sources.map((s) => s.products),
-    [86, 6, 56, 13, 72, 85, 15, 13, 69, 2, 38, 36, 2, 1, 2],
+    [86, 6, 56, 13, 72, 85, 15, 13, 69, 2, 38, 36, 2, 1, 0, 2, 2],
   );
-  assert.equal(products.filter((p) => p.image).length, 496);
+  assert.equal(products.filter((p) => p.image).length, 498);
   for (const p of products) {
     assert.ok(p.description || p.model);
     assert.ok(p.source.page > 0);
@@ -251,7 +251,9 @@ test("projector selection applies verified lens and brightness values and resets
   assert.equal(next.throwMin, 1.34);
   assert.equal(next.throwMax, 2.14);
   assert.equal(next.lumens, 2000);
-  assert.equal(next.positions.projector, undefined);
+  assert.ok(next.positions.projector);
+  const width=require('../src/components/theater-builder/design.ts').screenSize(next.diagonal,next.aspect).width;
+  assert.ok(Math.abs(next.positions.projector[2]-width*(next.throwMin+next.throwMax)/2)<1e-6);
   assert.equal(next.positions["row-0"][2], 3.8);
 });
 test("complete packages suppress component charging while retaining dormant selections for later", () => {
@@ -532,4 +534,31 @@ test('soundproofing defaults to 35000 and only this add-on permits employee cust
     assert.throws(()=>requireServiceRates(actor,[{...addon,...change}],[]));
   assert.throws(()=>parseProject({...s,services:[addon,{...addon,id:'duplicate-service'}]}));
   assert.throws(()=>parseProject({...s,services:[addon,{...addon,serviceCode:undefined}]}));
+});
+
+test('quotation dimensions use actual row overrides and report every length in feet and inches', () => {
+  const {roomDimensions}=require('../src/lib/theater/dimensions.ts');
+  const d={...DEFAULT_DESIGN,depth:11,rows:3,positions:{'row-0':[0,0,4],'row-1':[0,.25,6.2],'row-2':[0,.5,8.6]}};
+  const values=Object.fromEntries(roomDimensions(d).map(r=>[r.label,r.value]));
+  assert.equal(values['Room width'],'15 ft 9 in');assert.equal(values['Ceiling height'],'9 ft 2 in');
+  assert.equal(values['Front wall to primary seat'],'13 ft 1 in');
+  assert.equal(values['Clear gap: rows 1 to 2'],'2 ft 7 in');
+  assert.equal(values['Clear gap: rows 2 to 3'],'3 ft 3 in');
+  assert.equal(values['Screen diagonal'],'10 ft 0 in (120 in)');
+  assert.ok(Object.values(values).every(value=>value.includes(' ft ')&&value.includes(' in')));
+});
+
+test('automatic projector placement preserves zoom on screen changes and uses exact fixed-lens distances', () => {
+  const {autoProjectorPlacement}=require('../src/lib/theater/projection-plan.ts');
+  const {screenSize}=require('../src/components/theater-builder/design.ts');
+  const prior=autoProjectorPlacement({...DEFAULT_DESIGN,throwMin:1,throwMax:1.3});
+  const next=autoProjectorPlacement({...prior,diagonal:150},prior);
+  const before=prior.positions.projector[2]/screenSize(prior.diagonal,prior.aspect).width;
+  const after=next.positions.projector[2]/screenSize(next.diagonal,next.aspect).width;
+  assert.ok(Math.abs(before-after)<1e-8);
+  const fixed=autoProjectorPlacement({...next,throwMin:.8,throwMax:.8},next);
+  assert.ok(Math.abs(fixed.positions.projector[2]-screenSize(150,fixed.aspect).width*.8)<1e-8);
+  const impossible=autoProjectorPlacement({...DEFAULT_DESIGN,depth:4,diagonal:180,throwMin:2.5,throwMax:3});
+  assert.ok(impossible.positions.projector[2]<=3.78);
+  assert.ok(calculateDesign(impossible).warnings.some(w=>/projector.*throw|projector.*placement/.test(w)));
 });

@@ -4,6 +4,7 @@ import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 import { DRACOLoader } from "three/examples/jsm/loaders/DRACOLoader.js";
 import { calculateDesign, constrainObjectMove, rowMotionBounds, riserWidth, SEATING_CLEARANCE, rowWidth, seatOffset, seatingPosition, type ObjectPosition, type CameraView, type TheaterDesign } from "./design";
 import { formatLength, type LengthUnit } from "@/lib/theater/measurements";
+import { audioLabel } from "@/lib/theater/speaker-layout";
 
 const BASE = "/theater-demo/";
 const MODEL_FILES = ["2-chair-row-draco.gltf", "3-chair-row-draco.gltf", "4-chair-row-draco.gltf", "5-chair-row-draco.gltf", "all-speakers-draco.gltf", "projector-no-mount-draco.gltf", "tv-draco.gltf"];
@@ -13,6 +14,7 @@ export type SceneHandle = {
   zoom: (amount: number) => void;
   resetCamera: () => void;
   capture: () => string;
+  captureQuotation: () => string;
   dispose: () => void;
 };
 
@@ -177,8 +179,8 @@ export function createTheaterScene(canvas: HTMLCanvasElement, onProgress: (loade
   function label(text: string, position: [number, number, number]) {
     const sprite = reuse("label", () => {
       const c = document.createElement("canvas"); c.width = 512; c.height = 100;
-      const texture = new THREE.CanvasTexture(c); ownedTextures.add(texture);
-      const mat = new THREE.SpriteMaterial({ map: texture, depthTest: false }); ownedMaterials.add(mat);
+      const texture = new THREE.CanvasTexture(c); texture.colorSpace = THREE.SRGBColorSpace; ownedTextures.add(texture);
+      const mat = new THREE.SpriteMaterial({ map: texture, depthTest: false, toneMapped: false }); ownedMaterials.add(mat);
       return new THREE.Sprite(mat);
     });
     if (sprite.userData.text !== text) {
@@ -318,6 +320,12 @@ export function createTheaterScene(canvas: HTMLCanvasElement, onProgress: (loade
       ruler([-d.width / 2, 0.2, d.depth / 2 + 0.2], [d.width / 2, 0.2, d.depth / 2 + 0.2], `${formatLength(d.width, units)} wide`);
       ruler([d.width / 2 + 0.2, 0.2, frontZ], [d.width / 2 + 0.2, 0.2, d.depth / 2], `${formatLength(d.depth, units)} deep`);
       ruler([offset, 0.28, frontZ + 0.18], [offset, 0.28, primaryZ], `Viewing ${formatLength(viewingDistance, units)}`);
+      ruler([-d.width / 2 - 0.12, 0, frontZ], [-d.width / 2 - 0.12, d.height, frontZ], `${formatLength(d.height, units)} high`);
+      for (let row = 1; row < d.rows; row++) {
+        const before = seatingPosition(d, row - 1), after = seatingPosition(d, row);
+        const from = before[2] + SEATING_CLEARANCE.depth / 2, to = after[2] - SEATING_CLEARANCE.depth / 2;
+        ruler([d.width / 2 - 0.35, 0.16, from], [d.width / 2 - 0.35, 0.16, to], `Gap ${formatLength(to - from, units)}`);
+      }
     }
     ambient.intensity = d.lights ? 2.2 : 0.36;
     key.intensity = d.lights ? 3.5 : 0.6;
@@ -383,6 +391,32 @@ export function createTheaterScene(canvas: HTMLCanvasElement, onProgress: (loade
     zoom: amount => { const direction = camera.position.clone().sub(controls.target); direction.multiplyScalar(amount > 0 ? 0.85 : 1.18); camera.position.copy(controls.target).add(direction); controls.update(); },
     resetCamera: () => { if (currentDesign) applyCamera(currentDesign, currentView, true); },
     capture: () => { if (pending && loadedModels) { const next = pending; pending = undefined; applyDesign(next.design, next.view, next.units); } renderer.render(scene, camera); return renderer.domElement.toDataURL("image/png"); },
+    captureQuotation: () => {
+      if (!loadedModels || !currentDesign) return "";
+      if (pending) { const next = pending; pending = undefined; applyDesign(next.design, next.view, next.units); }
+      const original = currentDesign, originalView = currentView, originalUnits = currentUnits;
+      const size = renderer.getSize(new THREE.Vector2()), position = camera.position.clone(), target = controls.target.clone(), fov = camera.fov;
+      try {
+        renderer.setSize(1200, 675, false); camera.aspect = 1200 / 675;
+        const annotated = { ...original, dimensions: true, coverage: false };
+        applyDesign(annotated, "orbit", "ft"); applyCamera(annotated, "orbit", true); selection.visible = false;
+        renderer.render(scene, camera);
+        const output = document.createElement("canvas"); output.width = 1200; output.height = 759;
+        const ctx = output.getContext("2d"); if (!ctx) return "";
+        ctx.drawImage(renderer.domElement, 0, 0, 1200, 675);
+        ctx.fillStyle = "#173448"; ctx.fillRect(0, 675, 1200, 84); ctx.fillStyle = "#ffffff";
+        ctx.font = "600 25px Arial";
+        ctx.fillText(`ROOM: ${formatLength(original.width)} wide  x  ${formatLength(original.depth)} deep  x  ${formatLength(original.height)} high`, 24, 708);
+        ctx.font = "400 22px Arial";
+        ctx.fillText(`${original.diagonal} in screen  |  ${original.rows} rows / ${original.rows * original.seats} seats  |  ${audioLabel(original)} sound  |  Dimensions in feet and inches`, 24, 741);
+        return output.toDataURL("image/jpeg", 0.86);
+      } finally {
+        renderer.setSize(size.x, size.y, false); camera.aspect = size.x / size.y;
+        applyDesign(original, originalView, originalUnits);
+        camera.position.copy(position); controls.target.copy(target); camera.fov = fov; camera.updateProjectionMatrix(); controls.update();
+        renderer.render(scene, camera); dirty = true;
+      }
+    },
     dispose: () => { disposed = true; cancelAnimationFrame(animation); observer.disconnect(); canvas.removeEventListener("pointerdown", pointerDown, true); canvas.removeEventListener("pointermove", pointerMove, true); canvas.removeEventListener("pointerup", pointerUp, true); canvas.removeEventListener("pointercancel", pointerUp, true); controls.dispose(); selection.geometry.dispose(); (selection.material as THREE.Material).dispose(); clearContent(); releaseImports(); draco.dispose(); renderer.dispose(); },
   } };
 }

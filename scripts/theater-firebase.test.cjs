@@ -135,7 +135,7 @@ test("anonymous, invalid-token and unregistered Firebase accounts cannot read th
 test("new catalog TV and Marantz separates save and generate an owner-protected illustrated quotation", async () => {
   const catalogResponse = await catalogRoute.GET(request("alice", "/api/theater/catalog"));
   const catalog = (await catalogResponse.json()).products;
-  assert.equal(catalog.length, 496);
+  assert.equal(catalog.length, 498);
   const draft = structuredClone(state());
   draft.design = { ...draft.design, display: "tv", diagonal: 43, aspect: "16:9" };
   draft.equipment.slots = {
@@ -565,7 +565,7 @@ test("private previews live in Storage, not Firestore, and only owners/admins do
   assert.ok(
     (
       await theaterBucket()
-        .file(`theater-private/quotes/${users.alice.uid}/${q.id}.v3-item-discounts-inclusive.pdf`)
+        .file(`theater-private/quotes/${users.alice.uid}/${q.id}.v4-measured-room.pdf`)
         .exists()
     )[0],
   );
@@ -701,7 +701,7 @@ test('custom layouts, per-item discounts and employee-priced acoustics survive F
   assert.deepEqual(saved.state.design.customAudio,draft.design.customAudio);
   r=await quoteRoutes.POST(request('alice','/api/theater/quotes',{projectId:id,requestId:crypto.randomUUID(),state:draft,priceRevisions:{[p.id]:p.price.revision}}));
   assert.equal(r.status,200,await r.clone().text());
-  const q=await r.json();assert.equal(q.templateVersion,3);assert.equal(q.calculation.pricingMode,'inclusive');
+  const q=await r.json();assert.equal(q.templateVersion,4);assert.equal(q.calculation.pricingMode,'inclusive');
   assert.equal(q.calculation.taxPaise,0);assert.equal(q.calculation.lines.find(l=>l.productId===p.id).discountPercent,7.5);
   assert.equal(q.calculation.lines.find(l=>l.key.startsWith('service:')).totalPaise,3731000);
   const pdf=await pdfRoute.GET(request('alice'),params(q.id));assert.equal(pdf.status,200);
@@ -721,6 +721,16 @@ test('previously issued illustrated PDFs remain byte-for-byte unchanged', async 
   await store.collection('Quotes').doc(q.id).update({templateVersion:2});
   const original=Buffer.from('%PDF-legacy-immutable-test');
   await theaterBucket().file(`theater-private/quotes/${users.alice.uid}/${q.id}.v2-illustrated.pdf`).save(original,{resumable:false,contentType:'application/pdf'});
+  const response=await pdfRoute.GET(request('alice'),params(q.id));
+  assert.equal(response.status,200);assert.ok(Buffer.from(await response.arrayBuffer()).equals(original));
+});
+
+test('v3 quotation PDFs remain unchanged after the measured-room template upgrade', async () => {
+  const p=await store.saveProject(users.alice,crypto.randomUUID(),0,state());
+  const q=await store.saveQuote(users.alice,{projectId:p.id,requestId:crypto.randomUUID(),priceRevisions:{}},state());
+  await store.collection('Quotes').doc(q.id).update({templateVersion:3});
+  const original=Buffer.from('%PDF-v3-immutable-test');
+  await theaterBucket().file(`theater-private/quotes/${users.alice.uid}/${q.id}.v3-item-discounts-inclusive.pdf`).save(original,{resumable:false,contentType:'application/pdf'});
   const response=await pdfRoute.GET(request('alice'),params(q.id));
   assert.equal(response.status,200);assert.ok(Buffer.from(await response.arrayBuffer()).equals(original));
 });

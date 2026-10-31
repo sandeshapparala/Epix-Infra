@@ -426,5 +426,33 @@
     "specs": {
       "sourceUrl": "https://www.marantz.com/en/product/av-receivers/cinema-40/CINEMA40.html"
     }
+  },
+  "benq-tk705i": {
+    "image": "/theater-catalog/benq-tk705i.webp",
+    "imageSource": "https://www.benq.com/en-us/projector/home-projectors/tk705i.html",
+    "imageUrl": "https://image.benq.com/is/image/benqco/tk705i-right30-1-2?wid=960&fmt=png-alpha",
+    "imageSha256": "48b79b080c2af7aa7c96e398a975917bf616f596ce2a3c898b1e3400727a80d2",
+    "reviewedOn": "2026-10-31"
+  },
+  "benq-tk705sti": {
+    "image": "/theater-catalog/benq-tk705sti.webp",
+    "imageSource": "https://www.benq.com/en-us/projector/home-projectors/tk705sti.html",
+    "imageUrl": "https://image.benq.com/is/image/benqco/tk705sti-right30-1-2?wid=960&fmt=png-alpha",
+    "imageSha256": "22f842b46567fd3519335e58ce3ca23ce3387b9894c67abce5dcefbbc6bf67c8",
+    "reviewedOn": "2026-10-31"
+  },
+  "benq-tk710": {
+    "image": "/theater-catalog/benq-tk710.webp",
+    "imageSource": "https://www.benq.com/en-us/projector/home-projectors/tk710.html",
+    "imageUrl": "https://image.benq.com/is/image/benqco/tk710-right30?wid=960&fmt=png-alpha",
+    "imageSha256": "7414ce3f9c1e12ff26596af639ff8380395883daf2db0c96c45adb19d35edf0f",
+    "reviewedOn": "2026-10-31"
+  },
+  "benq-tk710sti": {
+    "image": "/theater-catalog/benq-tk710sti.webp",
+    "imageSource": "https://www.benq.com/en-us/projector/home-projectors/tk710sti.html",
+    "imageUrl": "https://image.benq.com/is/image/benqco/tk710sti-right30?wid=960&fmt=png-alpha",
+    "imageSha256": "479112af311719395400f79aefdb5c23ec68307f47b59f59287a7ad52af629b7",
+    "reviewedOn": "2026-10-31"
   }
 }

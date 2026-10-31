@@ -13,10 +13,10 @@ const { filterPricingProducts } = require('../src/lib/theater/pricing-filters.ts
 const find = id => { const p=products.find(p=>p.id===id); assert.ok(p,id); return p; };
 const state = () => ({design:{...DEFAULT_DESIGN},equipment:structuredClone(EMPTY_EQUIPMENT),customer:{...EMPTY_CUSTOMER},services:[],discountPercent:0,validityDays:15,terms:'',exclusions:''});
 
-test('new source lists add exactly 81 models and preserve original/Series 2 Marantz identities', () => {
+test('source lists and BenQ screenshot updates add 83 models and preserve original/Series 2 Marantz identities', () => {
   assert.equal(products.filter(p=>p.brand==='Marantz').length,40);
   assert.equal(products.filter(p=>p.brand==='Sony').length,36);
-  assert.equal(products.filter(p=>p.brand==='BenQ').length,5);
+  assert.equal(products.filter(p=>p.brand==='BenQ').length,7);
   const old=find('marantz-cinema-50'), newer=find('marantz-cinema-50-series-2');
   assert.equal(old.price.amountPaise,29990000);
   assert.equal(newer.price.amountPaise,31490000);
@@ -33,9 +33,9 @@ test('BenQ brochure specifications drive fixed/zoom throw tracks without inventi
   for(const [model,values] of Object.entries(expected)) {
     const p=find('benq-'+model),d=applyProjector(DEFAULT_DESIGN,p);
     assert.deepEqual([d.lumens,d.throwMin,d.throwMax],values);
-    assert.equal(p.price.amountPaise,null);
-    assert.equal(p.price.gstRate,null);
-    assert.equal(p.price.taxBasis,'unknown');
+    assert.equal(p.price.amountPaise,model==='tk705i'?21999000:model==='tk705sti'?23500000:null);
+    assert.equal(p.price.gstRate,['tk705i','tk705sti'].includes(model)?0:null);
+    assert.equal(p.price.taxBasis,['tk705i','tk705sti'].includes(model)?'inclusive':'unknown');
     assert.doesNotThrow(()=>parseSavedDesign(JSON.stringify({version:1,design:d})));
   }
   const high=applyProjector(DEFAULT_DESIGN,find('sony-vpl-fhz101l'));
@@ -89,7 +89,7 @@ test('new models appear in company/type/category filters and all images have a s
     assert.ok(p.imageSource,p.id);
     assert.ok(fs.existsSync('public'+p.image),p.id);
     assert.ok(fs.existsSync('public'+p.quoteImage),p.id);
-    assert.equal(p.price.gstRate,null,p.id);
+    assert.equal(p.price.gstRate,p.brand==='BenQ'&&p.price.amountPaise!==null?0:null,p.id);
   }
   assert.equal(find('sony-zm2810-1y').category,'accessory');
   assert.equal(find('sony-wq-bs1').imageKind,'service');
@@ -121,4 +121,17 @@ test('illustrated quotation PDFs embed the new display, processor, amplifier and
     assert.ok(doc.getPageCount()>=2);
     assert.ok(q.calculation.lines.some(l=>l.productId===(display==='tv'?slots.tv.productId:slots.projector.productId)));
   }
+});
+const suppliedBenq = require('../src/data/theater/benq-price-updates-2026-10.json');
+test('the supplied BenQ screenshot prices use exact models, official lens data and separate local photos', () => {
+  for(const entry of suppliedBenq.items) {
+    const p=find(entry.id);
+    assert.equal(p.price.amountPaise,entry.amountInr*100);
+    assert.equal(p.source.sha256,suppliedBenq.sources[entry.source].sha256);
+    assert.deepEqual([p.specs.throwMin,p.specs.throwMax],[entry.specs.throwMin,entry.specs.throwMax]);
+    assert.ok(p.imageSource.startsWith('https://www.benq.com/'));
+  }
+  assert.equal(find('benq-tk710').price.amountPaise,25999000);
+  assert.equal(find('benq-tk710sti').price.amountPaise,29999000);
+  assert.notEqual(find('benq-tk710').quoteImage,find('benq-tk710sti').quoteImage);
 });

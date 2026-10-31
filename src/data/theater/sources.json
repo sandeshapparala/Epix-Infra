@@ -113,7 +113,29 @@
     "sha256": "fb251363009fa70ad76f03370e26effe1c5b5a038a475682e8dd23b8ce2e2d31",
     "pages": 2,
     "parsedProducts": 2,
-    "products": 2,
+    "products": 0,
     "effectiveDate": "Undated brochure"
+  },
+  {
+    "brand": "BenQ",
+    "file": "BenQ Home Entertainment Oct-Dec 2026 - TK705 supplied screenshot",
+    "sha256": "5415faa9c7bc9cf86e5691666930df02e8a1278059b9075200326f9aba750295",
+    "pages": 1,
+    "page": 1,
+    "parsedProducts": 2,
+    "products": 2,
+    "effectiveDate": "2026-10-01",
+    "validUntil": "2026-12-31"
+  },
+  {
+    "brand": "BenQ",
+    "file": "BenQ Home Entertainment Oct-Dec 2026 - TK710 supplied screenshot",
+    "sha256": "718db9883c0262280a36d9f9d2dd0841c79b4de3153581f1c59b19213f6621c6",
+    "pages": 1,
+    "page": 2,
+    "parsedProducts": 2,
+    "products": 2,
+    "effectiveDate": "2026-10-01",
+    "validUntil": "2026-12-31"
   }
 ]

@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import * as Dialog from "@radix-ui/react-dialog";
 import Link from "next/link";
 import {
@@ -35,6 +35,8 @@ import QuoteLineEditor, {
 import { isAcousticsAddon } from "@/lib/theater/sound-services";
 import { audioLabel } from "@/lib/theater/speaker-layout";
 import { formatLength, type LengthUnit } from "@/lib/theater/measurements";
+import { visualDesign } from "@/lib/theater/visual-design";
+import RoomSummary from "./RoomSummary";
 
 export function EquipmentSlot({
   studio,
@@ -291,10 +293,12 @@ export function QuotationDock({ studio }: { studio: TheaterSales }) {
 export default function SalesWorkspace({
   studio,
   capture,
+  captureReady,
   units,
 }: {
   studio: TheaterSales;
   capture: () => string;
+  captureReady: boolean;
   units: LengthUnit;
 }) {
   const q = studio.calculation;
@@ -305,6 +309,25 @@ export default function SalesWorkspace({
     id: string;
     number: string;
   } | null>(null);
+  const [roomPreview, setRoomPreview] = useState("");
+  const captureRef = useRef(capture);
+  captureRef.current = capture;
+  const measuredDesign = visualDesign(
+    studio.state.design,
+    studio.equipment,
+    studio.products,
+  );
+  const roomPreviewKey = JSON.stringify(measuredDesign);
+  useEffect(() => {
+    if (!studio.review || !captureReady) {
+      setRoomPreview("");
+      return;
+    }
+    const frame = requestAnimationFrame(() =>
+      setRoomPreview(captureRef.current()),
+    );
+    return () => cancelAnimationFrame(frame);
+  }, [studio.review, captureReady, roomPreviewKey]);
   if (!studio.member) return null;
   return (
     <>
@@ -368,6 +391,10 @@ export default function SalesWorkspace({
                 </nav>
                 {tab === "equipment" && (
                   <>
+                    <RoomSummary
+                      design={measuredDesign}
+                      preview={roomPreview}
+                    />
                     <div className={styles.reviewHeading}>
                       <h3>Equipment schedule</h3>
                       <button

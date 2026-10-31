@@ -79,7 +79,7 @@ function sampleQuote() {
       name: "Epix design team",
       email: "hello@epixinfra.com",
     },
-    templateVersion: 3,
+    templateVersion: 4,
     company,
   };
 }
