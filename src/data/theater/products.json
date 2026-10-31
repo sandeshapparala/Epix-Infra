@@ -6098,9 +6098,7 @@
     "image": "/theater-catalog/kef-ci-200rr.webp",
     "finishes": [],
     "specs": {},
-    "issues": [
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "KEF PRICE LIST - OCT'2024 .pdf",
       "page": 4,
@@ -6111,8 +6109,8 @@
       "amountPaise": 6200000,
       "taxBasis": "inclusive",
       "gstRate": 18,
-      "unit": "unknown",
-      "packSize": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/70b49fa535fb531b3da7b108.jpg"
@@ -6841,9 +6839,7 @@
     "image": "/theater-catalog/kef-ci200qr.webp",
     "finishes": [],
     "specs": {},
-    "issues": [
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "KEF PRICE LIST - OCT'2024 .pdf",
       "page": 6,
@@ -6854,8 +6850,8 @@
       "amountPaise": 3800000,
       "taxBasis": "inclusive",
       "gstRate": 18,
-      "unit": "unknown",
-      "packSize": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/92772f9672a39f9b73e7a0a3.jpg"
@@ -6873,9 +6869,7 @@
     "image": "/theater-catalog/kef-ci200er.webp",
     "finishes": [],
     "specs": {},
-    "issues": [
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "KEF PRICE LIST - OCT'2024 .pdf",
       "page": 7,
@@ -6886,8 +6880,8 @@
       "amountPaise": 2200000,
       "taxBasis": "inclusive",
       "gstRate": 18,
-      "unit": "unknown",
-      "packSize": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/05e829fe8396e962646c0034.jpg"
@@ -6905,9 +6899,7 @@
     "image": "/theater-catalog/kef-ci130er.webp",
     "finishes": [],
     "specs": {},
-    "issues": [
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "KEF PRICE LIST - OCT'2024 .pdf",
       "page": 7,
@@ -6918,8 +6910,8 @@
       "amountPaise": 1500000,
       "taxBasis": "inclusive",
       "gstRate": 18,
-      "unit": "unknown",
-      "packSize": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/758065b358a861e560fa6ff7.jpg"
@@ -6937,9 +6929,7 @@
     "image": "/theater-catalog/kef-ci130qr.webp",
     "finishes": [],
     "specs": {},
-    "issues": [
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "KEF PRICE LIST - OCT'2024 .pdf",
       "page": 7,
@@ -6950,8 +6940,8 @@
       "amountPaise": 2400000,
       "taxBasis": "inclusive",
       "gstRate": 18,
-      "unit": "unknown",
-      "packSize": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/593b5d6003d1022039003760.jpg"
@@ -6969,9 +6959,7 @@
     "image": "/theater-catalog/kef-ci130qs.webp",
     "finishes": [],
     "specs": {},
-    "issues": [
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "KEF PRICE LIST - OCT'2024 .pdf",
       "page": 7,
@@ -6982,8 +6970,8 @@
       "amountPaise": 3150000,
       "taxBasis": "inclusive",
       "gstRate": 18,
-      "unit": "unknown",
-      "packSize": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/b8791bb60bdffe2f1b16580c.jpg"
@@ -7001,9 +6989,7 @@
     "image": "/theater-catalog/kef-ci160er.webp",
     "finishes": [],
     "specs": {},
-    "issues": [
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "KEF PRICE LIST - OCT'2024 .pdf",
       "page": 7,
@@ -7014,8 +7000,8 @@
       "amountPaise": 1600000,
       "taxBasis": "inclusive",
       "gstRate": 18,
-      "unit": "unknown",
-      "packSize": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/8965e6d829d99c3abfd6f0e5.jpg"
@@ -7033,9 +7019,7 @@
     "image": "/theater-catalog/kef-ci160qr.webp",
     "finishes": [],
     "specs": {},
-    "issues": [
-      "Selling unit requires confirmation"
-    ],
+    "issues": [],
     "source": {
       "file": "KEF PRICE LIST - OCT'2024 .pdf",
       "page": 7,
@@ -7046,8 +7030,8 @@
       "amountPaise": 2600000,
       "taxBasis": "inclusive",
       "gstRate": 18,
-      "unit": "unknown",
-      "packSize": null,
+      "unit": "unit",
+      "packSize": 1,
       "revision": 0
     },
     "quoteImage": "/theater-catalog/quotation/0d74d3c99c3617a5b070e029.jpg"

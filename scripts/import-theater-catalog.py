@@ -203,7 +203,7 @@ def extract(source):
                         elif brand == "KEF" and len(cells)==6 and "₹" in cells[3]:
                             model=clean(cells[0]); desc=clean(cells[2]);
                             if desc=="GRILL":model+=" GRILL"
-                            unit="pair" if "pair" in model.lower() else "unit" if "unit" in model.lower() or "subwoofer" in desc.lower() or "amplif" in desc.lower() else "unknown"
+                            unit="pair" if "pair" in model.lower() else "unit" if re.search(r"\bunit\b", model+" "+desc, re.I) or "subwoofer" in desc.lower() or "amplif" in desc.lower() else "unknown"
                             add(model,desc,money(cells[3]),unit,bbox=row.cells[1],gst=18)
                         elif brand == "Klipsch" and len(cells)==8 and re.match(r"^[\d,]+$",cells[7]):
                             unit={"each":"unit","pair":"pair","set":"set"}.get(cells[6].lower(),"unknown")

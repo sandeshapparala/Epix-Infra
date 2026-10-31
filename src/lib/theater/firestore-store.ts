@@ -21,7 +21,9 @@ import type {
   SalesProject,
   SavedProject,
   QuoteSnapshot,
+  CatalogReview,
 } from "./types";
+import { catalogDetailIssues, catalogReviewSourceKey } from "./pricing-review";
 import { activeSlots, calculateQuote } from "./quote";
 import { storePreview } from "./media";
 
@@ -61,11 +63,67 @@ async function serviceRatesFor(
     : [];
 }
 export async function catalog(): Promise<Product[]> {
-  const overrides = await collection("Prices").get();
+  const [overrides, reviews] = await Promise.all([
+    collection("Prices").get(),
+    collection("CatalogReviews").get(),
+  ]);
   const map = new Map(
     overrides.docs.map((d) => [d.id, d.data().price as Price]),
   );
-  return products.map((p) => ({ ...p, price: map.get(p.id) ?? p.price }));
+  const reviewMap = new Map(
+    reviews.docs.map((d) => [d.id, d.data() as CatalogReview]),
+  );
+  return products.map((p) => ({
+    ...p,
+    price: map.get(p.id) ?? p.price,
+    ...(reviewMap.has(p.id) ? { review: reviewMap.get(p.id) } : {}),
+  }));
+}
+export async function saveCatalogReview(
+  actor: Actor,
+  input: {
+    productId: string;
+    expectedRevision: number;
+    confirmed: boolean;
+    note: string;
+  },
+): Promise<CatalogReview> {
+  const product = products.find((p) => p.id === input.productId);
+  if (!product) throw new AccessError("Unknown catalog product.", 400);
+  if (!catalogDetailIssues(product).length)
+    throw new AccessError(
+      "Update the selling price or billing quantity to resolve this item.",
+      400,
+    );
+  return theaterDb().runTransaction(async (tx) => {
+    const current = await freshActor(tx, actor);
+    requireAdmin(current);
+    const ref = collection("CatalogReviews").doc(product.id);
+    const doc = await tx.get(ref);
+    const previous = doc.exists ? (doc.data() as CatalogReview) : null;
+    if ((previous?.revision ?? 0) !== input.expectedRevision)
+      throw new StoreConflict(
+        "This review changed in another window. Refresh before saving.",
+      );
+    const review: CatalogReview = {
+      note: input.note,
+      confirmed: input.confirmed,
+      sourceKey: catalogReviewSourceKey(product),
+      revision: input.expectedRevision + 1,
+      updatedAt: new Date().toISOString(),
+      updatedBy: attribution(current),
+    };
+    tx.set(ref, review);
+    tx.create(collection("Audit").doc(), {
+      action: "catalog_review_updated",
+      productId: product.id,
+      previous,
+      review,
+      actor: attribution(current),
+      createdAt: review.updatedAt,
+    });
+    return review;
+  });
 }
 export async function listServiceRates(actor: Actor) {
   const docs = await collection("ServiceRates").get();

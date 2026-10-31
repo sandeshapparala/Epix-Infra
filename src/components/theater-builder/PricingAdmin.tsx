@@ -10,6 +10,8 @@ import {
   Search,
   Upload,
   X,
+  AlertCircle,
+  CheckCircle2,
 } from "lucide-react";
 import type { Price, Product } from "@/lib/theater/types";
 import { rupees } from "@/lib/theater/types";
@@ -21,6 +23,13 @@ import {
   pricingType,
 } from "@/lib/theater/pricing-filters";
 import { ProductImage } from "./CatalogDialog";
+import {
+  PRICING_REVIEW_TYPES,
+  pricingReviewReasons,
+  catalogDetailIssues,
+  catalogDetailsConfirmed,
+  type PricingReviewKind,
+} from "@/lib/theater/pricing-review";
 import styles from "./sales.module.css";
 
 function csvRows(text: string): string[][] {
@@ -52,13 +61,18 @@ function csvRows(text: string): string[][] {
   return rows;
 }
 type Change = { productId: string; expectedRevision: number; price: Price };
-export default function PricingAdmin() {
+export default function PricingAdmin({
+  initialReview = false,
+}: {
+  initialReview?: boolean;
+}) {
   const [products, setProducts] = useState<Product[]>([]),
     [search, setSearch] = useState(""),
     [brand, setBrand] = useState(""),
     [type, setType] = useState(""),
     [category, setCategory] = useState(""),
-    [pending, setPending] = useState(false),
+    [pending, setPending] = useState(initialReview),
+    [reviewKind, setReviewKind] = useState<PricingReviewKind | "">(""),
     [page, setPage] = useState(0),
     [selected, setSelected] = useState<string[]>([]);
   const [editing, setEditing] = useState<Product | null>(null),
@@ -67,6 +81,7 @@ export default function PricingAdmin() {
     [busy, setBusy] = useState(false),
     [imported, setImported] = useState<Change[] | null>(null);
   const [loading, setLoading] = useState(true);
+  const [reviewNote, setReviewNote] = useState("");
   const [bulkUnit, setBulkUnit] = useState<Price["unit"] | "">("");
   async function refresh() {
     setLoading(true);
@@ -91,8 +106,13 @@ export default function PricingAdmin() {
         type,
         category,
         pending,
+        review: reviewKind,
       }),
-    [products, search, brand, type, category, pending],
+    [products, search, brand, type, category, pending, reviewKind],
+  );
+  const reviewCount = useMemo(
+    () => products.filter((p) => pricingReviewReasons(p).length).length,
+    [products],
   );
   const categories = useMemo(
     () =>
@@ -107,7 +127,14 @@ export default function PricingAdmin() {
       ),
     [products, type],
   );
-  const activeFilters = !!(search || brand || type || category || pending);
+  const activeFilters = !!(
+    search ||
+    brand ||
+    type ||
+    category ||
+    pending ||
+    reviewKind
+  );
   const currentPage = Math.min(
     page,
     Math.max(0, Math.ceil(filtered.length / 30) - 1),
@@ -117,13 +144,43 @@ export default function PricingAdmin() {
     setPage(0);
     // A new filtered view starts a fresh bulk selection; hidden rows cannot be edited accidentally.
     setSelected([]);
-  }, [search, brand, type, category, pending]);
+  }, [search, brand, type, category, pending, reviewKind]);
   function clearFilters() {
     setSearch("");
     setBrand("");
     setType("");
     setCategory("");
     setPending(false);
+    setReviewKind("");
+  }
+  async function confirmDetails(confirmed: boolean) {
+    if (!editing) return;
+    setBusy(true);
+    try {
+      const { review } = await api<{ review: NonNullable<Product["review"]> }>(
+        "/api/theater/catalog-review",
+        {
+          method: "PUT",
+          body: JSON.stringify({
+            productId: editing.id,
+            expectedRevision: editing.review?.revision ?? 0,
+            note: reviewNote,
+            confirmed,
+          }),
+        },
+      );
+      await refresh();
+      setEditing({ ...editing, review });
+      setMessage(
+        confirmed
+          ? "Source details confirmed. Missing prices or billing quantities still need to be updated."
+          : "Source details reopened for manual review.",
+      );
+    } catch (e) {
+      setMessage((e as Error).message);
+    } finally {
+      setBusy(false);
+    }
   }
   async function submit(changes: Change[]) {
     setBusy(true);
@@ -164,6 +221,8 @@ export default function PricingAdmin() {
       "selling_unit",
       "pack_size",
       "revision",
+      "review_reasons",
+      "review_note",
     ];
     const rows = [
       header,
@@ -175,11 +234,22 @@ export default function PricingAdmin() {
         p.price.unit,
         String(p.price.packSize ?? ""),
         String(p.price.revision),
+        pricingReviewReasons(p)
+          .map((r) => r.text)
+          .join(" | "),
+        p.review?.note ?? "",
       ]),
     ];
     const text = rows
       .map((row) =>
-        row.map((c) => '"' + String(c).replaceAll('"', '""') + '"').join(","),
+        row
+          .map((c) => {
+            const value = String(c);
+            // Free-text company notes must remain text in spreadsheet programs.
+            const safe = /^\s*[=+\-@]/.test(value) ? "'" + value : value;
+            return '"' + safe.replaceAll('"', '""') + '"';
+          })
+          .join(","),
       )
       .join("\r\n");
     const url = URL.createObjectURL(
@@ -310,6 +380,36 @@ export default function PricingAdmin() {
           </button>
         </div>
       </div>
+      <div className={styles.reviewViews} aria-label="Catalog view">
+        <button
+          type="button"
+          aria-pressed={!pending && !reviewKind}
+          onClick={() => {
+            setPending(false);
+            setReviewKind("");
+          }}
+        >
+          All models <span>{loading ? "…" : products.length}</span>
+        </button>
+        <button
+          type="button"
+          aria-pressed={pending || !!reviewKind}
+          onClick={() => {
+            setPending(true);
+            setReviewKind("");
+          }}
+        >
+          <AlertCircle size={17} aria-hidden="true" /> Unconfirmed / manual
+          review
+          <span>{loading ? "…" : reviewCount}</span>
+        </button>
+      </div>
+      {(pending || reviewKind) && (
+        <p className={styles.reviewIntro}>
+          Confirm with the company, then update each item. Resolved items leave
+          this list automatically.
+        </p>
+      )}
       <section
         className={styles.pricingFilterPanel}
         aria-label="Filter pricing catalog"
@@ -375,9 +475,29 @@ export default function PricingAdmin() {
             <input
               type="checkbox"
               checked={pending}
-              onChange={(e) => setPending(e.target.checked)}
+              onChange={(e) => {
+                setPending(e.target.checked);
+                if (!e.target.checked) setReviewKind("");
+              }}
             />{" "}
-            Needs price confirmation
+            Unconfirmed items only
+          </label>
+          <label className={styles.reviewReasonFilter}>
+            Review reason
+            <select
+              value={reviewKind}
+              onChange={(e) => {
+                setReviewKind(e.target.value as PricingReviewKind | "");
+                if (e.target.value) setPending(true);
+              }}
+            >
+              <option value="">All review reasons</option>
+              {PRICING_REVIEW_TYPES.map((r) => (
+                <option value={r.value} key={r.value}>
+                  {r.label}
+                </option>
+              ))}
+            </select>
           </label>
           <span role="status" aria-live="polite">
             {loading
@@ -484,6 +604,7 @@ export default function PricingAdmin() {
 
               <th>Selling unit</th>
               <th>Source date</th>
+              <th>Manual review</th>
               <th />
             </tr>
           </thead>
@@ -534,15 +655,47 @@ export default function PricingAdmin() {
                   <br />
                   <small>Page {p.source.page}</small>
                 </td>
+                <td className={styles.reviewCell}>
+                  {pricingReviewReasons(p).length ? (
+                    <ul>
+                      {pricingReviewReasons(p).map((r) => (
+                        <li key={r.kind + r.text}>
+                          <span>
+                            {
+                              PRICING_REVIEW_TYPES.find(
+                                (t) => t.value === r.kind,
+                              )?.label
+                            }
+                          </span>
+                          <p>{r.text}</p>
+                        </li>
+                      ))}
+                    </ul>
+                  ) : (
+                    <span className={styles.reviewReady}>
+                      <CheckCircle2 size={14} aria-hidden="true" /> Ready
+                    </span>
+                  )}
+                  {p.review?.note && (
+                    <details>
+                      <summary>Admin review note</summary>
+                      <p>{p.review.note}</p>
+                    </details>
+                  )}
+                </td>
                 <td>
                   <button
                     className={styles.secondary}
                     onClick={() => {
                       setEditing(p);
                       setDraft({ ...p.price });
+                      setReviewNote(p.review?.note ?? "");
+                      setMessage("");
                     }}
                   >
-                    Edit price
+                    {pricingReviewReasons(p).length
+                      ? "Review & update"
+                      : "Edit price"}
                   </button>
                 </td>
               </tr>
@@ -591,7 +744,7 @@ export default function PricingAdmin() {
           <Dialog.Content className={styles.priceDialog}>
             <div className={styles.dialogHeader}>
               <div>
-                <Dialog.Title>Update selling price</Dialog.Title>
+                <Dialog.Title>Review product & pricing</Dialog.Title>
                 <Dialog.Description>
                   {editing?.brand} {editing?.model}
                 </Dialog.Description>
@@ -708,13 +861,54 @@ export default function PricingAdmin() {
                   Changes update future quotations; saved quotation snapshots
                   are preserved.
                 </p>
-                {editing.issues
-                  .filter((i) => !/gst|tax basis|tax inclusion/i.test(i))
-                  .map((i) => (
-                    <p className={styles.warning} key={i}>
-                      {i}
+                {pricingReviewReasons(editing).map((r) => (
+                  <p className={styles.warning} key={r.kind + r.text}>
+                    {r.text}
+                  </p>
+                ))}
+                {catalogDetailIssues(editing).length > 0 && (
+                  <section
+                    className={styles.reviewNotes}
+                    aria-label="Source details review"
+                  >
+                    <h3>Product & order details</h3>
+                    <p>
+                      Record the confirmed description, coverage, order code and
+                      company reference. This does not confirm a missing price
+                      or billing quantity.
                     </p>
-                  ))}
+                    <label>
+                      Company confirmation notes
+                      <textarea
+                        value={reviewNote}
+                        maxLength={2000}
+                        rows={4}
+                        placeholder="Confirmed product description / order code, who confirmed it and reference date"
+                        onChange={(e) => setReviewNote(e.target.value)}
+                      />
+                    </label>
+                    {editing.review && (
+                      <small>
+                        Last reviewed by {editing.review.updatedBy.name} ·{" "}
+                        {new Date(editing.review.updatedAt).toLocaleDateString(
+                          "en-IN",
+                        )}
+                      </small>
+                    )}
+                    <button
+                      type="button"
+                      className={styles.secondary}
+                      disabled={busy || reviewNote.trim().length < 10}
+                      onClick={() =>
+                        void confirmDetails(!catalogDetailsConfirmed(editing))
+                      }
+                    >
+                      {catalogDetailsConfirmed(editing)
+                        ? "Reopen source review"
+                        : "Confirm source details"}
+                    </button>
+                  </section>
+                )}
                 <button className={styles.primary} disabled={busy}>
                   <Save size={16} />
                   {busy ? "Saving…" : "Save price update"}

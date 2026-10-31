@@ -26,6 +26,8 @@ const pdfRoute = require("../src/app/api/theater/quotes/[id]/pdf/route.ts");
 const pricesRoute = require("../src/app/api/theater/prices/route.ts");
 const ratesRoute = require("../src/app/api/theater/service-rates/route.ts");
 const catalogRoute = require("../src/app/api/theater/catalog/route.ts");
+const reviewRoute = require("../src/app/api/theater/catalog-review/route.ts");
+const { pricingReviewReasons } = require("../src/lib/theater/pricing-review.ts");
 const team = require("../src/lib/theater/team.ts");
 const {
   DEFAULT_DESIGN,
@@ -299,6 +301,28 @@ test("employees cannot update prices or approved rates; admin price changes are 
     .get();
   assert.ok(audit.docs.some((d) => d.data().actor.uid === users.admin.uid));
 });
+test("source reviews are admin-only, audited, conflict checked and cannot hide an unknown billing unit", async () => {
+  const id='sony-zm2810-1y';
+  const body={productId:id,expectedRevision:0,note:'Company confirmed coverage and accessory order code for this model.',confirmed:true};
+  try {
+    assert.equal((await reviewRoute.PUT(request(null,'/api/theater/catalog-review',body,'PUT'))).status,401);
+    assert.equal((await reviewRoute.PUT(request('alice','/api/theater/catalog-review',body,'PUT'))).status,403);
+    assert.equal((await reviewRoute.PUT(request('admin','/api/theater/catalog-review',{...body,note:' '},'PUT'))).status,400);
+    assert.equal((await reviewRoute.PUT(request('admin','/api/theater/catalog-review',{...body,productId:'unknown-model'},'PUT'))).status,400);
+    assert.equal((await reviewRoute.PUT(request('admin','/api/theater/catalog-review',{...body,productId:'canton-alpha-1'},'PUT'))).status,400);
+    assert.equal((await reviewRoute.PUT(request('admin','/api/theater/catalog-review',body,'PUT'))).status,200);
+    const p=(await store.catalog()).find(p=>p.id===id);
+    assert.equal(p.review.revision,1);assert.equal(p.review.updatedBy.uid,users.admin.uid);
+    assert.deepEqual(pricingReviewReasons(p).map(r=>r.kind),['unit']);
+    assert.equal((await reviewRoute.PUT(request('admin','/api/theater/catalog-review',body,'PUT'))).status,409);
+    assert.equal((await reviewRoute.PUT(request('admin','/api/theater/catalog-review',{...body,expectedRevision:1,confirmed:false},'PUT'))).status,200);
+    assert.ok(pricingReviewReasons((await store.catalog()).find(p=>p.id===id)).some(r=>r.kind==='details'));
+    const audit=await store.collection('Audit').where('productId','==',id).get();
+    assert.ok(audit.docs.some(d=>d.data().action==='catalog_review_updated' && d.data().actor.uid===users.admin.uid));
+    await assert.rejects(()=>store.saveCatalogReview({...users.alice,role:'admin'}, {...body,expectedRevision:2}),e=>e.status===403);
+  } finally { await store.collection('CatalogReviews').doc(id).delete(); }
+});
+
 test("approved service rates cannot be reduced or replaced with arbitrary employee rates", async () => {
   const rate = await store.saveServiceRate(users.admin, {
     id: crypto.randomUUID(),
@@ -588,6 +612,13 @@ test("Firestore rules deny direct anonymous and employee access even with a vali
       body: JSON.stringify({ fields: { role: { stringValue: "admin" } } }),
     });
     assert.equal(write.status, 403);
+    const reviewRead = await fetch(`${base}/theaterCatalogReviews/sony-zm2810-1y`, { headers });
+    assert.equal(reviewRead.status, 403);
+    const reviewWrite = await fetch(`${base}/theaterCatalogReviews/sony-zm2810-1y`, {
+      method: "PATCH", headers: { ...headers, "Content-Type": "application/json" },
+      body: JSON.stringify({ fields: { confirmed: { booleanValue: true } } }),
+    });
+    assert.equal(reviewWrite.status, 403);
   }
 });
 test("private Firestore media fallback stores large files in bounded chunks and protects downloads", async () => {

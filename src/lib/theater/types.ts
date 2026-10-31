@@ -24,6 +24,7 @@ export type Price = {
   updatedAt?: string;
 };
 export type Product = {
+  review?: CatalogReview;
   id: string;
   brand: string;
   model: string;
@@ -38,7 +39,13 @@ export type Product = {
   finishes: string[];
   price: Price;
   issues: string[];
-  source: { file: string; page: number; effectiveDate: string; sha256: string; validUntil?: string };
+  source: {
+    file: string;
+    page: number;
+    effectiveDate: string;
+    sha256: string;
+    validUntil?: string;
+  };
   specs: {
     warranty?: string;
     lumens?: number;
@@ -60,6 +67,14 @@ export type Product = {
     packageContents?: Partial<Record<Slot, number>>;
     packageReceiverChannels?: number;
   };
+};
+export type CatalogReview = {
+  note: string;
+  confirmed: boolean;
+  sourceKey: string;
+  revision: number;
+  updatedAt: string;
+  updatedBy: import("./access").Attribution;
 };
 export type Selection = { productId: string; finish: string };
 export type Equipment = {

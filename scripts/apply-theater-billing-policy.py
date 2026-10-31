@@ -5,6 +5,7 @@ untouched. This never connects to Firestore or changes administrator overrides.
 See docs/theater-catalog-imports.md for source and online research limitations.
 """
 import json
+import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -17,6 +18,13 @@ RESOLVED_ISSUES = {
 
 def apply_confirmed_billing(products):
     for product in products:
+        # Eight KEF descriptions explicitly state Unit even though the model
+        # column omits it. Preserve the PDF amount and other source metadata.
+        if (product["brand"] == "KEF" and product["price"]["unit"] == "unknown"
+                and re.search(r"\bunit\b", product["description"], re.I)):
+            product["price"].update(unit="unit", packSize=1)
+            product["issues"] = [i for i in product["issues"]
+                                 if i != "Selling unit requires confirmation"]
         if product["brand"] not in {"Canton", "FAITH"}:
             continue
         # A Movie set is ONE billable complete package, not six billable pieces.

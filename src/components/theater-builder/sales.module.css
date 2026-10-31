@@ -943,7 +943,7 @@
   justify-content: space-between;
   align-items: center;
   gap: 24px;
-  padding: 40px 0 24px;
+  padding: 28px 0 20px;
 }
 .pricingIntro h1 {
   font-size: clamp(28px, 3vw, 42px);
@@ -1007,6 +1007,26 @@
   line-height: 1.6;
   color: #526977;
 }
+.reviewViews { display:flex; flex-wrap:wrap; gap:8px; border-bottom:1px solid #d9e3e9; padding-bottom:16px; }
+.reviewViews button { display:flex; align-items:center; justify-content:center; gap:8px; min-height:44px; padding:12px 16px; border:1px solid #cbd8e0; border-radius:6px; background:#fff; color:#244c64; font-size:13px; font-weight:600; }
+.reviewViews button:hover { background:#eaf1f5; }
+.reviewViews button[aria-pressed="true"] { background:#244c64; color:#fff; border-color:#244c64; }
+.reviewViews button span { font-variant-numeric:tabular-nums; padding:2px 8px; border-radius:4px; background:#dce8ef; color:#17364a; }
+.reviewIntro { margin:12px 0 0; color:#526977; font-size:13px; line-height:1.7; }
+.pricingFilterSummary .reviewReasonFilter { display:grid; gap:6px; cursor:default; font-weight:600; }
+.reviewCell { white-space:normal!important; min-width:240px; max-width:340px; font-size:11px; line-height:1.6; }
+.reviewCell ul { list-style:none; padding:0; margin:0; display:grid; gap:12px; }
+.reviewCell li > span { display:inline-block; color:#795118; background:#fff2d8; padding:2px 8px; border-radius:4px; font-weight:600; }
+.reviewCell p { margin:4px 0 0; overflow-wrap:anywhere; color:#526977; }
+.reviewCell details { margin-top:8px; }
+.reviewCell summary { cursor:pointer; min-height:44px; display:flex; align-items:center; text-decoration:underline; }
+.reviewReady { display:flex; gap:6px; align-items:center; color:#376350; }
+.reviewNotes { padding:16px; border:1px solid #cbd8e0; border-radius:8px; background:#edf3f6; display:grid; gap:12px; }
+.reviewNotes h3 { font-size:14px; margin:0; }
+.reviewNotes p { font-size:12px; line-height:1.6; margin:0; color:#526977; }
+.reviewNotes textarea { width:100%; padding:12px; border:1px solid #cbd8e0; background:white; color:#17364a; font:inherit; font-size:13px; line-height:1.6; border-radius:6px; resize:vertical; }
+.reviewNotes small { font-size:11px; line-height:1.6; color:#526977; }
+@media(max-width:520px) { .reviewViews { display:grid; grid-template-columns:1fr; } .pricingFilterSummary .reviewReasonFilter { flex-basis:100%; } }
 @media (max-width: 1100px) {
   .pricingFilters {
     grid-template-columns: repeat(2, minmax(0, 1fr));

@@ -1,4 +1,5 @@
 import type { Product } from "./types";
+import { pricingReviewReasons, type PricingReviewKind } from "./pricing-review";
 
 const CATEGORIES: Record<string, { label: string; type: string }> = {
   floorstanding: { label: "Floorstanding speakers", type: "speakers" },
@@ -71,6 +72,7 @@ export type PricingFilters = {
   type: string;
   category: string;
   pending: boolean;
+  review?: PricingReviewKind | "";
 };
 
 export function filterPricingProducts(
@@ -87,9 +89,8 @@ export function filterPricingProducts(
         `${p.id} ${p.brand} ${p.model} ${p.series} ${pricingCategoryLabel(p.category)}`
           .toLowerCase()
           .includes(query)) &&
-      (!filters.pending ||
-        p.price.amountPaise === null ||
-        p.price.unit === "unknown" ||
-        p.price.packSize === null),
+      (!filters.pending || pricingReviewReasons(p).length > 0) &&
+      (!filters.review ||
+        pricingReviewReasons(p).some((r) => r.kind === filters.review)),
   );
 }

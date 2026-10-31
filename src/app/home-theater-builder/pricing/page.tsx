@@ -5,6 +5,15 @@ export const metadata: Metadata = {
   title: "Catalog pricing | Epix Infra",
   robots: { index: false, follow: false },
 };
-export default function PricingPage() {
-  return <StaffOnly admin><PricingAdmin /></StaffOnly>;
+export default async function PricingPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ review?: string }>;
+}) {
+  const { review } = await searchParams;
+  return (
+    <StaffOnly admin>
+      <PricingAdmin initialReview={review === "1"} />
+    </StaffOnly>
+  );
 }

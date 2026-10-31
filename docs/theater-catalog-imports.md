@@ -136,5 +136,30 @@ Research completed **before editing the data**, checked 31 October 2026:
 The supplied lists are the approved price authority. Online comparisons are
 corroboration, not replacements or a claim that every 2025 price is the latest
 October 2026 market price. Similar model generations and foreign-market prices
-must not be substituted. Missing source amounts stay pending; an existing live
-administrator-confirmed amount, such as Alpha 1, continues to take precedence.
+must not be substituted. Missing source amounts stay pending; active live
+administrator-confirmed prices take precedence over the seed catalog.
+
+## Manual review workspace
+
+Pricing administration includes an **Unconfirmed / manual review** view with
+filters for missing prices, billing quantities, source conflicts and product/order
+details. Company, type, category and search filters combine with this view. CSVs
+include the active review reasons and saved confirmation notes for matching rows.
+Obsolete source warnings do not keep a product pending after its price or billing
+quantity has been confirmed. Historic tax metadata and missing photos do not
+create manual pricing tasks.
+
+Eight KEF descriptions explicitly state Unit (Ci200RR, Ci200QR, Ci200ER,
+Ci130ER, Ci130QR, Ci130QS, Ci160ER and Ci160QR); the importer now recognises
+these descriptions and preserves their printed amounts.
+
+Admins can record and confirm ambiguous Sony accessory descriptions and Sonus
+faber order codes. Reviews are server-only Firestore records with author, time,
+revision, source identity and audit history. Confirming source details cannot
+clear a missing price or unknown billing quantity. A source change invalidates
+the old confirmation, and admins can reopen a review. Employees cannot modify
+reviews. Issued quotation snapshots are unchanged.
+
+Alpha 1's previous manual price was explicitly withdrawn at the customer's
+request. Its future selling amount is pending until an admin enters a new
+confirmed price; the source PDF also lists it on request.

@@ -8,6 +8,21 @@ const selection = z
     finish: z.string().max(100),
   })
   .strict();
+export const catalogReviewChange = z
+  .object({
+    productId: z.string().min(1).max(180),
+    expectedRevision: z.number().int().min(0),
+    confirmed: z.boolean(),
+    note: z
+      .string()
+      .trim()
+      .min(
+        10,
+        "Record the confirmed product details or order code (at least 10 characters).",
+      )
+      .max(2000),
+  })
+  .strict();
 const price = z
   .object({
     amountPaise: z.number().int().min(0).max(100_000_000_000).nullable(),
