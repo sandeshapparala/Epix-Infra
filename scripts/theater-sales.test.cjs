@@ -110,14 +110,14 @@ function state() {
   };
 }
 test("all supplied catalogs import with unique identifiers and existing images", () => {
-  assert.equal(products.length, 498);
-  assert.equal(sources.length, 17);
-  assert.equal(new Set(products.map((p) => p.id)).size, 498);
+  assert.equal(products.length, 709);
+  assert.equal(sources.length, 21);
+  assert.equal(new Set(products.map((p) => p.id)).size, 709);
   assert.deepEqual(
     sources.map((s) => s.products),
-    [86, 6, 56, 13, 72, 85, 15, 13, 69, 2, 38, 36, 2, 1, 0, 2, 2],
+    [86, 6, 56, 13, 72, 85, 15, 13, 69, 2, 38, 36, 2, 1, 0, 2, 2, 34, 69, 90, 18],
   );
-  assert.equal(products.filter((p) => p.image).length, 498);
+  assert.equal(products.filter((p) => p.image).length, 709);
   for (const p of products) {
     assert.ok(p.description || p.model);
     assert.ok(p.source.page > 0);

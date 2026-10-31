@@ -135,7 +135,7 @@ test("anonymous, invalid-token and unregistered Firebase accounts cannot read th
 test("new catalog TV and Marantz separates save and generate an owner-protected illustrated quotation", async () => {
   const catalogResponse = await catalogRoute.GET(request("alice", "/api/theater/catalog"));
   const catalog = (await catalogResponse.json()).products;
-  assert.equal(catalog.length, 498);
+  assert.equal(catalog.length, 709);
   const draft = structuredClone(state());
   draft.design = { ...draft.design, display: "tv", diagonal: 43, aspect: "16:9" };
   draft.equipment.slots = {
@@ -733,4 +733,24 @@ test('v3 quotation PDFs remain unchanged after the measured-room template upgrad
   await theaterBucket().file(`theater-private/quotes/${users.alice.uid}/${q.id}.v3-item-discounts-inclusive.pdf`).save(original,{resumable:false,contentType:'application/pdf'});
   const response=await pdfRoute.GET(request('alice'),params(q.id));
   assert.equal(response.status,200);assert.ok(Buffer.from(await response.arrayBuffer()).equals(original));
+});
+
+test('admin project saves and quotation APIs reject Rotel item discounts over ten percent', async () => {
+  const catalog=await store.catalog(),p=catalog.find(p=>p.id==='rotel-rmb-1585');
+  const draft=structuredClone(state(20));
+  draft.equipment.extras=[{productId:p.id,finish:'Black',quantity:1}];
+  const id=crypto.randomUUID();
+  let response=await projectRoutes.POST(request('admin',undefined,{id,version:0,state:draft}));
+  assert.equal(response.status,200,await response.clone().text());
+  response=await quoteRoutes.POST(request('admin','/api/theater/quotes',{projectId:id,requestId:crypto.randomUUID(),state:draft,priceRevisions:{[p.id]:p.price.revision}}));
+  assert.equal(response.status,200,await response.clone().text());
+  const q=await response.json(),line=q.calculation.lines.find(l=>l.productId===p.id);
+  assert.equal(line.discountPercent,10);
+  assert.equal(line.totalPaise,36711000);
+  draft.lineDiscounts={[p.id+'|Black']:10.01};
+  response=await projectRoutes.POST(request('admin',undefined,{id,version:1,state:draft}));
+  assert.equal(response.status,403);
+  response=await quoteRoutes.POST(request('admin','/api/theater/quotes',{projectId:id,requestId:crypto.randomUUID(),state:draft,priceRevisions:{[p.id]:p.price.revision}}));
+  assert.equal(response.status,403);
+  assert.equal((await store.getProject(users.admin,id)).version,1);
 });

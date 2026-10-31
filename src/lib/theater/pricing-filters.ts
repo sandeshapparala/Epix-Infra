@@ -23,6 +23,10 @@ const CATEGORIES: Record<string, { label: string; type: string }> = {
     label: "AV processors / preamplifiers",
     type: "electronics",
   },
+  "electronics-package": { label: "Equipment bundles", type: "electronics" },
+  "stereo-preamp": { label: "Stereo preamplifiers", type: "electronics" },
+  tuner: { label: "Tuners", type: "electronics" },
+  turntable: { label: "Turntables", type: "electronics" },
   "power-amplifier": { label: "Cinema power amplifiers", type: "electronics" },
   "integrated-amplifier": {
     label: "Stereo integrated amplifiers",

@@ -14,7 +14,7 @@ const find = id => { const p=products.find(p=>p.id===id); assert.ok(p,id); retur
 const state = () => ({design:{...DEFAULT_DESIGN},equipment:structuredClone(EMPTY_EQUIPMENT),customer:{...EMPTY_CUSTOMER},services:[],discountPercent:0,validityDays:15,terms:'',exclusions:''});
 
 test('source lists and BenQ screenshot updates add 83 models and preserve original/Series 2 Marantz identities', () => {
-  assert.equal(products.filter(p=>p.brand==='Marantz').length,40);
+  assert.equal(products.filter(p=>p.brand==='Marantz').length,58);
   assert.equal(products.filter(p=>p.brand==='Sony').length,36);
   assert.equal(products.filter(p=>p.brand==='BenQ').length,7);
   const old=find('marantz-cinema-50'), newer=find('marantz-cinema-50-series-2');
@@ -26,6 +26,82 @@ test('source lists and BenQ screenshot updates add 83 models and preserve origin
   assert.equal(find('marantz-cinema-60-series-2').price.amountPaise,24490000);
   assert.equal(find('marantz-amp30').price.amountPaise,54900000);
   assert.equal(find('marantz-av-10').price.amountPaise,126400000);
+});
+
+test('all thirteen supplied root price lists are recorded and the remaining brand imports preserve newer Marantz prices', () => {
+  const sources=require('../src/data/theater/sources.json');
+  const expected={'Rotel':34,'Focal':69,'Sonus faber':90,'Marantz':58};
+  for(const [brand,count] of Object.entries(expected))assert.equal(products.filter(p=>p.brand===brand).length,count,brand);
+  assert.equal(sources.length,21);
+  const remaining=require('../src/data/theater/remaining-catalog-evidence.json');
+  assert.equal(remaining.length,4);
+  assert.deepEqual(remaining.map(x=>x.rows.length),[34,69,195,35]);
+  for(const source of remaining)assert.ok(sources.some(x=>x.file===source.file&&x.sha256===source.sha256));
+  assert.equal(find('marantz-mm-7025').price.amountPaise,12990000);
+  assert.equal(find('marantz-cinema-50').source.effectiveDate,'2026-07-01');
+  assert.equal(find('marantz-av7706').source.effectiveDate,'2023-06-01');
+  assert.equal(find('marantz-tt5005').price.amountPaise,3990000);
+  for(const p of products.filter(p=>remaining.some(x=>x.file===p.source.file))){
+    assert.ok(fs.existsSync('public'+p.image),p.id);
+    assert.ok(fs.existsSync('public'+p.quoteImage),p.id);
+    assert.ok(p.imageSource,p.id);
+    assert.equal(p.price.taxBasis,'inclusive');
+    assert.equal(p.price.gstRate,0);
+    assert.ok(!/[•\ufffd]/.test(p.model),p.model);
+  }
+});
+
+test('remaining models retain correct selling packs, categories, distinct variants and explicit source conflicts', () => {
+  assert.equal(find('rotel-c8').price.amountPaise,25190000);
+  assert.equal(find('rotel-c8-plus').price.amountPaise,32590000);
+  assert.equal(find('rotel-rsp-1576mkii').specs.processedChannels,11);
+  assert.equal(find('rotel-rmb-1585').specs.amplifiedChannels,5);
+  assert.deepEqual(find('rotel-x5').roles,['extra']);
+  assert.equal(find('sonus-faber-concertino-standard-edition').category,'bookshelf');
+  assert.equal(find('sonus-faber-sonetto-g2-viii').category,'floorstanding');
+  assert.equal(find('sonus-faber-gravis-iii').category,'subwoofer');
+  assert.equal(find('sonus-faber-pc-662').category,'ceiling');
+  assert.equal(find('focal-aria-k2-936').price.packSize,2);
+  assert.equal(find('focal-aria-k2-center').price.packSize,1);
+  assert.equal(find('focal-100-iw-sub8-amplifier').roles.includes('amplifier'),false);
+  for(const name of ['kit320fin','kit321fin']){
+    const p=find('sonus-faber-palladio-square-grille-kit-'+name);
+    assert.equal(p.price.amountPaise,null);
+    assert.equal(p.price.packSize,10);
+    assert.ok(p.issues.some(x=>/different prices/.test(x)));
+  }
+  assert.ok(find('sonus-faber-arena-20').issues.some(x=>/repeats DIF393FIN/.test(x)));
+  const settings={search:'',brand:'Sonus faber',type:'speakers',category:'ceiling',pending:false};
+  assert.equal(filterPricingProducts(products,settings).length,9);
+});
+
+test('actual Rotel products and electronics bundles cannot exceed ten percent for admins or employees', () => {
+  const {requireItemDiscounts}=require('../src/lib/theater/access.ts');
+  const admin={uid:'admin',role:'admin',active:true,maxDiscountPercent:100};
+  const employee={uid:'employee',role:'employee',active:true,maxDiscountPercent:20};
+  const s=state();s.discountPercent=20;
+  const processor=find('rotel-rsp-1576mkii');
+  const bundle=find('rotel-7-1-4-amplification-package-1585');
+  s.equipment.slots.receiver={productId:processor.id,finish:''};
+  s.equipment.extras=[{productId:bundle.id,finish:'',quantity:1}];
+  const q=calculateQuote(s,products);
+  for(const p of [processor,bundle]){
+    const line=q.lines.find(l=>l.productId===p.id);
+    assert.equal(line.discountPercent,10);
+    assert.equal(line.totalPaise,Math.round(p.price.amountPaise*.9));
+    s.lineDiscounts={[p.id+'|']:10};
+    assert.doesNotThrow(()=>requireItemDiscounts(admin,s,products));
+    assert.doesNotThrow(()=>requireItemDiscounts(employee,s,products));
+    s.lineDiscounts[p.id+'|']=10.01;
+    assert.throws(()=>requireItemDiscounts(admin,s,products),/maximum allowed discount is 10%/);
+    assert.throws(()=>requireItemDiscounts(employee,s,products),/maximum allowed discount is 10%/);
+  }
+  assert.equal(bundle.category,'electronics-package');
+  assert.ok(q.missing.some(x=>/Front left/.test(x)),'an amplification bundle cannot silently supply speakers');
+  s.equipment.extras=[];s.equipment.slots.receiver={productId:bundle.id,finish:''};s.lineDiscounts={};
+  const bundleQuote=calculateQuote(s,products);
+  assert.ok(!bundleQuote.missing.includes('Additional power amplifier'));
+  assert.ok(bundleQuote.missing.some(x=>/Front left/.test(x)));
 });
 
 test('BenQ brochure specifications drive fixed/zoom throw tracks without inventing prices or tax', () => {
@@ -89,7 +165,7 @@ test('new models appear in company/type/category filters and all images have a s
     assert.ok(p.imageSource,p.id);
     assert.ok(fs.existsSync('public'+p.image),p.id);
     assert.ok(fs.existsSync('public'+p.quoteImage),p.id);
-    assert.equal(p.price.gstRate,p.brand==='BenQ'&&p.price.amountPaise!==null?0:null,p.id);
+    assert.equal(p.price.gstRate,p.source.effectiveDate==='2023-06-01'||p.brand==='BenQ'&&p.price.amountPaise!==null?0:null,p.id);
   }
   assert.equal(find('sony-zm2810-1y').category,'accessory');
   assert.equal(find('sony-wq-bs1').imageKind,'service');

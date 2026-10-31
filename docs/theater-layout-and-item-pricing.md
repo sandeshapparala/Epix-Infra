@@ -31,8 +31,9 @@ IDs with the same finish are grouped before pair/set rounding and share one disc
 The allowed percentage is the lower of the employee allowance and brand cap.
 Rotel is capped at 10% for every role, including extras. Global defaults are capped
 in the calculator; forged explicit item overrides are rejected by fresh membership
-checks in the project and quotation transactions. No Rotel products or prices are
-invented; this policy applies when those catalog items are supplied.
+checks in the project and quotation transactions. The supplied December 2022
+Rotel list now supplies 34 catalogue entries, including Michi and two electronics
+bundles; this same cap applies to every one of them, including admin quotations.
 
 Sound has a single optional Soundproofing - acoustics service per room, initially
 INR 35,000. Its custom price and item discount are edited in quotation preview.

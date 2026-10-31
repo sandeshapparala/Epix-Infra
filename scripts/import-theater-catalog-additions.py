@@ -188,6 +188,9 @@ def main(source):
     if missing: raise ValueError(f'Missing reviewed image assets: {missing}')
     (DATA/'products.json').write_text(json.dumps(products,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
     (DATA/'sources.json').write_text(json.dumps(sources,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
+    remaining = ROOT/'scripts/import-theater-remaining-catalogs.py'
+    if (source.parent/"rotel retail price - dec'22.pdf").exists():
+        runpy.run_path(str(remaining))['main'](source.parent)
     runpy.run_path(str(ROOT/'scripts/prepare-theater-images.py'))['prepare']()
     print(json.dumps(dict(added=len(additions),total=len(products),sources=manifest),indent=2))
 

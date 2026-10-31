@@ -239,6 +239,8 @@ if __name__ == "__main__":
     additions_source=Path(args.source)/'new'
     if (additions_source/'Marantz Price List Oct 2026.pdf').exists():
         runpy.run_path(str(ROOT/'scripts/import-theater-catalog-additions.py'))['main'](additions_source)
+    elif (Path(args.source)/"rotel retail price - dec'22.pdf").exists():
+        runpy.run_path(str(ROOT/'scripts/import-theater-remaining-catalogs.py'))['main'](Path(args.source))
     # Reviewed manufacturer images supplement price lists without product photos.
     # Rebuild the immutable JPEGs consumed by the quotation renderer as well.
     runpy.run_path(str(ROOT/"scripts/prepare-theater-images.py"))["prepare"]()

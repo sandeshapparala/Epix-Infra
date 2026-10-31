@@ -1,0 +1,4499 @@
+[
+  {
+    "brand": "Rotel",
+    "file": "rotel retail price - dec'22.pdf",
+    "sha256": "7b93a570abcf09d662c5d60954a2cf5c221ddf16d3cb2e6303860758a93c949e",
+    "rows": [
+      {
+        "page": 2,
+        "model": "X5 - Stereo Integrated Amplifier",
+        "description": "The Michi X5 Integrated Amplifier is Performance Redefined packaged in an exquisite industrial design delivering an astounding 600 Watts of Class AB power into 4 ohm speakers even under the most extreme loading conditions featuring an array of source inputs including Analog, Digital, XLR, apt-X Bluetooth, Moving Magnet and Moving Coil Phono Stage. AKM Premium 32-bit/768KHz DAC. Supports MQA. Certified Roon Tested.",
+        "amount": 77790000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          28.48376,
+          124.01349285714284,
+          140.97558869565216,
+          204.68230000000003
+        ]
+      },
+      {
+        "page": 2,
+        "model": "X3 - Stereo Integrated Amplifier",
+        "description": "The Michi X3 Integrated Amplifier delivers uncompromised audio performance conveniently packaged in an elegant industrial design. The X3 delivers 350 Watts of Class AB output power into 4 ohm loads maintaining musical accuracy with exceptional acoustic detail from the Analog, Digital, PC-USB, XLR, apt-X Bluetooth and Moving Magnet Phono Stage source inputs. Dual sets of Rodhium plated custom MICHI speaker binding post. AKM Premium 32-bit/768KHz DAC. Supports MQA. Certified Roon Tested.",
+        "amount": 56090000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          28.48376,
+          204.68230000000003,
+          140.97558869565216,
+          288.4972
+        ]
+      },
+      {
+        "page": 2,
+        "model": "P5 - Stereo Preamplifier",
+        "description": "The Michi P5 Control Amplifier delivers the ultimate performance in audio processing with a full complement of analog and digital source inputs. The Dual AKM 32-bit DACs feed the Class-A preamplifier circuit ensuring detail, accuracy and the highest musical fidelity while maintaining crucial rhythm and timing for all musical genre regardless of your listening style. These circuits are supported by an array of 17 independent voltage regulators driven from 2 custom designed and factory built toroidal transformers with low ESR smoothing capacitors to deliver ripple free current to all critical circuits. Automation and control system integration is easily supported with RS232 and Ethernet connections. The Michi P5 includes MQA (Master Quality Authenticated) technology, which enables you to play back MQA audio files and streams, delivering the sound of the original master recording.",
+        "amount": 49890000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          28.48376,
+          288.4972,
+          140.97558869565216,
+          401.4972
+        ]
+      },
+      {
+        "page": 2,
+        "model": "S5 - Stereo Power Amplifier",
+        "description": "The Michi S5 Stereo Amplifier delivers 500 watts per channel into 8 ohms loads with best in class audio performance. The dual monoblock design includes twin, oversized, in-house manufactured toroidal transformers for exceptional bass energy while maintaining control and precision of the finest detail all packaged in an elegant design. An elegant industrial design and Michi exclusive custom high current 5-way rhodium plated binding posts. The included remote control provides easy setup and operation with RS232 and Ethernet connections supporting all popular control systems. Balanced XLR Input",
+        "amount": 84290000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          28.48376,
+          401.4972,
+          140.97558869565216,
+          495.26680000000005
+        ]
+      },
+      {
+        "page": 2,
+        "model": "M8 - Monoblock",
+        "description": "The Michi M8 Monoblock Amplifier no-compromise Class AB amplifier delivers 1,080 watts into 8 ohms and an astounding 1,800 watts into 4 ohm loads. The design architecture ensures a smooth, accurate and relaxed delivery of the audio to even the most demanding loudspeakers while maintaining critical energy, rhythm and timing. A high resolution display adorns the front panel supporting a peak power meter or spectrum analyzer. With XLR and RCA inputs, 2 sets of custom Michi speaker binding posts, remote control and fully featured RS232 and Ethernet connections the M8 provides ultimate installation flexibility. Power amplification at its best in the most elegant of industrial designs.",
+        "amount": 84290000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          28.48376,
+          495.26680000000005,
+          140.97558869565216,
+          589.1614999999999
+        ]
+      },
+      {
+        "page": 3,
+        "model": "S14 - NEW",
+        "description": "Rotel S14 Integrated Network Streamer is an all-in-one solution providing the ultimate in convenience to the near limitless catalog of music. Hi-res audio including MQA from TIDAL and Qobuz with 32-bit ESS DAC delivering 150 Watts of Class AB power into 4ohms. S14 also has the ability to use Airplay 2 and Google Cast to stream your favourite music. Front panel color display presents album artwork, track, and title information. It connects to both hard-wired and dual band Wi-Fi networks. Use your favourite music player App or use S14 App. S14 also includes Coaxial, Opt, Analog, PC-USB and aptXHD Bluetooth source inputs. It also play MP3, WMA and AAC files from flash.",
+        "amount": 27390000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          41.79993,
+          125.3388957142857,
+          151.44142,
+          218.04440000000005
+        ]
+      },
+      {
+        "page": 3,
+        "model": "RA-6000 - NEW",
+        "description": "The Diamond Series RA-6000 Integrated Amplifier celebrates Rotel’s 60-Years of Japanese heritage. The RA-6000 supports a wide array of modern and legacy analog and digital sources delivering 350 watts of Class AB power into 4 ohms with exceptional acoustic detail and controlled rich, deep bass energy. The Diamond Series RA-6000 Integrated Amplifier celebrates Rotel’s 60-Years of Japanese heritage. The RA-6000 supports a wide array of modern and legacy analog and digital sources delivering 350 watts of Class AB power into 4 ohms with exceptional acoustic detail and controlled rich, deep bass energy. Ethernet, RS232,12V trigger and external remote input simplify integration with control systems. • Available in Black and Silver • Certified Roon Tested",
+        "amount": 47990000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          41.79993,
+          271.1101,
+          151.44142,
+          384.11010000000005
+        ]
+      },
+      {
+        "page": 3,
+        "model": "RA-1592MKII",
+        "description": "The RA-1592MKII delivers 200 Watts of Class AB output into 8 ohm speakers supporting your favourite analog, digital, XLR, aptXTM and AAC Bluetooth, PC-USB with MQA and Moving Magnet Phono stage inputs. The audiophile grade 32-bit/ 384kHz DAC and precisely tuned circuits delivers an unprecedented sound stage with exacting positioning. • Available in Black and Silver • Certified Roon Tested",
+        "amount": 28090000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          41.79993,
+          384.11010000000005,
+          151.44142,
+          460.01590000000004
+        ]
+      },
+      {
+        "page": 3,
+        "model": "RA-1572MKII",
+        "description": "The RA-1572MKII Integrated Amplifier brings your music to life with exceptional fidelity delivering 120 Watts of Class AB output into 8 ohms with deep, controlled bass energy. The audiophile grade DAC, analog, digital, aptXTM and AAC Bluetooth, PC- USB supporting MQA and Moving Magnet Phono stage ensure exceptional detail and immersive soundstage. • Available in Black and Silver • Certified Roon Tested",
+        "amount": 21190000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          41.79993,
+          460.01590000000004,
+          151.44142,
+          535.8530000000001
+        ]
+      },
+      {
+        "page": 3,
+        "model": "A14MKII",
+        "description": "• The A14 MKII Integrated Amplifier delivers 80 Watts per channel of Class AB amplification from your favourite sources including analog, digital, PC-USB with MQA, wireless aptXTM and AAC Bluetooth and Moving Magnet Phono stage. Critically tuned power supply, DAC and amplifier circuits ensure the A14MKII will deliver countless hours of entertainment. • Available in Black and Silver • Certified Roon Tested",
+        "amount": 15790000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          41.79993,
+          535.8530000000001,
+          151.44142,
+          611.9857999999999
+        ]
+      },
+      {
+        "page": 3,
+        "model": "A12MKII",
+        "description": "The A12MKII stands well above its sleek design delivering 60 Watts of dynamic Class AB output into 8 ohms. This integrated amplifier supports your favourite sources including MM Phono Stage, analog, digital, PC-USB and wireless Bluetooth. Optimised circuits and a 32-bit DAC deliver spacious and open reproduction of the music. • Available in Black and Silver • Certified Roon Tested",
+        "amount": 12890000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          41.79993,
+          611.9857999999999,
+          151.44142,
+          688.6567666666666
+        ]
+      },
+      {
+        "page": 3,
+        "model": "A11 Tribute",
+        "description": "The A11 Tribute is a Class AB 50W Integrated Amplifier developed in cooperation with the audio engineering legend Ken Ishiwata as a Tribute to his legacy. Upgraded components and meticulous tuning of all critical circuits deliver a richer, expressive, and true-to-life experience from the Bluetooth, RCA and Moving Magnet Phono Stage inputs. • Available in Black and Silver",
+        "amount": 9390000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          41.79993,
+          688.6567666666666,
+          151.44142,
+          764.0186006666667
+        ]
+      },
+      {
+        "page": 3,
+        "model": "A10",
+        "description": "The A10 is a 40-watt per channel integrated amplifier with class AB High Current power supply that will satisfy the audio purist who doesn’t require high power output or digital streaming capability. Its straightforward operation is refreshing and its performance is a pleasure to listen to. • Available in Black and Silver",
+        "amount": 6290000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          41.79993,
+          764.0186006666667,
+          151.44142,
+          840.0975966714286
+        ]
+      },
+      {
+        "page": 4,
+        "model": "RC-1590MKII",
+        "description": "Rotel’s RC-1590MKII reference preamplifier renders audio with natural expression, an open sound stage and dynamic clarity. Digital source inputs are processed utilizing an audiophile grade Texas Instruments 32-bit/384kHz Digital to Audio Converter (DAC). Analog signal paths feature DIRECT-PATH bypass modes eliminating unnecessary circuits. Supports multiple input sources Moving Magnet Phono input for vinyl lovers, Analog, Digital, XLR Balanced, high quality aptXTM and AAC wireless Bluetooth, and PC-USB (32-bit/384kHz) supporting MQA unfolding and rendering as well as certified Roon Tested. • Available in Black and Silver",
+        "amount": 23090000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          38.64001,
+          147.2900833333333,
+          151.95250666666666,
+          242.29010000000002
+        ]
+      },
+      {
+        "page": 4,
+        "model": "RC-1572MKII",
+        "description": "Affordable high-end begins with Rotel’s RC-1572MKII Preamplifier using premium Texas Instruments 32-bit Digital to Analog converter (DAC) ensuring the audio is effortlessly presented with exceptional dynamic detail and musical expression. Analog, Digital, XLR, aptXTM and AAC Wireless Bluetooth and Moving Magnet Phono Stage inputs ensure connection to your favourite music sources. Digital media files are supported via a 32-bit/384kHz PC-USB connection supporting MQA and is fully certified Roon Tested for graceful access to the near limitless catalog of online music. RCA, XLR and subwoofer outputs are provided for installation flexibility • Available in Black and Silver",
+        "amount": 14690000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          38.64001,
+          242.29010000000002,
+          151.95250666666666,
+          345.29010000000005
+        ]
+      },
+      {
+        "page": 4,
+        "model": "RB-1590",
+        "description": "The RB-1590 is at the top of its class as a 2 x 350 Watts Class AB stereo amplifier with dual toroidal transformers and special slit foil capacitors. Features include: XLR Balanced and RCA input connections, two pair of 5-way speaker binding posts, 12- volt trigger control, thermal protection circuitry, overcurrent, over-voltage protection circuitry, dual staged power on relay to reduce surge current and extend longevity, and a detachable IEC power cord all in a 5U chassis with included rack ears. • Available in Black and Silver",
+        "amount": 40390000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          38.64001,
+          376.9629,
+          151.95250666666666,
+          450.5976
+        ]
+      },
+      {
+        "page": 4,
+        "model": "RB-1582MKII",
+        "description": "At 2 x 200 Watts per channel and utilising Rotel's Balanced Design Concept for superior performance, the RB-1582 MkII is a compelling stereo amplifier. The output stage is a discrete design that consists of 10 high current bipolar transistors per channel. Input options consist of both balanced XLR and unbalanced RCA connectors. • Available in Black and Silver",
+        "amount": 20490000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          38.64001,
+          450.5976,
+          151.95250666666666,
+          524.2323
+        ]
+      },
+      {
+        "page": 4,
+        "model": "RB-1552MKII",
+        "description": "RB-1552 MkII is built upon the same platform as the RB-1582 MkII with only a slightly smaller power output capability at 2 x 130 Watts Class AB amplifier. Input options are balanced XLR or unbalanced RCA connectors. • Available in Black and Silver",
+        "amount": 12790000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          38.64001,
+          524.2323,
+          151.95250666666666,
+          597.8669
+        ]
+      },
+      {
+        "page": 5,
+        "model": "DT-6000 - NEW",
+        "description": "Rotel’s Diamond Series DT-6000 DAC Transport celebrates 60-Years of performance, passion, and value synonymous with the brands Japanese heritage. An 8-channel ESS Sabre ES9028PRO DAC dedicates 4 channels each to stereo outputs The PC-USB input supports up to 32-bit/384kHz including MQA (24-bit/384kHz) and DSD (4X). Optical and Coaxial inputs are also included supporting 24-bit/192kHz streams. Front panel controls, a back-lit IR remote and 2-line display ensure intuitive operation of the unit. RS232, 12V trigger and external remote input ensure integration with control systems. • Available in Black and Silver",
+        "amount": 23490000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          38.64001,
+          107.44739571428572,
+          151.9525068181818,
+          219.49740000000003
+        ]
+      },
+      {
+        "page": 5,
+        "model": "RCD-1572MKII",
+        "description": "The RCD-1572MKII follows Rotel’s proud tradition of delivering award winning CD players since 1989. Utilizing an ultra-low noise in-house manufactured toroidal transformer the RCD-1572MKII’s circuits are electrically and physically isolated removing unwanted distortion and lowering the noise floor. A premium Texas Instruments 32-bit DAC delivers exceptional frequency response to fully balanced differential XLR Balanced, RCA and coaxial digital outputs. • Available in Black and Silver",
+        "amount": 11290000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          38.64001,
+          219.49740000000003,
+          151.9525068181818,
+          310.1974
+        ]
+      },
+      {
+        "page": 5,
+        "model": "CD-14MKII",
+        "description": "The CD14 design begins with a carefully engineered power supply to ensure separate, ripple-free voltage and current to both digital and analogue circuits. • Wolfson premium 24-bit/192kHz DAC • Coaxial digital output connection • Available in Black and Silver",
+        "amount": 7990000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          38.64001,
+          310.1974,
+          151.9525068181818,
+          381.0574
+        ]
+      },
+      {
+        "page": 5,
+        "model": "CD11 Tribute",
+        "description": "Rotel has been designing and manufacturing CD players since the RCD-855 was launched in 1989 and has never looked back since. With over 40 years of audio engineering experience Ken’s collaboration with Rotel created something truly special – the CD11 Tribute edition. The CD11 Tribute includes critical changes to the power supply, DAC circuits and precise selection of components. Supporting RCA analog and coaxial digital outputs, front panel display and a remote control • Available in Black and Silver",
+        "amount": 5590000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          38.64001,
+          381.0574,
+          151.9525068181818,
+          471.0574
+        ]
+      },
+      {
+        "page": 5,
+        "model": "T14",
+        "description": "The T14 provides a wealth of high quality listening choices, from over the air FM/DAB+ broadcasts to a wide variety of internet streaming services over Wifi courtesy of DTS Play-Fi. The 30 FM and DAB+ presets provide easy access to all of your favourite music stations. T14 using the DTS Play- Fi iOS and Android Apps including Spotify, Pandora, Tidal, Rhapsody, Amazon Music, Deezer, AirPlay and more. • Available in Black and Silver",
+        "amount": 9990000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          38.64001,
+          487.6648,
+          151.9525068181818,
+          566.6648
+        ]
+      },
+      {
+        "page": 5,
+        "model": "T14 - Optional USB > Ethernet Adaptor Part # USB2E100B",
+        "description": "USB to 10/100 Fast Ethernet Network Adapter",
+        "amount": 580000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          38.64001,
+          566.6648,
+          151.9525068181818,
+          602.3377
+        ]
+      },
+      {
+        "page": 5,
+        "model": "T11",
+        "description": "Rotel’s T11 is a high quality FM/DAB+ tuner with up to 30 station presets. Like the T14, T11 features the ability to easily store and recall up to 30 presets each for FM or DAB+ stations. • Available in Black and Silver",
+        "amount": 5190000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          38.64001,
+          602.3377,
+          151.9525068181818,
+          679.1338
+        ]
+      },
+      {
+        "page": 6,
+        "model": "RMB-1585",
+        "description": "RMB-1585 features 5 x 200 Watts Class AB to drive even the largest of home theatre speaker systems.• THD (20Hz-20kHz) <0.03% • Available in Black and Silver",
+        "amount": 40790000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          38.64001,
+          186.2966957142857,
+          151.95250631578946,
+          260.94452499999994
+        ]
+      },
+      {
+        "page": 6,
+        "model": "RMB-1555",
+        "description": "With only slightly less power than its big brother, the RMB-1555 retains a very robust power supply to deliver 5 x 120 Watts Class AB per channel to medium and large home theatres. • Available in Black and Silver",
+        "amount": 22690000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          38.64001,
+          260.94452499999994,
+          151.95250631578946,
+          331.5546
+        ]
+      },
+      {
+        "page": 6,
+        "model": "RMB-1506",
+        "description": "Featuring 6 x 50 watts at 8ohm per channel, the RMB-1506 is a rugged, sophisticated, multichannel amplifier. It is perfect for less elaborate multizone audio systems and can be mated with our surround receiver or our preamp/processors to add music throughout three additional living areas or “zones” of your home. • Available in Black",
+        "amount": 12190000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          38.64001,
+          348.162,
+          151.95250631578946,
+          421.70071428571424
+        ]
+      },
+      {
+        "page": 6,
+        "model": "RMB-1504",
+        "description": "The RMB-1504 Class AB 4-channel amplifier delivers 70 Watts into 8ohm and 115 Watts into 4ohm on the ongoing commitment of performance without compromise building on over 55 years of Rotel amplifier design and in-house manufacturing of Hi-Fi electronics. This amplifier provides the power and refinement suited for home theater installations as well as custom installation multi-room audio solutions. The 12 volt trigger input and output connections, user selected audio signal sense power control. • Available in Black",
+        "amount": 11990000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          38.64001,
+          421.70071428571424,
+          151.95250631578946,
+          504.9507625
+        ]
+      },
+      {
+        "page": 6,
+        "model": "C8",
+        "description": "Performance meets efficiency in Rotel’s C8 Class AB Custom Installation Amplifier, driving 8- channels of premium audio at 70 Watts per channel, or bridged at 140 Watts into 4-ohm loads. The C8 includes 4 Analog inputs matrixed to all Zones. Front panel display and controls provide source and independent volume, bass and treble settings. The custom 2U height requires no top or bottom clearance when rack mounting. Control system integration is available via IP and RS232 interfaces and 12-Volt trigger.",
+        "amount": 25190000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          38.64001,
+          504.9507625,
+          151.95250631578946,
+          584.2008
+        ]
+      },
+      {
+        "page": 6,
+        "model": "C8+",
+        "description": "Performance meets efficiency in Rotel’s C8+ Class AB Custom Installation Amplifier, driving 8-channels of premium audio at 150 Watts per channel, or bridged at 300 Watts into 4-ohm speakers utilizing Rotel’s proprietary amplification technology. For ultimate installation flexibility the C8+ includes 4 Analog, 4 Digital inputs matrixed to all Zones. Front panel display and controls provide source selection and independent volume, bass and treble settings. Control system integration is available via IP and RS232 interfaces and 12-Volt trigger. The custom 2U height requires no top or bottom clearance when rack mounting.",
+        "amount": 32590000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          38.64001,
+          584.2008,
+          151.95250631578946,
+          685.87365
+        ]
+      },
+      {
+        "page": 2,
+        "model": "RSP-1576MKII",
+        "description": "7.1.4-channel AV processor; Dolby Atmos, DTS:X, Dirac Live room correction; 7 HDMI 2.0b inputs with 4K/UHD, HDCP 2.2 and HDR10; Bluetooth apt-X; MM phono and PC-USB. External amplification required.",
+        "amount": 37790000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          28,
+          625,
+          142,
+          703
+        ]
+      },
+      {
+        "page": 7,
+        "model": "7.1.4 Amplification Package 1585",
+        "description": "RSP-1576MKII processor, RMB-1585 (5 channels), RB-1582MKII (2 channels), RMB-1504 (4 channels). Electronics only; speakers and subwoofer are not included. Do not combine with the same individual components.",
+        "amount": 111060000,
+        "unit": "set",
+        "packSize": 1,
+        "cell": [
+          20,
+          170,
+          580,
+          360
+        ],
+        "package": true
+      },
+      {
+        "page": 9,
+        "model": "7.1.4 Amplification Package 1555",
+        "description": "RSP-1576MKII processor, RMB-1555 (5 channels), RMB-1506 (6 channels). Electronics only; speakers and subwoofer are not included. Do not combine with the same individual components.",
+        "amount": 72670000,
+        "unit": "set",
+        "packSize": 1,
+        "cell": [
+          20,
+          170,
+          580,
+          360
+        ],
+        "package": true
+      }
+    ]
+  },
+  {
+    "brand": "Focal",
+    "file": "FOCAL MRP ARIA PRICE LIST JULY-2023-1.pdf",
+    "sha256": "fde872f00a69ea33c1dfaa904bcc51af36c3892d57b23edaaca0d8e9fc53bba4",
+    "rows": [
+      {
+        "page": 3,
+        "model": "ARIA K2 936",
+        "description": "• Type 3-way bass-reflex floor standing loudspeaker • Speaker drivers 3 x 61/2\" (16.5cm) K2 woofer 61/2\" (16.5cm) K2 midrange 1\" (25mm) Al/Mg TNF inverted dome tweeter • Frequency response (+/-3dB) 39Hz -28kHz • Low frequency point -6 Db 32Hz • Sensitivity (2.83V / 1m) 92dB • Nominal impedance 8 Ω • Minimum impedance 2.8 Ω • Recommended amplifier power 50 -300W • Crossover frequency 260Hz / 3,100Hz • Dimensions (H x W x D) (1,150x294x371mm) • Weight 64lbs (29kg)",
+        "amount": 56000000,
+        "unit": "pair",
+        "packSize": 2,
+        "cell": [
+          3,
+          202.35000000000002,
+          114,
+          380.31
+        ]
+      },
+      {
+        "page": 3,
+        "model": "ARIA K2 906",
+        "description": "Weight 64lbs (29kg) • Type Bass-reflex 2-way bookshelf loudspeaker • Speaker drivers 61/2\" (16.5cm) K2 Bass/Midrange Inverted dome TNF tweeter Al/Mg 1\" (25mm) • Frequency response (+/-3dB) 55Hz -28kHz • Low frequency cut-off (-6dB) 47Hz • Sensitivity (2.83V / 1m) 89.5dB • Nominal impedance 8 Ohms • Minimal impedance 4.6 Ohms • Recommended amplifier power 30 -120W • Crossover frequency 2,800Hz • Dimensions (WxDxH) (225x280x390mm) • Weight (with grille) 18.7lbs (8.5kg)",
+        "amount": 24000000,
+        "unit": "pair",
+        "packSize": 2,
+        "cell": [
+          3,
+          380.31,
+          114,
+          558.27
+        ]
+      },
+      {
+        "page": 3,
+        "model": "ARIA K2 CENTER",
+        "description": "Weight (with grille) 18.7lbs (8.5kg) • Type Bass-reflex 2-way central speaker • Speaker drivers 2 x 61/2\" (16.5cm) K2 Bass/Midrange Inverted dome TNF tweeter Al/Mg 1\" (25mm) • Frequency response (+/-3dB) 57Hz -28kHZ • Low frequency cut-off (-6dB) 50Hz • Sensitivity (2.83V / 1m) 91dB • Nominal impedance 8 Ohms • Minimal impedance 4.3 Ohms • Recommended amplifier power 40 -200W • Crossover frequency 2,800Hz • Dimensions (WxDxH) (533x245x200mm) • Weight (with grille) 23.15lbs (10.5kg)",
+        "amount": 15000000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          3,
+          558.27,
+          114,
+          736.3
+        ]
+      },
+      {
+        "page": 4,
+        "model": "ARIA 948",
+        "description": "• Type 2-way bass-reflex floor standing loud speaker power flow • Drivers 2x8¼“flax bass • 6½” flaxmidrange • 1\" TNFtweeter • Freq response 37Hz -28kHz • Sensitivity 92.5db • Nominalimpedance8ohms • Recommended power50….350W • Dimensions(HxWxD) 45¼\"x 14⅝\"x16⅗\" • Weight 77lb(35kg)",
+        "amount": 57000000,
+        "unit": "pair",
+        "packSize": 2,
+        "cell": [
+          3,
+          202.35000000000002,
+          114,
+          324.61
+        ]
+      },
+      {
+        "page": 4,
+        "model": "ARIA 936",
+        "description": "• Type 3-way bass-reflex floor standing loud speaker power flow • Drivers 3x6½” flaxbass • 6½” flaxmidrange • 1\" TNFtweeter • Freq response 39Hz -28kHz • Sensitivity 92db • Nominalimpedance8ohms • Recommended power50….300W • Dimensions(HxWxD) 45¼\"x 11⅗\"x14⅝\" • Weight 64lb(29kg)",
+        "amount": 47500000,
+        "unit": "pair",
+        "packSize": 2,
+        "cell": [
+          3,
+          324.61,
+          114,
+          443.01
+        ]
+      },
+      {
+        "page": 4,
+        "model": "ARIA 926",
+        "description": "• Type 3-way bass-reflex floor standing loud speaker power flow • Drivers 2x6½” flaxbass • 6½” flaxmidbass • 1\" TNFtweeter • Freq response 45Hz -28kHz • Sensitivity 91.5db • Nominalimpedance8ohms • Recommended power40….250W • Dimensions(HxWxD) 40¾\"x 11⅗\"x14⅝\" • Weight 55lb(25kg)",
+        "amount": 39500000,
+        "unit": "pair",
+        "packSize": 2,
+        "cell": [
+          3,
+          443.01,
+          114,
+          561.4100000000001
+        ]
+      },
+      {
+        "page": 4,
+        "model": "ARIA CC 900",
+        "description": "• Type 2-way bass-reflex shielded canter channel • Drivers 2x6½” flaxmid • 1\" TNFtweeter • Freq response 57Hz -28kHz • Sensitivity 91db • Nominalimpedance8ohms • Recommended power40….200W • Dimensions(HxWxD) 7⅞\"x 20⅞\"x9⅝\" • Weight 23lb(10.5kg)",
+        "amount": 12000000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          3,
+          561.4100000000001,
+          114,
+          668.06
+        ]
+      },
+      {
+        "page": 4,
+        "model": "ARIA SR 900",
+        "description": "• Type 2-way sealed bi polar effect loud speaker, polyfix wall bracket • Drivers 2x5” flaxmidbass • 2x1\" TNFtweeter • Freq response 85Hz -28kHz • Sensitivity 90db • Nominalimpedance8ohms • Recommended power25….120W • Dimensions(HxWxD) 11½\"x 15¾\"x6⅞\" • Weight 12.1lb(5.6kg)",
+        "amount": 19500000,
+        "unit": "pair",
+        "packSize": 2,
+        "cell": [
+          3,
+          668.06,
+          114,
+          776.391
+        ]
+      },
+      {
+        "page": 5,
+        "model": "ARIA 906",
+        "description": "Type 2-way bass-reflex bookshelf speaker Drivers 6.5“flax midbass 1\" TNFtweeter Freq response 55Hz -28kHz Sensitivity 89.5db Nominalimpedance8ohms Recommended power25….120W Dimensions(HxWxD) 15⅜\"x 8⅞\"x11¾\" Weight 19lb(8.5kg)",
+        "amount": 19000000,
+        "unit": "pair",
+        "packSize": 2,
+        "cell": [
+          3,
+          192.26999999999998,
+          114,
+          301.92999999999995
+        ]
+      },
+      {
+        "page": 5,
+        "model": "ARIA S900",
+        "description": "Type floor stand for Aria S 906 Drivers mattaluminium Dimensions(H)24”",
+        "amount": 9900000,
+        "unit": "pair",
+        "packSize": 2,
+        "cell": [
+          3,
+          301.92999999999995,
+          114,
+          386.98
+        ]
+      },
+      {
+        "page": 5,
+        "model": "SUB 1000F",
+        "description": "Type bass-reflex active subwoofer Drivers 30cm flax-membrane bass speaker cone Freq response 40Hz -160Hz Recommended power1000W",
+        "amount": 19000000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          3,
+          386.98,
+          114,
+          489.04
+        ]
+      },
+      {
+        "page": 7,
+        "model": "VESTIA N4",
+        "description": "• Type 3-way bass-reflex floor standing loudspeaker • Drivers 2 x 81/4” (21cm) Slate fiberwoofers 61/2\" (16.5cm) Slate fiber Midrange 1\" (25mm) Al/Mg ‘M’-shaped inverted dome TAM tweeter • Sensitivity (2,83V/1m) 92dB • Frequency response (±3 dB) 40Hz -30kHz • Low frequency point (-6 dB) 34Hz • Nominalimpedance8Ω • Minimumimpedance2.6Ω • Recommendedamplifierpower40-350W • Dimensions (WxDxH) (30.4 x 43 x 112.6cm) • Net weight (with grille) 69.45lbs (31.5kg)",
+        "amount": 47000000,
+        "unit": "pair",
+        "packSize": 2,
+        "cell": [
+          3,
+          218.01,
+          114,
+          364.3
+        ]
+      },
+      {
+        "page": 7,
+        "model": "VESTIA N3",
+        "description": "• Type 3-way bass-reflex floor standing loudspeaker • Drivers 3 x 61/2\" (16.5cm) Slate fiberWoofer 61/2\" (16.5cm) Slate fiber Midrange 1\" (25mm) Al/Mg inverted dome TAM tweeter • Sensitivity (2,83V/1m) 92dB • Frequency response (±3 dB) 42Hz -30kHz • Low frequency point (-6 dB) 35Hz • Nominalimpedance8Ω • Minimumimpedance2.9Ω • Recommendedamplifierpower40-300W • Dimensions (WxDxH) (25.6x37.5x112.2cm) • Net weight (with grille) 58.4lbs (26.5 kg)",
+        "amount": 40000000,
+        "unit": "pair",
+        "packSize": 2,
+        "cell": [
+          3,
+          364.3,
+          114,
+          517.39
+        ]
+      },
+      {
+        "page": 7,
+        "model": "VESTIA N2",
+        "description": "• Type 3-way bass-reflex floor standing loudspeaker • Drivers 2 x 61/2\" (16.5cm) Slate fiberWoofer 61/2\" (16.5cm) Slate fiber Midbass1\" (25mm) Al/Mg inverted dome TAM tweeter • Sensitivity (2,83V/1m) 91.5dB • Frequency response (±3 dB) 47Hz -30kHz • Low frequency point (-6 dB) 37Hz • Nominalimpedance8Ω • Minimumimpedance3Ω • Recommendedamplifierpower40-250W • Dimensions (WxDxH) (25.6x37.1x101.2cm) • Net weight (with grille) 48.5lbs (22kg)",
+        "amount": 32000000,
+        "unit": "pair",
+        "packSize": 2,
+        "cell": [
+          3,
+          517.39,
+          114,
+          662.83
+        ]
+      },
+      {
+        "page": 8,
+        "model": "VESTIA N1",
+        "description": "• Type 2-way bass-reflex bookshelf loudspeaker • Drivers 61/2\" (16.5cm) SlatefiberMidbass1\" (25mm) Al/Mg inverted dome TAM tweeter • Sensitivity (2,83V/1m) 89.5dB • Frequency response (±3 dB) 56Hz -30kHz • Low frequency point (-6 dB) 48Hz • Nominalimpedance8Ω • Minimumimpedance4.5Ω • Recommendedamplifierpower25-120W • Dimensions(WxDxH) (21.9x26x38.7cm) • Net weight (with grille)",
+        "amount": 16500000,
+        "unit": "pair",
+        "packSize": 2,
+        "cell": [
+          3,
+          218.01,
+          114,
+          357.6
+        ]
+      },
+      {
+        "page": 8,
+        "model": "VESTIA CENTER",
+        "description": "• Type 2-way bass-reflex centerloudspeaker • Drivers 2 x 61/2\" (16.5cm) Slate fiberMid-bass 1\" (25mm) Al/Mg inverted dome TAM tweeter • Sensitivity (2,83V/1m) 91.5dB • Frequency response (±3 dB) 58Hz -30kHz • Low frequency point (-6 dB) 50Hz • Nominalimpedance 8Ω • Minimumimpedance3.6Ω • Recommendedamplifierpower 40-200W • Dimensions (WxDxH) (53.7x25.9x21.6cm) • Net weight (with grille) 22lbs (10kg)",
+        "amount": 11000000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          3,
+          357.6,
+          114,
+          488.26
+        ]
+      },
+      {
+        "page": 8,
+        "model": "VESTIA N1 STAND",
+        "description": "• Type Stand for bookshelf loudspeaker • Height without spikes 1.8ft (55cm) • Weight (unit) 8.4lbs (3.8kg)",
+        "amount": 2500000,
+        "unit": "pair",
+        "packSize": 2,
+        "cell": [
+          3,
+          488.26,
+          114,
+          633.71
+        ]
+      },
+      {
+        "page": 8,
+        "model": "VESTIA CENTER STAND",
+        "description": "Key points: Design in harmony with the entire Vestia line Spikes and feet included Brushed black finish Height without spikes: 17 ²³/₃₂” (45cm)",
+        "amount": 1500000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          3,
+          633.71,
+          114,
+          779.15
+        ]
+      },
+      {
+        "page": 10,
+        "model": "THEVA N3-D",
+        "description": "• Type: 3-way bass-reflex floorstanding loudspeaker • Drivers: 2 x 61/2\" (16.5cm) Slatefiberbass 61/2\" (16.5cm) Slatefiber midrange 1\" (25mm) Al/Mg inverted dome TNF tweeter 5\" (13cm) full-range speaker driver • Sensitivity” 91dB / 91dB • Bandwidth:48Hz-28kHz/100Hz-20kHz • Low-frequencycut-of:39Hz/90Hz • Nominalimpedance:8Ω/6Ω • Minimalimpedance:2.9Ω • Recommandedamplifierpower:40/250W • Dimensions(HxWxD):40.11\"x8.34\"x15.27\" • Netweight(withgrille):48.5lbs(22kg)",
+        "amount": 30000000,
+        "unit": "pair",
+        "packSize": 2,
+        "cell": [
+          3,
+          210.71000000000004,
+          114,
+          360.33
+        ]
+      },
+      {
+        "page": 10,
+        "model": "THEVA N3",
+        "description": "• Type: Bass-reflex 3-way floorstandingloudspeaker • Drivers 2 x 61/2\" (16.5cm) Slatefiberbass 61/2\" (16.5cm) Slatefiber midrange 1\" (25mm) Al/Mg inverted dome TNF tweeter • Sensitivity: 91dB • Bandwidth: 48Hz –28kHz • Low-frequency cut-of: 39Hz • Nominal impedance: 8 Ω • Minimal impedance: 2.9 Ω • Recommended amp power: 40 –250W • Dimensions(HxWxD): 39\"x8.5\"x15.25“ • Net weight (with grille): 44.09lbs (20kg)",
+        "amount": 24000000,
+        "unit": "pair",
+        "packSize": 2,
+        "cell": [
+          3,
+          360.33,
+          114,
+          511.49
+        ]
+      },
+      {
+        "page": 10,
+        "model": "THEVA N2",
+        "description": "• Type:Bass-reflex 3-way floorstandingloudspeaker • Drivers 2 x 5\" (13cm) Slatefiberbass 5\" (13cm) Slatefibermidrange 1\" (25mm) Al/Mg inverted dome TNF tweeter • Sensitivity: 90dB • Bandwidth: 53 –28kHz • Low-frequency cut-of: 44 • Nominal impedance: 8 Ω • Minimal impedance: 2.9 Ω • Recommended amp power: 40 –200W • Dimensions(HxWxD): 37\"x7.5\"x14” • Net weight (with grille): 37.48lbs (17kg)",
+        "amount": 21000000,
+        "unit": "pair",
+        "packSize": 2,
+        "cell": [
+          3,
+          511.49,
+          114,
+          651.84
+        ]
+      },
+      {
+        "page": 10,
+        "model": "THEVA N1",
+        "description": "• Type: Bass-reflex 2-way bookshelf loudspeaker • Drivers: 61/2\" (16.5cm) SlatefiberMidrange/Bass 1\" (25mm) Al/Mg inverted dome TNF tweeter • Sensitivity: 89dB • Bandwidth: 58Hz –28kHz • Low-frequency cut-of: 49Hz • Nominal impedance: 8 Ω • Minimal impedance: 4.6 Ω • Recommended amp power: 25 –100W • Dimensions(HxWxD): 15.5\"x8.5\"x10.25” • Net weight (with grille): 15.43lbs (7kg)",
+        "amount": 12000000,
+        "unit": "pair",
+        "packSize": 2,
+        "cell": [
+          3,
+          651.84,
+          114,
+          797.09
+        ]
+      },
+      {
+        "page": 11,
+        "model": "THEVA CENTER",
+        "description": "• Type: 2-way closed centre speaker • Drivers: 2x 61/2\" (16.5cm) slatefiberMidrange/Bass 1\" (25mm) Al/Mg inverted dome TNF tweeter • Sensitivity: 91dB • Bandwidth: 59Hz –28kHz • Low-frequency cut-of: 51Hz • Nominal impedance : 8Ω • Minimalimpedance:3.8Ω • Recommandedamplifierpower:40–200W • Dimensions(HxWxD):8.5\"x21\"x10.25\" • Netweight(withgrille):22.05lbs(10kg)",
+        "amount": 9900000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          3,
+          210.71000000000004,
+          114,
+          335.95
+        ]
+      },
+      {
+        "page": 11,
+        "model": "THEVA SURROUND",
+        "description": "• Type: 2-way closed surround speaker • Drivers: 61/2\" (16.5cm) SlatefiberMidrange/Bass 1\" (25mm) Al/Mg inverted dome TNF tweeter • Sensitivity: 89dB • Bandwidth: 80Hz –28kHz • Low-frequency cut-of: 67Hz • Nominal impedance: 8 Ω • Minimal impedance: 4.5 Ω • Recommended amp power: 25 –100W • Dimensions(HxWxD): 17.5\"x12.5\"x4.25“ • Net weight (with grille): 12.13lbs (5.5kg)",
+        "amount": 12000000,
+        "unit": "pair",
+        "packSize": 2,
+        "cell": [
+          3,
+          335.95,
+          114,
+          487.11
+        ]
+      },
+      {
+        "page": 11,
+        "model": "THEVA N1 STAND",
+        "description": "• STAND FOR THEVA N°1 AND VESTIA N°1 • Standing at 215/8” (55cm) high, these stands have been specifically designed to elevate and showcase theThevaN°1etVestiaN°1high- fidelity loudspeakers. The loudspeaker is fixed to the stand using a screw system that ensures it is stable and prevents any vibration. The stands are also tilted forTime Alignment, achieving a soundstage focused more on the listener.",
+        "amount": 2500000,
+        "unit": "pair",
+        "packSize": 2,
+        "cell": [
+          3,
+          487.11,
+          114,
+          627.46
+        ]
+      },
+      {
+        "page": 11,
+        "model": "THEVA CENTER STAND",
+        "description": "• STAND FOR THEVA CENTER AND VESTIA CENTER • The stand forThevaCenterandVestiaCenterhas been specifically designed to elevate and showcase these central Home Cinema speakers. The loudspeaker is fixed to the base using a screw system that guarantees the product is stable and prevents any vibration, for even more listening pleasure.",
+        "amount": 1500000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          3,
+          627.46,
+          114,
+          772.711
+        ]
+      },
+      {
+        "page": 13,
+        "model": "1000 ICW10",
+        "description": "• Type LITTORA 1000 ICW10 • Tweeter Beryllium • Recommended amp power 50 –200W • Nominal impedance8 Ohms • Minimal impedance 4.3 ohms at 150Hz • Sensitivity (2.83 V/3ft -1m) 92dB • Frequency response 38Hz –40kHz • IP certification IP65 (ASTMB117) • Diameter 10“ • Mounting depth43/4\" (122mm)",
+        "amount": 22000000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          3,
+          208.34000000000003,
+          114,
+          324.61
+        ]
+      },
+      {
+        "page": 13,
+        "model": "1000 ICW8",
+        "description": "• Type LITTORA 1000 ICW8 • Tweeter Beryllium • Recommended amp power 50 –180W • Nominal impedance8 Ohms • Minimal impedance 4.3 ohms at 150Hz • Sensitivity (2.83 V/3ft -1m) 91dB • Frequency response 45Hz –40kHz • IP certification IP65 (ASTMB117) • Diameter 8\" • Mounting depth 41/2\" (112.7mm)",
+        "amount": 20000000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          3,
+          324.61,
+          114,
+          443.68
+        ]
+      },
+      {
+        "page": 13,
+        "model": "1000 ICW SUB10",
+        "description": "• Type LITTORA 1000 ICW SUB10 • Recommended amp power 100 -300W • Nominal impedance8 ohms • Minimal impedance 4 ohms at 85Hz • Sensitivity (2.83 V/3ft -1m) 90dB • Frequency response 25Hz -500Hz • IP certification IP65 (ASTMB117) • Diameter 10'' • Mounting depth47/8\" (123mm)",
+        "amount": 17500000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          3,
+          443.68,
+          114,
+          551.4100000000001
+        ]
+      },
+      {
+        "page": 13,
+        "model": "200 ICW8",
+        "description": "• Type LITTORA 200 ICW8 • Tweeter ‘M’-shaped aluminium dome • Recommended amp power 25 –150W • Nominal impedance8 Ohms • Minimal impedance 4.2 ohms at 150Hz • Sensitivity (2.83 V/3ft -1m) 90dB • Frequency response 48Hz –28kHz • IP certification IP65 (ASTMB117) • Diameter 8\" • Mounting depth41/2\" (113mm)",
+        "amount": 7100000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          3,
+          551.4100000000001,
+          114,
+          664.81
+        ]
+      },
+      {
+        "page": 13,
+        "model": "200 ICW6",
+        "description": "• Type LITTORA 200 ICW6 • Tweeter ‘M’-shaped aluminium dome • Recommended amp power 25 –130W • Nominal impedance8 Ohms • Minimal impedance 4.2 ohms at 150Hz • Sensitivity (2.83 V/3ft -1m) 89dB • Frequency response 65Hz –28kHz • IP certification IP65 (ASTMB117) • Diameter 6.5\" • Mounting depth 33/4\" (95.5mm)",
+        "amount": 6000000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          3,
+          664.81,
+          114,
+          783.875
+        ]
+      },
+      {
+        "page": 14,
+        "model": "OD SAT 5",
+        "description": "Type 2-way outdoor speaker Speaker drivers 5\" (12.7cm) Midbass, Iris IP cone 1\" (2.5cm) Aluminium 'M'- shaped tweeter Bandwidth 90Hz –28kHz impedance8Ώ Minimal impedance 5.2Ώ at 250Hz P Sensitivity 88dB Power 50W RMS –100W Peak Recommended amp power 8Ώ 20W –100W IP rating IP55 Dimensions (WxDxH)125/8\"x125/8\"x81/4\" (32x32x21cm) Weight 5.5lbs (2.5kg)",
+        "amount": 5500000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          3,
+          208.34000000000003,
+          114,
+          335.95
+        ]
+      },
+      {
+        "page": 14,
+        "model": "OD STONE 8",
+        "description": "Type 2-way outdoor speaker Speaker drivers 8\" (20cm) Midbasswith Iris IP cone 1\" (2.5cm) Aluminium 'M'-shaped tweeter Bandwidth 45Hz –28kHz impedance8Ώ Minimal impedance 5.2Ώ at 180Hz Sensitivity 89dB P Power at 8Ώ 75W RMS –150W Peak Power at 100V 50W Recommended amp power 8Ώ 20W –150W IP rating IP55 Dimensions (WxDxH)113/8\"x173/8\"x173/8\"(29x44x44cm) Weight 14.3lbs (6.5kg)",
+        "amount": 6500000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          3,
+          335.95,
+          114,
+          477.7
+        ]
+      },
+      {
+        "page": 14,
+        "model": "OD SUB 12",
+        "description": "Type Outdoor subwoofer Speaker drivers 113/4\" (30cm) woofer with Iris IP cone Bandwidth 40Hz –120Hz impedance6Ώ Minimal impedance 5Ώ at 55Hz Sensitivity 90dB P Power 100W RMS –400W Peak Recommended amp power 8Ώ 50W –300W IP rating IP55 Dimensions (WxDxH)15\"x361/4\"x22\" (38x92x56cm) Weight 41.89lbs (19kg)",
+        "amount": 13200000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          3,
+          477.7,
+          114,
+          594.03
+        ]
+      },
+      {
+        "page": 16,
+        "model": "301",
+        "description": "TYPE 2-way loudspeaker DRIVERS 2 x 4\" (100mm) Flax MidBass1 x 1\" (25mm) Tweeter TNF Sensitivity (2.83V/1m)87dB Frequency response (+/-3dB) 53Hz –28kHz Low frequency point (-6dB) 44Hz Nominal impedance8 Ω Minimum impedance 5.5Ω Recommended amplifier power 25 –130W Crossover frequency 2,500Hz Dimensions (HxWxD) 311/2x61/8x39/16\" (80x15.5x9cm) Net weight (unit with grille)13lbs (5.9kg)",
+        "amount": 12500000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          3,
+          204.47000000000003,
+          114,
+          375.64
+        ]
+      },
+      {
+        "page": 16,
+        "model": "302",
+        "description": "TYPE 2.5-way loudspeaker DRIVERS 4 x 4\" (100mm) Flax MidBass1 x 1\" (25mm) Tweeter TNF Sensitivity (2.83V/1m) 91dB Frequency response (+/-3dB) 50Hz –28kHz Low frequency point (-6dB) 40Hz Nominal impedance 8 Ω Minimum impedance 5Ω Recommended amplifier power 40 –180W Crossover frequency 1,100Hz –2,500Hz Dimensions (HxWxD) 49 3/16 x 6 1/8 x3 9/16\" (125x15.5x9cm) Net weight (unit with grille)20.72lbs (9.4kg)",
+        "amount": 18000000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          3,
+          375.64,
+          114,
+          523.06
+        ]
+      },
+      {
+        "page": 16,
+        "model": "301/302 STAND",
+        "description": "",
+        "amount": 6000000,
+        "unit": "pair",
+        "packSize": 2,
+        "cell": [
+          3,
+          523.06,
+          114,
+          670.48
+        ]
+      },
+      {
+        "page": 17,
+        "model": "300ICW4",
+        "description": "Type in-wall/in-ceiling loudspeaker with a 4” flax woofer Drivers 4“(10cm) flax midbass 1“(25mm) Al/Mg inverted dome tweeter Freq response 80Hz -28kHz Sensitivity 88db Nominalimpedance8ohms Recommended power25….100W Dimensions(DIA) Ø 7 1/2\" x 31/2\" Weight 2.6lb(1.3kg)",
+        "amount": 4300000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          3,
+          204.47000000000003,
+          114,
+          312.82000000000005
+        ]
+      },
+      {
+        "page": 17,
+        "model": "300ICW6",
+        "description": "Type in-wall/in-ceiling loudspeaker with a 6.5” flaxwoofer Drivers 6.5“(16.5cm) flax midbass 1“(25mm) Al/Mg inverted dome tweeter Freq response 65Hz -28kHz Sensitivity 89db Nominalimpedance8ohms Recommended power25….130W Dimensions(DIA) Ø 9 1/2\" x 41/2\" Weight 5.9lb(2.4kg)",
+        "amount": 6000000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          3,
+          312.82000000000005,
+          114,
+          421.17
+        ]
+      },
+      {
+        "page": 17,
+        "model": "300ICW8",
+        "description": "Type in-wall/in-ceiling loudspeaker with a 8” flax midbass Drivers 8“(21cm) flax midbass 1“(25mm) Al/Mg inverted dome tweeter Freq response 48Hz -28kHz Sensitivity 90db Nominalimpedance8ohms Recommended power25….150W Dimensions(DIA) Ø 11 1/2\" x5\" Weight 7.05lb(3.2kg)",
+        "amount": 6500000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          3,
+          421.17,
+          114,
+          529.52
+        ]
+      },
+      {
+        "page": 17,
+        "model": "300 ICA6",
+        "description": "Type 2-way in-ceiling Drivers 61/2\" (16.5cm) Flax Mid-bass 1\" (25mm) Aluminium/Magnesium inverted dome tweeter Sensitivity (2.83V/1m) 89.5dB Bandwidth (+/-3dB) 65Hz -28kHz Low-frequency cut-off (-6dB) 45Hz Nominal impedance 8 Ώ Recommended amp power 25 -130W Mounting diameter (Ø) 103/8\" (264mm) Depth from wall 53/4\" (146mm) Net weight (with grille) 6.6 lbs (3kg)",
+        "amount": 6500000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          3,
+          529.52,
+          114,
+          647.8
+        ]
+      },
+      {
+        "page": 17,
+        "model": "300 IC LCR5",
+        "description": "Type 3-way in-ceiling speaker Drivers 2 x 5\" (13cm) Flax woofers, 4\" (10cm) Flax midrange, 1\" (25mm) Al/Mg inverted dome tweeter Freq response 55Hz -28kHz Sensitivity 91db. Nominalimpedance8ohms Recommended power50….150W Dimensions(HxWxD) (14.56”x 14.56”x7.67”) Cut-out (HxL) (13.38”x13.38”) Depth from wall 71/2\"(190mm) Weight 16.3 lbs(7.4kg)",
+        "amount": 12000000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          3,
+          647.8,
+          114,
+          776.297
+        ]
+      },
+      {
+        "page": 18,
+        "model": "300 IW LCR6",
+        "description": "Type 3-way in-wallspeaker Drivers 2 x 61/2\" (16.5cm) woofers, 4\" (10cm) Flax midrange, 1\" (25mm) Al/Mg inverted dome tweeter Freq response 40Hz -28kHz Sensitivity 92db. Nominalimpedance8ohms P Recommended power50….150W Dimensions(HxWxD) (23.62”x 8.66”x3.85”) Cut-out (HxL) (22.36”x7.51”) Depth from wall 311/16\"(93mm) Weight 12.4lbs(5.65kg)",
+        "amount": 12000000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          3,
+          219.67999999999995,
+          114,
+          348.18
+        ]
+      },
+      {
+        "page": 18,
+        "model": "300 IW 6",
+        "description": "Type 2-way in-wall speaker Drivers 61/2\" (16.5cm) flax cone woofer, 1\" (25mm) Al/Mg inverted dometweeter Freq response 55Hz -28kHz Sensitivity 90db. Nominalimpedance8ohms P Recommended power25….130W Dimensions(HxWxD) (12.71”x 8.66” x3.85”) Cut-out (HxL) (11.49”x7.51”) Depth from wall 311/16\" (93mm) Weight 4.9lbs(2.25kg)",
+        "amount": 6700000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          3,
+          348.18,
+          114,
+          466.58
+        ]
+      },
+      {
+        "page": 18,
+        "model": "100 IW SUB8",
+        "description": "Type: Passive subwoofer Speakers: 8\" (21cm) PolyglassWoofer Bandwith(+/-3dB): 34-140Hz Cut-off frequency (-6dB): 30Hz Nominal impedance: 8Ώ Recommended amp power: Max 200W / 4Ώ P Dimensions (WxDxH): 137/8 x 37/8 x 513/16\" (352 x 98 x 1,300mm) Cut-out dimensions (WxH): 137/8 x 513/16\" (352 x 1,300mm) Depth from wall: 33/8\" (86mm) Net weight:32.3lbs (14.6kg)",
+        "amount": 7300000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          3,
+          466.58,
+          114,
+          584.98
+        ]
+      },
+      {
+        "page": 18,
+        "model": "100 IW SUB8 Amplifier",
+        "description": "Type: Subwoofer amplifier Power (continuous): Max 200W, 150W continuous (4Ώ) Minimum load: 4Ώ Voltage range: 100-120V~60Hz / 220-230V~50Hz Power consumption: 150W Stand-by power consumption: 0.5W Bandwith: 20-250Hz Subsonic filter: 18dB/oct. Inputs:LFE, Line in L/R P Outputs: Line out L/R and subwoofer power output on speaker terminal Cord: Detachable IEC power cord Protection: Dynamic power control, thermal protection, short circuit, fuse, and over-current protection Dimensions (HxWxD) : 13/4 (21/16 with stands) x 167/8 (19 with brackets) x 101/8\" [44.5 x 429 x 257mm] Net weight: 6.8lbs (3.1kg)",
+        "amount": 12000000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          3,
+          584.98,
+          114,
+          758.502
+        ]
+      },
+      {
+        "page": 20,
+        "model": "100 ICW 8",
+        "description": "Type 2-way coaxial in-ceiling/in-wall speaker Drivers 8\" (21cm) Polyglass Midbass. 1\" (25mm) AI inverted domeTweeter Freq response 53Hz -23kHz Sensitivity 90db Nominalimpedance8ohms P Recommended power25-150W Dimensions(DIA)(248x111mm)(9.76”x 4.37”) Cut-out (DIA)(224mm)(8.81”) Depth from wall (107mm)(4.21”) Weight 3.86lbs(1.75kg)",
+        "amount": 3700000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          3,
+          199.42999999999995,
+          114,
+          317.83000000000004
+        ]
+      },
+      {
+        "page": 20,
+        "model": "100 ICW 6",
+        "description": "Type 2-way coaxial in-ceiling/in-wall speaker Drivers 61/2\" (16,5cm) Polyglass Midbass. 1\" (25mm) AI inverted domeTweeter Freq response 62Hz -23kHz Sensitivity 89db. Nominalimpedance8ohms P Recommended power25-100W Dimensions(DIA)(208x95mm)(8.18” x 3.74”) Cut-out (DIA)(184mm)(7.24”) Depth from wall (91mm)(3.58”) Weight 3.3lbs(1.50kg)",
+        "amount": 3200000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          3,
+          317.83000000000004,
+          114,
+          436.23
+        ]
+      },
+      {
+        "page": 20,
+        "model": "100 ICW 5",
+        "description": "Type 2-way coaxial in-ceiling/in-wall speaker Drivers 5\" (13cm) Polyglass Midbass. 1\" (25mm) AI inverted domeTweeter Freq response 65Hz -23kHz Sensitivity 88db. Nominalimpedance8ohms P Recommended power15-100W Dimensions(DIA)(184x87mm)(7.24”x 3.42”) Cut-out (DIA)(160mm)(6.29”) Depth from wall (82mm)(3.22”) Weight 3.3lbs(1.50kg)",
+        "amount": 2500000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          3,
+          436.23,
+          114,
+          554.63
+        ]
+      },
+      {
+        "page": 20,
+        "model": "100 IW 6",
+        "description": "Type 2-way in-wall speaker Drivers 61/2\" (16,5cm) Polyglass Midbass. 1\" (25mm) AI inverted domeTweeter Freq response 60Hz -23kHz Sensitivity 89db. Nominalimpedance8ohms P Recommended power25-120W Dimensions(DIA)(11.73”x7.67”x3.62”) Cut-out(273x170mm)(10.74”x 6.69”) Depth from wall (88mm)(3.46”) Weight 4.1lbs(1.85kg)",
+        "amount": 3300000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          3,
+          554.63,
+          114,
+          673.03
+        ]
+      },
+      {
+        "page": 20,
+        "model": "100 IC LCR5",
+        "description": "Type 2-way in-ceiling speaker Drivers 2 x 5\" (13cm) Polyglass woofers, 1\" (25mm) inverted dome tweeter, 8\" (21cm) Polyglass passive radiator Freq response 65Hz -23kHz Sensitivity 92db. Nominalimpedance8Ώ P Recommended power25-120W Dimensions(HxWxD)(13.93”x13.93”x5.90”) Cut-out (HxW)(328x328mm)(12.91”x12.91”) Depth from wall 6”(152mm)(5.98”) Weight 11.6lbs(5.3kg)",
+        "amount": 7900000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          3,
+          673.03,
+          114,
+          801.529
+        ]
+      },
+      {
+        "page": 21,
+        "model": "IC6 ST",
+        "description": "Type 2-way coaxial in-ceiling-stereo speaker Drivers 61/2\" (16,5cm) Dual voice coil Polyglass Midbass. 2 x 1\" (25mm) AI inverted domeTweeters Freq response 60Hz -23kHz Sensitivity 89db Nominalimpedance2x8Ώ PI Recommended power25-100W Dimensions(DIA)(208x95mm)(8.18”x3.74”) Cut-out (DIA)(184mm)(7.24”) Depth from wall (91mm)(3.58”) Weight 3.86lbs(1.75kg)",
+        "amount": 3500000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          3,
+          208.34000000000003,
+          114,
+          330.28
+        ]
+      },
+      {
+        "page": 21,
+        "model": "100 IW LCR 5",
+        "description": "Type 2-way in-wall D'appolito Drivers 2x5\" (13cm) Polyglass Midbass. 1\" (25mm) AI inverted domeTweeter Freq response 55Hz -23kHz Sensitivity 90.5db. Nominalimpedance8ohms P Recommended power25-120W Dimensions(DIA)(17.32”x6.81”x8.83”) Cut-out(16.33”x5.78”) Depth from wall 3.26” (83mm) Weight 3.89lbs(2.90kg)",
+        "amount": 5200000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          3,
+          330.28,
+          114,
+          460.69
+        ]
+      },
+      {
+        "page": 21,
+        "model": "100 OD 6",
+        "description": "Type out door loudspeaker Speaker Aluminium inverted dome tweeter 61/2\" (165mm) waterproof woofer with Polyglasstreatment Freq response 65Hz -23kHz Sensitivity 87db. Nominalimpedance8Ώ PI Recommended power20-120W Dimensions(LxPxH) 8.8x10.1x12.6\"(224x256x 319mm) Weight 91lbs(4.1kg)",
+        "amount": 3100000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          3,
+          460.69,
+          114,
+          579.76
+        ]
+      },
+      {
+        "page": 21,
+        "model": "100OD8",
+        "description": "Type out door loudspeaker Speaker Aluminium inverted dome tweeter 8\" (210mm) waterproof woofer with Polyglasstreatment Freq response 60Hz -23kHz Sensitivity 88db. Nominalimpedance8Ώ PI Recommended power20-150W Dimensions(LxPxH) 10.2x11x15.4\"(258x280x 390mm) Weight 12.6lbs(5.8kg)",
+        "amount": 4200000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          3,
+          579.76,
+          114,
+          698.83
+        ]
+      },
+      {
+        "page": 22,
+        "model": "100 ICW8-T",
+        "description": "• Type: In-wall/In-celling -2-way coaxial for 100V/70V line installation • Drivers : 8\" (21cm) PolyglassMidbass1\" (25mm) AIuminium inverted dome Tweeter • Recommended amp power: 15 -100W • Sensitivity (2.83 V/3ft -1m): 90dB • Frequency response (+/-3dB): 53Hz -23kHZ • Low frequency point (-6dB): 40Hz • Power in 70V : 7.5/15/30W • Power in 100V : 15/30/60W • Cut-Out diameter : 813/16\" (224mm) • Depth from wall : 41/4\" (107mm) • Net weight (with front grille) : 5lbs (2.3kg)",
+        "amount": 4600000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          3,
+          208.34000000000003,
+          114,
+          334.59
+        ]
+      },
+      {
+        "page": 22,
+        "model": "100 ICW6-T",
+        "description": "• Type: In-wall/In-celling -2-way coaxial for 100V/70V line installation • Drivers : 61/2\" (16.5cm) PolyglassMidbass1\" (25mm) Aluminium inverted dome Tweeter • Recommended amp power: 25 -100W • Sensitivity (2.83 V/3ft -1m): 89dB • Frequency response (+/-3dB) : 62Hz -23kHz • Low frequency point (-6dB): 50Hz • Power in 70V : 4/7,5/15W • Power in 100V : 8/15/30W • Cut-Out diameter : 71/4\" (184mm) • Depth from wall : 35/8\" (91mm) • Net weight (with front grille) : 3.75lbs (1.7kg)",
+        "amount": 4000000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          3,
+          334.59,
+          114,
+          466.36
+        ]
+      },
+      {
+        "page": 22,
+        "model": "100 ICW5-T",
+        "description": "• Type: In-wall/In-celling -2-way coaxial for 100V/70V line installation • Drivers : 5\" (13cm) PolyglassMidbass1\" (25mm) Aluminium inverted dome Tweeter • Recommended amp power: 15 -100W • Sensitivity (2.83 V/3ft -1m): 88dB • Frequency response (+/-3dB) : 65Hz -23kHz • Low frequency point (-6dB): 56Hz • Power in 70V : 2/4/7.5W • Power in 100V : 4/8/15W • Cut-Out diameter : 63/16\" (157mm) • Depth from wall : 33/4\" (96mm) • Net weight (with front grille) : 3.52lbs (1.6kg)",
+        "amount": 3000000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          3,
+          466.36,
+          114,
+          602.44
+        ]
+      },
+      {
+        "page": 23,
+        "model": "100 OD6-T",
+        "description": "• Type: Outdoor loudspeaker • Speakers : Aluminum inverted dome tweeter 61/2\" (165mm) waterproof woofer with Polyglasstreatment • Recommended amp power: 20-120W • Sensitivity (2.83 V/3ft -1m): 87dB • Frequency response (+/-3dB) : 65Hz-23kHz • Low frequency point (-6dB): 55Hz • Power in 8Ώ: 60W • Power in 70V : 7.5W/15W/30W • Power in 100V : 15W/30W/60W • Filtering frequencies : 2,800Hz • Dimensions (LxPxH) with brackets : 8.8x10.1x12.6\" (224x256x319mm) • Net weight with brackets : 9lbs (4.1kg)",
+        "amount": 4000000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          3,
+          208.34000000000003,
+          114,
+          352.96
+        ]
+      },
+      {
+        "page": 23,
+        "model": "100 OD8-T",
+        "description": "• Type: Outdoor loudspeaker • Speakers : Aluminium inverted dome tweeter 8\" (21cm) waterproof woofer with Polyglasstreatment • Recommended amp power: 20-150W • Sensitivity (2.83 V/3ft -1m): 88dB • Frequency response (+/-3dB) : 60Hz-23kHz • Low frequency point (-6dB): 45Hz • Power in 8Ώ: 120W • Power in 70V : 15/30/60W • Power in 100V : 30/60/120W • Filtering frequencies : 2,800Hz • Dimensions (LxPxH) with brackets : 10.2x11x15.4\" (258x280x390mm) • Net weight with brackets : 12.6lbs (5.8kg)",
+        "amount": 5300000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          3,
+          352.96,
+          114,
+          494.71
+        ]
+      },
+      {
+        "page": 25,
+        "model": "SIB EVO DOLBY ATMOS 5.1.2",
+        "description": "SIB EVO DOLBY ATMOS 5.1 Type 2-way compact bass-reflexloudspeaker Speaker 5\" (13cm) Polyflex woofer 3/4\" (19mm) soft dometweeter Freq response 70Hz -25kHz Sensibility 90db Nominalimpedance6ohms Recommended power25-200W Dimensions(HxWxD)(9.92”x6.37”x6.37”) Weight 4lbs(1.8kg) SIB EVOSUB Type active bass-reflexsubwoofer Speaker 8 1/4\" (21cm) Polyflexwoofer Freq response 35Hz -150Hz Rca input Right, left LFE Amplifierpower200Wclassamplifier Power mode On / Auto power(0.5W) Dimensions(HxWxD)(12”x11.10”x11.77”) Weight 17.5lbs(8kg)",
+        "amount": 18000000,
+        "unit": "set",
+        "packSize": 1,
+        "cell": [
+          3,
+          192.26999999999998,
+          114,
+          401.42
+        ]
+      },
+      {
+        "page": 25,
+        "model": "SIB EVO 5.1",
+        "description": "Type 2-way compact bass-reflexloudspeaker Speaker 5\" (13cm) Polyflex woofer 3/4\" (19mm) soft dometweeter Freq response 70Hz -25kHz Sensibility 90db Nominalimpedance6ohms Recommended power25-200W Dimensions(HxWxD)(9.92”x6.37”x6.37”) Weight 4lbs(1.8kg) SIBEVO Type active bass-reflexsubwoofer Speaker 8 1/4\" (21cm) Polyflexwoofer Freq response 35Hz -150Hz Rca input Right, left LFE Amplifierpower200Wclassamplifier Power mode On / Auto power(0.5W) Dimensions(HxWxD)(12”x11.10”x11.77”) Weight 17.5lbs(8kg) Inclusive of total 5 Brackets",
+        "amount": 11500000,
+        "unit": "set",
+        "packSize": 1,
+        "cell": [
+          3,
+          401.42,
+          114,
+          608.11
+        ]
+      },
+      {
+        "page": 25,
+        "model": "SIB EVO WALL MOUNTS",
+        "description": "These wall mounts are compatible with Sib Evo and Sib Evo Dolby Atmos©loudspeakers. With their Black High Gloss finish, they are the perfect match for the lines of these satellite speakers. These wall mounts blend in discretely with any décor.",
+        "amount": 275000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          3,
+          608.11,
+          114,
+          727.1800000000001
+        ]
+      },
+      {
+        "page": 27,
+        "model": "SUB AIR",
+        "description": "Type Flat bass-reflex subwoofer, integrated 150W BASH amp Speaker Drivers 8\"(21cm) Freq response 40Hz -200Hz Input panel left right /LFE Poweroutput110W Peakpower150W Phase adjustment 0 -180°switch Power functions ON Auto (1 W) OFF (0,5W) Dimensions(HxWxD) 16.1\"x14.2\"x6.3\" (410mmx360mmx160mm) Weight 17lbs(7.65kg)",
+        "amount": 8800000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          3,
+          532.4300000000001,
+          114,
+          665.58
+        ]
+      },
+      {
+        "page": 27,
+        "model": "CUB EVO",
+        "description": "Type active bass-reflexsubwoofer Speaker 8 1/4\" (21cm) Polyflexwoofer Freq response 35Hz -150Hz Rca input Right, left LFE Amplifierpower200Wclassamplifier Power mode On / Auto power(0.5W) Dimensions(HxWxD)(12”x11.10”x11.77”) Weight 17.5lbs(8kg)",
+        "amount": 5500000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          3,
+          665.58,
+          114,
+          778.205
+        ]
+      },
+      {
+        "page": 29,
+        "model": "SOUNDBAR DIMENSION",
+        "description": "• Type 5-channel sound bar • Speaker drivers 5 ultra-flat speaker-drivers315/16\"(10cm) • Integrated amplification 6-channel 450Watts • Frequency response 50Hz to25kHz • Input 2 x HDMI™ (OUT/IN) Digital Optical Toslink Analogue 3.5 mmJack • Subwoofer output Dimension Sub Out:Powered output dedicated to Dimension Sub Sub Line Out: Low-Level output compatible with all amplified subwoofers • Dimensions onfurniture(WxDxH)(115.5 x11.5x11.5cm)(45.47”x5.52”x4.52”) • Dimensions wall mount(WxDxH) (115.5 x6.5 x14.7cm)(45.47”x2.55”x5.78”) • Weight 12lbs(5.5kg)",
+        "amount": 10500000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          3,
+          195.70000000000005,
+          114,
+          360.45
+        ]
+      },
+      {
+        "page": 29,
+        "model": "APTX",
+        "description": "• Type universal wireless receiver • Range 10m (line ofsight) • Codecaptx • Compression ratio4:1 • Resolution and Sampling Rate 16 bits -44,1kHz • Frequency response 10Hz to22kHz • Radio transmission power 2,5mW(4dBm) • Radio transmission Frequency Range 2,4GHz (Bandes ISM) • Dimensions(HxWxD)60x56x14mm(2.36”x2.20”x0.55”) • Weight 0.044lb(22g)",
+        "amount": 1650000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          3,
+          448.12,
+          114,
+          574.97
+        ]
+      },
+      {
+        "page": 29,
+        "model": "DIMENSION APTX Sub Air",
+        "description": "Dimension Type 5-channel sound bar Speaker drivers 5 ultra-flat speaker-drivers315/16\" APTX Type universal wireless receiver Sub Air Range 10m (line ofsight) Type Flat bass-reflex Codecaptx subwoofer, Compression ratio4:1 integrated 150W BASHamp Speaker Drivers 8\"(21cm) Freq response 40Hz -200Hz",
+        "amount": 17000000,
+        "unit": "set",
+        "packSize": 1,
+        "cell": [
+          3,
+          627.25,
+          114,
+          800.885
+        ]
+      },
+      {
+        "page": 27,
+        "model": "DOME FLAX SUB-AIR",
+        "description": "Dome Flax speaker and Sub Air subwoofer set. The supplied list does not state the number of satellites; confirm package contents before treating it as a complete cinema system.",
+        "amount": 26000000,
+        "unit": "set",
+        "packSize": 1,
+        "cell": [
+          3,
+          190,
+          114,
+          500
+        ]
+      }
+    ]
+  },
+  {
+    "brand": "Sonus faber",
+    "file": "Sonus faber INDIA RETAIL Pricelist APR26.pdf",
+    "sha256": "4010208b399dfadd0d8ac47f699282233c568102072bd29ff25b961ee2cd3cc2",
+    "rows": [
+      {
+        "page": 6,
+        "half": 1,
+        "model": "Suprema",
+        "code": "DIF410GFI",
+        "amount": 8359990000,
+        "unit": "pair",
+        "packSize": 2,
+        "finish": "SUPREMA WENGE",
+        "rowText": "SUPREMA WENGE DIF410GFI | 8056684714933 PAIR Rs. 8,35,99,900",
+        "y": 196.37765502929688,
+        "accessory": false
+      },
+      {
+        "page": 6,
+        "half": 1,
+        "model": "Suprema",
+        "code": "DIF410PFI",
+        "amount": 8359990000,
+        "unit": "pair",
+        "packSize": 2,
+        "finish": "SUPREMA GRAPHITE",
+        "rowText": "SUPREMA GRAPHITE DIF410PFI | 8056684714957 PAIR Rs. 8,35,99,900",
+        "y": 226.5953369140625,
+        "accessory": false
+      },
+      {
+        "page": 6,
+        "half": 1,
+        "model": "Suprema",
+        "code": "DIF410RFI",
+        "amount": 8359990000,
+        "unit": "pair",
+        "packSize": 2,
+        "finish": "SUPREMA RED",
+        "rowText": "SUPREMA RED DIF410RFI | 8056684714919 PAIR Rs. 8,35,99,900",
+        "y": 256.86029052734375,
+        "accessory": false
+      },
+      {
+        "page": 6,
+        "half": 1,
+        "model": "Suprema",
+        "code": "DIF410VFI",
+        "amount": 8359990000,
+        "unit": "pair",
+        "packSize": 2,
+        "finish": "SUPREMA RED VIOLIN",
+        "rowText": "SUPREMA RED VIOLIN DIF410VFI | 8056684714926 PAIR Rs. 8,35,99,900",
+        "y": 286.3686218261719,
+        "accessory": false
+      },
+      {
+        "page": 6,
+        "half": 1,
+        "model": "Suprema",
+        "code": "DIF410WFI",
+        "amount": 8359990000,
+        "unit": "pair",
+        "packSize": 2,
+        "finish": "SUPREMA WALNUT",
+        "rowText": "SUPREMA WALNUT DIF410WFI | 8056684714940 PAIR Rs. 8,35,99,900",
+        "y": 316.85430908203125,
+        "accessory": false
+      },
+      {
+        "page": 6,
+        "half": 1,
+        "model": "Suprema Subwoofer + Electronic Crossover",
+        "code": "DIF411GFI",
+        "amount": 2659990000,
+        "unit": "unit",
+        "packSize": 1,
+        "finish": "SUPREMA SUB +CE WENGE",
+        "rowText": "DIF411GFI | 8056684715671 SINGLE Rs. 2,65,99,900 SUPREMA SUB +CE WENGE",
+        "y": 376.8572998046875,
+        "accessory": false
+      },
+      {
+        "page": 6,
+        "half": 1,
+        "model": "Suprema Subwoofer + Electronic Crossover",
+        "code": "DIF411PFI",
+        "amount": 2659990000,
+        "unit": "unit",
+        "packSize": 1,
+        "finish": "SUPREMA SUB + CE GRAPHITE",
+        "rowText": "SUPREMA SUB + CE GRAPHITE DIF411PFI | 8056684715695 SINGLE Rs. 2,65,99,900",
+        "y": 404.7168273925781,
+        "accessory": false
+      },
+      {
+        "page": 6,
+        "half": 1,
+        "model": "Suprema Subwoofer + Electronic Crossover",
+        "code": "DIF411RFI",
+        "amount": 2659990000,
+        "unit": "unit",
+        "packSize": 1,
+        "finish": "SUPREMA SUB + CE RED",
+        "rowText": "SUPREMA SUB + CE RED DIF411RFI | 8056684715657 SINGLE Rs.2,65,99,900",
+        "y": 436.851318359375,
+        "accessory": false
+      },
+      {
+        "page": 6,
+        "half": 1,
+        "model": "Suprema Subwoofer + Electronic Crossover",
+        "code": "DIF411VFI",
+        "amount": 2659990000,
+        "unit": "unit",
+        "packSize": 1,
+        "finish": "SUPREMA SUB + CE RED VIOLIN",
+        "rowText": "SUPREMA SUB + CE RED VIOLIN DIF411VFI | 8056684715664 SINGLE Rs. 2,65,99,900",
+        "y": 466.8482971191406,
+        "accessory": false
+      },
+      {
+        "page": 6,
+        "half": 1,
+        "model": "Suprema Subwoofer + Electronic Crossover",
+        "code": "DIF411WFI",
+        "amount": 2659990000,
+        "unit": "unit",
+        "packSize": 1,
+        "finish": "SUPREMA SUB + CE WALNUT",
+        "rowText": "SUPREMA SUB + CE WALNUT DIF411WFI | 8056684715688 SINGLE Rs. 2,65,99,900",
+        "y": 500.86090087890625,
+        "accessory": false
+      },
+      {
+        "page": 6,
+        "half": 1,
+        "model": "Suprema Subwoofer",
+        "code": "DIF412GFI",
+        "amount": 1139290000,
+        "unit": "unit",
+        "packSize": 1,
+        "finish": "SUPREMA SUB WENGE",
+        "rowText": "SUPREMA SUB WENGE DIF412GFI | 8056684715169 SINGLE Rs. 1,13,92,900",
+        "y": 558.154296875,
+        "accessory": false
+      },
+      {
+        "page": 6,
+        "half": 1,
+        "model": "Suprema Subwoofer",
+        "code": "DIF412PFI",
+        "amount": 1139290000,
+        "unit": "unit",
+        "packSize": 1,
+        "finish": "SUPREMA SUB GRAPHITE",
+        "rowText": "SUPREMA SUB GRAPHITE DIF412PFI | 8056684715183 SINGLE Rs. 1,13,92,900",
+        "y": 586.3566284179688,
+        "accessory": false
+      },
+      {
+        "page": 6,
+        "half": 1,
+        "model": "Suprema Subwoofer",
+        "code": "DIF412RFI",
+        "amount": 1139290000,
+        "unit": "unit",
+        "packSize": 1,
+        "finish": "SUPREMA SUB RED",
+        "rowText": "SUPREMA SUB RED DIF412RFI | 8056684715145 SINGLE Rs. 1,13,92,900",
+        "y": 616.84228515625,
+        "accessory": false
+      },
+      {
+        "page": 6,
+        "half": 1,
+        "model": "Suprema Subwoofer",
+        "code": "DIF412RFI",
+        "amount": 1139290000,
+        "unit": "unit",
+        "packSize": 1,
+        "finish": "SUPREMA SUB RED VIOLIN",
+        "rowText": "SUPREMA SUB RED VIOLIN DIF412RFI | 8056684715152 SINGLE Rs. 1,13,92,900",
+        "y": 646.8392944335938,
+        "accessory": false
+      },
+      {
+        "page": 6,
+        "half": 1,
+        "model": "Suprema Subwoofer",
+        "code": "DIF412WFI",
+        "amount": 1139290000,
+        "unit": "unit",
+        "packSize": 1,
+        "finish": "SUPREMA SUB WALNUT",
+        "rowText": "SUPREMA SUB WALNUT DIF412WFI | 8056684715176 SINGLE Rs. 1,13,92,900",
+        "y": 676.8363037109375,
+        "accessory": false
+      },
+      {
+        "page": 8,
+        "half": 1,
+        "model": "Aida",
+        "code": "DIF121RFI",
+        "amount": 1974690000,
+        "unit": "pair",
+        "packSize": 2,
+        "finish": "RED",
+        "rowText": "RED DIF121RFI | 8056684711871 PAIR Rs. 1,97,46,900",
+        "y": 583.5531005859375,
+        "accessory": false
+      },
+      {
+        "page": 8,
+        "half": 1,
+        "model": "Aida",
+        "code": "DIF121AFI",
+        "amount": 1974690000,
+        "unit": "pair",
+        "packSize": 2,
+        "finish": "WALNUT",
+        "rowText": "WALNUT DIF121AFI | 8056684713844 PAIR Rs. 1,97,46,900",
+        "y": 613.5501098632812,
+        "accessory": false
+      },
+      {
+        "page": 8,
+        "half": 1,
+        "model": "Aida",
+        "code": "DIF121WFI",
+        "amount": 1974690000,
+        "unit": "pair",
+        "packSize": 2,
+        "finish": "WENGE",
+        "rowText": "WENGE DIF121WFI | 8056684711888 PAIR Rs. 1,97,46,900",
+        "y": 643.7449340820312,
+        "accessory": false
+      },
+      {
+        "page": 10,
+        "half": 1,
+        "model": "Lilium",
+        "code": "DIF170RFI",
+        "amount": 1063390000,
+        "unit": "pair",
+        "packSize": 2,
+        "finish": "RED",
+        "rowText": "RED DIF170RFI | 8056684710751 PAIR Rs. 1,06,33,900",
+        "y": 582.8732299804688,
+        "accessory": false
+      },
+      {
+        "page": 10,
+        "half": 1,
+        "model": "Lilium",
+        "code": "DIF170WFI",
+        "amount": 1063390000,
+        "unit": "pair",
+        "packSize": 2,
+        "finish": "WALNUT",
+        "rowText": "WALNUT DIF170WFI |8056684710782 PAIR Rs. 1,06,33,900",
+        "y": 613.5501098632812,
+        "accessory": false
+      },
+      {
+        "page": 10,
+        "half": 1,
+        "model": "Lilium",
+        "code": "DIF170EFI",
+        "amount": 1063390000,
+        "unit": "pair",
+        "packSize": 2,
+        "finish": "WENGE",
+        "rowText": "WENGE DIF170EFI | 8056684712588 PAIR Rs. 1,06,33,900",
+        "y": 643.547119140625,
+        "accessory": false
+      },
+      {
+        "page": 12,
+        "half": 1,
+        "model": "Il Cremonese",
+        "code": "DIF201RFI",
+        "amount": 987390000,
+        "unit": "pair",
+        "packSize": 2,
+        "finish": "RED",
+        "rowText": "RED DIF201RFI | 8056684710874 PAIR Rs. 98,73,900",
+        "y": 582.9441528320312,
+        "accessory": false
+      },
+      {
+        "page": 12,
+        "half": 1,
+        "model": "Il Cremonese",
+        "code": "DIF201WFI",
+        "amount": 987390000,
+        "unit": "pair",
+        "packSize": 2,
+        "finish": "WALNUT",
+        "rowText": "WALNUT DIF201WFI | 8056684710881 PAIR Rs. 98,73,900",
+        "y": 613.5501098632812,
+        "accessory": false
+      },
+      {
+        "page": 12,
+        "half": 1,
+        "model": "Il Cremonese",
+        "code": "DIF201EFI",
+        "amount": 987390000,
+        "unit": "pair",
+        "packSize": 2,
+        "finish": "WENGE",
+        "rowText": "WENGE DIF201EFI | 8056684712007 PAIR Rs. 98,73,900",
+        "y": 643.547119140625,
+        "accessory": false
+      },
+      {
+        "page": 14,
+        "half": 1,
+        "model": "Il Cremonese Ex3me",
+        "code": "DIF20XRFI",
+        "amount": 1063390000,
+        "unit": "pair",
+        "packSize": 2,
+        "finish": "RED VIOLIN",
+        "rowText": "RED VIOLIN DIF20XRFI | 8056684713325 PAIR Rs. 1,06,33,900",
+        "y": 583.5531005859375,
+        "accessory": false
+      },
+      {
+        "page": 16,
+        "half": 1,
+        "model": "Il Cremonese Ex3me Automobili Lamborghini Edition",
+        "code": "DIF20LYFI",
+        "amount": 1898790000,
+        "unit": "pair",
+        "packSize": 2,
+        "finish": "GIALLO COUNTACH",
+        "rowText": "GIALLO COUNTACH DIF20LYFI | 8056684715992 PAIR Rs. 1,89,87,900",
+        "y": 583.5531005859375,
+        "accessory": false
+      },
+      {
+        "page": 16,
+        "half": 1,
+        "model": "Il Cremonese Ex3me Automobili Lamborghini Edition",
+        "code": "DIF20LOFI",
+        "amount": 1898790000,
+        "unit": "pair",
+        "packSize": 2,
+        "finish": "ARANCIO EGON",
+        "rowText": "ARANCIO EGON DIF20LOFI | 8056684716012 PAIR Rs. 1,89,87,900",
+        "y": 613.5501098632812,
+        "accessory": false
+      },
+      {
+        "page": 16,
+        "half": 1,
+        "model": "Il Cremonese Ex3me Automobili Lamborghini Edition",
+        "code": "DIF20LGFI",
+        "amount": 1898790000,
+        "unit": "pair",
+        "packSize": 2,
+        "finish": "VERDE MERCURIUS",
+        "rowText": "VERDE MERCURIUS DIF20LGFI | 8056684716029 PAIR Rs. 1,89,87,900",
+        "y": 643.547119140625,
+        "accessory": false
+      },
+      {
+        "page": 16,
+        "half": 1,
+        "model": "Il Cremonese Ex3me Automobili Lamborghini Edition",
+        "code": "DIF20LBFI",
+        "amount": 1898790000,
+        "unit": "pair",
+        "packSize": 2,
+        "finish": "BLU MARINUS MATTE",
+        "rowText": "BLU MARINUS MATTE DIF20LBFI | 8056684716036 PAIR Rs. 1,89,87,900",
+        "y": 673.5441284179688,
+        "accessory": false
+      },
+      {
+        "page": 16,
+        "half": 1,
+        "model": "Il Cremonese Ex3me Automobili Lamborghini Edition",
+        "code": "DIF20LNFI",
+        "amount": 1898790000,
+        "unit": "pair",
+        "packSize": 2,
+        "finish": "NERO NEMESIS MATTE",
+        "rowText": "NERO NEMESIS MATTE DIF20LNFI | 8056684716043 PAIR Rs. 1,89,87,900",
+        "y": 703.5410766601562,
+        "accessory": false
+      },
+      {
+        "page": 18,
+        "half": 1,
+        "model": "Amati Supreme",
+        "code": "DIF386SFI",
+        "amount": 1184890000,
+        "unit": "pair",
+        "packSize": 2,
+        "finish": "SABBIA ORO",
+        "rowText": "SABBIA ORO DIF386SFI | 8056684715978 PAIR Rs. 1,18,48,900",
+        "y": 583.5531005859375,
+        "accessory": false
+      },
+      {
+        "page": 18,
+        "half": 1,
+        "model": "Amati Supreme",
+        "code": "DIF386TFI",
+        "amount": 1184890000,
+        "unit": "pair",
+        "packSize": 2,
+        "finish": "TERRA ROSSA",
+        "rowText": "TERRA ROSSA DIF386TFI | 8056684715985 PAIR Rs. 1,18,48,900",
+        "y": 613.5501098632812,
+        "accessory": false
+      },
+      {
+        "page": 18,
+        "half": 1,
+        "model": "Amati Supreme",
+        "code": "DIF386RFI",
+        "amount": 1184890000,
+        "unit": "pair",
+        "packSize": 2,
+        "finish": "RED",
+        "rowText": "RED DIF386RFI | 8056684715794 PAIR Rs. 1,18,48,900",
+        "y": 643.547119140625,
+        "accessory": false
+      },
+      {
+        "page": 18,
+        "half": 1,
+        "model": "Amati Supreme",
+        "code": "DIF386PFI",
+        "amount": 1184890000,
+        "unit": "pair",
+        "packSize": 2,
+        "finish": "GRAPHITE",
+        "rowText": "GRAPHITE DIF386PFI | 8056684715800 PAIR Rs. 1,18,48,900",
+        "y": 673.5441284179688,
+        "accessory": false
+      },
+      {
+        "page": 18,
+        "half": 1,
+        "model": "Amati Supreme",
+        "code": "DIF386GFI",
+        "amount": 1184890000,
+        "unit": "pair",
+        "packSize": 2,
+        "finish": "WENGE",
+        "rowText": "WENGE DIF386GFI | 8056684715817 PAIR Rs. 1,18,48,900",
+        "y": 703.5410766601562,
+        "accessory": false
+      },
+      {
+        "page": 20,
+        "half": 1,
+        "model": "Stradivari",
+        "code": "DIF385RFI",
+        "amount": 873490000,
+        "unit": "pair",
+        "packSize": 2,
+        "finish": "RED",
+        "rowText": "RED DIF385RFI | 8056684714834 PAIR Rs. 87,34,900",
+        "y": 583.064453125,
+        "accessory": false
+      },
+      {
+        "page": 20,
+        "half": 1,
+        "model": "Stradivari",
+        "code": "DIF385PFI",
+        "amount": 873490000,
+        "unit": "pair",
+        "packSize": 2,
+        "finish": "GRAPHITE",
+        "rowText": "GRAPHITE DIF385PFI | 8056684714858 PAIR Rs. 87,34,900",
+        "y": 613.5501098632812,
+        "accessory": false
+      },
+      {
+        "page": 20,
+        "half": 1,
+        "model": "Stradivari",
+        "code": "DIF385GFI",
+        "amount": 873490000,
+        "unit": "pair",
+        "packSize": 2,
+        "finish": "WENGE",
+        "rowText": "WENGE DIF385GFI | 8056684714841 PAIR Rs. 87,34,900",
+        "y": 643.547119140625,
+        "accessory": false
+      },
+      {
+        "page": 21,
+        "half": 1,
+        "model": "Amati Folgore Limited Edition",
+        "code": "DIF380MFI",
+        "amount": 835390000,
+        "unit": "pair",
+        "packSize": 2,
+        "finish": "RAME FOLGORE",
+        "rowText": "RAME FOLGORE DIF380MFI | 8056684715053 PAIR Rs. 83,53,900",
+        "y": 583.5531005859375,
+        "accessory": false
+      },
+      {
+        "page": 22,
+        "half": 1,
+        "model": "Amati",
+        "code": "DIF380RFI",
+        "amount": 622790000,
+        "unit": "pair",
+        "packSize": 2,
+        "finish": "RED",
+        "rowText": "RED DIF380RFI | 8056684714438 PAIR Rs. 62,27,900",
+        "y": 583.5531005859375,
+        "accessory": false
+      },
+      {
+        "page": 22,
+        "half": 1,
+        "model": "Amati",
+        "code": "DIF380PFI",
+        "amount": 622790000,
+        "unit": "pair",
+        "packSize": 2,
+        "finish": "GRAPHITE",
+        "rowText": "GRAPHITE DIF380PFI | 8056684714452 PAIR Rs. 62,27,900",
+        "y": 613.5501098632812,
+        "accessory": false
+      },
+      {
+        "page": 22,
+        "half": 1,
+        "model": "Amati",
+        "code": "DIF380GFI",
+        "amount": 622790000,
+        "unit": "pair",
+        "packSize": 2,
+        "finish": "WENGE",
+        "rowText": "WENGE DIF380GFI | 8056684714445 PAIR Rs. 62,27,900",
+        "y": 643.547119140625,
+        "accessory": false
+      },
+      {
+        "page": 23,
+        "half": 1,
+        "model": "Serafino",
+        "code": "DIF382RFI",
+        "amount": 455790000,
+        "unit": "pair",
+        "packSize": 2,
+        "finish": "RED",
+        "rowText": "RED DIF382RFI | 8056684714490 PAIR Rs. 45,57,900",
+        "y": 583.064453125,
+        "accessory": false
+      },
+      {
+        "page": 23,
+        "half": 1,
+        "model": "Serafino",
+        "code": "DIF382PFI",
+        "amount": 455790000,
+        "unit": "pair",
+        "packSize": 2,
+        "finish": "GRAPHITE",
+        "rowText": "GRAPHITE DIF382PFI | 8056684714513 PAIR Rs. 45,57,900",
+        "y": 613.5501098632812,
+        "accessory": false
+      },
+      {
+        "page": 23,
+        "half": 1,
+        "model": "Serafino",
+        "code": "DIF382GFI",
+        "amount": 455790000,
+        "unit": "pair",
+        "packSize": 2,
+        "finish": "WENGE",
+        "rowText": "WENGE DIF382GFI | 8056684714506 PAIR Rs. 45,57,900",
+        "y": 643.547119140625,
+        "accessory": false
+      },
+      {
+        "page": 24,
+        "half": 1,
+        "model": "Guarneri",
+        "code": "DIF381RFI",
+        "amount": 265890000,
+        "unit": "pair",
+        "packSize": 2,
+        "finish": "RED",
+        "rowText": "RED DIF381RFI | 8056684714469 PAIR Rs. 26,58,900",
+        "y": 548.0039672851562,
+        "accessory": false
+      },
+      {
+        "page": 24,
+        "half": 1,
+        "model": "Guarneri",
+        "code": "DIF381PFI",
+        "amount": 265890000,
+        "unit": "pair",
+        "packSize": 2,
+        "finish": "GRAPHITE",
+        "rowText": "GRAPHITE DIF381PFI | 8056684714483 PAIR Rs. 26,58,900",
+        "y": 578.1171264648438,
+        "accessory": false
+      },
+      {
+        "page": 24,
+        "half": 1,
+        "model": "Guarneri",
+        "code": "DIF381GFI",
+        "amount": 265890000,
+        "unit": "pair",
+        "packSize": 2,
+        "finish": "WENGE",
+        "rowText": "WENGE DIF381GFI | 8056684714476 PAIR Rs. 26,58,900",
+        "y": 608.1140747070312,
+        "accessory": false
+      },
+      {
+        "page": 24,
+        "half": 1,
+        "model": "Guarneri Stand CLN231FIN",
+        "code": "CLN231FIN",
+        "amount": 60790000,
+        "unit": "pair",
+        "packSize": 2,
+        "finish": "BLACK / CARBON FIBRE",
+        "rowText": "BLACK / CARBON FIBRE CLN231FIN | 8056684711574 PAIR Rs. 6,07,900",
+        "y": 702.3261108398438,
+        "accessory": true
+      },
+      {
+        "page": 25,
+        "half": 1,
+        "model": "Vox",
+        "code": "DIF383RFI",
+        "amount": 288690000,
+        "unit": "unit",
+        "packSize": 1,
+        "finish": "RED",
+        "rowText": "RED DIF383RFI | 8056684714629 UNIT Rs. 28,86,900",
+        "y": 583.064453125,
+        "accessory": false
+      },
+      {
+        "page": 25,
+        "half": 1,
+        "model": "Vox",
+        "code": "DIF383PFI",
+        "amount": 288690000,
+        "unit": "unit",
+        "packSize": 1,
+        "finish": "GRAPHITE",
+        "rowText": "GRAPHITE DIF383PFI | 8056684714643 UNIT Rs. 28,86,900",
+        "y": 613.5501098632812,
+        "accessory": false
+      },
+      {
+        "page": 25,
+        "half": 1,
+        "model": "Vox",
+        "code": "DIF383GFI",
+        "amount": 288690000,
+        "unit": "unit",
+        "packSize": 1,
+        "finish": "WENGE",
+        "rowText": "WENGE DIF383GFI | 8056684714636 UNIT Rs. 28,86,900",
+        "y": 643.547119140625,
+        "accessory": false
+      },
+      {
+        "page": 27,
+        "half": 1,
+        "model": "Maxima Amator",
+        "code": "DIF360FIN",
+        "amount": 288690000,
+        "unit": "pair",
+        "packSize": 2,
+        "finish": "SOLID WALNUT PORT SAINT LAURENT MARBLE",
+        "rowText": "SOLID WALNUT PORT SAINT LAURENT MARBLE DIF360FIN | 8056684713820 PAIR Rs. 28,86,900",
+        "y": 591.3201293945312,
+        "accessory": false
+      },
+      {
+        "page": 28,
+        "half": 1,
+        "model": "Electa Amator III",
+        "code": "DIF290FIN",
+        "amount": 182390000,
+        "unit": "pair",
+        "packSize": 2,
+        "finish": "SOLID WALNUT CARRARA MARBLE",
+        "rowText": "SOLID WALNUT CARRARA MARBLE DIF290FIN | 8056684712571 PAIR Rs. 18,23,900*",
+        "y": 542.7824096679688,
+        "accessory": false
+      },
+      {
+        "page": 28,
+        "half": 1,
+        "model": "Electa Amator III Stand CLN290FIN",
+        "code": "CLN290FIN",
+        "amount": 30490000,
+        "unit": "pair",
+        "packSize": 2,
+        "finish": "BLACK / CARRARA BASE",
+        "rowText": "BLACK / CARRARA BASE PAIR CLN290FIN | 8056684712564 Rs. 3,04,900",
+        "y": 668.9354248046875,
+        "accessory": true
+      },
+      {
+        "page": 29,
+        "half": 1,
+        "model": "Concertino Standard Edition",
+        "code": "DIF441FIN",
+        "amount": 64590000,
+        "unit": "pair",
+        "packSize": 2,
+        "finish": "SOLID WALNUT",
+        "rowText": "SOLID WALNUT DIF441FIN | 8056684714902 PAIR Rs. 6,45,900",
+        "y": 533.1851196289062,
+        "accessory": false
+      },
+      {
+        "page": 29,
+        "half": 1,
+        "model": "Concertino Standard Edition Stand CLN440FIN",
+        "code": "CLN440FIN",
+        "amount": 25890000,
+        "unit": "pair",
+        "packSize": 2,
+        "finish": "BLACK / SOLID WALNUT",
+        "rowText": "BLACK / SOLID WALNUT CLN440FIN | 8056684714971 PAIR Rs. 2,58,900",
+        "y": 678.2277221679688,
+        "accessory": true
+      },
+      {
+        "page": 31,
+        "half": 1,
+        "model": "Olympica Nova V",
+        "code": "DIF305WFI",
+        "amount": 303890000,
+        "unit": "pair",
+        "packSize": 2,
+        "finish": "WALNUT",
+        "rowText": "WALNUT DIF305WFI | 8056684712830 PAIR Rs. 30,38,900",
+        "y": 583.5531005859375,
+        "accessory": false
+      },
+      {
+        "page": 31,
+        "half": 1,
+        "model": "Olympica Nova V",
+        "code": "DIF305EFI",
+        "amount": 303890000,
+        "unit": "pair",
+        "packSize": 2,
+        "finish": "WENGE",
+        "rowText": "WENGE DIF305EFI | 8056684712823 PAIR Rs. 30,38,900",
+        "y": 613.5501098632812,
+        "accessory": false
+      },
+      {
+        "page": 31,
+        "half": 1,
+        "model": "Olympica Nova V",
+        "code": "DIF305BFI",
+        "amount": 303890000,
+        "unit": "pair",
+        "packSize": 2,
+        "finish": "PIANO BLACK",
+        "rowText": "PIANO BLACK DIF305BFI | 8056684714094 PAIR Rs. 30,38,900",
+        "y": 643.547119140625,
+        "accessory": false
+      },
+      {
+        "page": 32,
+        "half": 1,
+        "model": "Olympica Nova III",
+        "code": "DIF303WFI",
+        "amount": 243090000,
+        "unit": "pair",
+        "packSize": 2,
+        "finish": "WALNUT",
+        "rowText": "WALNUT DIF303WFI | 8056684712816 PAIR Rs. 24,30,900",
+        "y": 583.5531005859375,
+        "accessory": false
+      },
+      {
+        "page": 32,
+        "half": 1,
+        "model": "Olympica Nova III",
+        "code": "DIF303EFI",
+        "amount": 243090000,
+        "unit": "pair",
+        "packSize": 2,
+        "finish": "WENGE",
+        "rowText": "WENGE DIF303EFI | 8056684712809 PAIR Rs. 24,30,900",
+        "y": 613.5501098632812,
+        "accessory": false
+      },
+      {
+        "page": 32,
+        "half": 1,
+        "model": "Olympica Nova III",
+        "code": "DIF303BFI",
+        "amount": 243090000,
+        "unit": "pair",
+        "packSize": 2,
+        "finish": "PIANO BLACK",
+        "rowText": "PIANO BLACK DIF303BFI | 8056684714087 PAIR Rs. 24,30,900",
+        "y": 643.547119140625,
+        "accessory": false
+      },
+      {
+        "page": 33,
+        "half": 1,
+        "model": "Olympica Nova II",
+        "code": "DIF302WFI",
+        "amount": 182390000,
+        "unit": "pair",
+        "packSize": 2,
+        "finish": "WALNUT",
+        "rowText": "WALNUT DIF302WFI | 8056684712793 PAIR Rs. 18,23,900",
+        "y": 583.5531005859375,
+        "accessory": false
+      },
+      {
+        "page": 33,
+        "half": 1,
+        "model": "Olympica Nova II",
+        "code": "DIF302EFI",
+        "amount": 182390000,
+        "unit": "pair",
+        "packSize": 2,
+        "finish": "WENGE",
+        "rowText": "WENGE DIF302EFI | 8056684712786 PAIR Rs. 18,23,900",
+        "y": 613.5501098632812,
+        "accessory": false
+      },
+      {
+        "page": 33,
+        "half": 1,
+        "model": "Olympica Nova II",
+        "code": "DIF302BFI",
+        "amount": 182390000,
+        "unit": "pair",
+        "packSize": 2,
+        "finish": "PIANO BLACK",
+        "rowText": "PIANO BLACK DIF302BFI | 8056684714070 PAIR Rs. 18,23,900",
+        "y": 643.547119140625,
+        "accessory": false
+      },
+      {
+        "page": 34,
+        "half": 1,
+        "model": "Olympica Nova I",
+        "code": "DIF301WFI",
+        "amount": 121590000,
+        "unit": "pair",
+        "packSize": 2,
+        "finish": "WALNUT",
+        "rowText": "WALNUT DIF301WFI | 8056684712779 PAIR Rs. 12,15,900",
+        "y": 560.8721923828125,
+        "accessory": false
+      },
+      {
+        "page": 34,
+        "half": 1,
+        "model": "Olympica Nova I",
+        "code": "DIF301EFI",
+        "amount": 121590000,
+        "unit": "pair",
+        "packSize": 2,
+        "finish": "WENGE",
+        "rowText": "WENGE DIF301EFI | 8056684712762 PAIR Rs. 12,15,900",
+        "y": 590.8692016601562,
+        "accessory": false
+      },
+      {
+        "page": 34,
+        "half": 1,
+        "model": "Olympica Nova I",
+        "code": "DIF301BFI",
+        "amount": 121590000,
+        "unit": "pair",
+        "packSize": 2,
+        "finish": "PIANO BLACK",
+        "rowText": "PIANO BLACK DIF301BFI | 8056684714063 PAIR Rs. 12,15,900*",
+        "y": 620.8662109375,
+        "accessory": false
+      },
+      {
+        "page": 34,
+        "half": 1,
+        "model": "Olympica Nova I Stand CLN301FIN",
+        "code": "CLN301FIN",
+        "amount": 16790000,
+        "unit": "pair",
+        "packSize": 2,
+        "finish": "BLACK",
+        "rowText": "BLACK CLN301FIN | 8056684712915 PAIR Rs. 1,67,900",
+        "y": 731.6060791015625,
+        "accessory": true
+      },
+      {
+        "page": 35,
+        "half": 1,
+        "model": "Olympica Nova C II",
+        "code": "DIF307WFI",
+        "amount": 121590000,
+        "unit": "unit",
+        "packSize": 1,
+        "finish": "WALNUT",
+        "rowText": "WALNUT DIF307WFI | 8056684712878 UNIT Rs. 12,15,900*",
+        "y": 560.8721923828125,
+        "accessory": false
+      },
+      {
+        "page": 35,
+        "half": 1,
+        "model": "Olympica Nova C II",
+        "code": "DIF307EFI",
+        "amount": 121590000,
+        "unit": "unit",
+        "packSize": 1,
+        "finish": "WENGE",
+        "rowText": "WENGE DIF307EFI | 8056684712861 UNIT Rs. 12,15,900*",
+        "y": 590.8692016601562,
+        "accessory": false
+      },
+      {
+        "page": 35,
+        "half": 1,
+        "model": "Olympica Nova C II",
+        "code": "DIF307BFI",
+        "amount": 121590000,
+        "unit": "unit",
+        "packSize": 1,
+        "finish": "PIANO BLACK",
+        "rowText": "PIANO BLACK DIF307BFI | 8056684714117 UNIT Rs. 12,15,900*",
+        "y": 620.8662109375,
+        "accessory": false
+      },
+      {
+        "page": 35,
+        "half": 1,
+        "model": "Olympica Nova Center Stand CLN306FIN",
+        "code": "CLN306FIN",
+        "amount": 12590000,
+        "unit": "unit",
+        "packSize": 1,
+        "finish": "BLACK",
+        "rowText": "BLACK CLN306FIN | 8056684712922 UNIT Rs. 1,25,900",
+        "y": 731.5393676757812,
+        "accessory": true
+      },
+      {
+        "page": 36,
+        "half": 1,
+        "model": "Olympica Nova C I",
+        "code": "DIF306WFI",
+        "amount": 91190000,
+        "unit": "unit",
+        "packSize": 1,
+        "finish": "WALNUT",
+        "rowText": "WALNUT DIF306WFI | 8056684712854 UNIT Rs. 9,11,900*",
+        "y": 560.8760375976562,
+        "accessory": false
+      },
+      {
+        "page": 36,
+        "half": 1,
+        "model": "Olympica Nova C I",
+        "code": "DIF306EFI",
+        "amount": 91190000,
+        "unit": "unit",
+        "packSize": 1,
+        "finish": "WENGE",
+        "rowText": "WENGE DIF306EFI | 8056684712847 UNIT Rs. 9,11,900*",
+        "y": 590.3722534179688,
+        "accessory": false
+      },
+      {
+        "page": 36,
+        "half": 1,
+        "model": "Olympica Nova C I",
+        "code": "DIF306BFI",
+        "amount": 91190000,
+        "unit": "unit",
+        "packSize": 1,
+        "finish": "PIANO BLACK",
+        "rowText": "PIANO BLACK DIF306BFI | 8056684714100 UNIT Rs. 9,11,900*",
+        "y": 620.8699951171875,
+        "accessory": false
+      },
+      {
+        "page": 36,
+        "half": 1,
+        "model": "Olympica Nova Center Stand CLN306FIN",
+        "code": "CLN306FIN",
+        "amount": 12590000,
+        "unit": "unit",
+        "packSize": 1,
+        "finish": "BLACK",
+        "rowText": "BLACK CLN306FIN | 8056684712922 UNIT Rs. 1,25,900",
+        "y": 731.5393676757812,
+        "accessory": true
+      },
+      {
+        "page": 37,
+        "half": 1,
+        "model": "Olympica Nova Wall",
+        "code": "DIF308WFI",
+        "amount": 68390000,
+        "unit": "unit",
+        "packSize": 1,
+        "finish": "WALNUT",
+        "rowText": "WALNUT DIF308WFI | 8056684712892 UNIT Rs. 6,83,900",
+        "y": 583.5531005859375,
+        "accessory": false
+      },
+      {
+        "page": 37,
+        "half": 1,
+        "model": "Olympica Nova Wall",
+        "code": "DIF308EFI",
+        "amount": 68390000,
+        "unit": "unit",
+        "packSize": 1,
+        "finish": "WENGE",
+        "rowText": "WENGE DIF308EFI | 8056684712885 UNIT Rs. 6,83,900",
+        "y": 613.5501098632812,
+        "accessory": false
+      },
+      {
+        "page": 37,
+        "half": 1,
+        "model": "Olympica Nova Wall",
+        "code": "DIF308BFI",
+        "amount": 68390000,
+        "unit": "unit",
+        "packSize": 1,
+        "finish": "PIANO BLACK",
+        "rowText": "PIANO BLACK DIF308BFI | 8056684714124 UNIT Rs. 6,83,900",
+        "y": 643.547119140625,
+        "accessory": false
+      },
+      {
+        "page": 39,
+        "half": 1,
+        "model": "Sonetto G2 VIII",
+        "code": "DIF438EFI",
+        "amount": 115890000,
+        "unit": "pair",
+        "packSize": 2,
+        "finish": "WENGE",
+        "rowText": "WENGE DIF438EFI | 8056684715428 PAIR Rs. 11,58,900",
+        "y": 580.5001831054688,
+        "accessory": false
+      },
+      {
+        "page": 39,
+        "half": 1,
+        "model": "Sonetto G2 VIII",
+        "code": "DIF438RFI",
+        "amount": 115890000,
+        "unit": "pair",
+        "packSize": 2,
+        "finish": "WALNUT",
+        "rowText": "WALNUT DIF438RFI | 8056684715435 PAIR Rs. 11,58,900",
+        "y": 612.2083129882812,
+        "accessory": false
+      },
+      {
+        "page": 39,
+        "half": 1,
+        "model": "Sonetto G2 VIII",
+        "code": "DIF438BFI",
+        "amount": 115890000,
+        "unit": "pair",
+        "packSize": 2,
+        "finish": "PIANO BLACK",
+        "rowText": "PIANO BLACK DIF438BFI | 8056684715411 PAIR Rs. 11,58,900",
+        "y": 642.6721801757812,
+        "accessory": false
+      },
+      {
+        "page": 40,
+        "half": 1,
+        "model": "Sonetto G2 V",
+        "code": "DIF435EFI",
+        "amount": 95490000,
+        "unit": "pair",
+        "packSize": 2,
+        "finish": "WENGE",
+        "rowText": "WENGE DIF435EFI | 8056684715381 PAIR Rs. 9,54,900",
+        "y": 582.6781616210938,
+        "accessory": false
+      },
+      {
+        "page": 40,
+        "half": 1,
+        "model": "Sonetto G2 V",
+        "code": "DIF435RFI",
+        "amount": 95490000,
+        "unit": "pair",
+        "packSize": 2,
+        "finish": "WALNUT",
+        "rowText": "WALNUT DIF435RFI | 8056684715398 PAIR Rs. 9,54,900",
+        "y": 612.6751708984375,
+        "accessory": false
+      },
+      {
+        "page": 40,
+        "half": 1,
+        "model": "Sonetto G2 V",
+        "code": "DIF435BFI",
+        "amount": 95490000,
+        "unit": "pair",
+        "packSize": 2,
+        "finish": "PIANO BLACK",
+        "rowText": "PIANO BLACK DIF435BFI | 8056684715374 PAIR Rs. 9,54,900",
+        "y": 642.6721801757812,
+        "accessory": false
+      },
+      {
+        "page": 41,
+        "half": 1,
+        "model": "Sonetto G2 III",
+        "code": "DIF433EFI",
+        "amount": 70890000,
+        "unit": "pair",
+        "packSize": 2,
+        "finish": "WENGE",
+        "rowText": "WENGE DIF433EFI | 8056684715343 PAIR Rs. 7,08,900",
+        "y": 582.67822265625,
+        "accessory": false
+      },
+      {
+        "page": 41,
+        "half": 1,
+        "model": "Sonetto G2 III",
+        "code": "DIF433RFI",
+        "amount": 70890000,
+        "unit": "pair",
+        "packSize": 2,
+        "finish": "WALNUT",
+        "rowText": "WALNUT DIF433RFI | 8056684715350 PAIR Rs. 7,08,900",
+        "y": 612.6751708984375,
+        "accessory": false
+      },
+      {
+        "page": 41,
+        "half": 1,
+        "model": "Sonetto G2 III",
+        "code": "DIF433BFI",
+        "amount": 70890000,
+        "unit": "pair",
+        "packSize": 2,
+        "finish": "PIANO BLACK PIANO BLACK",
+        "rowText": "PIANO BLACK DIF433BFI | 8056684715336 PAIR Rs. 7,08,900 PIANO BLACK DIF433BFI | 8056684715336 PAIR Rs. 7,08,900",
+        "y": 642.6721801757812,
+        "accessory": false
+      },
+      {
+        "page": 42,
+        "half": 1,
+        "model": "Sonetto G2 II",
+        "code": "DIF432EFI",
+        "amount": 39790000,
+        "unit": "pair",
+        "packSize": 2,
+        "finish": "WENGE",
+        "rowText": "WENGE DIF432EFI | 8056684715305 PAIR RS.3,97,900*",
+        "y": 540.1554565429688,
+        "accessory": false
+      },
+      {
+        "page": 42,
+        "half": 1,
+        "model": "Sonetto G2 II",
+        "code": "DIF432RFI",
+        "amount": 39790000,
+        "unit": "pair",
+        "packSize": 2,
+        "finish": "WALNUT",
+        "rowText": "WALNUT DIF432RFI | 8056684715312 PAIR Rs. 3,97,900*",
+        "y": 570.1524658203125,
+        "accessory": false
+      },
+      {
+        "page": 42,
+        "half": 1,
+        "model": "Sonetto G2 II",
+        "code": "DIF432BFI",
+        "amount": 39790000,
+        "unit": "pair",
+        "packSize": 2,
+        "finish": "PIANO BLACK",
+        "rowText": "PIANO BLACK DIF432BFI | 8056684715299 PAIR Rs. 3,97,900* *",
+        "y": 600.1494750976562,
+        "accessory": false
+      },
+      {
+        "page": 42,
+        "half": 1,
+        "model": "Sonetto G2 Stand CLN431FIN",
+        "code": "CLN431FIN",
+        "amount": 14590000,
+        "unit": "pair",
+        "packSize": 2,
+        "finish": "FINISH BLACK",
+        "rowText": "FINISH ITEM CODE | EAN CODE U.M. MRP BLACK CLN431FIN | 8056684715527 PAIR Rs. 1,45,900",
+        "y": 728.3281860351562,
+        "accessory": true
+      },
+      {
+        "page": 43,
+        "half": 1,
+        "model": "Sonetto G2 I",
+        "code": "DIF431EFI",
+        "amount": 31890000,
+        "unit": "pair",
+        "packSize": 2,
+        "finish": "WENGE",
+        "rowText": "WENGE DIF431EFI | 8056684715268 PAIR Rs. 3,18,900*",
+        "y": 540.6399536132812,
+        "accessory": false
+      },
+      {
+        "page": 43,
+        "half": 1,
+        "model": "Sonetto G2 I",
+        "code": "DIF431RFI",
+        "amount": 31890000,
+        "unit": "pair",
+        "packSize": 2,
+        "finish": "WALNUT",
+        "rowText": "WALNUT DIF431RFI | 8056684715275 PAIR Rs. 3,18,900*",
+        "y": 569.6856079101562,
+        "accessory": false
+      },
+      {
+        "page": 43,
+        "half": 1,
+        "model": "Sonetto G2 I",
+        "code": "DIF431BFI",
+        "amount": 31890000,
+        "unit": "pair",
+        "packSize": 2,
+        "finish": "PIANO BLACK PIANO BLACK",
+        "rowText": "PIANO BLACK DIF431BFI | 8056684715251 PAIR Rs. 3,18,900* * PIANO BLACK DIF431BFI | 8056684715251 PAIR Rs. 3,18,900* *",
+        "y": 605.1653442382812,
+        "accessory": false
+      },
+      {
+        "page": 43,
+        "half": 1,
+        "model": "Sonetto G2 Stand CLN431FIN",
+        "code": "CLN431FIN",
+        "amount": 14590000,
+        "unit": "pair",
+        "packSize": 2,
+        "finish": "BLACK",
+        "rowText": "BLACK CIN431FIN | 8056684715527 PAIR Rs. 1,45,900",
+        "y": 732.1005249023438,
+        "accessory": true
+      },
+      {
+        "page": 44,
+        "half": 1,
+        "model": "Sonetto G2 Center",
+        "code": "DIF437EFI",
+        "amount": 39790000,
+        "unit": "unit",
+        "packSize": 1,
+        "finish": "WENGE",
+        "rowText": "WENGE DIF437EFI | 8056684715503 UNIT Rs. 3,97,900",
+        "y": 540.1585693359375,
+        "accessory": false
+      },
+      {
+        "page": 44,
+        "half": 1,
+        "model": "Sonetto G2 Center",
+        "code": "DIF437RFI",
+        "amount": 39790000,
+        "unit": "unit",
+        "packSize": 1,
+        "finish": "WALNUT",
+        "rowText": "WALNUT DIF437RFI | 8056684715510 UNIT Rs. 3,97,900",
+        "y": 570.1555786132812,
+        "accessory": false
+      },
+      {
+        "page": 44,
+        "half": 1,
+        "model": "Sonetto G2 Center",
+        "code": "DIF437BFI",
+        "amount": 39790000,
+        "unit": "unit",
+        "packSize": 1,
+        "finish": "PIANO BLACK",
+        "rowText": "PIANO BLACK DIF437BFI | 8056684715497 UNIT Rs. 3,97,900",
+        "y": 600.152587890625,
+        "accessory": false
+      },
+      {
+        "page": 45,
+        "half": 1,
+        "model": "Sonetto G2 Wall",
+        "code": "DIF436EFI",
+        "amount": 20990000,
+        "unit": "unit",
+        "packSize": 1,
+        "finish": "WENGE",
+        "rowText": "WENGE DIF436EFI | 8056684715466 UNIT Rs. 2,09,900",
+        "y": 539.669921875,
+        "accessory": false
+      },
+      {
+        "page": 45,
+        "half": 1,
+        "model": "Sonetto G2 Wall",
+        "code": "DIF436RFI",
+        "amount": 20990000,
+        "unit": "unit",
+        "packSize": 1,
+        "finish": "WALNUT",
+        "rowText": "WALNUT DIF436RFI | 8056684715473 UNIT Rs. 2,09,900",
+        "y": 569.7943115234375,
+        "accessory": false
+      },
+      {
+        "page": 45,
+        "half": 1,
+        "model": "Sonetto G2 Wall",
+        "code": "DIF436BFI",
+        "amount": 20990000,
+        "unit": "unit",
+        "packSize": 1,
+        "finish": "PIANO BLACK",
+        "rowText": "PIANO BLACK DIF436BFI | 8056684715459 UNIT Rs. 2,09,900",
+        "y": 600.152587890625,
+        "accessory": false
+      },
+      {
+        "page": 47,
+        "half": 1,
+        "model": "Lumina V Amator",
+        "code": "DIF355GFI",
+        "amount": 59390000,
+        "unit": "pair",
+        "packSize": 2,
+        "finish": "WENGE",
+        "rowText": "WENGE DIF355GFI | 8056684715107 PAIR Rs. 5,93,900",
+        "y": 582.1895141601562,
+        "accessory": false
+      },
+      {
+        "page": 47,
+        "half": 1,
+        "model": "Lumina V Amator",
+        "code": "DIF355SFI",
+        "amount": 59390000,
+        "unit": "pair",
+        "packSize": 2,
+        "finish": "WALNUT",
+        "rowText": "WALNUT DIF355SFI | 8056684715114 PAIR Rs. 5,93,900",
+        "y": 612.6751708984375,
+        "accessory": false
+      },
+      {
+        "page": 47,
+        "half": 1,
+        "model": "Lumina V Amator",
+        "code": "DIF355RFI",
+        "amount": 59390000,
+        "unit": "pair",
+        "packSize": 2,
+        "finish": "RED RED",
+        "rowText": "RED DIF355RFI | 8056684715015 PAIR Rs. 5,93,900 RED DIF355RFI | 8056684715015 PAIR Rs. 5,93,900",
+        "y": 642.6721801757812,
+        "accessory": false
+      },
+      {
+        "page": 48,
+        "half": 1,
+        "model": "Lumina V",
+        "code": "DIF355EFI",
+        "amount": 49190000,
+        "unit": "pair",
+        "packSize": 2,
+        "finish": "WENGE",
+        "rowText": "WENGE DIF355EFI | 8056684713752 PAIR Rs. 4,91,900",
+        "y": 582.00732421875,
+        "accessory": false
+      },
+      {
+        "page": 48,
+        "half": 1,
+        "model": "Lumina V",
+        "code": "DIF355WFI",
+        "amount": 49190000,
+        "unit": "pair",
+        "packSize": 2,
+        "finish": "WALNUT",
+        "rowText": "WALNUT DIF355WFI | 8056684713769 PAIR Rs. 4,91,900",
+        "y": 612.0043334960938,
+        "accessory": false
+      },
+      {
+        "page": 48,
+        "half": 1,
+        "model": "Lumina V",
+        "code": "DIF355BFI",
+        "amount": 49190000,
+        "unit": "pair",
+        "packSize": 2,
+        "finish": "PIANO BLACK",
+        "rowText": "PIANO BLACK DIF355BFI | 8056684713745 PAIR Rs. 4,91,900",
+        "y": 642.205322265625,
+        "accessory": false
+      },
+      {
+        "page": 49,
+        "half": 1,
+        "model": "Lumina III",
+        "code": "DIF353EFI",
+        "amount": 36890000,
+        "unit": "pair",
+        "packSize": 2,
+        "finish": "WENGE",
+        "rowText": "WENGE DIF353EFI | 8056684713721 PAIR Rs. 3,68,900",
+        "y": 582.6594848632812,
+        "accessory": false
+      },
+      {
+        "page": 49,
+        "half": 1,
+        "model": "Lumina III",
+        "code": "DIF353WFI",
+        "amount": 36890000,
+        "unit": "pair",
+        "packSize": 2,
+        "finish": "WALNUT",
+        "rowText": "WALNUT DIF353WFI | 8056684713738 PAIR Rs. 3,68,900",
+        "y": 612.656494140625,
+        "accessory": false
+      },
+      {
+        "page": 49,
+        "half": 1,
+        "model": "Lumina III",
+        "code": "DIF353BFI",
+        "amount": 36890000,
+        "unit": "pair",
+        "packSize": 2,
+        "finish": "PIANO BLACK",
+        "rowText": "PIANO BLACK DIF353BFI | 8056684713714 PAIR Rs. 3,68,900",
+        "y": 642.6535034179688,
+        "accessory": false
+      },
+      {
+        "page": 50,
+        "half": 1,
+        "model": "Lumina II Amator",
+        "code": "DIF352GFI",
+        "amount": 25390000,
+        "unit": "pair",
+        "packSize": 2,
+        "finish": "W EWENGE",
+        "rowText": "W EWENGE DIF352GFI | 8056684715077 PAIR Rs. 2,53,900",
+        "y": 582.6781616210938,
+        "accessory": false
+      },
+      {
+        "page": 50,
+        "half": 1,
+        "model": "Lumina II Amator",
+        "code": "DIF352SFI",
+        "amount": 25390000,
+        "unit": "pair",
+        "packSize": 2,
+        "finish": "LN LNLNLNUT",
+        "rowText": "LN LNLNLNUT DIF352SFI | 8056684715084 PAIR Rs. 2,53,900",
+        "y": 612.1865234375,
+        "accessory": false
+      },
+      {
+        "page": 50,
+        "half": 1,
+        "model": "Lumina II Amator",
+        "code": "DIF352RFI",
+        "amount": 25390000,
+        "unit": "pair",
+        "packSize": 2,
+        "finish": "RE RERERED RERERED",
+        "rowText": "RE RERERED DIF352RFI | 8056684714995 PAIR Rs. 2,53,900 RERERED DIF352RFI | 8056684714995 PAIR Rs. 2,53,900",
+        "y": 642.205322265625,
+        "accessory": false
+      },
+      {
+        "page": 51,
+        "half": 1,
+        "model": "Lumina II",
+        "code": "DIF352EFI",
+        "amount": 20290000,
+        "unit": "pair",
+        "packSize": 2,
+        "finish": "W EWENGE",
+        "rowText": "W EWENGE DIF352EFI | 8056684713691 PAIR Rs. 2,02,900",
+        "y": 582.2113647460938,
+        "accessory": false
+      },
+      {
+        "page": 51,
+        "half": 1,
+        "model": "Lumina II",
+        "code": "DIF352WFI",
+        "amount": 20290000,
+        "unit": "pair",
+        "packSize": 2,
+        "finish": "LN LNLNLNUT",
+        "rowText": "LN LNLNLNUT DIF352WFI | 8056684713707 PAIR Rs. 2,02,900",
+        "y": 612.6751708984375,
+        "accessory": false
+      },
+      {
+        "page": 51,
+        "half": 1,
+        "model": "Lumina II",
+        "code": "DIF352BFI",
+        "amount": 20290000,
+        "unit": "pair",
+        "packSize": 2,
+        "finish": "PI PIPIPIANO BLACK PIPIPIANO BLACK",
+        "rowText": "PI PIPIPIANO BLACK DIF352BFI | 8056684713684 PAIR Rs. 2,02,900 PIPIPIANO BLACK DIF352BFI | 8056684713684 PAIR Rs. 2,02,900",
+        "y": 642.6721801757812,
+        "accessory": false
+      },
+      {
+        "page": 52,
+        "half": 1,
+        "model": "Lumina I",
+        "code": "DIF351EFI",
+        "amount": 15190000,
+        "unit": "pair",
+        "packSize": 2,
+        "finish": "WENGE",
+        "rowText": "WENGE DIF351EFI | 8056684713660 PAIR Rs. 1,51,900",
+        "y": 582.67822265625,
+        "accessory": false
+      },
+      {
+        "page": 52,
+        "half": 1,
+        "model": "Lumina I",
+        "code": "DIF351WFI",
+        "amount": 15190000,
+        "unit": "pair",
+        "packSize": 2,
+        "finish": "WALNUT",
+        "rowText": "WALNUT DIF351WFI | 8056684713677 PAIR Rs. 1,51,900",
+        "y": 612.1865234375,
+        "accessory": false
+      },
+      {
+        "page": 52,
+        "half": 1,
+        "model": "Lumina I",
+        "code": "DIF351BFI",
+        "amount": 15190000,
+        "unit": "pair",
+        "packSize": 2,
+        "finish": "PIANO BLACK",
+        "rowText": "PIANO BLACK DIF351BFI | 8056684713653 PAIR Rs. 1,51,900",
+        "y": 642.8699951171875,
+        "accessory": false
+      },
+      {
+        "page": 53,
+        "half": 1,
+        "model": "Lumina C I",
+        "code": "DIF356EFI",
+        "amount": 13090000,
+        "unit": "unit",
+        "packSize": 1,
+        "finish": "WENGE",
+        "rowText": "WENGE DIF356EFI | 8056684713783 UNIT Rs. 1,30,900",
+        "y": 582.2113647460938,
+        "accessory": false
+      },
+      {
+        "page": 53,
+        "half": 1,
+        "model": "Lumina C I",
+        "code": "DIF356WFI",
+        "amount": 13090000,
+        "unit": "unit",
+        "packSize": 1,
+        "finish": "WALNUT",
+        "rowText": "WALNUT DIF356WFI | 8056684713790 UNIT Rs. 1,30,900",
+        "y": 612.6751708984375,
+        "accessory": false
+      },
+      {
+        "page": 53,
+        "half": 1,
+        "model": "Lumina C I",
+        "code": "DIF356BFI",
+        "amount": 13090000,
+        "unit": "unit",
+        "packSize": 1,
+        "finish": "PIANO BLACK",
+        "rowText": "PIANO BLACK DIF356BFI | 8056684713776 UNIT Rs. 1,30,900",
+        "y": 642.6721801757812,
+        "accessory": false
+      },
+      {
+        "page": 55,
+        "half": 1,
+        "model": "Gravis VI",
+        "code": "SBWU10RFI",
+        "amount": 101290000,
+        "unit": "unit",
+        "packSize": 1,
+        "finish": "2023 REF&TRAD RED",
+        "rowText": "2023 SBWU11RFI | 8056684714735 REF&TRAD SBWU10RFI | 8056684712441 RED UNIT Rs. 10,12,900",
+        "y": 584.6582641601562,
+        "accessory": false
+      },
+      {
+        "page": 55,
+        "half": 1,
+        "model": "Gravis VI",
+        "code": "SBWU11PFI",
+        "amount": 101290000,
+        "unit": "unit",
+        "packSize": 1,
+        "finish": "GRAPHITE 2023",
+        "rowText": "GRAPHITE 2023 SBWU11PFI | 8056684714742 UNIT Rs. 10,12,900",
+        "y": 616.42822265625,
+        "accessory": false
+      },
+      {
+        "page": 55,
+        "half": 1,
+        "model": "Gravis VI",
+        "code": "SBWU10GFI",
+        "amount": 101290000,
+        "unit": "unit",
+        "packSize": 1,
+        "finish": "WENGE 2023 REF&TRAD",
+        "rowText": "WENGE 2023 SBWU11GFI | 8056684714728 REF&TRAD SBWU10GFI | 8056684712427 UNIT Rs. 10,12,900",
+        "y": 649.1030883789062,
+        "accessory": false
+      },
+      {
+        "page": 55,
+        "half": 1,
+        "model": "Gravis VI",
+        "code": "SBWU10BFI",
+        "amount": 101290000,
+        "unit": "unit",
+        "packSize": 1,
+        "finish": "PIANO BLACK 2023 REF&TRAD",
+        "rowText": "PIANO BLACK 2023 SBWU11BFI | 8056684714711 REF&TRAD SBWU10BFI | 8056684712410 UNIT Rs. 10,12,900",
+        "y": 683.60009765625,
+        "accessory": false
+      },
+      {
+        "page": 56,
+        "half": 1,
+        "model": "Gravis V",
+        "code": "SBWU20RFI",
+        "amount": 72390000,
+        "unit": "unit",
+        "packSize": 1,
+        "finish": "2023 REF&TRAD RED",
+        "rowText": "2023 SBWU21RFI | 8056684714773 REF&TRAD SBWU20RFI | 8056684712496 RED UNIT Rs. 7,23,900",
+        "y": 585.3291015625,
+        "accessory": false
+      },
+      {
+        "page": 56,
+        "half": 1,
+        "model": "Gravis V",
+        "code": "SBWU21PFI",
+        "amount": 72390000,
+        "unit": "unit",
+        "packSize": 1,
+        "finish": "GRAPHITE 2023",
+        "rowText": "GRAPHITE 2023 SBWU21PFI |8056684714780 UNIT Rs. 7,23,900",
+        "y": 616.2177124023438,
+        "accessory": false
+      },
+      {
+        "page": 56,
+        "half": 1,
+        "model": "Gravis V",
+        "code": "SBWU20GFI",
+        "amount": 72390000,
+        "unit": "unit",
+        "packSize": 1,
+        "finish": "WENGE 2023 REF&TRAD",
+        "rowText": "WENGE 2023 SBWU21GFI | 8056684714766 REF&TRAD SBWU20GFI | 8056684712472 UNIT Rs. 7,23,900",
+        "y": 649.1030883789062,
+        "accessory": false
+      },
+      {
+        "page": 56,
+        "half": 1,
+        "model": "Gravis V",
+        "code": "SBWU20BFI",
+        "amount": 72390000,
+        "unit": "unit",
+        "packSize": 1,
+        "finish": "PIANO BLACK 2023 REF&TRAD",
+        "rowText": "PIANO BLACK 2023 SBWU21BFI | 8056684714759 REF&TRAD SBWU20BFI | 8056684712465 UNIT Rs. 7,23,900",
+        "y": 683.1051025390625,
+        "accessory": false
+      },
+      {
+        "page": 57,
+        "half": 1,
+        "model": "Gravis III",
+        "code": "SBWU30WFI",
+        "amount": 39790000,
+        "unit": "unit",
+        "packSize": 1,
+        "finish": "WALNUT",
+        "rowText": "WALNUT SBWU30WFI | 8056684713240 UNIT Rs. 3,97,900",
+        "y": 626.0728149414062,
+        "accessory": false
+      },
+      {
+        "page": 57,
+        "half": 1,
+        "model": "Gravis III",
+        "code": "SBWU30EFI",
+        "amount": 39790000,
+        "unit": "unit",
+        "packSize": 1,
+        "finish": "WENGE",
+        "rowText": "WENGE SBWU30EFI | 8056684713233 UNIT Rs. 3,97,900",
+        "y": 656.06982421875,
+        "accessory": false
+      },
+      {
+        "page": 57,
+        "half": 1,
+        "model": "Gravis III",
+        "code": "SBWU30BFI",
+        "amount": 39790000,
+        "unit": "unit",
+        "packSize": 1,
+        "finish": "PIANO BLACK",
+        "rowText": "PIANO BLACK SBWU30BFI | 8056684713226 UNIT Rs. 3,97,900",
+        "y": 686.0668334960938,
+        "accessory": false
+      },
+      {
+        "page": 58,
+        "half": 1,
+        "model": "Gravis II",
+        "code": "SBWU42EFI",
+        "amount": 20290000,
+        "unit": "unit",
+        "packSize": 1,
+        "finish": "WENGE 120 V 220 V",
+        "rowText": "WENGE 120 V SBWU41EFI | 8056684713356 220 V SBWU42EFI | 8056684713363 UNIT Rs. 2,02,900",
+        "y": 585.8211059570312,
+        "accessory": false
+      },
+      {
+        "page": 58,
+        "half": 1,
+        "model": "Gravis II",
+        "code": "SBWU42RFI",
+        "amount": 20290000,
+        "unit": "unit",
+        "packSize": 1,
+        "finish": "WALNUT 120 V 220 V",
+        "rowText": "WALNUT 120 V SBWU41RFI | 8056684712267 220 V SBWU42RFI | 8056684712298 UNIT Rs. 2,02,900",
+        "y": 620.0930786132812,
+        "accessory": false
+      },
+      {
+        "page": 58,
+        "half": 1,
+        "model": "Gravis II",
+        "code": "SBWU42BFI",
+        "amount": 20290000,
+        "unit": "unit",
+        "packSize": 1,
+        "finish": "PIANO BLACK 120 V 220 V",
+        "rowText": "PIANO BLACK 120 V SBWU41BFI | 8056684712250 220 V SBWU42BFI | 8056684712281 UNIT Rs. 2,02,900",
+        "y": 654.0950927734375,
+        "accessory": false
+      },
+      {
+        "page": 58,
+        "half": 1,
+        "model": "Gravis II",
+        "code": "SBWU42WFI",
+        "amount": 20290000,
+        "unit": "unit",
+        "packSize": 1,
+        "finish": "WHITE MATTE 120 V 220 V",
+        "rowText": "WHITE MATTE 120 V SBWU41WFI | 8056684712274 220 V SBWU42WFI | 8056684712304 UNIT Rs. 2,02,900",
+        "y": 688.0971069335938,
+        "accessory": false
+      },
+      {
+        "page": 59,
+        "half": 1,
+        "model": "Gravis I",
+        "code": "SBWU52EFI",
+        "amount": 13090000,
+        "unit": "unit",
+        "packSize": 1,
+        "finish": "WENGE 120 V 220 V",
+        "rowText": "WENGE 120 V SBWU51EFI | 8056684713370 220 V SBWU52EFI | 8056684713387 UNIT Rs. 1,30,900",
+        "y": 578.5184936523438,
+        "accessory": false
+      },
+      {
+        "page": 59,
+        "half": 1,
+        "model": "Gravis I",
+        "code": "SBWU52RFI",
+        "amount": 13090000,
+        "unit": "unit",
+        "packSize": 1,
+        "finish": "WALNUT 120 V 220 V",
+        "rowText": "WALNUT 120 V SBWU51RFI | 8056684712328 220 V SBWU52RFI | 8056684712359 UNIT Rs. 1,30,900",
+        "y": 613.0068969726562,
+        "accessory": false
+      },
+      {
+        "page": 59,
+        "half": 1,
+        "model": "Gravis I",
+        "code": "SBWU52BFI",
+        "amount": 13090000,
+        "unit": "unit",
+        "packSize": 1,
+        "finish": "PIANO BLACK 120 V 220 V",
+        "rowText": "PIANO BLACK 120 V SBWU51BFI | 8056684712311 220 V SBWU52BFI | 8056684712342 UNIT Rs. 1,30,900",
+        "y": 647.0089111328125,
+        "accessory": false
+      },
+      {
+        "page": 59,
+        "half": 1,
+        "model": "Gravis I",
+        "code": "SBWU52WFI",
+        "amount": 13090000,
+        "unit": "unit",
+        "packSize": 1,
+        "finish": "WHITE MATTE 120 V 220 V",
+        "rowText": "WHITE MATTE 120 V SBWU51WFI | 8056684712335 220 V SBWU52WFI | 8056684712366 UNIT Rs. 1,30,900",
+        "y": 681.0109252929688,
+        "accessory": false
+      },
+      {
+        "page": 59,
+        "half": 1,
+        "model": "WTX Transmitter WTX112FIN",
+        "code": "WTX112FIN",
+        "amount": 7290000,
+        "unit": "unit",
+        "packSize": 1,
+        "finish": "T R A N S M I T T E R BLACK MATTE",
+        "rowText": "T R A N S M I T T E R BLACK MATTE WTX112FIN | 8056684712595 UNIT Rs. 72900",
+        "y": 734.9658813476562,
+        "accessory": true
+      },
+      {
+        "page": 61,
+        "half": 1,
+        "model": "Duetto",
+        "code": "DIF342WFI",
+        "amount": 48590000,
+        "unit": "pair",
+        "packSize": 2,
+        "finish": "WALNUT GRAPHITE IN IN",
+        "rowText": "WALNUT GRAPHITE DIF342WFI | 8056684714391 DIF342GFI | 8056684714384 IN PAIR Rs. 4,85,900 IN",
+        "y": 578.5272827148438,
+        "accessory": false
+      },
+      {
+        "page": 61,
+        "half": 1,
+        "model": "Duetto Stand CLN342FIN",
+        "code": "CLN342FIN",
+        "amount": 9190000,
+        "unit": "pair",
+        "packSize": 2,
+        "finish": "BLACK",
+        "rowText": "BLACK CLN342FIN | 8056684714964 PAIR Rs.91,900",
+        "y": 731.5388793945312,
+        "accessory": true
+      },
+      {
+        "page": 63,
+        "half": 1,
+        "model": "Omnia",
+        "code": "DIF340WFI",
+        "amount": 21090000,
+        "unit": "unit",
+        "packSize": 1,
+        "finish": "WALNUT GRAPHITE IN",
+        "rowText": "UNIT WALNUT GRAPHITE DIF340WFI | 8056684713967 DIF340GFI | 8056684713936 Rs. 2,10,900 IN",
+        "y": 649.1893310546875,
+        "accessory": false
+      },
+      {
+        "page": 65,
+        "half": 0,
+        "model": "Arena 30",
+        "code": "DIF393FIN",
+        "amount": 258290000,
+        "unit": "unit",
+        "packSize": 1,
+        "finish": "4 WAY IN-WALL SEALED BOX ENCLOSURE BLACK",
+        "rowText": "4 WAY IN-WALL SEALED BOX ENCLOSURE BLACK DIF393FIN | 8056684714612 UNIT Rs. 25,82,900",
+        "y": 663.5333862304688,
+        "accessory": false
+      },
+      {
+        "page": 65,
+        "half": 1,
+        "model": "Arena 30H",
+        "code": "DIF393HFI",
+        "amount": 258290000,
+        "unit": "unit",
+        "packSize": 1,
+        "finish": "WAY -WALL EALED BOX NCLOSURE BLACK",
+        "rowText": "WAY -WALL EALED BOX NCLOSURE BLACK DIF393HFI | 8056684716159 UNIT Rs. 25,82,900",
+        "y": 663.5333862304688,
+        "accessory": false
+      },
+      {
+        "page": 66,
+        "half": 0,
+        "model": "Arena 20",
+        "code": "DIF393FIN",
+        "amount": 167190000,
+        "unit": "unit",
+        "packSize": 1,
+        "finish": "4 WAY IN-WALL SEALED BOX ENCLOSURE BLACK",
+        "rowText": "4 WAY IN-WALL SEALED BOX ENCLOSURE BLACK DIF393FIN | 8056684714612 UNIT Rs. 16,71,900",
+        "y": 662.9608764648438,
+        "accessory": false
+      },
+      {
+        "page": 66,
+        "half": 1,
+        "model": "Arena 10",
+        "code": "DIF391FIN",
+        "amount": 121590000,
+        "unit": "unit",
+        "packSize": 1,
+        "finish": "WAY -CEILING EALED BOX NCLOSURE BLACK",
+        "rowText": "WAY -CEILING EALED BOX NCLOSURE BLACK DIF391FIN | 8056684714865 UNIT Rs. 12,15,900",
+        "y": 663.4550170898438,
+        "accessory": false
+      },
+      {
+        "page": 66,
+        "half": 1,
+        "model": "Palladio Premium Frame Kit KIT391FIN",
+        "code": "KIT391FIN",
+        "amount": 22790000,
+        "unit": "unit",
+        "packSize": 1,
+        "finish": "RAME BLACK",
+        "rowText": "RAME BLACK KIT391FIN | 8056684715824 UNIT Rs. 2,27,900",
+        "y": 702.0919799804688,
+        "accessory": true
+      },
+      {
+        "page": 67,
+        "half": 1,
+        "model": "Arena S10",
+        "code": "DIF394BFI",
+        "amount": 68390000,
+        "unit": "unit",
+        "packSize": 1,
+        "finish": "-WALL SUB OOFER BLACK",
+        "rowText": "-WALL SUB OOFER BLACK DIF394BFI | 8056684715596 UNIT Rs. 6,83,900",
+        "y": 654.9320068359375,
+        "accessory": false
+      },
+      {
+        "page": 67,
+        "half": 0,
+        "model": "Arena S15",
+        "code": "DIF390FIN",
+        "amount": 121590000,
+        "unit": "unit",
+        "packSize": 1,
+        "finish": "IN WALL SUB WOOFER ARRAY BALANCED BLACK",
+        "rowText": "IN WALL SUB WOOFER ARRAY BALANCED BLACK DIF390FIN | 8056684714599 UNIT Rs. 12,15,900",
+        "y": 663.509033203125,
+        "accessory": false
+      },
+      {
+        "page": 67,
+        "half": 1,
+        "model": "Arena S10",
+        "code": "DIF394WFI",
+        "amount": 68390000,
+        "unit": "unit",
+        "packSize": 1,
+        "finish": "RRAY ALANCED WHITE PRIMER",
+        "rowText": "RRAY ALANCED WHITE PRIMER DIF394WFI | 8056684716166 UNIT Rs. 6,83,900",
+        "y": 685.1630249023438,
+        "accessory": false
+      },
+      {
+        "page": 68,
+        "half": 0,
+        "model": "Arena 5",
+        "code": "DIF396FIN",
+        "amount": 75990000,
+        "unit": "unit",
+        "packSize": 1,
+        "finish": "3 Way Closed Box BLACK.",
+        "rowText": "3 Way Closed Box BLACK. DIF396FIN | 8056684715619. UNIT. Rs. 7,59,900",
+        "y": 652.70556640625,
+        "accessory": false
+      },
+      {
+        "page": 68,
+        "half": 1,
+        "model": "Arena 2",
+        "code": "DIF395FIN",
+        "amount": 60790000,
+        "unit": "unit",
+        "packSize": 1,
+        "finish": "Closed Box. BLACK.",
+        "rowText": "Closed Box. BLACK. DIF395FIN | 8056684715602. UNIT. Rs. 6,07,900",
+        "y": 652.70556640625,
+        "accessory": false
+      },
+      {
+        "page": 69,
+        "half": 0,
+        "model": "Arena 1",
+        "code": "DIF397FIN",
+        "amount": 60790000,
+        "unit": "unit",
+        "packSize": 1,
+        "finish": "3 WAY CLOSED BOX BLACK",
+        "rowText": "3 WAY CLOSED BOX BLACK DIF397FIN | 8056684715626 UNIT Rs. 6,07,900",
+        "y": 654.9320068359375,
+        "accessory": false
+      },
+      {
+        "page": 72,
+        "half": 1,
+        "model": "PC 662",
+        "code": "CIL331FIN",
+        "amount": 10190000,
+        "unit": "unit",
+        "packSize": 1,
+        "finish": "WAY n IN-CEILING PTIONAL /",
+        "rowText": "WAY n IN-CEILING PTIONAL / CIL331FIN | 80566847127 0 0 UNIT Rs. 1,01 ,900 *",
+        "y": 654.2891235351562,
+        "accessory": false
+      },
+      {
+        "page": 72,
+        "half": 0,
+        "model": "PW 662",
+        "code": "CIL330FIN",
+        "amount": 23190000,
+        "unit": "unit",
+        "packSize": 1,
+        "finish": "IN-WALL. SEALED BOX ENCLOSURE /",
+        "rowText": "IN-WALL. SEALED BOX ENCLOSURE / CIL330FIN | 8056684712694 UNIT Rs. 2,31,900",
+        "y": 663.304931640625,
+        "accessory": false
+      },
+      {
+        "page": 72,
+        "half": 1,
+        "model": "Palladio Square Grille Kit KIT320FIN",
+        "code": "KIT320FIN",
+        "amount": 6590000,
+        "unit": "set",
+        "packSize": 10,
+        "finish": "PTIONAL QUARE GRILL E PAINTABLE",
+        "rowText": "PTIONAL QUARE GRILL E PAINTABLE KIT320FIN | 805668471298 4 (10 PCS) X 1KI T Rs. 65,900",
+        "y": 684.3670654296875,
+        "accessory": true
+      },
+      {
+        "page": 72,
+        "half": 0,
+        "model": "Palladio Premium Frame Kit KIT330FIN",
+        "code": "KIT330FIN",
+        "amount": 3990000,
+        "unit": "unit",
+        "packSize": 1,
+        "finish": "- WOOD - PAINTABLE WALNUT",
+        "rowText": "- WOOD - PAINTABLE WALNUT KIT330FIN | 8056684713035 UNIT Rs. 39,900",
+        "y": 702.1909790039062,
+        "accessory": true
+      },
+      {
+        "page": 72,
+        "half": 1,
+        "model": "Palladio Pre-mounting Kit KIT322FIN",
+        "code": "KIT322FIN",
+        "amount": 2190000,
+        "unit": "set",
+        "packSize": 5,
+        "finish": "OPTIONAL RE MOUNTI N G /",
+        "rowText": "OPTIONAL RE MOUNTI N G / KIT322FIN | 80566847130 0 4 (5 PCS) X 1 K I T Rs. 21,900",
+        "y": 715.0880126953125,
+        "accessory": true
+      },
+      {
+        "page": 72,
+        "half": 0,
+        "model": "Palladio Premium Frame Kit KIT331FIN",
+        "code": "KIT331FIN",
+        "amount": 3990000,
+        "unit": "unit",
+        "packSize": 1,
+        "finish": "FRAME - STRING GRILLE WENGE",
+        "rowText": "FRAME - STRING GRILLE WENGE KIT331FIN | 8056684713042 UNIT Rs. 39,900",
+        "y": 732.2960205078125,
+        "accessory": true
+      },
+      {
+        "page": 73,
+        "half": 0,
+        "model": "PC 682",
+        "code": "CIL332FIN",
+        "amount": 11290000,
+        "unit": "unit",
+        "packSize": 1,
+        "finish": "2 Way 8 in In-Ceiling /.",
+        "rowText": "2 Way 8 in In-Ceiling /. CIL332FIN | 8056684712717 UNIT. Rs. 1,12,900",
+        "y": 649.1270141601562,
+        "accessory": false
+      },
+      {
+        "page": 73,
+        "half": 1,
+        "model": "PC 662P",
+        "code": "CIL333FIN",
+        "amount": 10190000,
+        "unit": "unit",
+        "packSize": 1,
+        "finish": "Way 6 In In-Ceiling /.",
+        "rowText": "Way 6 In In-Ceiling /. CIL333FIN | 8056684712724 UNIT. Rs. 1,01,900",
+        "y": 649.1270141601562,
+        "accessory": false
+      },
+      {
+        "page": 73,
+        "half": 1,
+        "model": "Palladio Square Grille Kit KIT321FIN",
+        "code": "KIT321FIN",
+        "amount": 6590000,
+        "unit": "set",
+        "packSize": 10,
+        "finish": "tional Square Grill Paintable.",
+        "rowText": "tional Square Grill Paintable. KIT321FIN | 8056684712991. (10 PCS) x 1 KIT. Rs. 65,900",
+        "y": 676.72021484375,
+        "accessory": true
+      },
+      {
+        "page": 73,
+        "half": 0,
+        "model": "Palladio Square Grille Kit KIT321FIN",
+        "code": "KIT321FIN",
+        "amount": 6590000,
+        "unit": "set",
+        "packSize": 10,
+        "finish": "Optional Square Grill Paintable",
+        "rowText": "Optional Square Grill Paintable KIT321FIN | 8056684712991 (10 PCS) x 1 KIT Rs. 65,900",
+        "y": 677.0397338867188,
+        "accessory": true
+      },
+      {
+        "page": 73,
+        "half": 0,
+        "model": "Palladio Pre-mounting Kit KIT324FIN",
+        "code": "KIT324FIN",
+        "amount": 2190000,
+        "unit": "set",
+        "packSize": 5,
+        "finish": "Optional Pre Mounting. /",
+        "rowText": "Optional Pre Mounting. / KIT324FIN | 8056684713028. ( 5 PCS) x 1 KIT. Rs. 21,900",
+        "y": 706.2892456054688,
+        "accessory": true
+      },
+      {
+        "page": 73,
+        "half": 1,
+        "model": "Palladio Pre-mounting Kit KIT323FIN",
+        "code": "KIT323FIN",
+        "amount": 2190000,
+        "unit": "set",
+        "packSize": 5,
+        "finish": "ptional Pre Mounting. /.",
+        "rowText": "ptional Pre Mounting. /. KIT323FIN | 8056684713011 (5 PCS) x 1 KIT. Rs. 21,900",
+        "y": 709.2310791015625,
+        "accessory": true
+      },
+      {
+        "page": 74,
+        "half": 1,
+        "model": "PC 683",
+        "code": "CIL335FIN",
+        "amount": 14190000,
+        "unit": "unit",
+        "packSize": 1,
+        "finish": "WAY IN-CEI- NG FINITE BAFFLE /",
+        "rowText": "WAY IN-CEI- NG FINITE BAFFLE / CIL335FIN | 8056684712748 UNIT Rs. 1,41,900",
+        "y": 657.8430786132812,
+        "accessory": false
+      },
+      {
+        "page": 74,
+        "half": 0,
+        "model": "PC 664P",
+        "code": "CIL334FIN",
+        "amount": 33390000,
+        "unit": "unit",
+        "packSize": 1,
+        "finish": "IN CEILING DRONE CONE PASSIVE RADIATOR /",
+        "rowText": "IN CEILING DRONE CONE PASSIVE RADIATOR / CIL334FIN | 8056684712731 UNIT Rs. 3,33,900",
+        "y": 672.8370971679688,
+        "accessory": false
+      },
+      {
+        "page": 74,
+        "half": 1,
+        "model": "Palladio Square Grille Kit KIT321FIN",
+        "code": "KIT321FIN",
+        "amount": 6590000,
+        "unit": "set",
+        "packSize": 10,
+        "finish": "OPTIONAL QUARE GRILLE PAINTABLE",
+        "rowText": "OPTIONAL QUARE GRILLE PAINTABLE KIT321FIN | 8056684712991 (10 PCS) X 1 KIT Rs. 65,900",
+        "y": 691.6448974609375,
+        "accessory": true
+      },
+      {
+        "page": 74,
+        "half": 1,
+        "model": "Palladio Pre-mounting Kit KIT324FIN",
+        "code": "KIT324FIN",
+        "amount": 2190000,
+        "unit": "set",
+        "packSize": 5,
+        "finish": "OPTIONAL RE MOUNTING /",
+        "rowText": "OPTIONAL RE MOUNTING / KIT324FIN | 8056684713028 (5 PCS) X 1 KIT Rs. 21,900",
+        "y": 722.0900268554688,
+        "accessory": true
+      },
+      {
+        "page": 75,
+        "half": 0,
+        "model": "PL 664",
+        "code": "CIL336FIN",
+        "amount": 33390000,
+        "unit": "unit",
+        "packSize": 1,
+        "finish": "3 WAY LCR 2X6 in IN-WALL MID /",
+        "rowText": "3 WAY LCR 2X6 in IN-WALL MID / CIL336FIN | 8056684712755 UNIT Rs. 3,33,900",
+        "y": 584.0659790039062,
+        "accessory": false
+      },
+      {
+        "page": 75,
+        "half": 0,
+        "model": "Palladio Premium Frame Kit KIT333FIN",
+        "code": "KIT333FIN",
+        "amount": 4790000,
+        "unit": "unit",
+        "packSize": 1,
+        "finish": "*OPTIONAL VERTICAL PREMIUM KIT: WALNUT VERTICAL",
+        "rowText": "*OPTIONAL VERTICAL PREMIUM KIT: WALNUT VERTICAL KIT333FIN | 8056684713066 UNIT Rs. 47,900",
+        "y": 624.6788940429688,
+        "accessory": true
+      },
+      {
+        "page": 75,
+        "half": 0,
+        "model": "Palladio Premium Frame Kit KIT335FIN",
+        "code": "KIT335FIN",
+        "amount": 4790000,
+        "unit": "unit",
+        "packSize": 1,
+        "finish": "- PAINTABLE FRAME - STRING GRILLE WENGE VERTICAL",
+        "rowText": "- PAINTABLE FRAME - STRING GRILLE WENGE VERTICAL KIT335FIN | 8056684713080 UNIT Rs. 47,900",
+        "y": 667.0869140625,
+        "accessory": true
+      },
+      {
+        "page": 75,
+        "half": 0,
+        "model": "Palladio Premium Frame Kit KIT332FIN",
+        "code": "KIT332FIN",
+        "amount": 4790000,
+        "unit": "unit",
+        "packSize": 1,
+        "finish": "*OPTIONAL HORIZONTAL PREMIUM KIT: WALNUT HORIZONTAL",
+        "rowText": "*OPTIONAL HORIZONTAL PREMIUM KIT: WALNUT HORIZONTAL KIT332FIN | 8056684713059 UNIT Rs. 47,900",
+        "y": 707.0828857421875,
+        "accessory": true
+      },
+      {
+        "page": 75,
+        "half": 0,
+        "model": "Palladio Premium Frame Kit KIT334FIN",
+        "code": "KIT334FIN",
+        "amount": 4790000,
+        "unit": "unit",
+        "packSize": 1,
+        "finish": "X - PAINTABLE FRAME - STRING GRILLE WENGE HORIZONTAL",
+        "rowText": "X - PAINTABLE FRAME - STRING GRILLE WENGE HORIZONTAL KIT334FIN | 8056684713073 UNIT Rs. 47,900",
+        "y": 745.5848999023438,
+        "accessory": true
+      },
+      {
+        "page": 77,
+        "half": 0,
+        "model": "PW 562",
+        "code": "CIL320FIN",
+        "amount": 7790000,
+        "unit": "unit",
+        "packSize": 1,
+        "finish": "2 WAY 6 in IN-WA L L /",
+        "rowText": "2 WAY 6 in IN-WA L L / CIL320FIN | 8056684712 6 4 9 UNIT Rs. 77,900",
+        "y": 648.8179931640625,
+        "accessory": false
+      },
+      {
+        "page": 77,
+        "half": 1,
+        "model": "PC 562",
+        "code": "CIL321FIN",
+        "amount": 5990000,
+        "unit": "unit",
+        "packSize": 1,
+        "finish": "2 WAY 6 in IN-CEILIN G /",
+        "rowText": "2 WAY 6 in IN-CEILIN G / CIL321FIN | 805668471263 2 UNIT Rs. 59,900",
+        "y": 654.6113891601562,
+        "accessory": false
+      },
+      {
+        "page": 77,
+        "half": 1,
+        "model": "Palladio Square Grille Kit KIT320FIN",
+        "code": "KIT320FIN",
+        "amount": 5090000,
+        "unit": "set",
+        "packSize": 10,
+        "finish": "OPTIONAL QUARE GRIL L E PAINTABLE",
+        "rowText": "OPTIONAL QUARE GRIL L E PAINTABLE KIT320FIN | 80566847129 8 4 (10 PCS) X 1 K I T Rs. 50,900",
+        "y": 685.08203125,
+        "accessory": true
+      },
+      {
+        "page": 77,
+        "half": 1,
+        "model": "Palladio Pre-mounting Kit KIT322FIN",
+        "code": "KIT322FIN",
+        "amount": 2190000,
+        "unit": "set",
+        "packSize": 5,
+        "finish": "*OPTIONAL PRE MOUNTIN G /",
+        "rowText": "*OPTIONAL PRE MOUNTIN G / KIT322FIN | 805668471300 4 (5 PCS) X 1 KI T Rs. 21,900",
+        "y": 714.504638671875,
+        "accessory": true
+      },
+      {
+        "page": 78,
+        "half": 0,
+        "model": "PC 582",
+        "code": "CIL322FIN",
+        "amount": 7090000,
+        "unit": "unit",
+        "packSize": 1,
+        "finish": "2 WAY 8 in IN-CEILING. / 8056684712656 |",
+        "rowText": "2 WAY 8 in IN-CEILING. / 8056684712656 | CIL322FIN UNIT Rs. 70,900",
+        "y": 656.3572387695312,
+        "accessory": false
+      },
+      {
+        "page": 78,
+        "half": 1,
+        "model": "PC 562P",
+        "code": "CIL323FIN",
+        "amount": 6790000,
+        "unit": "unit",
+        "packSize": 1,
+        "finish": "WAY 6 in IN-CEILING /.",
+        "rowText": "WAY 6 in IN-CEILING /. CIL323FIN | 8056684712663 UNIT Rs. 67,900",
+        "y": 656.3572387695312,
+        "accessory": false
+      },
+      {
+        "page": 78,
+        "half": 0,
+        "model": "Palladio Square Grille Kit KIT321FIN",
+        "code": "KIT321FIN",
+        "amount": 5090000,
+        "unit": "set",
+        "packSize": 10,
+        "finish": "*OPTIONAL SQUARE GRILLE PAINTABLE",
+        "rowText": "*OPTIONAL SQUARE GRILLE PAINTABLE KIT321FIN | 8056684712991 (10 PCS) X 1 KIT Rs. 50,900 *OPT",
+        "y": 679.9340209960938,
+        "accessory": true
+      },
+      {
+        "page": 78,
+        "half": 1,
+        "model": "Palladio Square Grille Kit KIT321FIN",
+        "code": "KIT321FIN",
+        "amount": 5090000,
+        "unit": "set",
+        "packSize": 10,
+        "finish": "SQUARE GRILLE PAINTABL",
+        "rowText": "SQUARE GRILLE PAINTABL KIT321FIN | 8056684712991 (10 PCS) X 1 KI Rs. 50,900",
+        "y": 679.9340209960938,
+        "accessory": true
+      },
+      {
+        "page": 78,
+        "half": 0,
+        "model": "Palladio Pre-mounting Kit KIT324FIN",
+        "code": "KIT324FIN",
+        "amount": 2190000,
+        "unit": "set",
+        "packSize": 5,
+        "finish": "*OPTIONAL PRE MOUNTIN /",
+        "rowText": "*OPTIONAL PRE MOUNTIN / KIT324FIN | 8056684713028 (5 PCS) X 1 KIT Rs. 21,900",
+        "y": 715.0790405273438,
+        "accessory": true
+      },
+      {
+        "page": 78,
+        "half": 1,
+        "model": "Palladio Pre-mounting Kit KIT323FIN",
+        "code": "KIT323FIN",
+        "amount": 2190000,
+        "unit": "set",
+        "packSize": 5,
+        "finish": "OPTIONAL PRE MOUNTING /",
+        "rowText": "OPTIONAL PRE MOUNTING / KIT323FIN | 805668471301 (5 PCS) X 1 KI Rs. 21,900",
+        "y": 715.0790405273438,
+        "accessory": true
+      },
+      {
+        "page": 79,
+        "half": 0,
+        "model": "PL 563",
+        "code": "CIL324FIN",
+        "amount": 15590000,
+        "unit": "unit",
+        "packSize": 1,
+        "finish": "2 WAY IN-WALL LCR 2X6 in / 2X6 in /",
+        "rowText": "2 WAY IN-WALL LCR 2X6 in / CIL324FIN | 8056684712670 UNIT Rs. 1,55,900 2X6 in / CIL324FIN | 8056684712670 UNIT Rs. 1,55,900",
+        "y": 656.8394165039062,
+        "accessory": false
+      },
+      {
+        "page": 79,
+        "half": 1,
+        "model": "PC 563P",
+        "code": "CIL325FIN",
+        "amount": 16890000,
+        "unit": "unit",
+        "packSize": 1,
+        "finish": "WAY -CEILING 2X6 i / 2X6 i /",
+        "rowText": "WAY -CEILING 2X6 i / CIL325FIN | 8056684712687 UNIT Rs. 1,68,900 2X6 i / CIL325FIN | 8056684712687 UNIT Rs. 1,68,900",
+        "y": 656.8394165039062,
+        "accessory": false
+      },
+      {
+        "page": 80,
+        "half": 0,
+        "model": "PS G101",
+        "code": "CIL326FIN",
+        "amount": 11890000,
+        "unit": "unit",
+        "packSize": 1,
+        "finish": "10 in IN-WALL SUB /",
+        "rowText": "10 in IN-WALL SUB / CIL326FIN | 8056684712939 UNIT Rs.1,18,900",
+        "y": 655.0130004882812,
+        "accessory": false
+      },
+      {
+        "page": 82,
+        "half": 0,
+        "model": "Aster",
+        "code": "DIF370BFI",
+        "amount": 7490000,
+        "unit": "unit",
+        "packSize": 1,
+        "finish": "2 WAY OUTDOOR BLACK",
+        "rowText": "2 WAY OUTDOOR BLACK DIF370BFI | 8056684714650 UNIT Rs. 74,900",
+        "y": 654.020263671875,
+        "accessory": false
+      },
+      {
+        "page": 82,
+        "half": 0,
+        "model": "Aster",
+        "code": "DIF370WFI",
+        "amount": 7490000,
+        "unit": "unit",
+        "packSize": 1,
+        "finish": "SPEAKER WHITE",
+        "rowText": "SPEAKER WHITE DIF370WFI | 8056684714667 UNIT Rs. 74,900",
+        "y": 684.5010986328125,
+        "accessory": false
+      }
+    ]
+  },
+  {
+    "brand": "Marantz",
+    "file": "Marantz Price List June 2023.pdf",
+    "sha256": "1bcd3de107bc6c247cccc403a60a9dc2a948900b9afcfa506cd3ce2936d55f83",
+    "rows": [
+      {
+        "page": 1,
+        "model": "MM-7025",
+        "description": "2X140W @8OHMS XLR Audio Inputs DC Triggers",
+        "amount": 11990000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          120,
+          148.140003375,
+          270,
+          207.299995125
+        ]
+      },
+      {
+        "page": 1,
+        "model": "MM-7055",
+        "description": "5X140W @8OHMS XLR Audio Inputs DC Triggers Ultra Bandwidth for SACD Frequencies",
+        "amount": 15690000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          120,
+          207.299995125,
+          270,
+          267.17999287500004
+        ]
+      },
+      {
+        "page": 1,
+        "model": "MM-8077",
+        "description": "7X150W @8OHMS XLR Audio Inputs DC Triggers Ultra Bandwidth for SACD Frequencies",
+        "amount": 28190000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          120,
+          267.17999287500004,
+          270,
+          327.660003375
+        ]
+      },
+      {
+        "page": 1,
+        "model": "AV7706",
+        "description": "11.2 channel XLR Pre-Out - Dolby Atmos, Dolby Atmos Height Virtualization Technology, DTS:X and DTS Virtual:X, IMAX Enhanced and Auro-3D Processing",
+        "amount": 35290000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          120,
+          327.660003375,
+          270,
+          388.980010875
+        ]
+      },
+      {
+        "page": 1,
+        "model": "AV-8805 A",
+        "description": "13.2 ch preout (XLR 15.2) - Dolby Atmos (up to 7.1.6 or 9.1.4), DTS:X and Auro-3D (up to 13.1) - HEOS. Control Your Music with Amazon Alexa Voice Commands - Built-in Bluetooth and Wi-Fi",
+        "amount": 62490000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          120,
+          388.980010875,
+          270,
+          462.54000075
+        ]
+      },
+      {
+        "page": 1,
+        "model": "AV 10",
+        "description": "15.4ch audio processing | 17.4ch XLR pre-out | 2ch XLR input | Toroidal transformer & Copper plated chassis | 7x HDMI inputs - all 8K / 3x outputs | Dolby Atmos (up to 9.1.6) | DTS:X up to 15ch |Auro 3D up to 13ch |Gold plated terminals",
+        "amount": 115990000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          120,
+          462.54000075,
+          270,
+          536.099990625
+        ]
+      },
+      {
+        "page": 1,
+        "model": "AMP 10",
+        "description": "Marantz New ID with a level meter | 16 channel Class D amplification | 200W + 200W at 8ohms, single driven | 400W + 400W at 8ohms in BTL mode | 16 channel XLR/RCA inputs | SMPS and Toroidal power transformer",
+        "amount": 115990000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          120,
+          536.099990625,
+          270,
+          609.660003375
+        ]
+      },
+      {
+        "page": 2,
+        "model": "Cinema 50",
+        "description": "• 185W x 9ch • 11.4ch processing, 11.4ch pre- out 4x independent subwoofer outputs • 4x independent subwoofer outputs • Dolby Atmos (5.1.2, 5.1.4, 7.1.2, 7.1.4*) • 6 HDMI inputs - all 8K / 3 HDMI outputs (2 main + zone 2 out) • Dirac Live (by update, licence required)",
+        "amount": 25490000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          120,
+          89.9400015,
+          270,
+          175.74
+        ]
+      },
+      {
+        "page": 2,
+        "model": "Cinema 60",
+        "description": "• 180W x 7ch (6 ohms, 1%, 1ch driven) • Dolby Atmos (up to 5.1.2), DTS:X • HEOS Wireless Multi-Room Audio • AirPlay2, Bluetooth, Internet Radio, Spotify Connect, Tidal, Deezer, Amazon Music HD • Bluetooth Headphone support",
+        "amount": 18790000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          120,
+          175.74,
+          270,
+          258.90000937499997
+        ]
+      },
+      {
+        "page": 2,
+        "model": "Cinema 70s",
+        "description": "• 90W x 7ch (6 ohms, 1%, 1ch driven) • Dolby Atmos (up to 5.1.2), Dolby Atmos Height Virtualization• DTS:X, DTS Virtual:X• 8K enhanced, 4K/120Hz• 6 HDMI (3x 8K) inputs / 1 output,eARC support • HDR10+, Dynamic HDR, ALLM, VRR, QFT",
+        "amount": 15490000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          120,
+          258.90000937499997,
+          270,
+          342.0600015
+        ]
+      },
+      {
+        "page": 2,
+        "model": "NR 1200",
+        "description": "2 X 75 Watts (8 Ohms) • 5 in / 1out HDMI (3D / ARC) • Integrated Phono Amp • HDCP2.2 • AirPlay • Spotify Connect •HEOS",
+        "amount": 11790000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          120,
+          364.020000375,
+          270,
+          430.140014625
+        ]
+      },
+      {
+        "page": 2,
+        "model": "NR 1510",
+        "description": "5x 85 Watts (6 ohms, 1%) • WiFi •HEOS •Bluetooth •HDMI 2.0 (4k full rate) • 6+1in / 1out HDMI (eARC and ALLM) • HDCP2.2 • • AirPlay • Spotify Connect •HEOS • Alexa• Google Assistant",
+        "amount": 10690000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          120,
+          430.140014625,
+          270,
+          498.90000937499997
+        ]
+      },
+      {
+        "page": 2,
+        "model": "NR1711",
+        "description": "8K Reciever • 7x 90 Watts (6 ohms, 1%) • WiFi • Bluetooth • 6+1in / 1out HDMI (HLG, eARC and ALLM) • HDCP2.2 • AirPlay • Spotify Connect •HEOS • Alexa• Supports Dolby Vision",
+        "amount": 13990000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          120,
+          498.90000937499997,
+          270,
+          567.660003375
+        ]
+      },
+      {
+        "page": 2,
+        "model": "SR 5015",
+        "description": "8K Reciever • 7 x 180 Watts (6 ohms, 1%) • 8K/60Hz and 4K/120Hz Pass-Through • eARC HDMI Support • HEOS Built-in • Supports all your favourite voice assistants",
+        "amount": 16990000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          120,
+          567.660003375,
+          270,
+          637.740005625
+        ]
+      },
+      {
+        "page": 2,
+        "model": "SR6015",
+        "description": "8K Reciever • 9x 185 Watts (6 ohms, 1%) • 11.2 Channel pocessing capabilty • 8K/60Hz and 4K/120Hz pass-through • HDAM Circuit Boards • WiFi • Bluetooth • HEOS • Dolby Atmos (7.1.4) •7+1in / 2out HDMI",
+        "amount": 23490000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          120,
+          637.740005625,
+          270,
+          706.5
+        ]
+      },
+      {
+        "page": 3,
+        "model": "SR7015",
+        "description": "8K Reciever • 9x 200 Watts (6 ohms, 1%) • 11.2 Channel pocessing capabilty • 8K/60Hz and 4K/120Hz pass-through • eARC HDMI support • HDAM Circuit Boards • Supports all your favourite voice assistants:",
+        "amount": 31990000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          120,
+          89.81999887500001,
+          270,
+          155.93999887500001
+        ]
+      },
+      {
+        "page": 3,
+        "model": "SR8015",
+        "description": "8K Reciever • 11.2 Channel x 205W •8K/60Hz and 4K/120Hz pass-through • Most Advanced Three-Dimensional Audio Formats • DTS:X® Pro support • High-resolution Streaming for Audiophile Approved Sound",
+        "amount": 59490000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          120,
+          155.93999887500001,
+          270,
+          227.459998875
+        ]
+      },
+      {
+        "page": 3,
+        "model": "M-CR 612",
+        "description": "Network CD receiver featuring HEOS, FM/AM, Bluetooth, AirPlay 2 and voice control compatibility • 2x 60W or Bi- amping 30 W x 4, Speaker A/B",
+        "amount": 12590000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          120,
+          262.379997375,
+          270,
+          327.0600015
+        ]
+      },
+      {
+        "page": 3,
+        "model": "PM 6007",
+        "description": "Digital Input - 45 watts per channel into 8 ohms and 60 watts per channel into 4 ohms - Powered by a Toroidal power transformer",
+        "amount": 9990000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          120,
+          346.979999625,
+          270,
+          401.22001650000004
+        ]
+      },
+      {
+        "page": 3,
+        "model": "PM 7000N",
+        "description": "60W per channel driving 8 ohm loads • Wide range of connectivity • Premium Marantz SPKT-1+ speaker terminals • Play vinyl with exceptional clarity",
+        "amount": 19590000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          120,
+          401.22001650000004,
+          270,
+          456.90000937499997
+        ]
+      },
+      {
+        "page": 3,
+        "model": "PM 8006",
+        "description": "PM8006Integrated Amplifier with new Phono-EQ - 2x 70W / 8 ohm rms - HDAM-SA3 circuits - High quality, original Marantz SPKT- 1+ Speaker Terminals (A / B switchable)",
+        "amount": 22190000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          120,
+          456.90000937499997,
+          270,
+          518.820007125
+        ]
+      },
+      {
+        "page": 3,
+        "model": "CD 6007",
+        "description": "Versatile playback for all your audio - High quality AK4490 D/A conversion - Best amplifier connection - High-quality sound even from demanding headphones",
+        "amount": 9990000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          120,
+          539.45999925,
+          270,
+          595.8599853750001
+        ]
+      },
+      {
+        "page": 3,
+        "model": "NA 6006",
+        "description": "Network Audio Streamer • WiFi (b/g/n) and Ethernet connectivity • Wi-Fi sharing for iOS device • Bluetooth connectivity • Spotify Connect, Internet Radio, AirPlay and Alexa",
+        "amount": 12290000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          120,
+          595.8599853750001,
+          270,
+          650.9399868749999
+        ]
+      },
+      {
+        "page": 3,
+        "model": "ND8006",
+        "description": "High quality CD, CD-R/RW (MP3/WMA) playback • AirPlay, Bluetooth, Internet Radio, Spotify Connect, Amazon Music, TIDAL, Deezer • HDAM-SA2 circuits • HEOS",
+        "amount": 20690000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          120,
+          650.9399868749999,
+          270,
+          712.259994375
+        ]
+      },
+      {
+        "page": 4,
+        "model": "Model 40n",
+        "description": "Integrated Stereo Amplifier With Streaming Built-In,Marantz has reimagined the integrated amplifier for the digital age while preserving a luxurious analog feel and sound.",
+        "amount": 43990000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          120,
+          107.580001875,
+          270,
+          173.699998875
+        ]
+      },
+      {
+        "page": 4,
+        "model": "Marantz CD 60",
+        "description": "CD 60 CD PLAYER With its modern style and The Most Musical Sound, CD 60 inspires listeners to discover new details in their favorite CDs.",
+        "amount": 14890000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          120,
+          173.699998875,
+          270,
+          235.020000375
+        ]
+      },
+      {
+        "page": 4,
+        "model": "Model 30",
+        "description": "MODEL 30 continues the renowned heritage of exquisite Marantz amplifiers. Tuned by the Marantz Sound Master who channeled his passion, experience, and extraordinary ear into the amplifier design.",
+        "amount": 52190000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          120,
+          235.020000375,
+          270,
+          304.5
+        ]
+      },
+      {
+        "page": 4,
+        "model": "SACD30N",
+        "description": "The SACD 30n continues the renowned heritage of exquisite Marantz components. The SACD 30n is tuned by the Marantz Sound Master, who channeled his passion, experience, and extraordinary ear.",
+        "amount": 52190000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          120,
+          304.5,
+          270,
+          378.78000637499997
+        ]
+      },
+      {
+        "page": 4,
+        "model": "PM12SE",
+        "description": "Marantz PM-12 Special Edition Integrated Amplifier - Generous output: 100W + 100W (into 8ohm), 200W + 200W (4ohm) - HDAM® SA3 circuitry for clean signal and optimal dynamics.",
+        "amount": 50990000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          120,
+          378.78000637499997,
+          270,
+          447.54000075
+        ]
+      },
+      {
+        "page": 4,
+        "model": "SA12SE",
+        "description": "Marantz SA-12SE Special Edition Super Audio CD Player with DAC - Custom-designed 1-bit direct “MMM–Conversion” from DSD to analogue - Marantz HDAM-SA3 technology and low impedance output",
+        "amount": 52190000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          120,
+          447.54000075,
+          270,
+          517.619980125
+        ]
+      },
+      {
+        "page": 4,
+        "model": "PM-10",
+        "description": "PM-10 Refence Series Integraded Amplifer - The Amplifer is rated at 200 W at 8 Ohms and 400 W at 4 Ohms",
+        "amount": 89990000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          120,
+          517.619980125,
+          270,
+          574.019989125
+        ]
+      },
+      {
+        "page": 4,
+        "model": "SA-10",
+        "description": "SA-10 Refence Series SACD/CD Player with USB DAC and Digital Inputs",
+        "amount": 67390000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          120,
+          574.019989125,
+          270,
+          631.1400146249999
+        ]
+      },
+      {
+        "page": 4,
+        "model": "PM 14S1SE",
+        "description": "PM-14S1Reference Integrated Amplifier.The amplifier is rated at 90 watts per channel into 8 ohms and 140 watts per channel into 4 ohms",
+        "amount": 37490000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          120,
+          631.1400146249999,
+          270,
+          692.45999925
+        ]
+      },
+      {
+        "page": 5,
+        "model": "SA 14S1SE",
+        "description": "SA-14S1 Reference Super Audio CD player.",
+        "amount": 37490000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          120,
+          89,
+          280,
+          145
+        ]
+      },
+      {
+        "page": 5,
+        "model": "TT5005",
+        "description": "Automatic turntable; switchable built-in phono equalizer, 33 1/3 and 45 rpm; preinstalled MM cartridge.",
+        "amount": 3990000,
+        "unit": "unit",
+        "packSize": 1,
+        "cell": [
+          120,
+          160,
+          280,
+          229
+        ]
+      }
+    ]
+  }
+]

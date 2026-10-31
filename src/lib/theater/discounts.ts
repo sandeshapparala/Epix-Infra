@@ -1,6 +1,6 @@
 import type { Product, SalesProject } from "./types";
 
-// Brand policies apply to every item, including items added under extras.
+// Brand policies apply to admins and employees, including extras and bundles.
 export const BRAND_DISCOUNT_CAPS: Record<string, number> = { rotel: 10 };
 export function brandDiscountCap(brand: string) {
   const key = brand.trim().toLowerCase();

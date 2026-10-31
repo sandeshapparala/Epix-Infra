@@ -137,5 +137,41 @@
     "products": 2,
     "effectiveDate": "2026-10-01",
     "validUntil": "2026-12-31"
+  },
+  {
+    "brand": "Rotel",
+    "file": "rotel retail price - dec'22.pdf",
+    "sha256": "7b93a570abcf09d662c5d60954a2cf5c221ddf16d3cb2e6303860758a93c949e",
+    "pages": 9,
+    "parsedProducts": 34,
+    "products": 34,
+    "effectiveDate": "2022-12-01"
+  },
+  {
+    "brand": "Focal",
+    "file": "FOCAL MRP ARIA PRICE LIST JULY-2023-1.pdf",
+    "sha256": "fde872f00a69ea33c1dfaa904bcc51af36c3892d57b23edaaca0d8e9fc53bba4",
+    "pages": 29,
+    "parsedProducts": 69,
+    "products": 69,
+    "effectiveDate": "2023-07-01"
+  },
+  {
+    "brand": "Sonus faber",
+    "file": "Sonus faber INDIA RETAIL Pricelist APR26.pdf",
+    "sha256": "4010208b399dfadd0d8ac47f699282233c568102072bd29ff25b961ee2cd3cc2",
+    "pages": 87,
+    "parsedProducts": 195,
+    "products": 90,
+    "effectiveDate": "2026-04-01"
+  },
+  {
+    "brand": "Marantz",
+    "file": "Marantz Price List June 2023.pdf",
+    "sha256": "1bcd3de107bc6c247cccc403a60a9dc2a948900b9afcfa506cd3ce2936d55f83",
+    "pages": 5,
+    "parsedProducts": 35,
+    "products": 18,
+    "effectiveDate": "2023-06-01"
   }
 ]
