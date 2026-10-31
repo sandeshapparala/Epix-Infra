@@ -338,7 +338,6 @@ test("approved service rates cannot be reduced or replaced with arbitrary employ
   );
   for (const changes of [
     { amountPaise: 1 },
-    { gstRate: 0 },
     { rateId: undefined },
   ]) {
     const bad = { ...good, services: [{ ...good.services[0], ...changes }] };
@@ -566,7 +565,7 @@ test("private previews live in Storage, not Firestore, and only owners/admins do
   assert.ok(
     (
       await theaterBucket()
-        .file(`theater-private/quotes/${users.alice.uid}/${q.id}.v2-illustrated.pdf`)
+        .file(`theater-private/quotes/${users.alice.uid}/${q.id}.v3-item-discounts-inclusive.pdf`)
         .exists()
     )[0],
   );
@@ -686,4 +685,42 @@ test("Storage permission failures fail closed instead of silently writing Firest
     if (previous === undefined) delete process.env.THEATER_MEDIA_BACKEND;
     else process.env.THEATER_MEDIA_BACKEND = previous;
   }
+});
+test('custom layouts, per-item discounts and employee-priced acoustics survive Firebase save and protected PDF generation', async () => {
+  const {acousticsAddon}=require('../src/lib/theater/sound-services.ts');
+  const p=(await store.catalog()).find(p=>p.id==='jvc-dla-nz500be');
+  const draft=structuredClone(state());
+  draft.design={...draft.design,audio:'custom',customAudio:{bed:9,subs:1,height:4}};
+  draft.equipment.slots={projector:{productId:p.id,finish:''}};
+  draft.services=[{...acousticsAddon(),amountPaise:4100000}];
+  draft.lineDiscounts={[p.id+'|']:7.5,['service:'+draft.services[0].id]:9};
+  const id=crypto.randomUUID();
+  let r=await projectRoutes.POST(request('alice',undefined,{id,version:0,state:draft}));
+  assert.equal(r.status,200,await r.clone().text());
+  const saved=await r.json();assert.deepEqual(saved.state.lineDiscounts,draft.lineDiscounts);
+  assert.deepEqual(saved.state.design.customAudio,draft.design.customAudio);
+  r=await quoteRoutes.POST(request('alice','/api/theater/quotes',{projectId:id,requestId:crypto.randomUUID(),state:draft,priceRevisions:{[p.id]:p.price.revision}}));
+  assert.equal(r.status,200,await r.clone().text());
+  const q=await r.json();assert.equal(q.templateVersion,3);assert.equal(q.calculation.pricingMode,'inclusive');
+  assert.equal(q.calculation.taxPaise,0);assert.equal(q.calculation.lines.find(l=>l.productId===p.id).discountPercent,7.5);
+  assert.equal(q.calculation.lines.find(l=>l.key.startsWith('service:')).totalPaise,3731000);
+  const pdf=await pdfRoute.GET(request('alice'),params(q.id));assert.equal(pdf.status,200);
+  assert.ok((await pdf.arrayBuffer()).byteLength>1000);
+  assert.equal((await pdfRoute.GET(request('bob'),params(q.id))).status,404);
+  const forged=structuredClone(draft);forged.lineDiscounts[p.id+'|']=10.01;
+  r=await projectRoutes.POST(request('alice',undefined,{id,version:1,state:forged}));assert.equal(r.status,403);
+  r=await quoteRoutes.POST(request('alice','/api/theater/quotes',{projectId:id,requestId:crypto.randomUUID(),state:forged,priceRevisions:{[p.id]:p.price.revision}}));assert.equal(r.status,403);
+  const invalid=structuredClone(draft);invalid.services[0].serviceCode=undefined;
+  r=await projectRoutes.POST(request('alice',undefined,{id,version:1,state:invalid}));assert.equal(r.status,403);
+});
+
+
+test('previously issued illustrated PDFs remain byte-for-byte unchanged', async () => {
+  const p=await store.saveProject(users.alice,crypto.randomUUID(),0,state());
+  const q=await store.saveQuote(users.alice,{projectId:p.id,requestId:crypto.randomUUID(),priceRevisions:{}},state());
+  await store.collection('Quotes').doc(q.id).update({templateVersion:2});
+  const original=Buffer.from('%PDF-legacy-immutable-test');
+  await theaterBucket().file(`theater-private/quotes/${users.alice.uid}/${q.id}.v2-illustrated.pdf`).save(original,{resumable:false,contentType:'application/pdf'});
+  const response=await pdfRoute.GET(request('alice'),params(q.id));
+  assert.equal(response.status,200);assert.ok(Buffer.from(await response.arrayBuffer()).equals(original));
 });

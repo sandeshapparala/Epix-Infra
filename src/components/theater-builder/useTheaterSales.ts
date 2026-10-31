@@ -30,6 +30,10 @@ import { parseProject } from "@/lib/theater/validation";
 import { api, downloadQuote } from "@/lib/theater/client";
 import { useTheaterSession } from "./TheaterSession";
 import type { ServiceRate } from "@/lib/theater/access";
+import { requireItemDiscounts } from "@/lib/theater/access";
+import { lineDiscountLimit } from "@/lib/theater/discounts";
+import referenceTerms from "@/data/theater/quotation-terms.json";
+const DEFAULT_TERMS = referenceTerms.terms.join("\n");
 export function useTheaterSales(
   design: TheaterDesign,
   setDesign: Dispatch<SetStateAction<TheaterDesign>>,
@@ -48,8 +52,11 @@ export function useTheaterSales(
     [services, setServices] = useState<ServiceLine[]>([]);
   const [discountPercent, setDiscount] = useState(0),
     [validityDays, setValidity] = useState(15),
-    [terms, setTerms] = useState(""),
+    [terms, setTerms] = useState(DEFAULT_TERMS),
     [exclusions, setExclusions] = useState("");
+  const [lineDiscounts, setLineDiscounts] = useState<Record<string, number>>(
+    {},
+  );
   const [slot, setSlot] = useState<Slot | null>(null),
     [review, setReview] = useState(false),
     [projectsOpen, setProjectsOpen] = useState(false);
@@ -94,13 +101,14 @@ export function useTheaterSales(
     setCustomer(EMPTY_CUSTOMER);
     setServices([]);
     setDiscount(0);
+    setLineDiscounts({});
     setProject(null);
     setQuote(null);
     setHistory([]);
     setReview(false);
     setSlot(null);
     setProjectsOpen(false);
-    setTerms("");
+    setTerms(DEFAULT_TERMS);
     setExclusions("");
     setMessage("");
     setBusy(false);
@@ -143,6 +151,7 @@ export function useTheaterSales(
       customer,
       services,
       discountPercent,
+      lineDiscounts,
       validityDays,
       terms,
       exclusions,
@@ -153,6 +162,7 @@ export function useTheaterSales(
       customer,
       services,
       discountPercent,
+      lineDiscounts,
       validityDays,
       terms,
       exclusions,
@@ -186,8 +196,9 @@ export function useTheaterSales(
     setCustomer(s.customer);
     setServices(s.services);
     setDiscount(s.discountPercent);
+    setLineDiscounts(s.lineDiscounts ?? {});
     setValidity(s.validityDays);
-    setTerms(s.terms);
+    setTerms(s.terms || DEFAULT_TERMS);
     setExclusions(s.exclusions);
   }
   function select(p: Product, finish: string) {
@@ -282,6 +293,7 @@ export function useTheaterSales(
   }
   async function saveDatabase(preview?: string) {
     if (!member) throw new Error("Sign in to save a project.");
+    requireItemDiscounts(member, state, products);
     if (discountPercent > maxDiscount)
       throw new Error(
         `Your maximum discount is ${maxDiscount}%. Reduce the discount before saving.`,
@@ -374,6 +386,7 @@ export function useTheaterSales(
       customer: EMPTY_CUSTOMER,
       services: [],
       discountPercent: 0,
+      lineDiscounts: {},
       terms: "",
       exclusions: "",
     });
@@ -417,6 +430,19 @@ export function useTheaterSales(
     setServices,
     discountPercent,
     setDiscount,
+    lineDiscounts,
+    setLineDiscounts,
+    setLineDiscount: (key: string, percent: number) => {
+      const line = calculation.lines.find((l) => l.key === key);
+      if (line)
+        setLineDiscounts((current) => ({
+          ...current,
+          [key]: Math.max(
+            0,
+            Math.min(lineDiscountLimit(line.brand, maxDiscount), percent),
+          ),
+        }));
+    },
     validityDays,
     setValidity,
     terms,

@@ -151,7 +151,7 @@ const blankRate = (): ServiceRate => ({
   description: "",
   unit: "job",
   amountPaise: 0,
-  gstRate: 18,
+  gstRate: 0,
   active: true,
   revision: 0,
 });
@@ -358,7 +358,7 @@ export default function TeamAdmin() {
             <h2>Approved project-work rates</h2>
             <p className={styles.muted}>
               Employees can change quantities and select these rates, but cannot
-              edit unit prices or GST. All rates exclude GST.
+              edit standard unit prices. All rates are final amounts.
             </p>
           </div>
           <button onClick={() => setRate(blankRate())}>+ Add a rate</button>
@@ -411,7 +411,7 @@ export default function TeamAdmin() {
                 />
               </label>
               <label>
-                Rate (₹, before GST)
+                Final rate (INR)
                 <input
                   type="number"
                   required
@@ -423,20 +423,6 @@ export default function TeamAdmin() {
                       ...rate,
                       amountPaise: Math.round(Number(e.target.value) * 100),
                     })
-                  }
-                />
-              </label>
-              <label>
-                GST (%)
-                <input
-                  type="number"
-                  required
-                  min={0}
-                  max={100}
-                  step={0.1}
-                  value={rate.gstRate}
-                  onChange={(e) =>
-                    setRate({ ...rate, gstRate: Number(e.target.value) })
                   }
                 />
               </label>
@@ -465,7 +451,7 @@ export default function TeamAdmin() {
               <tr>
                 <th>Project work</th>
                 <th>Unit rate</th>
-                <th>GST</th>
+
                 <th>Employee selection</th>
                 <th>Action</th>
               </tr>
@@ -480,7 +466,7 @@ export default function TeamAdmin() {
                   <td>
                     {rupees(r.amountPaise)} / {r.unit}
                   </td>
-                  <td>{r.gstRate}%</td>
+
                   <td>{r.active ? "Enabled" : "Disabled"}</td>
                   <td>
                     <button onClick={() => setRate(r)}>Edit rate</button>

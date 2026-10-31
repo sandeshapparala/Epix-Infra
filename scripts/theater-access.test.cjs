@@ -45,7 +45,7 @@ test("ownership is checked independently from model selection and roles", () => 
   requireOwner(member("admin"), "employee-b");
   assert.throws(() => requireAdmin(member()));
 });
-test("approved rates prevent a unit-price, GST or ad-hoc-line discount bypass", () => {
+test("approved rates prevent unit-price and ad-hoc-line bypasses", () => {
   const rate = {
     id: "rate-1",
     active: true,
@@ -62,7 +62,6 @@ test("approved rates prevent a unit-price, GST or ad-hoc-line discount bypass", 
   requireServiceRates(member(), [line], [rate]);
   for (const next of [
     { ...line, amountPaise: 1 },
-    { ...line, gstRate: 0 },
     { ...line, category: "other" },
     { ...line, rateId: undefined },
   ])

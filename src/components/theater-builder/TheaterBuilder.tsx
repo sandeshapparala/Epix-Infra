@@ -15,6 +15,8 @@ import { useTheaterSales } from "./useTheaterSales";
 import SalesWorkspace, { EquipmentSlot, QuotationDock, SoundEquipment } from "./SalesWorkspace";
 import { formatLength, lengthStep, METRES_PER_INCH, type LengthUnit } from "@/lib/theater/measurements";
 import LengthInput from "./LengthInput";
+import SpeakerLayoutControl from "./SpeakerLayoutControl";
+import { audioLabel } from "@/lib/theater/speaker-layout";
 
 const Viewport = dynamic(() => import("./TheaterViewport"), { ssr: false, loading: () => <div className={styles.loading}><strong>Opening the design studio…</strong></div> });
 const STORAGE_KEY = "epix-theater-design-v1";
@@ -207,7 +209,7 @@ export default function TheaterBuilder() {
           <div><span>Seating capacity</span><strong>{calculated.totalSeats}<small> seats</small></strong></div>
           <div><span>Screen diagonal</span><strong>{design.diagonal}<small> inches</small></strong></div>
           <div><span>Viewing angle</span><strong>{calculated.angle.toFixed(1)}<small>°</small></strong></div>
-          <div><span>Sound layout</span><strong>{design.audio}<small> channels</small></strong></div>
+          <div><span>Sound layout</span><strong>{audioLabel(design)}<small> channels</small></strong></div>
         </div>
         <details className={styles.fitDetails}>
           <summary>{calculated.warnings.length ? <TriangleAlert size={16} /> : <Check size={16} />}<span>{calculated.warnings.length ? `${calculated.warnings.length} layout checks to review` : "Layout fit checks passed"}</span><ChevronDown size={14} /></summary>
@@ -274,8 +276,7 @@ export default function TheaterBuilder() {
           </>}
           {panel === "sound" && <>
             <div className={styles.sectionLead}><h3>Surrounded by possibility.</h3><p>Explore speaker layouts around your primary listening seat.</p></div>
-            {choices("audio", "Speaker layout", [{ value: "5.1", label: "5.1" }, { value: "5.1.2", label: "5.1.2" }, { value: "7.2.4", label: "7.2.4" }])}
-            <div className={styles.infoNote}>{design.audio === "7.2.4" ? "7 ear-level speakers · 2 subwoofers · 4 overhead speakers" : design.audio === "5.1.2" ? "5 ear-level speakers · 1 subwoofer · 2 overhead speakers" : "5 ear-level speakers · 1 subwoofer"}</div>
+            <SpeakerLayoutControl design={design} onChange={(audio,customAudio)=>{if(applyLayout({...design,audio,customAudio}))setPreset("");}}/>
             <SoundEquipment studio={studio} />
             {choices("front", "Front left & right speakers", [{ value: "tower", label: "Floorstanding" }, { value: "in-wall", label: "In-wall" }])}
             <button className={styles.coverageButton} aria-pressed={design.coverage} onClick={() => change("coverage", !design.coverage)}><Volume2 size={20} /><span><strong>{design.coverage ? "Hide" : "Show"} speaker coverage</strong><small>Explore the illustrative sound paths</small></span><ChevronRight size={16} /></button>
@@ -300,7 +301,7 @@ export default function TheaterBuilder() {
       <h1>EPIX INFRA — Home theatre design</h1><p>Concept design · {new Date().toLocaleDateString("en-IN")}</p>
       {reportImage && <img src={reportImage} alt="Your theatre layout" />}
       <h2>Room and seating</h2><p>{measurement(design.width)} wide × {measurement(design.depth)} deep × {measurement(design.height)} high</p><p>{design.rows} rows · {design.seats} seats per row · {calculated.totalSeats} seats</p>
-      <h2>Display and sound</h2><p>{design.display === "tv" ? "TV" : "Projector"} · {design.diagonal} inch screen · {design.aspect} · {calculated.angle.toFixed(1)}° viewing angle</p><p>Image: {measurement(calculated.screen.width)} × {measurement(calculated.screen.height)} · Sound: {design.audio}</p>
+      <h2>Display and sound</h2><p>{design.display === "tv" ? "TV" : "Projector"} · {design.diagonal} inch screen · {design.aspect} · {calculated.angle.toFixed(1)}° viewing angle</p><p>Image: {measurement(calculated.screen.width)} × {measurement(calculated.screen.height)} · Sound: {audioLabel(design)}</p>
       <table><thead><tr><th>Channel</th><th>Distance to listener</th><th>Alignment delay</th></tr></thead><tbody>{calculated.sound.speakers.filter(s=>s.model!=="sub").map(s=><tr key={s.id}><td>{s.id}</td><td>{measurement(s.distance)}</td><td>{s.delayMs.toFixed(1)} ms</td></tr>)}</tbody></table>
       <h2>Layout review</h2>{calculated.warnings.length ? <ul>{calculated.warnings.map(w=><li key={w}>{w}</li>)}</ul> : <p>Passes the concept fit checks.</p>}
       <p>Illustrative equipment dimensions and geometric sound estimates. Final installation, clearances and calibration require an Epix site survey.</p>

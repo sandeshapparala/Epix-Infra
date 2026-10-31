@@ -20,7 +20,7 @@ const rate = z
     ]),
     unit: z.string().trim().min(1).max(30),
     amountPaise: z.number().int().min(1).max(10_000_000_000),
-    gstRate: z.number().min(0).max(100),
+    gstRate: z.number().min(0).max(100).default(0),
     active: z.boolean(),
     revision: z.number().int().min(0),
   })

@@ -1,3 +1,4 @@
+import { AUDIO_PRESETS, speakerLayout, validCustomAudio, type AudioPreset, type CustomAudio } from "../../lib/theater/speaker-layout";
 export type CameraView = "orbit" | "plan" | "seat";
 export type ObjectPosition = [number, number, number];
 export type ObjectPositions = Record<string, ObjectPosition>;
@@ -59,7 +60,7 @@ function rowFreeIntervals(d: TheaterDesign, row: number): MotionInterval[] {
   }
   if (row === 0) for (const side of sound.speakers.filter(s => s.id === "SL" || s.id === "SR")) {
     const radius = cabinetRadius(side.size);
-    const offset = -Math.abs(side.position[0] - x) / Math.tan((d.audio === "7.2.4" ? 100 : 110) * Math.PI / 180);
+    const offset = -Math.abs(side.position[0] - x) / Math.tan((speakerLayout(d).bed >= 7 ? 100 : 110) * Math.PI / 180);
     if (Math.abs(side.position[0] - x) < rowWidth(d.seats) / 2 + radius + SEATING_CLEARANCE.equipment && Math.abs(offset) < half + radius + SEATING_CLEARANCE.equipment && side.position[1] < top) return [];
     let track: MotionInterval[] = [{ min: radius + 0.05, max: d.depth - radius - 0.05 }];
     for (const speaker of fixed) {
@@ -168,7 +169,7 @@ export type TheaterDesign = {
   seats: number; rows: number; distance: number; rowSpacing: number; riser: number;
   aisle: "both" | "left" | "right"; aisleWidth: number;
   display: "projector" | "tv"; diagonal: number; aspect: "16:9" | "2.4:1";
-  audio: "5.1" | "5.1.2" | "7.2.4"; front: "tower" | "in-wall";
+  audio: AudioPreset; customAudio?: CustomAudio; front: "tower" | "in-wall";
   finish: "graphite" | "walnut" | "midnight" | "custom";
   wallColor?: string;
   lights: boolean; dimensions: boolean; coverage: boolean;
@@ -206,6 +207,7 @@ const clamp = (value: number, min: number, max: number) => Math.min(max, Math.ma
  * clamping is reported, never represented as a physically perfect solution.
  */
 export function solveSpeakers(d: TheaterDesign) {
+  const layout = speakerLayout(d);
   const primary = seatingPosition(d, 0);
   const listener: [number, number, number] = [primary[0], primary[1] + 1.15, primary[2]];
   // Installed equipment uses the room centre as its placement reference. Only
@@ -238,11 +240,11 @@ export function solveSpeakers(d: TheaterDesign) {
     const size: ObjectPosition = d.equipmentSizes?.[side < 0 ? "SL" : "SR"] ?? [0.24, 0.38, 0.23];
     const margin = cabinetRadius(size) + 0.05;
     const x = clamp(side * (d.width / 2 - 0.24), -d.width / 2 + margin, d.width / 2 - margin);
-    const angle = (d.audio === "7.2.4" ? 100 : 110) * Math.PI / 180;
+    const angle = (layout.bed >= 7 ? 100 : 110) * Math.PI / 180;
     const z = listener[2] - Math.abs(x - listener[0]) / Math.tan(angle);
     add(side < 0 ? "SL" : "SR", "bookshelf", [x, 0.96, z], [0.24, 0.38, 0.23]);
   }
-  function addSub(id: string, side: number) {
+  function addSub(id: string, side: number, rear = false) {
     const size: ObjectPosition = d.equipmentSizes?.[id] ?? [0.48, 0.48, 0.48];
     const radius = cabinetRadius(size), margin = radius + 0.05;
     const x = clamp(side * (d.width / 2 - 0.5), -d.width / 2 + margin, d.width / 2 - margin);
@@ -251,11 +253,13 @@ export function solveSpeakers(d: TheaterDesign) {
       const gap = radius + cabinetRadius(front.size) + SEATING_CLEARANCE.equipment;
       if (Math.abs(front.position[0] - x) < gap) distance = Math.max(distance, front.position[2] - frontZ + gap);
     }
-    add(id, "sub", [x, 0, frontZ + distance], size, 0);
+    add(id, "sub", [x, 0, rear ? d.depth / 2 - Math.max(margin,0.5) : frontZ + distance], size, 0);
   }
   addSub("SUB1", -1);
-  if (d.audio === "7.2.4") {
-    addSub("SUB2", 1);
+  if (layout.subs >= 2) addSub("SUB2", 1);
+  if (layout.subs >= 3) addSub("SUB3", -1, true);
+  if (layout.subs >= 4) addSub("SUB4", 1, true);
+  if (layout.bed >= 7) {
     for (const side of [-1, 1]) {
       // Trace a 145-degree ray to the first room boundary.
       const dx = side * Math.sin(145 * Math.PI / 180), dz = -Math.cos(145 * Math.PI / 180);
@@ -263,10 +267,15 @@ export function solveSpeakers(d: TheaterDesign) {
       add(side < 0 ? "SBL" : "SBR", "bookshelf", [roomListener[0] + dx * t, 0.96, roomListener[2] + dz * t], [0.24, 0.38, 0.23]);
     }
   }
-  if (d.audio !== "5.1") {
+  if (layout.bed === 9) for (const side of [-1,1]) {
+    const x = side * (d.width / 2 - 0.25);
+    const z = roomListener[2] - Math.abs(x - roomListener[0]) / Math.tan(60 * Math.PI / 180);
+    add(side < 0 ? "FWL" : "FWR", "bookshelf", [x,0.96,z], [0.24,0.38,0.23]);
+  }
+  if (layout.height > 0) {
     const rise = d.height - 0.075 - roomListener[1];
     const xs = Math.min(rise * 0.65, d.width / 2 - 0.35);
-    for (const forward of d.audio === "7.2.4" ? [-1, 1] : [0]) for (const side of [-1, 1]) {
+    for (const forward of layout.height === 6 ? [-1,0,1] : layout.height === 4 ? [-1,1] : [0]) for (const side of [-1, 1]) {
       add(`${forward < 0 ? "TF" : forward > 0 ? "TR" : "TM"}${side < 0 ? "L" : "R"}`, "ceiling-grill", [roomListener[0] + side * xs, d.height - 0.1, roomListener[2] + forward * rise], [0.32, 0.055, 0.32], 0);
     }
   }
@@ -327,7 +336,7 @@ export function calculateDesign(d: TheaterDesign) {
   if (!fitted.design && !warnings.includes(fitted.reason)) warnings.push(fitted.reason);
   return { screen, angle, viewingDistance, minThrow, maxThrow, projectedDistance, projector, nits, widthNeeded, rearExtent, warnings, sound,
     totalSeats: d.seats * d.rows,
-    speakerCount: d.audio === "7.2.4" ? 13 : d.audio === "5.1.2" ? 8 : 6,
+    speakerCount: sound.speakers.length,
   };
 }
 export const NUMBER_LIMITS = {
@@ -343,19 +352,23 @@ export function parseSavedDesign(raw: string): TheaterDesign {
     if (typeof d[key] !== "number" || !Number.isFinite(d[key]) || d[key] < min || d[key] > max) throw new Error("The saved design contains invalid dimensions.");
   }
   if (!Number.isInteger(d.seats) || !Number.isInteger(d.rows)) throw new Error("Invalid seating arrangement.");
-  for (const [key, values] of Object.entries({ aisle: ["both", "left", "right"], display: ["projector", "tv"], aspect: ["16:9", "2.4:1"], audio: ["5.1", "5.1.2", "7.2.4"], front: ["tower", "in-wall"], finish: ["graphite", "walnut", "midnight", "custom"] })) {
+  for (const [key, values] of Object.entries({ aisle: ["both", "left", "right"], display: ["projector", "tv"], aspect: ["16:9", "2.4:1"], audio: [...AUDIO_PRESETS,"custom"], front: ["tower", "in-wall"], finish: ["graphite", "walnut", "midnight", "custom"] })) {
     if (!values.includes(d[key])) throw new Error("The saved design contains an unsupported option.");
   }
   for (const key of ["lights", "dimensions", "coverage"]) if (typeof d[key] !== "boolean") throw new Error("Invalid viewer options.");
   // Whitelist fields so saved data cannot add arbitrary state.
   const clean = Object.fromEntries(Object.keys(DEFAULT_DESIGN).map(key => [key, d[key]])) as TheaterDesign;
+  if (d.customAudio !== undefined || d.audio === "custom") {
+    if (!validCustomAudio(d.customAudio)) throw new Error("Choose a valid custom layout with at most 16 speakers, including subwoofers.");
+    clean.customAudio = {bed:d.customAudio.bed,subs:d.customAudio.subs,height:d.customAudio.height};
+  }
   if (d.wallColor !== undefined || d.finish === "custom") {
     if (typeof d.wallColor !== "string" || !/^#[0-9a-f]{6}$/i.test(d.wallColor)) throw new Error("Invalid custom room colour.");
     clean.wallColor = d.wallColor.toLowerCase();
   }
   if (d.positions !== undefined) {
     if (!d.positions || typeof d.positions !== "object" || Array.isArray(d.positions)) throw new Error("Invalid object positions.");
-    const allowed = /^(row-[0-2]|projector|L|R|C|SL|SR|SBL|SBR|SUB[12]|T[FRM][LR])$/;
+    const allowed = /^(row-[0-2]|projector|L|R|C|SL|SR|SBL|SBR|FWL|FWR|SUB[1-4]|T[FRM][LR])$/;
     clean.positions = {};
     for (const [id, p] of Object.entries(d.positions)) {
       if (!allowed.test(id) || !Array.isArray(p) || p.length !== 3 || p.some(v => typeof v !== "number" || !Number.isFinite(v) || Math.abs(v) > 30)) throw new Error("Invalid object position.");

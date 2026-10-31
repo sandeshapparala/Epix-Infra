@@ -5,6 +5,8 @@ import {
   type PDFImage,
   type PDFFont,
 } from "pdf-lib";
+import referenceTerms from "../../data/theater/quotation-terms.json";
+import { audioLabel } from "./speaker-layout";
 import companyDefault from "../../data/theater/quotation-company.json";
 import type { QuoteSnapshot } from "./types";
 import { formatLength } from "./measurements";
@@ -14,7 +16,7 @@ import {
   quotationProduct,
 } from "./quotation-assets";
 
-export const QUOTATION_TEMPLATE_VERSION = "v2-illustrated";
+export const QUOTATION_TEMPLATE_VERSION = "v3-item-discounts-inclusive";
 const C = {
   ink: rgb(0.075, 0.15, 0.2),
   muted: rgb(0.32, 0.39, 0.43),
@@ -42,6 +44,23 @@ const date = (s: string) =>
     year: "numeric",
     timeZone: "Asia/Kolkata",
   });
+
+function displaySubtotal(q: QuoteSnapshot) {
+  if (q.calculation.pricingMode === "inclusive")
+    return q.calculation.subtotalPaise;
+  return q.calculation.lines.reduce((sum, l) => {
+    if (l.totalPaise === null) return sum;
+    const gross = (l.price.amountPaise ?? 0) * l.quantity;
+    return (
+      sum +
+      Math.round(
+        l.price.taxBasis === "exclusive"
+          ? gross * (1 + (l.price.gstRate ?? 0) / 100)
+          : gross,
+      )
+    );
+  }, 0);
+}
 
 export async function quotationPdf(q: QuoteSnapshot): Promise<Uint8Array> {
   const doc = await PDFDocument.create();
@@ -231,12 +250,9 @@ export async function quotationPdf(q: QuoteSnapshot): Promise<Uint8Array> {
     C.muted,
   );
   const authorBody = lines(
-    [
-      q.createdBy?.email ?? company.email,
-      company.phone,
-      company.address,
-      `GSTIN ${company.gstin}`,
-    ].join("\n"),
+    [q.createdBy?.email ?? company.email, company.phone, company.address].join(
+      "\n",
+    ),
     L + 315,
     y - authorHeight - 5,
     205,
@@ -250,7 +266,7 @@ export async function quotationPdf(q: QuoteSnapshot): Promise<Uint8Array> {
     `${formatLength(d.width)} x ${formatLength(d.depth)}`,
     `${d.rows} rows / ${d.rows * d.seats} seats`,
     `${d.diagonal}" ${d.aspect}`,
-    `${d.audio} sound`,
+    `${audioLabel(d)} sound`,
   ];
   ensure(57);
   page.drawRectangle({ x: L, y: y - 43, width, height: 45, color: C.pale });
@@ -330,7 +346,7 @@ export async function quotationPdf(q: QuoteSnapshot): Promise<Uint8Array> {
   draw(amount, cx + 14, cardTop - 56, amountSize, bold, C.white);
   lines(
     q.calculation.complete
-      ? "Includes the GST shown in the price breakdown."
+      ? "Final project amount after item discounts."
       : "Incomplete estimate. Missing and unconfirmed items are excluded.",
     cx + 14,
     cardTop - 79,
@@ -428,21 +444,6 @@ export async function quotationPdf(q: QuoteSnapshot): Promise<Uint8Array> {
         C.gold,
       ) + 7;
     dy -= lines(summary, L + 72, dy, detailWidth, 7.7, regular, C.muted, 3) + 4;
-    const tax =
-      line.price.taxBasis === "inclusive"
-        ? "List rate includes GST"
-        : line.price.taxBasis === "exclusive"
-          ? "List rate excludes GST"
-          : "Tax basis to confirm";
-    draw(
-      `${tax}${line.price.gstRate !== null ? ` (${line.price.gstRate}%)` : ""}`,
-      L + 72,
-      dy,
-      7,
-      regular,
-      C.muted,
-    );
-    dy -= 11;
     if (line.spare) {
       draw(
         `${line.spare} spare physical unit(s) included in these packs`,
@@ -483,7 +484,7 @@ export async function quotationPdf(q: QuoteSnapshot): Promise<Uint8Array> {
     );
     if (line.totalPaise !== null) {
       right(
-        `GST ${money(line.taxPaise ?? 0)}`,
+        `${line.discountPercent ?? q.state.discountPercent}% discount`,
         R - 8,
         top - 27,
         6.4,
@@ -510,9 +511,8 @@ export async function quotationPdf(q: QuoteSnapshot): Promise<Uint8Array> {
   y -= 16;
   const totalX = L + 292;
   const totals = [
-    ["Subtotal before discount & GST", q.calculation.subtotalPaise],
-    [`Discount (${q.state.discountPercent}%)`, -q.calculation.discountPaise],
-    ["GST", q.calculation.taxPaise],
+    ["List subtotal", displaySubtotal(q)],
+    ["Item savings", -(displaySubtotal(q) - q.calculation.totalPaise)],
   ] as const;
   for (const [label, value] of totals) {
     draw(label, totalX, y, 8, regular, C.muted);
@@ -537,7 +537,7 @@ export async function quotationPdf(q: QuoteSnapshot): Promise<Uint8Array> {
   right(money(q.calculation.totalPaise), R - 8, y - 24, 16, bold, C.white);
   y -= 65;
   paragraph(
-    "Amounts in INR. List/unit rates retain the stated tax basis. Line totals include applicable GST after the discount. Quantities are purchasable units, pairs or sets.",
+    "Final amounts in INR after the item discounts shown above. Quantities are purchasable units, pairs or sets.",
     7.5,
   );
   const pending = [
@@ -551,11 +551,6 @@ export async function quotationPdf(q: QuoteSnapshot): Promise<Uint8Array> {
     section("Items to confirm before ordering");
     for (const item of pending) paragraph(`- ${item}`, 8.5);
   }
-  section("Installation scope & terms");
-  paragraph(
-    q.state.terms.trim() ||
-      "Payment, delivery and installation terms have not been specified. Confirm the project scope with Epix Infra before placing an order.",
-  );
   if (q.state.exclusions.trim()) {
     section("Exclusions");
     paragraph(q.state.exclusions);
@@ -574,8 +569,18 @@ export async function quotationPdf(q: QuoteSnapshot): Promise<Uint8Array> {
   });
   draw("Authorised signatory", R - 145, y - 51, 7.5, regular, C.muted);
   y -= Math.max(bankH, 65) + 8;
+  const termsText = q.state.terms.trim() || referenceTerms.terms.join("\n");
+  // Keep the reference clauses together when they fit on one fresh page.
+  ensure(
+    Math.min(
+      H - 108 - B,
+      wrap(termsText, regular, 9, width).length * 13.5 + 42,
+    ),
+  );
+  section("Terms & conditions");
+  paragraph(termsText);
   const note = wrap(
-    "Photos identify the model; finish/accessories may differ. Full specifications: model library. The 3D room is a concept; verify site dimensions and installation. Saved prices are preserved with this revision. Not a tax invoice.",
+    "Photos identify the model; finish/accessories may differ. Full specifications: model library. The 3D room is a concept; verify site dimensions and installation. Saved prices are preserved with this revision.",
     regular,
     6,
     width,

@@ -1,3 +1,6 @@
+import type { Product, SalesProject } from "./types";
+import { lineDiscountLimit, selectedDiscountBrands } from "./discounts";
+import { ACOUSTICS_CODE, ACOUSTICS_DESCRIPTION } from "./sound-services";
 export type TheaterRole = "admin" | "employee";
 export type TheaterMember = {
   uid: string;
@@ -61,6 +64,22 @@ export function requireDiscount(actor: Actor, discount: number) {
       `Your maximum allowed discount is ${max}%. Enter a discount from 0% to ${max}%.`,
     );
 }
+export function requireItemDiscounts(
+  actor: Actor,
+  state: SalesProject,
+  products: Product[],
+) {
+  requireDiscount(actor, state.discountPercent);
+  const employeeLimit = actor.role === "admin" ? 100 : actor.maxDiscountPercent;
+  const brands = selectedDiscountBrands(state, products);
+  for (const [key, discount] of Object.entries(state.lineDiscounts ?? {})) {
+    const limit = lineDiscountLimit(brands.get(key) ?? "", employeeLimit);
+    if (!Number.isFinite(discount) || discount < 0 || discount > limit)
+      throw new AccessError(
+        `This item's maximum allowed discount is ${limit}%. Review its discount before saving.`,
+      );
+  }
+}
 export function requireSelfSafe(
   actor: Actor,
   target: string,
@@ -95,17 +114,29 @@ export function requireServiceRates(
     amountPaise: number;
     gstRate: number;
     category: string;
+    serviceCode?: string;
+    description?: string;
+    quantity?: number;
   }[],
   rates: ServiceRate[],
 ) {
   requireActive(actor);
   if (actor.role === "admin") return;
   for (const line of lines) {
+    if (
+      line.serviceCode === ACOUSTICS_CODE &&
+      line.category === "acoustics" &&
+      line.description === ACOUSTICS_DESCRIPTION &&
+      line.quantity === 1 &&
+      Number.isInteger(line.amountPaise) &&
+      line.amountPaise >= 0 &&
+      line.amountPaise <= 10_000_000_000
+    )
+      continue;
     const rate = rates.find((r) => r.id === line.rateId);
     if (
       !rate?.active ||
       rate.amountPaise !== line.amountPaise ||
-      rate.gstRate !== line.gstRate ||
       rate.category !== line.category
     )
       throw new AccessError(

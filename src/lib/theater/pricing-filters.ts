@@ -85,8 +85,7 @@ export function filterPricingProducts(
           .includes(query)) &&
       (!filters.pending ||
         p.price.amountPaise === null ||
-        p.price.taxBasis === "unknown" ||
         p.price.unit === "unknown" ||
-        p.price.gstRate === null),
+        p.price.packSize === null),
   );
 }

@@ -28,7 +28,7 @@ assets, so neither catalog browsing nor quotation rendering depends on remote
 image availability.
 
 Do not infer prices, GST rates, lens ratios, model generations or enclosure axis
-order from a similar product. All new GST rates remain unconfirmed. BenQ prices
+order from a similar product. Historical tax metadata is retained only as source provenance. BenQ prices
 remain on request. Three Sony ZM2810 accessory codes have no supplied description;
 their selling units remain unconfirmed. The software licence and unidentified
 codes use clearly labelled catalog identity cards, rather than unrelated hardware
@@ -44,8 +44,10 @@ photographs. Hardware entries have supplied or reviewed model photos.
 - Firestore supplies approved price overrides over the source catalog. Importing
   new seed products requires no Firestore migration and does not overwrite team
   pricing or previously issued quotation snapshots.
-- Admins confirm new selling prices, GST and units on the protected pricing page.
-  Unconfirmed lines stay pending in quotation calculations.
+- Admins confirm final selling prices and selling units on the protected pricing
+  page. All amounts are treated as inclusive final prices; no separate tax is
+  added or displayed. Missing amounts and unconfirmed selling units stay pending.
+  Price CSVs contain model identity, amount, selling unit, pack size and revision.
 
 Manufacturer specifications supplement supplied brochures where explicitly
 recorded. Regional ES projector photo suffixes are retained in image provenance;

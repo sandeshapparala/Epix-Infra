@@ -6,6 +6,7 @@ import { activeSlots, requirements } from "@/lib/theater/quote";
 import { SLOT_LABELS, type Product, type Slot } from "@/lib/theater/types";
 import type { TheaterSales } from "./useTheaterSales";
 import { priceLabel } from "./CatalogDialog";
+import { audioLabel } from "@/lib/theater/speaker-layout";
 import styles from "./sales.module.css";
 
 export default function MatchingSeriesDialog({
@@ -59,7 +60,8 @@ export default function MatchingSeriesDialog({
             <div>
               <Dialog.Title>Build a matching system</Dialog.Title>
               <Dialog.Description>
-                {front.brand} · {front.series} · {studio.state.design.audio}
+                {front.brand} · {front.series} ·{" "}
+                {audioLabel(studio.state.design)}
               </Dialog.Description>
             </div>
             <Dialog.Close
@@ -77,8 +79,8 @@ export default function MatchingSeriesDialog({
             </p>
             {roles.map((role) => (
               <label key={role}>
-                {SLOT_LABELS[role]} ·{" "}
-                {requirements(studio.state.design.audio)[role]} speakers
+                {SLOT_LABELS[role]} · {requirements(studio.state.design)[role]}{" "}
+                speakers
                 <select
                   value={draft[role]}
                   onChange={(e) =>

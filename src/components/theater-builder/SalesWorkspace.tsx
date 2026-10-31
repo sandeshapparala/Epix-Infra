@@ -28,6 +28,12 @@ import CatalogDialog, { ProductImage, priceLabel } from "./CatalogDialog";
 import styles from "./sales.module.css";
 import MatchingSeriesDialog from "./MatchingSeriesDialog";
 import QuotationPreview from "./QuotationPreview";
+import QuoteLineEditor, {
+  QuoteDiscountToolbar,
+  SoundAddOn,
+} from "./QuoteLineEditor";
+import { isAcousticsAddon } from "@/lib/theater/sound-services";
+import { audioLabel } from "@/lib/theater/speaker-layout";
 import { formatLength, type LengthUnit } from "@/lib/theater/measurements";
 
 export function EquipmentSlot({
@@ -57,6 +63,7 @@ export function EquipmentSlot({
               "center",
               "surround",
               "rear",
+              "wide",
               "height",
               "subwoofer",
             ].includes(slot)
@@ -145,6 +152,7 @@ export function SoundEquipment({ studio }: { studio: TheaterSales }) {
         Speaker quantities follow your layout. Sets and pairs are billed once,
         with pack quantities calculated automatically.
       </p>
+      <SoundAddOn studio={studio} />
     </section>
   );
 }
@@ -224,25 +232,60 @@ function ProjectsDialog({ studio }: { studio: TheaterSales }) {
 export function QuotationDock({ studio }: { studio: TheaterSales }) {
   if (!studio.member) return null;
   const q = studio.calculation;
-  return <section className={styles.quotationDock} aria-label="Live quotation">
-    <details>
-      <summary>
-        <ShoppingBag size={18} />
-        <span><strong>Quotation</strong><small>{q.complete ? "Estimated total" : "Known subtotal"}</small></span>
-        <b>{rupees(q.totalPaise)}</b><ChevronRight className={styles.dockChevron} size={17} />
-      </summary>
-      <div className={styles.dockContent}>
-        <p>{q.lines.length} line items{q.missing.length ? ` · ${q.missing.length} selections remaining` : ""}{q.pending ? ` · ${q.pending} prices need confirmation` : ""}</p>
-        {studio.customer.name && <strong className={styles.dockCustomer}>{studio.customer.project || studio.customer.name}</strong>}
-        <div className={styles.dockActions}>
-          <button className={styles.secondary} onClick={() => studio.setProjectsOpen(true)}><FolderOpen size={16} /> Projects</button>
-          <button className={styles.primary} onClick={() => studio.setReview(true)}>Review quotation <ArrowUpRight size={16} /></button>
+  return (
+    <section className={styles.quotationDock} aria-label="Live quotation">
+      <details>
+        <summary>
+          <ShoppingBag size={18} />
+          <span>
+            <strong>Quotation</strong>
+            <small>{q.complete ? "Estimated total" : "Known subtotal"}</small>
+          </span>
+          <b>{rupees(q.totalPaise)}</b>
+          <ChevronRight className={styles.dockChevron} size={17} />
+        </summary>
+        <div className={styles.dockContent}>
+          <p>
+            {q.lines.length} line items
+            {q.missing.length
+              ? ` · ${q.missing.length} selections remaining`
+              : ""}
+            {q.pending ? ` · ${q.pending} prices need confirmation` : ""}
+          </p>
+          {studio.customer.name && (
+            <strong className={styles.dockCustomer}>
+              {studio.customer.project || studio.customer.name}
+            </strong>
+          )}
+          <div className={styles.dockActions}>
+            <button
+              className={styles.secondary}
+              onClick={() => studio.setProjectsOpen(true)}
+            >
+              <FolderOpen size={16} /> Projects
+            </button>
+            <button
+              className={styles.primary}
+              onClick={() => studio.setReview(true)}
+            >
+              Review quotation <ArrowUpRight size={16} />
+            </button>
+          </div>
         </div>
+      </details>
+      {studio.catalogError && (
+        <div className={styles.dockError} role="alert">
+          {studio.catalogError}
+          <button onClick={studio.refresh}>
+            <RefreshCw size={14} /> Retry catalog
+          </button>
+        </div>
+      )}
+      <div className={styles.dockStatus} role="status">
+        {studio.message}
       </div>
-    </details>
-    {studio.catalogError && <div className={styles.dockError} role="alert">{studio.catalogError}<button onClick={studio.refresh}><RefreshCw size={14} /> Retry catalog</button></div>}
-    <div className={styles.dockStatus} role="status">{studio.message}</div>
-  </section>;
+    </section>
+  );
 }
 
 export default function SalesWorkspace({
@@ -334,75 +377,27 @@ export default function SalesWorkspace({
                         <Plus size={15} /> Add equipment
                       </button>
                     </div>
+                    {q.lines.length > 0 && (
+                      <QuoteDiscountToolbar studio={studio} />
+                    )}
                     {q.lines.length === 0 ? (
                       <div className={styles.empty}>
                         <ShoppingBag />
                         <h3>Start choosing your equipment</h3>
                         <p>
-                          Select a projector in Screen and your system in Sound.
+                          Select your display in Screen and your system in
+                          Sound.
                         </p>
                       </div>
                     ) : (
                       <div className={styles.quoteLines}>
-                        {q.lines.map((l) => {
-                          const product = studio.products.find(
-                            (p) =>
-                              p.id === (l.productId ?? l.key.split("|")[0]),
-                          );
-                          return (
-                            <article key={l.key}>
-                              {product ? (
-                                <ProductImage product={product} small />
-                              ) : (
-                                <div className={styles.workImage}>
-                                  <FileText size={24} />
-                                  <small>Project work</small>
-                                </div>
-                              )}
-                              <div>
-                                <strong>
-                                  {l.model ? `${l.brand} ${l.model}` : l.label}
-                                </strong>
-                                <p>
-                                  {l.label}
-                                  {l.finish ? ` · ${l.finish}` : ""}
-                                </p>
-                                {product && (
-                                  <details className={styles.lineDetails}>
-                                    <summary>
-                                      Model features & description
-                                    </summary>
-                                    <p>{product.description}</p>
-                                  </details>
-                                )}
-                                <small>
-                                  {l.quantity} {l.unit}
-                                  {l.quantity !== 1 ? "s" : ""}
-                                  {l.spare
-                                    ? ` · ${l.spare} spare physical unit`
-                                    : ""}{" "}
-                                  ·{" "}
-                                  {l.price.amountPaise === null
-                                    ? "Price pending"
-                                    : rupees(l.price.amountPaise) +
-                                      " / " +
-                                      l.unit}{" "}
-                                  · {l.price.taxBasis} tax
-                                </small>
-                                {l.pending.length > 0 && (
-                                  <span className={styles.badgeWarning}>
-                                    Confirm {l.pending.join(", ")}
-                                  </span>
-                                )}
-                              </div>
-                              <strong>
-                                {l.totalPaise === null
-                                  ? "Pending"
-                                  : rupees(l.totalPaise)}
-                              </strong>
-                            </article>
-                          );
-                        })}
+                        {q.lines.map((line) => (
+                          <QuoteLineEditor
+                            key={line.key}
+                            line={line}
+                            studio={studio}
+                          />
+                        ))}
                       </div>
                     )}
                     {studio.equipment.extras.length > 0 && (
@@ -422,6 +417,7 @@ export default function SalesWorkspace({
                               type="number"
                               min="1"
                               max="100"
+
                               value={s.quantity}
                               onChange={(e) => {
                                 const n = Number(e.target.value);
@@ -533,8 +529,9 @@ export default function SalesWorkspace({
                     <h3>Installation and project work</h3>
                     <p className={styles.muted}>
                       Add screens, seating, cable runs, mounting, acoustics and
-                      calibration using your project rates. Rates below exclude
-                      GST.
+                      calibration using your final project rates. The
+                      soundproofing add-on price is editable in the quotation
+                      preview.
                     </p>
                     <label>
                       Administrator-approved project work
@@ -582,7 +579,10 @@ export default function SalesWorkspace({
                         <label>
                           Category
                           <select
-                            disabled={studio.member?.role !== "admin"}
+                            disabled={
+                              studio.member?.role !== "admin" ||
+                              isAcousticsAddon(s)
+                            }
                             value={s.category}
                             onChange={(e) =>
                               studio.setServices((a) =>
@@ -614,6 +614,7 @@ export default function SalesWorkspace({
                         <label>
                           Description
                           <input
+                            disabled={isAcousticsAddon(s)}
                             value={s.description}
                             maxLength={200}
                             onChange={(e) =>
@@ -633,6 +634,7 @@ export default function SalesWorkspace({
                             type="number"
                             min="0.01"
                             step="0.01"
+                            disabled={isAcousticsAddon(s)}
                             value={s.quantity}
                             onChange={(e) =>
                               studio.setServices((a) =>
@@ -678,31 +680,7 @@ export default function SalesWorkspace({
                             }
                           />
                         </label>
-                        <label>
-                          GST %
-                          <input
-                            type="number"
-                            min="0"
-                            max="100"
-                            disabled={studio.member?.role !== "admin"}
-                            value={s.gstRate}
-                            onChange={(e) =>
-                              studio.setServices((a) =>
-                                a.map((x, n) =>
-                                  n === i
-                                    ? {
-                                        ...x,
-                                        gstRate: Math.max(
-                                          0,
-                                          Math.min(100, Number(e.target.value)),
-                                        ),
-                                      }
-                                    : x,
-                                ),
-                              )
-                            }
-                          />
-                        </label>
+
                         <button
                           className={styles.iconButton}
                           aria-label="Remove project work"
@@ -728,7 +706,7 @@ export default function SalesWorkspace({
                               description: "Installation & calibration",
                               quantity: 1,
                               amountPaise: 0,
-                              gstRate: 18,
+                              gstRate: 0,
                             },
                           ])
                         }
@@ -754,31 +732,9 @@ export default function SalesWorkspace({
                           }
                         />
                       </label>
-                      <label>
-                        Discount on pre-tax amount (%) · limit{" "}
-                        {studio.maxDiscount}%
-                        <input
-                          type="number"
-                          min="0"
-                          max={studio.maxDiscount}
-                          step="0.1"
-                          value={studio.discountPercent}
-                          onChange={(e) =>
-                            studio.setDiscount(
-                              Math.max(
-                                0,
-                                Math.min(
-                                  studio.maxDiscount,
-                                  Number(e.target.value),
-                                ),
-                              ),
-                            )
-                          }
-                        />
-                      </label>
                     </div>
                     <label>
-                      Scope and payment terms
+                      Terms & conditions
                       <textarea
                         rows={4}
                         maxLength={4000}
@@ -806,20 +762,16 @@ export default function SalesWorkspace({
                 <p>
                   {formatLength(studio.state.design.width, units)} ×{" "}
                   {formatLength(studio.state.design.depth, units)} ·{" "}
-                  {studio.state.design.audio}
+                  {audioLabel(studio.state.design)}
                 </p>
                 <dl>
                   <div>
-                    <dt>Known pre-tax subtotal</dt>
+                    <dt>List subtotal</dt>
                     <dd>{rupees(q.subtotalPaise)}</dd>
                   </div>
                   <div>
                     <dt>Discount</dt>
                     <dd>−{rupees(q.discountPaise)}</dd>
-                  </div>
-                  <div>
-                    <dt>GST</dt>
-                    <dd>{rupees(q.taxPaise)}</dd>
                   </div>
                 </dl>
                 <div className={styles.grandTotal}>

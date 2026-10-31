@@ -18,7 +18,12 @@ export async function GET(
         .parse((await context.params).id),
       quote = await getQuote(actor, id);
     const path = `theater-private/quotes/${quote.ownerUid}/${id}.${QUOTATION_TEMPLATE_VERSION}.pdf`,
-      cached = await readPrivateFile(path);
+      cached =
+        ((quote.templateVersion ?? 1) < 3
+          ? await readPrivateFile(
+              `theater-private/quotes/${quote.ownerUid}/${id}.v2-illustrated.pdf`,
+            )
+          : null) ?? (await readPrivateFile(path));
     let bytes: Uint8Array;
     if (cached) bytes = cached.bytes;
     else {

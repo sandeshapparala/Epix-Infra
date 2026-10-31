@@ -129,3 +129,35 @@
 .mobileView{display:none}
 @media(max-width:760px){.canvasToolbar{overflow-x:auto;scrollbar-width:thin}.viewerTools{flex-shrink:0}.toolGroup[aria-label="Camera views"]{display:none}.mobileView{display:flex;align-items:center;gap:6px;font-size:10px;color:#586775;margin-left:auto}.mobileView>span{display:none}.mobileView select{min-height:44px;width:84px;padding:8px 4px;border:1px solid #ccd9e1;border-radius:4px;background:white;color:#173f56;font-size:11px}.zoomTools{margin-left:0;flex-shrink:0}.zoomTools button,.toolGroup button{width:44px;height:44px}.zoomTools button:last-child{display:none}}
 @media(max-height:560px) and (min-width:600px) and (max-width:760px){.app{min-height:0}.workspace{grid-template-columns:minmax(0,1fr) 320px;grid-template-rows:minmax(0,1fr)}.sidebar{border-left:1px solid var(--line);border-top:0}.metrics small{display:none}.fitDetails summary{min-height:32px}.stageHelp{display:none}}
+
+.audioControls {
+  display: grid;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.audioControls label {
+  display: grid;
+  gap: 8px;
+  font-size: 12px;
+  color: #28475b;
+}
+.audioControls select {
+  width: 100%;
+  min-width: 0;
+  min-height: 44px;
+  padding: 8px 10px;
+  border: 1px solid #c9d6de;
+  border-radius: 6px;
+  color: #17364a;
+  background: white;
+  font: inherit;
+}
+.customAudioGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+.audioControls select:focus-visible {
+  outline: 3px solid #bf842e;
+  outline-offset: 2px;
+}

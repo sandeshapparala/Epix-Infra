@@ -19,6 +19,7 @@ import {
   type Slot,
   type SalesProject,
 } from "@/lib/theater/types";
+import { audioLabel } from "@/lib/theater/speaker-layout";
 import styles from "./sales.module.css";
 import { pricingCategoryLabel } from "@/lib/theater/pricing-filters";
 
@@ -141,7 +142,13 @@ export default function CatalogDialog({
     minLumens,
   ]);
   const eligible = useMemo(
-    () => products.filter((p) => slot === "extra" || p.roles.includes(slot)),
+    () =>
+      products.filter(
+        (p) =>
+          slot === "extra" ||
+          p.roles.includes(slot) ||
+          (slot === "wide" && p.roles.includes("front")),
+      ),
     [products, slot],
   );
   const filtered = useMemo(
@@ -356,8 +363,8 @@ export default function CatalogDialog({
                 Hide incompatible options
               </label>
               <p className={styles.muted}>
-                List prices retain their source tax basis. Final quantities and
-                tax are calculated in your quotation.
+                Prices are final selling rates. Final quantities and discounts
+                are calculated in your quotation.
               </p>
               <button
                 className={styles.textButton}
@@ -433,11 +440,13 @@ export default function CatalogDialog({
                     {detailed.source.page} · effective{" "}
                     {detailed.source.effectiveDate}
                   </p>
-                  {detailed.issues.map((i) => (
-                    <p className={styles.warning} key={i}>
-                      {i}
-                    </p>
-                  ))}
+                  {detailed.issues
+                    .filter((i) => !/gst|tax basis|tax inclusion/i.test(i))
+                    .map((i) => (
+                      <p className={styles.warning} key={i}>
+                        {i}
+                      </p>
+                    ))}
                 </div>
               ) : showCompare ? (
                 <div className={styles.details}>
@@ -457,12 +466,7 @@ export default function CatalogDialog({
                         </h4>
                         <strong>{priceLabel(p)}</strong>
                         <p>{p.category}</p>
-                        <p>
-                          {p.price.taxBasis} tax ·{" "}
-                          {p.price.gstRate === null
-                            ? "GST to confirm"
-                            : p.price.gstRate + "% GST"}
-                        </p>
+
                         {Object.entries(p.specs)
                           .filter(([k]) => k !== "sourceUrl")
                           .map(([k, v]) => (
@@ -497,7 +501,8 @@ export default function CatalogDialog({
                   <div className={styles.resultsHeading}>
                     <span>{filtered.length} models</span>
                     <span>
-                      {state.design.audio} · {state.design.diagonal}″ screen
+                      {audioLabel(state.design)} · {state.design.diagonal}″
+                      screen
                     </span>
                   </div>
                   <div className={styles.productGrid}>
@@ -531,13 +536,7 @@ export default function CatalogDialog({
                             <strong className={styles.price}>
                               {priceLabel(p)}
                             </strong>
-                            <small className={styles.tax}>
-                              {p.price.taxBasis === "inclusive"
-                                ? "Includes GST"
-                                : p.price.taxBasis === "exclusive"
-                                  ? "GST extra"
-                                  : "Tax basis to confirm"}
-                            </small>
+
                             {errors.length > 0 && (
                               <span
                                 className={

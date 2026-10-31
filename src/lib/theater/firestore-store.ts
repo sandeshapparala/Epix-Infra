@@ -9,6 +9,7 @@ import {
   requireActive,
   requireAdmin,
   requireDiscount,
+  requireItemDiscounts,
   requireOwner,
   requireServiceRates,
   type Actor,
@@ -144,7 +145,7 @@ export async function saveProject(
     const ref = collection("Projects").doc(id),
       existing = await tx.get(ref);
     const rates = await serviceRatesFor(tx, state);
-    requireDiscount(current, state.discountPercent);
+    requireItemDiscounts(current, state, products);
     requireServiceRates(current, state.services, rates);
     if (existing.exists) requireOwner(current, existing.data()!.ownerUid);
     if (
@@ -331,7 +332,7 @@ export async function saveQuote(
       price: prices[i].exists ? (prices[i].data()!.price as Price) : p.price,
     }));
     const rates = await serviceRatesFor(tx, state);
-    requireDiscount(current, state.discountPercent);
+    requireItemDiscounts(current, state, currentProducts);
     requireServiceRates(current, state.services, rates);
     if (
       currentProducts.some(
@@ -347,7 +348,7 @@ export async function saveQuote(
       revision = (projectDoc.data()!.quoteRevision ?? 0) + 1,
       createdAt = new Date().toISOString();
     const snapshot: QuoteSnapshot = clean({
-      templateVersion: 2,
+      templateVersion: 3,
       company: quotationCompany,
       id,
       number: `EPIX-${new Date().getFullYear()}-${id.slice(0, 8).toUpperCase()}-R${revision}`,

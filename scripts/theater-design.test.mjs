@@ -2,7 +2,10 @@ import test from 'node:test';
 
 import assert from 'node:assert/strict';
 
-import { DEFAULT_DESIGN, calculateDesign, parseSavedDesign, screenSize, solveSpeakers, constrainObjectMove, fitSeatingLayout, rowMotionBounds, seatingPosition, PRESETS, MIN_ROW_SPACING, SEATING_CLEARANCE } from '../src/components/theater-builder/design.ts';
+import { createRequire } from 'node:module';
+const require = createRequire(import.meta.url);
+require('./theater-test-loader.cjs');
+const { DEFAULT_DESIGN, calculateDesign, parseSavedDesign, screenSize, solveSpeakers, constrainObjectMove, fitSeatingLayout, rowMotionBounds, seatingPosition, PRESETS, MIN_ROW_SPACING, SEATING_CLEARANCE } = require('../src/components/theater-builder/design.ts');
 
 
 

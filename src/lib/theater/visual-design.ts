@@ -28,7 +28,9 @@ export function visualDesign(
     center: ["C"],
     surround: ["SL", "SR"],
     rear: ["SBL", "SBR"],
-    subwoofer: ["SUB1", "SUB2"],
+    wide: ["FWL", "FWR"],
+    height: ["TFL", "TFR", "TML", "TMR", "TRL", "TRR"],
+    subwoofer: ["SUB1", "SUB2", "SUB3", "SUB4"],
   };
   const equipmentSizes: Record<string, [number, number, number]> = {};
   for (const [slot, ids] of Object.entries(channels)) {

@@ -11,8 +11,10 @@ const selection = z
 const price = z
   .object({
     amountPaise: z.number().int().min(0).max(100_000_000_000).nullable(),
-    taxBasis: z.enum(["inclusive", "exclusive", "unknown"]),
-    gstRate: z.number().min(0).max(100).nullable(),
+    taxBasis: z
+      .enum(["inclusive", "exclusive", "unknown"])
+      .default("inclusive"),
+    gstRate: z.number().min(0).max(100).nullable().default(0),
     unit: z.enum(["unit", "pair", "set", "unknown"]),
     packSize: z.number().int().min(1).max(100).nullable(),
     revision: z.number().int().min(0).optional(),
@@ -82,6 +84,7 @@ const fields = z
             center: selection.optional(),
             surround: selection.optional(),
             rear: selection.optional(),
+            wide: selection.optional(),
             height: selection.optional(),
             subwoofer: selection.optional(),
             receiver: selection.optional(),
@@ -110,6 +113,7 @@ const fields = z
         z
           .object({
             id: z.string().max(80),
+            serviceCode: z.literal("soundproofing-acoustics").optional(),
             rateId: z.string().uuid().optional(),
             category: z
               .enum([
@@ -125,12 +129,32 @@ const fields = z
             description: z.string().min(1).max(200),
             quantity: z.number().min(0.01).max(1000),
             amountPaise: z.number().int().min(0).max(10_000_000_000),
-            gstRate: z.number().min(0).max(100),
+            gstRate: z.number().min(0).max(100).default(0),
           })
           .strict(),
       )
-      .max(50),
+      .max(50)
+      .superRefine((lines, ctx) => {
+        if (new Set(lines.map((s) => s.id)).size !== lines.length)
+          ctx.addIssue({
+            code: "custom",
+            message: "Project work must have unique identifiers",
+          });
+        if (
+          lines.filter((s) => s.serviceCode === "soundproofing-acoustics")
+            .length > 1
+        )
+          ctx.addIssue({
+            code: "custom",
+            message:
+              "Only one soundproofing - acoustics add-on is allowed per room",
+          });
+      }),
     discountPercent: z.number().min(0).max(100),
+    lineDiscounts: z
+      .record(z.number().min(0).max(100))
+      .refine((v) => Object.keys(v).length <= 200, "Too many item discounts")
+      .optional(),
     validityDays: z.number().int().min(1).max(365),
     terms: z.string().max(4000),
     exclusions: z.string().max(4000),

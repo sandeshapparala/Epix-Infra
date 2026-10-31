@@ -7,6 +7,7 @@ export type Slot =
   | "center"
   | "surround"
   | "rear"
+  | "wide"
   | "height"
   | "subwoofer"
   | "receiver"
@@ -73,6 +74,7 @@ export type Customer = {
   address: string;
 };
 export type ServiceLine = {
+  serviceCode?: "soundproofing-acoustics";
   rateId?: string;
   id: string;
   category:
@@ -94,6 +96,7 @@ export type SalesProject = {
   customer: Customer;
   services: ServiceLine[];
   discountPercent: number;
+  lineDiscounts?: Record<string, number>;
   validityDays: number;
   terms: string;
   exclusions: string;
@@ -113,6 +116,7 @@ export type QuoteLine = {
   price: Price;
   subtotalPaise: number | null;
   discountPaise: number;
+  discountPercent?: number;
   netPaise: number | null;
   taxPaise: number | null;
   totalPaise: number | null;
@@ -124,6 +128,7 @@ export type ReviewIssue = {
   slot?: Slot;
 };
 export type QuoteCalculation = {
+  pricingMode?: "inclusive";
   lines: QuoteLine[];
   issues: ReviewIssue[];
   missing: string[];
@@ -189,6 +194,7 @@ export const SLOT_LABELS: Record<Slot, string> = {
   center: "Centre speaker",
   surround: "Side surrounds",
   rear: "Rear surrounds",
+  wide: "Front wide speakers",
   height: "Height / Atmos",
   subwoofer: "Subwoofers",
   receiver: "AV receiver / processor",

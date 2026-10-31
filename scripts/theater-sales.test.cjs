@@ -57,7 +57,7 @@ test("pricing equipment groups cover the complete source catalog without duplica
 test("pricing confirmation filter and category search keep the source billing rules", () => {
   const pending = filterPricingProducts(products, { ...noPricingFilters, pending: true, brand: "Denon", type: "electronics" });
   assert.ok(pending.length > 0);
-  assert.ok(pending.every((p) => p.brand === "Denon" && (p.price.amountPaise === null || p.price.taxBasis === "unknown" || p.price.unit === "unknown" || p.price.gstRate === null)));
+  assert.ok(pending.every((p) => p.brand === "Denon" && (p.price.amountPaise === null || p.price.unit === "unknown" || p.price.packSize === null)));
   const ceiling = filterPricingProducts(products, { ...noPricingFilters, search: "in-ceiling" });
   assert.ok(ceiling.length > 0);
   assert.ok(ceiling.every((p) => p.category === "ceiling"));
@@ -185,7 +185,7 @@ test("odd speaker requirements round to whole purchasable pairs and disclose the
   assert.equal(l.quantity, 2);
   assert.equal(l.spare, 1);
 });
-test("tax-inclusive list prices are not taxed twice; discounts apply before GST", () => {
+test("final list prices are discounted without adding tax", () => {
   const s = state();
   const p = product("jvc-dla-nz500be");
   s.equipment.slots.projector = { productId: p.id, finish: "" };
@@ -292,7 +292,7 @@ test("saved state and price update validation reject malformed values and pack m
     }),
   );
 });
-test("custom project work adds a screen and calculates its quantity, discount and GST", () => {
+test("custom project work uses final pricing and its item discount", () => {
   const s = state();
   s.services = [
     {
@@ -306,7 +306,7 @@ test("custom project work adds a screen and calculates its quantity, discount an
   ];
   s.discountPercent = 10;
   const q = calculateQuote(s, products);
-  assert.equal(q.totalPaise, 1062000);
+  assert.equal(q.totalPaise, 900000);
   assert.ok(!q.missing.some((s) => s.startsWith("Projection screen")));
 });
 test("database updates are durable, conflict checked and quotation snapshots are immutable", async () => {
@@ -397,7 +397,7 @@ test("physical room conflicts appear in quotation review instead of a complete q
   );
 });
 
-test("fractional project-work quantities round once to whole paise before tax", () => {
+test("fractional project-work quantities round once to whole paise", () => {
   const s = state();
   s.services = [
     {
@@ -411,8 +411,8 @@ test("fractional project-work quantities round once to whole paise before tax", 
   ];
   const q = calculateQuote(s, products);
   assert.equal(q.subtotalPaise, 333);
-  assert.equal(q.taxPaise, 60);
-  assert.equal(q.totalPaise, 393);
+  assert.equal(q.taxPaise, 0);
+  assert.equal(q.totalPaise, 333);
 });
 
 test("a dual-subwoofer set supplies two cabinets with one billable set", () => {
@@ -452,4 +452,84 @@ test("a packaged receiver cannot silently support an eleven-channel upgrade", ()
       (i) => i.level === "error" && i.text.includes("included receiver"),
     ),
   );
+});
+const { speakerLayout, validCustomAudio } = require('../src/lib/theater/speaker-layout.ts');
+const { requirements } = require('../src/lib/theater/quote.ts');
+const { requireItemDiscounts, requireServiceRates } = require('../src/lib/theater/access.ts');
+const { acousticsAddon, ACOUSTICS_DEFAULT_PAISE } = require('../src/lib/theater/sound-services.ts');
+
+test('expanded presets and custom counts agree across the scene and bill of materials', () => {
+  for (const audio of ['7.1.6','9.1.4']) {
+    const d={...DEFAULT_DESIGN,audio};
+    assert.equal(calculateDesign(d).speakerCount,14);
+    assert.equal(speakerLayout(d).channels,13);
+    assert.equal(parseProject({...state(),design:d}).design.audio,audio);
+  }
+  const d={...DEFAULT_DESIGN,audio:'custom',customAudio:{bed:9,subs:3,height:4}};
+  const parsed=parseProject({...state(),design:d});
+  assert.deepEqual(parsed.design.customAudio,d.customAudio);
+  assert.equal(calculateDesign(d).speakerCount,16);
+  const r=requirements(d);
+  assert.equal(r.wide,2); assert.equal(r.rear,2); assert.equal(r.height,4); assert.equal(r.subwoofer,3);
+  for(const customAudio of [{bed:9,subs:2,height:6},{bed:6,subs:1,height:2},{bed:7,subs:0,height:4},{bed:7,subs:1.5,height:4},{bed:7,subs:1,height:3},undefined]) {
+    assert.equal(validCustomAudio(customAudio),false);
+    assert.throws(()=>parseProject({...state(),design:{...d,customAudio}}));
+  }
+});
+
+test('wide speakers and every ceiling pair stay installed when the primary row moves', () => {
+  const {solveSpeakers}=require('../src/components/theater-builder/design.ts');
+  for(const customAudio of [{bed:9,subs:1,height:6},{bed:9,subs:3,height:4}]) {
+    const d={...DEFAULT_DESIGN,audio:'custom',customAudio};
+    const before=solveSpeakers(d),after=solveSpeakers({...d,distance:d.distance-.3});
+    assert.ok(before.speakers.some(s=>s.id==='FWL'));
+    for(const s of before.speakers) {
+      const next=after.speakers.find(n=>n.id===s.id);
+      assert.ok(s.position.every(Number.isFinite));
+      if(!['SL','SR'].includes(s.id)) assert.deepEqual(next.position,s.position,s.id);
+      else assert.notDeepEqual(next.position,s.position);
+    }
+  }
+});
+
+test('all final source amounts, including old exclusive and unknown tax metadata, use the same discounted total', () => {
+  for(const taxBasis of ['inclusive','exclusive','unknown']) {
+    const p={...product('polk-es15-pair'),price:{...product('polk-es15-pair').price,taxBasis,gstRate:null,amountPaise:1234500}};
+    const s=state();s.equipment.extras=[{productId:p.id,finish:'',quantity:2}];s.discountPercent=20;
+    const q=calculateQuote(s,[p]);
+    assert.equal(q.totalPaise,987600);assert.equal(q.subtotalPaise,1234500);assert.equal(q.taxPaise,0);assert.equal(q.pending,0);
+  }
+});
+
+test('varied item discounts and Rotel caps apply to grouped slots and extras', () => {
+  const base=product('polk-es15-pair');
+  const rotel={...base,id:'rotel-policy-test',brand:'Rotel',price:{...base.price,amountPaise:1000000}};
+  const other={...base,id:'other-policy-test',price:{...base.price,amountPaise:2000000}};
+  const s=state();s.discountPercent=20;
+  s.equipment.slots.front={productId:rotel.id,finish:''};
+  s.equipment.extras=[{productId:rotel.id,finish:'',quantity:2},{productId:other.id,finish:'',quantity:2}];
+  let q=calculateQuote(s,[rotel,other]);
+  assert.equal(q.lines[0].quantity,2);assert.equal(q.lines[0].discountPercent,10);assert.equal(q.lines[0].totalPaise,1800000);
+  assert.equal(q.lines[1].discountPercent,20);assert.equal(q.totalPaise,3400000);
+  s.lineDiscounts={[rotel.id+'|']:7.5,[other.id+'|']:12.5};q=calculateQuote(s,[rotel,other]);
+  assert.equal(q.totalPaise,3600000);assert.equal(q.discountPaise,400000);
+  const actor={uid:'qa',active:true,role:'employee',maxDiscountPercent:20};
+  assert.doesNotThrow(()=>requireItemDiscounts(actor,s,[rotel,other]));
+  s.lineDiscounts[rotel.id+'|']=10.01;
+  assert.throws(()=>requireItemDiscounts(actor,s,[rotel,other]),/maximum allowed discount is 10%/);
+  assert.throws(()=>requireItemDiscounts({...actor,role:'admin'},s,[rotel,other]),/10%/);
+  s.lineDiscounts={[other.id+'|']:20.01};assert.throws(()=>requireItemDiscounts(actor,s,[rotel,other]),/20%/);
+  s.lineDiscounts={[rotel.id+'|']:5};assert.throws(()=>requireItemDiscounts({...actor,maxDiscountPercent:4}, {...s,discountPercent:0},[rotel,other]),/4%/);
+});
+
+test('soundproofing defaults to 35000 and only this add-on permits employee custom pricing', () => {
+  const s=state(),addon=acousticsAddon(),actor={uid:'qa',active:true,role:'employee',maxDiscountPercent:20};
+  assert.equal(addon.amountPaise,ACOUSTICS_DEFAULT_PAISE);assert.equal(addon.amountPaise,3500000);
+  addon.amountPaise=4200050;s.services=[addon];s.lineDiscounts={['service:'+addon.id]:12.5};
+  requireServiceRates(actor,s.services,[]);requireItemDiscounts(actor,s,[]);
+  const q=calculateQuote(s,[]);assert.equal(q.totalPaise,3675044);assert.equal(q.lines[0].discountPercent,12.5);
+  for(const change of [{serviceCode:undefined},{category:'other'},{description:'Unapproved work'},{quantity:2},{amountPaise:-1}])
+    assert.throws(()=>requireServiceRates(actor,[{...addon,...change}],[]));
+  assert.throws(()=>parseProject({...s,services:[addon,{...addon,id:'duplicate-service'}]}));
+  assert.throws(()=>parseProject({...s,services:[addon,{...addon,serviceCode:undefined}]}));
 });

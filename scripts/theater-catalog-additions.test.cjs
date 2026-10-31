@@ -59,7 +59,7 @@ test('catalog displays set and retain their real 43–98 inch size and remain se
   const q=calculateQuote(s,products);
   assert.ok(q.lines.some(l=>l.productId===tv.id));
   assert.ok(!q.missing.some(m=>/TV price|professional display/.test(m)));
-  assert.ok(q.lines.find(l=>l.productId===tv.id).pending.includes('GST rate'));
+  assert.equal(q.lines.find(l=>l.productId===tv.id).pending.length, 0);
   s.design={...DEFAULT_DESIGN};
   assert.ok(!calculateQuote(s,products).lines.some(l=>l.productId===tv.id));
 });

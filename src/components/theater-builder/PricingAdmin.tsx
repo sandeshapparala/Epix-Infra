@@ -67,9 +67,7 @@ export default function PricingAdmin() {
     [busy, setBusy] = useState(false),
     [imported, setImported] = useState<Change[] | null>(null);
   const [loading, setLoading] = useState(true);
-  const [bulkTax, setBulkTax] = useState<Price["taxBasis"]>("inclusive"),
-    [bulkGst, setBulkGst] = useState("18"),
-    [bulkUnit, setBulkUnit] = useState<Price["unit"] | "">("");
+  const [bulkUnit, setBulkUnit] = useState<Price["unit"] | "">("");
   async function refresh() {
     setLoading(true);
     try {
@@ -137,8 +135,8 @@ export default function PricingAdmin() {
             ...c,
             price: {
               amountPaise: c.price.amountPaise,
-              taxBasis: c.price.taxBasis,
-              gstRate: c.price.gstRate,
+              taxBasis: "inclusive",
+              gstRate: 0,
               unit: c.price.unit,
               packSize: c.price.packSize,
             },
@@ -163,8 +161,6 @@ export default function PricingAdmin() {
       "brand",
       "model",
       "amount_inr",
-      "tax_basis",
-      "gst_rate",
       "selling_unit",
       "pack_size",
       "revision",
@@ -176,8 +172,6 @@ export default function PricingAdmin() {
         p.brand,
         p.model,
         p.price.amountPaise === null ? "" : String(p.price.amountPaise / 100),
-        p.price.taxBasis,
-        p.price.gstRate === null ? "" : String(p.price.gstRate),
         p.price.unit,
         String(p.price.packSize ?? ""),
         String(p.price.revision),
@@ -206,8 +200,6 @@ export default function PricingAdmin() {
       const columns = [
         "product_id",
         "amount_inr",
-        "tax_basis",
-        "gst_rate",
         "selling_unit",
         "revision",
       ].map((h) => header.indexOf(h));
@@ -216,9 +208,7 @@ export default function PricingAdmin() {
       const seen = new Set<string>();
       const changes: Change[] = [];
       for (const row of rows) {
-        const [id, amount, tax, gst, unit, revision] = columns.map(
-          (i) => row[i] ?? "",
-        );
+        const [id, amount, unit, revision] = columns.map((i) => row[i] ?? "");
         const p = products.find((p) => p.id === id);
         if (!p) throw new Error(`Unknown product: ${id}`);
         if (seen.has(id)) throw new Error(`Duplicate product: ${id}`);
@@ -226,8 +216,8 @@ export default function PricingAdmin() {
         const price: Price = {
           amountPaise:
             amount.trim() === "" ? null : Math.round(Number(amount) * 100),
-          taxBasis: tax as Price["taxBasis"],
-          gstRate: gst.trim() === "" ? null : Number(gst),
+          taxBasis: "inclusive",
+          gstRate: 0,
           unit: unit as Price["unit"],
           packSize:
             unit === "pair"
@@ -242,7 +232,6 @@ export default function PricingAdmin() {
           revision: Number(revision),
         };
         if (
-          !["inclusive", "exclusive", "unknown"].includes(tax) ||
           !["unit", "pair", "set", "unknown"].includes(unit) ||
           (price.amountPaise !== null &&
             (!Number.isFinite(price.amountPaise) || price.amountPaise <= 0)) ||
@@ -258,7 +247,7 @@ export default function PricingAdmin() {
             `Stale revision for ${id}. Export a fresh CSV before importing.`,
           );
         if (
-          ["amountPaise", "taxBasis", "gstRate", "unit", "packSize"].some(
+          ["amountPaise", "unit", "packSize"].some(
             (k) => price[k as keyof Price] !== p.price[k as keyof Price],
           )
         )
@@ -292,8 +281,8 @@ export default function PricingAdmin() {
           <p className={styles.eyebrow}>CATALOG ADMINISTRATION</p>
           <h1>Keep every quote current.</h1>
           <p>
-            Update selling prices, tax treatment and billing units. All models
-            are ordered for the project.
+            Update final selling prices and billing units. All models are
+            ordered for the project.
           </p>
         </div>
         <div className={styles.barActions}>
@@ -414,27 +403,7 @@ export default function PricingAdmin() {
       {selected.length > 0 && (
         <div className={styles.bulkPanel}>
           <strong>{selected.length} selected</strong>
-          <label>
-            Tax basis
-            <select
-              value={bulkTax}
-              onChange={(e) => setBulkTax(e.target.value as Price["taxBasis"])}
-            >
-              <option value="inclusive">Includes GST</option>
-              <option value="exclusive">GST extra</option>
-              <option value="unknown">Unconfirmed</option>
-            </select>
-          </label>
-          <label>
-            GST %
-            <input
-              type="number"
-              min="0"
-              max="100"
-              value={bulkGst}
-              onChange={(e) => setBulkGst(e.target.value)}
-            />
-          </label>
+
           <label>
             Selling unit
             <select
@@ -459,8 +428,8 @@ export default function PricingAdmin() {
                     expectedRevision: p.price.revision,
                     price: {
                       ...p.price,
-                      taxBasis: bulkTax,
-                      gstRate: bulkGst.trim() === "" ? null : Number(bulkGst),
+                      taxBasis: "inclusive",
+                      gstRate: 0,
                       ...(bulkUnit
                         ? {
                             unit: bulkUnit,
@@ -477,7 +446,7 @@ export default function PricingAdmin() {
               )
             }
           >
-            Apply confirmed billing rules
+            Apply selling unit
           </button>
         </div>
       )}
@@ -512,7 +481,7 @@ export default function PricingAdmin() {
               </th>
               <th>Product</th>
               <th>Current list price</th>
-              <th>Tax</th>
+
               <th>Selling unit</th>
               <th>Source date</th>
               <th />
@@ -558,15 +527,7 @@ export default function PricingAdmin() {
                     rupees(p.price.amountPaise)
                   )}
                 </td>
-                <td>
-                  {p.price.taxBasis}
-                  <br />
-                  <small>
-                    {p.price.gstRate === null
-                      ? "GST to confirm"
-                      : p.price.gstRate + "% GST"}
-                  </small>
-                </td>
+
                 <td>{p.price.unit}</td>
                 <td>
                   {p.source.effectiveDate}
@@ -682,52 +643,6 @@ export default function PricingAdmin() {
                     }
                   />
                 </label>
-                <div className={styles.formGrid}>
-                  <label>
-                    Tax basis
-                    <select
-                      value={draft.taxBasis}
-                      onChange={(e) =>
-                        setDraft((d) =>
-                          d
-                            ? {
-                                ...d,
-                                taxBasis: e.target.value as Price["taxBasis"],
-                              }
-                            : d,
-                        )
-                      }
-                    >
-                      <option value="inclusive">Includes GST</option>
-                      <option value="exclusive">GST extra</option>
-                      <option value="unknown">Needs confirmation</option>
-                    </select>
-                  </label>
-                  <label>
-                    GST rate (%)
-                    <input
-                      type="number"
-                      min="0"
-                      max="100"
-                      step="0.01"
-                      value={draft.gstRate ?? ""}
-                      placeholder="Unconfirmed"
-                      onChange={(e) =>
-                        setDraft((d) =>
-                          d
-                            ? {
-                                ...d,
-                                gstRate:
-                                  e.target.value === ""
-                                    ? null
-                                    : Number(e.target.value),
-                              }
-                            : d,
-                        )
-                      }
-                    />
-                  </label>
-                </div>
                 <label>
                   Selling unit
                   <select
@@ -793,11 +708,13 @@ export default function PricingAdmin() {
                   Changes update future quotations; saved quotation snapshots
                   are preserved.
                 </p>
-                {editing.issues.map((i) => (
-                  <p className={styles.warning} key={i}>
-                    {i}
-                  </p>
-                ))}
+                {editing.issues
+                  .filter((i) => !/gst|tax basis|tax inclusion/i.test(i))
+                  .map((i) => (
+                    <p className={styles.warning} key={i}>
+                      {i}
+                    </p>
+                  ))}
                 <button className={styles.primary} disabled={busy}>
                   <Save size={16} />
                   {busy ? "Saving…" : "Save price update"}
@@ -841,7 +758,6 @@ export default function PricingAdmin() {
                   {c.price.amountPaise === null
                     ? "Price pending"
                     : rupees(c.price.amountPaise)}{" "}
-                  · {c.price.taxBasis} · {c.price.gstRate ?? "?"}% GST ·{" "}
                   {c.price.unit}
                 </p>
               ))}

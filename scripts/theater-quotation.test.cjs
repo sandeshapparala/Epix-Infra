@@ -81,7 +81,7 @@ test("illustrated PDF embeds model photos and preserves the saved quote values",
     assert.equal(p.getWidth(), 595.28);
     assert.equal(p.getHeight(), 841.89);
   }
-  assert.equal(QUOTATION_TEMPLATE_VERSION, "v2-illustrated");
+  assert.equal(QUOTATION_TEMPLATE_VERSION, "v3-item-discounts-inclusive");
 });
 test("old quote-line keys still resolve photos without using model-name guesses", () => {
   const q = sampleQuote(),

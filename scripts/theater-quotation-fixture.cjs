@@ -21,10 +21,6 @@ function sampleQuote() {
   const products = catalog
     .filter((p) => Object.values(slots).includes(p.id))
     .map((p) => ({ ...p, price: { ...p.price } }));
-  // This is a local visual fixture, never a change to catalog or client pricing.
-  // The Denon source has inclusive GST without a numeric rate; 18% below is an
-  // explicitly disclosed demonstration assumption, not an approved selling rate.
-  products.find((p) => p.id === slots.receiver).price.gstRate = 18;
   const state = {
     design: { ...DEFAULT_DESIGN },
     equipment: {
@@ -64,8 +60,7 @@ function sampleQuote() {
     ],
     discountPercent: 5,
     validityDays: 15,
-    terms:
-      "TEMPLATE DEMONSTRATION ONLY - NOT A COMMERCIAL OFFER.\nPrices shown are catalog reference values. The receiver GST rate is assumed at 18% for this visual example and requires administrator confirmation. Project-work prices are demonstration amounts.\nPayment schedule, delivery timeline, installation scope and warranty terms must be confirmed in the actual customer quotation.",
+    terms: require("../src/data/theater/quotation-terms.json").terms.join("\n"),
     exclusions:
       "Civil works, electrical preparation, acoustic treatment, network infrastructure and other work are included only when expressly listed in the customer scope.",
   };
@@ -84,7 +79,7 @@ function sampleQuote() {
       name: "Epix design team",
       email: "hello@epixinfra.com",
     },
-    templateVersion: 2,
+    templateVersion: 3,
     company,
   };
 }

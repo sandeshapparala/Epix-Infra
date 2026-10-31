@@ -14,15 +14,21 @@ import {
 } from "./types";
 import { visualDesign } from "./visual-design";
 import { formatLength } from "./measurements";
+import { audioLabel, speakerLayout, type CustomAudio } from "./speaker-layout";
+import { appliedDiscount } from "./discounts";
 
-export function requirements(audio: string): Partial<Record<Slot, number>> {
+export function requirements(
+  audio: string | { audio: string; customAudio?: CustomAudio },
+): Partial<Record<Slot, number>> {
+  const layout = speakerLayout(audio);
   return {
     front: 2,
     center: 1,
     surround: 2,
-    rear: audio === "7.2.4" ? 2 : 0,
-    height: audio === "7.2.4" ? 4 : audio === "5.1.2" ? 2 : 0,
-    subwoofer: audio === "7.2.4" ? 2 : 1,
+    rear: layout.bed >= 7 ? 2 : 0,
+    wide: layout.bed === 9 ? 2 : 0,
+    height: layout.height,
+    subwoofer: layout.subs,
     receiver: 1,
     amplifier: 0,
     projector: 1,
@@ -34,7 +40,7 @@ export function remainingRequirements(
   state: Pick<SalesProject, "design" | "equipment">,
   products: Product[],
 ): Partial<Record<Slot, number>> {
-  const req = requirements(state.design.audio);
+  const req = requirements(state.design);
   if (state.equipment.mode === "package") {
     const p = products.find(
       (p) => p.id === state.equipment.slots.package?.productId,
@@ -62,6 +68,7 @@ export function activeSlots(
         "center",
         "surround",
         "rear",
+        "wide",
         "height",
         "subwoofer",
         "receiver",
@@ -77,8 +84,13 @@ export function compatibility(
 ): ReviewIssue[] {
   const issues: ReviewIssue[] = [];
   const d = state.design;
-  const channels = d.audio === "7.2.4" ? 11 : d.audio === "5.1.2" ? 7 : 5;
-  if (slot !== "extra" && !p.roles.includes(slot))
+  const layout = speakerLayout(d),
+    channels = layout.channels;
+  if (
+    slot !== "extra" &&
+    !p.roles.includes(slot) &&
+    !(slot === "wide" && p.roles.includes("front"))
+  )
     issues.push({
       level: "error",
       text: `${p.model} is not catalogued for ${SLOT_LABELS[slot].toLowerCase()}.`,
@@ -94,7 +106,7 @@ export function compatibility(
     else if (p.specs.processedChannels < channels)
       issues.push({
         level: "error",
-        text: `${p.model} processes ${p.specs.processedChannels} channels; ${d.audio} requires ${channels}.`,
+        text: `${p.model} processes ${p.specs.processedChannels} channels; ${audioLabel(d)} requires ${channels}.`,
         slot,
       });
     if (
@@ -104,16 +116,25 @@ export function compatibility(
     )
       issues.push({
         level: "warning",
-        text: `${p.model} needs ${channels - p.specs.amplifiedChannels} additional amplifier channels for ${d.audio}.`,
+        text: `${p.model} needs ${channels - p.specs.amplifiedChannels} additional amplifier channels for ${audioLabel(d)}.`,
         slot,
       });
-    if (d.audio !== "5.1" && p.specs.atmos === false)
+    if (layout.height > 0 && p.specs.atmos === false)
       issues.push({
         level: "error",
         text: `Physical Atmos support is not established for ${p.model}.`,
         slot,
       });
   }
+  if (
+    slot === "receiver" &&
+    (layout.bed === 9 || layout.height === 6 || layout.subs > 2)
+  )
+    issues.push({
+      level: "warning",
+      slot,
+      text: "Confirm the receiver's front-wide, overhead and subwoofer output assignments for this custom channel configuration; channel count alone does not establish format support.",
+    });
   if (slot === "projector") {
     if (p.specs.throwMin !== undefined && p.specs.throwMax !== undefined) {
       const w = screenSize(d.diagonal, d.aspect).width;
@@ -194,36 +215,24 @@ function pricedLine(
   const price = line.price;
   const pending: string[] = [];
   if (price.amountPaise === null) pending.push("Price");
-  if (price.taxBasis === "unknown") pending.push("Tax inclusion");
-  if (price.gstRate === null) pending.push("GST rate");
   if (price.unit === "unknown" || price.packSize === null)
     pending.push("Selling unit");
   const gross =
     price.amountPaise === null
       ? null
       : Math.round(price.amountPaise * line.quantity);
-  const subtotal =
-    gross === null || price.taxBasis === "unknown" || price.gstRate === null
-      ? null
-      : price.taxBasis === "inclusive"
-        ? Math.round((gross * 100) / (100 + price.gstRate))
-        : gross;
+  const subtotal = gross;
   const discounted =
     subtotal === null ? 0 : Math.round((subtotal * discount) / 100);
   const net = subtotal === null ? null : subtotal - discounted;
-  // Reconcile inclusive prices to their exact quoted paise. Reapplying GST to
-  // an already rounded taxable base can otherwise add a paise to a pair.
-  const tax =
-    net === null || price.gstRate === null
-      ? null
-      : price.taxBasis === "inclusive" && gross !== null
-        ? Math.round((gross * (100 - discount)) / 100) - net
-        : Math.round((net * price.gstRate) / 100);
+  // Catalog and service prices are final inclusive amounts. No tax is added.
+  const tax = 0;
   return {
     ...line,
     pending,
     subtotalPaise: subtotal,
     discountPaise: discounted,
+    discountPercent: discount,
     netPaise: net,
     taxPaise: tax,
     totalPaise:
@@ -318,12 +327,7 @@ export function calculateQuote(
     missing.push("Projection screen (add a Screen line under Scope)");
   const receiver = byId.get(state.equipment.slots.receiver?.productId ?? "");
   const amp = byId.get(state.equipment.slots.amplifier?.productId ?? "");
-  const channels =
-    state.design.audio === "7.2.4"
-      ? 11
-      : state.design.audio === "5.1.2"
-        ? 7
-        : 5;
+  const channels = speakerLayout(state.design).channels;
   if (
     activeSlots(state, products).includes("receiver") &&
     receiver &&
@@ -340,7 +344,7 @@ export function calculateQuote(
       issues.push({
         level: "error",
         slot: "amplifier",
-        text: `${amp.model} provides ${amp.specs.externalAmpChannels} power-amplifier channels; ${receiver.model} needs ${channels - (receiver.specs.amplifiedChannels ?? 0)} external channels for ${state.design.audio}.`,
+        text: `${amp.model} provides ${amp.specs.externalAmpChannels} power-amplifier channels; ${receiver.model} needs ${channels - (receiver.specs.amplifiedChannels ?? 0)} external channels for ${audioLabel(state.design)}.`,
       });
     else
       issues.push({
@@ -368,7 +372,7 @@ export function calculateQuote(
           spare: quantity * size - g.required,
           price: g.p.price,
         },
-        state.discountPercent,
+        appliedDiscount(state, key, g.p.brand),
       ),
     );
   }
@@ -376,7 +380,7 @@ export function calculateQuote(
     lines.push(
       pricedLine(
         {
-          key: s.id,
+          key: `service:${s.id}`,
           label: s.description,
           model: "",
           brand: "Epix Infra",
@@ -387,18 +391,19 @@ export function calculateQuote(
           spare: 0,
           price: {
             amountPaise: s.amountPaise,
-            taxBasis: "exclusive",
-            gstRate: s.gstRate,
+            taxBasis: "inclusive",
+            gstRate: 0,
             unit: "unit",
             packSize: 1,
             revision: 0,
           },
         },
-        state.discountPercent,
+        appliedDiscount(state, `service:${s.id}`, "Epix Infra"),
       ),
     );
   const pending = lines.filter((l) => l.pending.length).length;
   return {
+    pricingMode: "inclusive",
     lines,
     issues,
     missing,
